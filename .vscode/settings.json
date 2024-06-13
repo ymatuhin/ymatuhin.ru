@@ -1,3 +1,8 @@
 {
-  "tailwindCSS.rootFontSize": 17
+  "workbench.colorCustomizations": {
+    "editorStickyScroll.background": "#171821",
+    "activityBar.background": "#26310E",
+    "titleBar.activeBackground": "#354514",
+    "titleBar.activeForeground": "#F9FBF3"
+  }
 }

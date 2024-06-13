@@ -15,8 +15,10 @@ export const TopMenu = ({ pathname, menuItems }: Props) => {
   return (
     <div class={s.header}>
       <a {...(pathname !== "/" && { href: "/" })} class={s.logo}>
-        <img src="/favicon.svg" width="20" height="20" />
-        <span>ymatuhin</span>
+        {/* <img src="/ym.svg" /> */}
+        <span>/</span>
+        ymatuhin
+        <span>/</span>
       </a>
 
       <nav class={s.nav}>
@@ -30,20 +32,6 @@ export const TopMenu = ({ pathname, menuItems }: Props) => {
           </a>
         ))}
       </nav>
-
-      {/* <div class={s.right}>
-        <span>v0.1.1</span>
-        <button>dark mode</button>
-        <select name="" id="">
-          <option value="system">По умолчанию</option>
-          <option value="light">Светлая тема</option>
-          <option value="dark">Темная тема</option>
-        </select>
-        <select name="" id="">
-          <option value="ru">Русский</option>
-          <option value="en">Английский</option>
-        </select>
-      </div> */}
     </div>
   );
 };

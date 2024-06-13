@@ -1,0 +1,1376 @@
+---
+layout: post
+title: Гайд по стилю кода на JavaScript от AirBnB
+description: >
+  Общие рекомендации по стилю написания кода от Airbnb. Влючая сравнения производительности и лучшие практики.
+categories: front-end
+tags: >
+  front end собеседование работа вопросы перевод должность кандидат
+
+image:
+  path: /assets/img/styleguide/styleguide.jpg
+  width: 509
+  height: 303
+  alt: Гайд по стилю кода на JavaScript от AirBnB
+---
+
+{% include media-post-image.html %}
+
+<blockquote>
+    <p>Перевод AirBnB Style Guide — <a rel="nofollow" href="https://github.com/airbnb/javascript">Airbnb JavaScript Style Guide</a> (en) на русский язык от команды Uprock. За что им огромное спасибо! Подробнее о переводе на <a rel="nofollow" href="https://habrahabr.ru/company/uprock/blog/204848/">хабре</a>.</p>
+</blockquote>
+
+<p>Стиль вашего кода, может сказать о вас достаточно много. Это один из показателей опытного разработчика. Помимо исключительно визуальной составляющей,  в переводе содержатся бенчмарки и рекомендации по производительности. А в некоторых случаях, использование такого кодстайла, может избавить вас он проблем связанных с тонкостями языка. Статья является отличным дополнением к <a href="/front-end/front_end_developer_interview_quersions/">вопросам для собеседования кандидату на должность Front-end разработчика</a> и к вашему скилу как разработчика 😉</p>
+
+<h2><a id="Оглавление" class="anchor" href="#Оглавление" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="TOC">Оглавление</a></h2>
+
+<ol>
+<li><a href="#types">Типы</a></li>
+<li><a href="#objects">Объекты</a></li>
+<li><a href="#arrays">Массивы</a></li>
+<li><a href="#strings">Строки</a></li>
+<li><a href="#functions">Функции</a></li>
+<li><a href="#properties">Свойства</a></li>
+<li><a href="#variables">Переменные</a></li>
+<li><a href="#hoisting">Области видимости</a></li>
+<li><a href="#conditionals">Условные выражения и равенства</a></li>
+<li><a href="#blocks">Блоки кода</a></li>
+<li><a href="#comments">Комментарии</a></li>
+<li><a href="#whitespace">Пробелы</a></li>
+<li><a href="#commas">Запятые</a></li>
+<li><a href="#semicolons">Точки с запятой</a></li>
+<li><a href="#type-coercion">Приведение типов</a></li>
+<li><a href="#naming-conventions">Соглашение об именовании</a></li>
+<li><a href="#accessors">Геттеры и сеттеры</a></li>
+<li><a href="#constructors">Конструкторы</a></li>
+<li><a href="#events">События</a></li>
+<li><a href="#modules">Модули</a></li>
+<li><a href="#jquery">jQuery</a></li>
+<li><a href="#es5">Совместимость с ES5</a></li>
+<li><a href="#testing">Тестирование</a></li>
+<li><a href="#performance">Быстродействие</a></li>
+<li><a href="#resources">Ресурсы</a></li>
+<li><a href="#in-the-wild">В реальном мире</a></li>
+</ol>
+
+<h2><a id="Типы" class="anchor" href="#Типы" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="types">Типы</a></h2>
+
+<ul>
+<li><p><strong>Простые типы</strong>: Когда вы взаимодействуете с простым типом, вы взаимодействуете непосредственно с его значением в памяти.</p>
+
+<ul>
+<li><code>string</code></li>
+<li><code>number</code></li>
+<li><code>boolean</code></li>
+<li><code>null</code></li>
+<li><code>undefined</code></li>
+</ul>
+
+<div class="highlight highlighter-rouge"><pre><span class="k">var</span> foo <span class="k">=</span> <span class="c1">1</span>,
+    bar <span class="k">=</span> foo;
+
+bar <span class="k">=</span> <span class="c1">9</span>;
+
+<span class="en">console</span><span class="c1">.log</span>(foo, bar); <span class="c">// =&gt; 1, 9. foo не изменился</span></pre></div></li>
+<li><p><strong>Сложные типы</strong>: Когда вы взаимодействуете со сложным типом, вы взаимодействуете с ссылкой на его значение в памяти.</p>
+
+<ul>
+<li><code>object</code></li>
+<li><code>array</code></li>
+<li><code>function</code></li>
+</ul>
+
+<div class="highlight highlighter-rouge"><pre><span class="k">var</span> foo <span class="k">=</span> [<span class="c1">1</span>, <span class="c1">2</span>],
+    bar <span class="k">=</span> foo;
+
+bar[<span class="c1">0</span>] <span class="k">=</span> <span class="c1">9</span>;
+
+<span class="en">console</span><span class="c1">.log</span>(foo[<span class="c1">0</span>], bar[<span class="c1">0</span>]); <span class="c">// =&gt; 9, 9.</span></pre></div>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="Объекты" class="anchor" href="#Объекты" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="objects">Объекты</a></h2>
+
+<ul>
+<li><p>Для создания объекта используйте фигурные скобки. Не создавайте объекты через конструктор <code>new Object</code>.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">var</span> item <span class="k">=</span> <span class="k">new</span> <span class="en">Object</span>();
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> item <span class="k">=</span> {};</pre></div></li>
+<li><p>Не используйте <a rel="nofollow" href="http://es5.github.io/#x7.6.1">зарезервированные слова</a> в качестве ключей объектов. Они не будут работать в IE8. <a rel="nofollow" href="https://github.com/airbnb/javascript/issues/61">Подробнее</a></p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">var</span> superman <span class="k">=</span> {
+  <span class="k">default</span><span class="k">:</span> { clark<span class="k">:</span> <span class="s"><span class="pds">'</span>kent<span class="pds">'</span></span> },
+  private<span class="k">:</span> <span class="c1">true</span>
+};
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> superman <span class="k">=</span> {
+  defaults<span class="k">:</span> { clark<span class="k">:</span> <span class="s"><span class="pds">'</span>kent<span class="pds">'</span></span> },
+  hidden<span class="k">:</span> <span class="c1">true</span>
+};</pre></div></li>
+<li><p>Не используйте ключевые слова (в том числе измененные). Вместо них используйте синонимы.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">var</span> superman <span class="k">=</span> {
+  class<span class="k">:</span> <span class="s"><span class="pds">'</span>alien<span class="pds">'</span></span>
+};
+
+<span class="c">// плохо</span>
+<span class="k">var</span> superman <span class="k">=</span> {
+  klass<span class="k">:</span> <span class="s"><span class="pds">'</span>alien<span class="pds">'</span></span>
+};
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> superman <span class="k">=</span> {
+  type<span class="k">:</span> <span class="s"><span class="pds">'</span>alien<span class="pds">'</span></span>
+};</pre></div>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="Массивы" class="anchor" href="#Массивы" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="arrays">Массивы</a></h2>
+
+<ul>
+<li><p>Для создания массива используйте квадратные скобки. Не создавайте массивы через конструктор <code>new Array</code>.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">var</span> items <span class="k">=</span> <span class="k">new</span> <span class="en">Array</span>();
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> items <span class="k">=</span> [];</pre></div></li>
+<li><p>Если вы не знаете длину массива, используйте Array::push.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="k">var</span> someStack <span class="k">=</span> [];
+
+
+<span class="c">// плохо</span>
+someStack[someStack.<span class="c1">length</span>] <span class="k">=</span> <span class="s"><span class="pds">'</span>abracadabra<span class="pds">'</span></span>;
+
+<span class="c">// хорошо</span>
+someStack.<span class="c1">push</span>(<span class="s"><span class="pds">'</span>abracadabra<span class="pds">'</span></span>);</pre></div></li>
+<li><p>Если вам необходимо скопировать массив, используйте Array::slice. <a rel="nofollow" href="https://jsperf.com/converting-arguments-to-an-array/7">jsPerf</a></p>
+
+<div class="highlight highlighter-rouge"><pre><span class="k">var</span> len <span class="k">=</span> items.<span class="c1">length</span>,
+    itemsCopy <span class="k">=</span> [],
+    i;
+
+<span class="c">// плохо</span>
+<span class="k">for</span> (i <span class="k">=</span> <span class="c1">0</span>; i <span class="k">&lt;</span> len; i<span class="k">++</span>) {
+  itemsCopy[i] <span class="k">=</span> items[i];
+}
+
+<span class="c">// хорошо</span>
+itemsCopy <span class="k">=</span> items.<span class="c1">slice</span>();</pre></div></li>
+<li><p>Чтобы скопировать похожий по свойствам на массив объект (например, NodeList или Arguments), используйте Array::slice.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="k">function</span> <span class="en">trigger</span>() {
+  <span class="k">var</span> args <span class="k">=</span> <span class="c1">Array</span>.<span class="c1">prototype</span>.slice.<span class="c1">call</span>(arguments);
+  ...
+}</pre></div>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="Строки" class="anchor" href="#Строки" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="strings">Строки</a></h2>
+
+<ul>
+<li><p>Используйте одинарные кавычки <code>''</code> для строк.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">var</span> name <span class="k">=</span> <span class="s"><span class="pds">"</span>Боб Дилан<span class="pds">"</span></span>;
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> name <span class="k">=</span> <span class="s"><span class="pds">'</span>Боб Дилан<span class="pds">'</span></span>;
+
+<span class="c">// плохо</span>
+<span class="k">var</span> fullName <span class="k">=</span> <span class="s"><span class="pds">"</span>Боб <span class="pds">"</span></span> <span class="k">+</span> <span class="v">this</span>.lastName;
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> fullName <span class="k">=</span> <span class="s"><span class="pds">'</span>Дилан <span class="pds">'</span></span> <span class="k">+</span> <span class="v">this</span>.lastName;</pre></div></li>
+<li><p>Строки длиннее 80 символов нужно разделять, выполняя перенос через конкатенацию строк.</p></li>
+<li><p>Осторожно: строки с большим количеством конкатенаций могут отрицательно влиять на быстродействие. <a rel="nofollow" href="https://jsperf.com/ya-string-concat">jsPerf</a> и <a rel="nofollow" href="https://github.com/airbnb/javascript/issues/40">Обсуждение</a></p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">var</span> errorMessage <span class="k">=</span> <span class="s"><span class="pds">'</span>Эта сверхдлинная ошибка возникла из-за белой обезъяны. Не говори про обезъяну! Не слушай об обезьяне! Не думай об обезъяне!<span class="pds">'</span></span>;
+
+<span class="c">// плохо</span>
+<span class="k">var</span> errorMessage <span class="k">=</span> <span class="s"><span class="pds">'</span>Эта сверхдлинная ошибка возникла из-за белой обезъяны. \</span>
+<span class="s">Не говори про обезъяну! Не слушай об обезьяне! \</span>
+<span class="s">Не думай об обезъяне!<span class="pds">'</span></span>;
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> errorMessage <span class="k">=</span> <span class="s"><span class="pds">'</span>Эта сверхдлинная ошибка возникла из-за белой обезъяны. <span class="pds">'</span></span> <span class="k">+</span>
+  <span class="s"><span class="pds">'</span>Не говори про обезъяну! Не слушай об обезьяне! <span class="pds">'</span></span> <span class="k">+</span>
+  <span class="s"><span class="pds">'</span>Не думай об обезъяне!<span class="pds">'</span></span>;</pre></div></li>
+<li><p>Когда строка создается программным путем, используйте Array::join вместо объединения строк. В основном для IE: <a rel="nofollow" href="https://jsperf.com/string-vs-array-concat/2">jsPerf</a>.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="k">var</span> items,
+    messages,
+    length,
+    i;
+
+messages <span class="k">=</span> [{
+    state<span class="k">:</span> <span class="s"><span class="pds">'</span>success<span class="pds">'</span></span>,
+    message<span class="k">:</span> <span class="s"><span class="pds">'</span>Это работает.<span class="pds">'</span></span>
+},{
+    state<span class="k">:</span> <span class="s"><span class="pds">'</span>success<span class="pds">'</span></span>,
+    message<span class="k">:</span> <span class="s"><span class="pds">'</span>Это тоже.<span class="pds">'</span></span>
+},{
+    state<span class="k">:</span> <span class="s"><span class="pds">'</span>error<span class="pds">'</span></span>,
+    message<span class="k">:</span> <span class="s"><span class="pds">'</span>А я томат.<span class="pds">'</span></span>
+}];
+
+length <span class="k">=</span> messages.<span class="c1">length</span>;
+
+<span class="c">// плохо</span>
+<span class="k">function</span> <span class="en">inbox</span>(<span class="smi">messages</span>) {
+  items <span class="k">=</span> <span class="s"><span class="pds">'</span>&lt;ul&gt;<span class="pds">'</span></span>;
+
+  <span class="k">for</span> (i <span class="k">=</span> <span class="c1">0</span>; i <span class="k">&lt;</span> length; i<span class="k">++</span>) {
+    items <span class="k">+=</span> <span class="s"><span class="pds">'</span>&lt;li&gt;<span class="pds">'</span></span> <span class="k">+</span> messages[i].message <span class="k">+</span> <span class="s"><span class="pds">'</span>&lt;/li&gt;<span class="pds">'</span></span>;
+  }
+
+  <span class="k">return</span> items <span class="k">+</span> <span class="s"><span class="pds">'</span>&lt;/ul&gt;<span class="pds">'</span></span>;
+}
+
+<span class="c">// хорошо</span>
+<span class="k">function</span> <span class="en">inbox</span>(<span class="smi">messages</span>) {
+  items <span class="k">=</span> [];
+
+  <span class="k">for</span> (i <span class="k">=</span> <span class="c1">0</span>; i <span class="k">&lt;</span> length; i<span class="k">++</span>) {
+    items[i] <span class="k">=</span> messages[i].message;
+  }
+
+  <span class="k">return</span> <span class="s"><span class="pds">'</span>&lt;ul&gt;&lt;li&gt;<span class="pds">'</span></span> <span class="k">+</span> items.<span class="c1">join</span>(<span class="s"><span class="pds">'</span>&lt;/li&gt;&lt;li&gt;<span class="pds">'</span></span>) <span class="k">+</span> <span class="s"><span class="pds">'</span>&lt;/li&gt;&lt;/ul&gt;<span class="pds">'</span></span>;
+}</pre></div>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="Функции" class="anchor" href="#Функции" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="functions">Функции</a></h2>
+
+<ul>
+<li><p>Объявление функций:</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// объявление анонимной функции</span>
+<span class="k">var</span> <span class="en">anonymous</span> <span class="k">=</span> <span class="k">function</span>() {
+  <span class="k">return</span> <span class="c1">true</span>;
+};
+
+<span class="c">// объявление именованной функции</span>
+<span class="k">var</span> <span class="en">named</span> <span class="k">=</span> <span class="k">function</span> <span class="en">named</span>() {
+  <span class="k">return</span> <span class="c1">true</span>;
+};
+
+<span class="c">// объявление функции, которая сразу же выполняется (замыкание)</span>
+(<span class="k">function</span>() {
+  <span class="en">console</span><span class="c1">.log</span>(<span class="s"><span class="pds">'</span>Если вы читаете это, вы открыли консоль.<span class="pds">'</span></span>);
+})();</pre></div></li>
+<li>Никогда не объявляйте функцию внутри блока кода — например в if, while, else и так далее. Единственное исключение — блок функции. Вместо этого присваивайте функцию уже объявленной через <code>var</code> переменной. Условное объявление функций работает, но в различных браузерах работает по-разному.</li>
+<li><p><strong>Примечание</strong> ECMA-262 устанавливает понятие <code>блока</code> как списка операторов. Объявление функции (не путайте с присвоением функции переменной) не является оператором. <a rel="nofollow" href="http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf#page=97">Комментарий по этому вопросу в ECMA-262</a>.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">if</span> (currentUser) {
+  <span class="k">function</span> <span class="en">test</span>() {
+    <span class="en">console</span><span class="c1">.log</span>(<span class="s"><span class="pds">'</span>Плохой мальчик.<span class="pds">'</span></span>);
+  }
+}
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> test;
+<span class="k">if</span> (currentUser) {
+  <span class="en">test</span> <span class="k">=</span> <span class="k">function</span> <span class="en">test</span>() {
+    <span class="en">console</span><span class="c1">.log</span>(<span class="s"><span class="pds">'</span>Молодец.<span class="pds">'</span></span>);
+  };
+}</pre></div></li>
+<li><p>Никогда не используйте аргумент функции <code>arguments</code>, он будет более приоритетным над объектом <code>arguments</code>, который доступен без объявления для каждой функции.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">function</span> <span class="en">nope</span>(<span class="smi">name</span>, <span class="smi">options</span>, <span class="smi">arguments</span>) {
+  <span class="c">// ...код...</span>
+}
+
+<span class="c">// хорошо</span>
+<span class="k">function</span> <span class="en">yup</span>(<span class="smi">name</span>, <span class="smi">options</span>, <span class="smi">args</span>) {
+  <span class="c">// ...код...</span>
+}</pre></div>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="Свойства" class="anchor" href="#Свойства" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="properties">Свойства</a></h2>
+
+<ul>
+<li><p>Используйте точечную нотацию для доступа к свойствам и методам.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="k">var</span> luke <span class="k">=</span> {
+  jedi<span class="k">:</span> <span class="c1">true</span>,
+  age<span class="k">:</span> <span class="c1">28</span>
+};
+
+<span class="c">// плохо</span>
+<span class="k">var</span> isJedi <span class="k">=</span> luke[<span class="s"><span class="pds">'</span>jedi<span class="pds">'</span></span>];
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> isJedi <span class="k">=</span> luke.jedi;</pre></div></li>
+<li><p>Используйте нотацию с <code>[]</code>, когда вы получаете свойство, имя для которого хранится в переменной.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="k">var</span> luke <span class="k">=</span> {
+  jedi<span class="k">:</span> <span class="c1">true</span>,
+  age<span class="k">:</span> <span class="c1">28</span>
+};
+
+<span class="k">function</span> <span class="en">getProp</span>(<span class="smi">prop</span>) {
+  <span class="k">return</span> luke[prop];
+}
+
+<span class="k">var</span> isJedi <span class="k">=</span> getProp(<span class="s"><span class="pds">'</span>jedi<span class="pds">'</span></span>);</pre></div>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="Переменные" class="anchor" href="#Переменные" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="variables">Переменные</a></h2>
+
+<ul>
+<li><p>Всегда используйте <code>var</code> для объявления переменных. В противном случае переменная будет объявлена глобальной. Загрязнение глобального пространства имен — всегда плохо.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+superPower <span class="k">=</span> <span class="k">new</span> <span class="en">SuperPower</span>();
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> superPower <span class="k">=</span> <span class="k">new</span> <span class="en">SuperPower</span>();</pre></div></li>
+<li><p>Используйте одно <code>var</code> объявление переменных для всех переменных, и объявляйте каждую переменную на новой строке.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">var</span> items <span class="k">=</span> getItems();
+<span class="k">var</span> goSportsTeam <span class="k">=</span> <span class="c1">true</span>;
+<span class="k">var</span> dragonball <span class="k">=</span> <span class="s"><span class="pds">'</span>z<span class="pds">'</span></span>;
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> items <span class="k">=</span> getItems(),
+    goSportsTeam <span class="k">=</span> <span class="c1">true</span>,
+    dragonball <span class="k">=</span> <span class="s"><span class="pds">'</span>z<span class="pds">'</span></span>;</pre></div></li>
+<li><p>Объявляйте переменные, которым не присваивается значение, в конце. Это удобно, когда вам необходимо задать значение одной из этих переменных на базе уже присвоенных значений.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">var</span> i, len, dragonball,
+    items <span class="k">=</span> getItems(),
+    goSportsTeam <span class="k">=</span> <span class="c1">true</span>;
+
+<span class="c">// плохо</span>
+<span class="k">var</span> i, items <span class="k">=</span> getItems(),
+    dragonball,
+    goSportsTeam <span class="k">=</span> <span class="c1">true</span>,
+    len;
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> items <span class="k">=</span> getItems(),
+    goSportsTeam <span class="k">=</span> <span class="c1">true</span>,
+    dragonball,
+    length,
+    i;</pre></div></li>
+<li><p>Присваивайте переменные в начале области видимости. Это помогает избегать проблем с объявлением переменных и областями видимости.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">function</span>() {
+  <span class="c1">test</span>();
+  <span class="en">console</span><span class="c1">.log</span>(<span class="s"><span class="pds">'</span>делаю что-нибудь..<span class="pds">'</span></span>);
+
+  <span class="c">//..или не делаю...</span>
+
+  <span class="k">var</span> name <span class="k">=</span> getName();
+
+  <span class="k">if</span> (name <span class="k">===</span> <span class="s"><span class="pds">'</span>test<span class="pds">'</span></span>) {
+    <span class="k">return</span> <span class="c1">false</span>;
+  }
+
+  <span class="k">return</span> name;
+}
+
+<span class="c">// хорошо</span>
+<span class="k">function</span>() {
+  <span class="k">var</span> name <span class="k">=</span> getName();
+
+  <span class="c1">test</span>();
+  <span class="en">console</span><span class="c1">.log</span>(<span class="s"><span class="pds">'</span>делаю что-то полезное..<span class="pds">'</span></span>);
+
+  <span class="c">//..продолжаю приносить пользу людям..</span>
+
+  <span class="k">if</span> (name <span class="k">===</span> <span class="s"><span class="pds">'</span>test<span class="pds">'</span></span>) {
+    <span class="k">return</span> <span class="c1">false</span>;
+  }
+
+  <span class="k">return</span> name;
+}
+
+<span class="c">// плохо</span>
+<span class="k">function</span>() {
+  <span class="k">var</span> name <span class="k">=</span> getName();
+
+  <span class="k">if</span> (<span class="k">!</span>arguments.<span class="c1">length</span>) {
+    <span class="k">return</span> <span class="c1">false</span>;
+  }
+
+  <span class="k">return</span> <span class="c1">true</span>;
+}
+
+<span class="c">// хорошо</span>
+<span class="k">function</span>() {
+  <span class="k">if</span> (<span class="k">!</span>arguments.<span class="c1">length</span>) {
+    <span class="k">return</span> <span class="c1">false</span>;
+  }
+
+  <span class="k">var</span> name <span class="k">=</span> getName();
+
+  <span class="k">return</span> <span class="c1">true</span>;
+}</pre></div>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="Области-видимости" class="anchor" href="#Области-видимости" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="hoisting">Области видимости</a></h2>
+
+<ul>
+<li><p>Объявление переменных ограничивается областью видимости, а присвоение — нет.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// Мы знаем, что это не будет работать</span>
+<span class="c">// если нет глобальной переменной notDefined</span>
+<span class="k">function</span> <span class="en">example</span>() {
+  <span class="en">console</span><span class="c1">.log</span>(notDefined); <span class="c">// =&gt; выбрасывает код с ошибкой ReferenceError</span>
+}
+
+<span class="c">// Декларирование переменной после ссылки на нее</span>
+<span class="c">// не будет работать из-за ограничения области видимости.</span>
+<span class="k">function</span> <span class="en">example</span>() {
+  <span class="en">console</span><span class="c1">.log</span>(declaredButNotAssigned); <span class="c">// =&gt; undefined</span>
+  <span class="k">var</span> declaredButNotAssigned <span class="k">=</span> <span class="c1">true</span>;
+}
+
+<span class="c">// Интерпретатор переносит объявление переменной</span>
+<span class="c">// к верху области видимости.</span>
+<span class="c">// Что значит, что предыдущий пример в действительности</span>
+<span class="c">// будет воспринят интерпретатором так:</span>
+<span class="k">function</span> <span class="en">example</span>() {
+  <span class="k">var</span> declaredButNotAssigned;
+  <span class="en">console</span><span class="c1">.log</span>(declaredButNotAssigned); <span class="c">// =&gt; undefined</span>
+  declaredButNotAssigned <span class="k">=</span> <span class="c1">true</span>;
+}</pre></div></li>
+<li><p>Объявление анонимной функции поднимает наверх области видимости саму переменную, но не ее значение.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="k">function</span> <span class="en">example</span>() {
+  <span class="en">console</span><span class="c1">.log</span>(anonymous); <span class="c">// =&gt; undefined</span>
+
+  anonymous(); <span class="c">// =&gt; TypeError anonymous is not a function</span>
+  <span class="c">// Ошибка типов: переменная anonymous не является функцией и не может быть вызвана</span>
+
+  <span class="k">var</span> <span class="en">anonymous</span> <span class="k">=</span> <span class="k">function</span>() {
+    <span class="en">console</span><span class="c1">.log</span>(<span class="s"><span class="pds">'</span>анонимная функция<span class="pds">'</span></span>);
+  };
+}</pre></div></li>
+<li><p>Именованные функции поднимают наверх области видимости переменную, не ее значение. Имя функции при этом недоступно в области видимости переменной и доступно только изнутри.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="k">function</span> <span class="en">example</span>() {
+  <span class="en">console</span><span class="c1">.log</span>(named); <span class="c">// =&gt; undefined</span>
+
+  named(); <span class="c">// =&gt; TypeError named is not a function</span>
+  <span class="c">// Ошибка типов: переменная named не является функцией и не может быть вызвана</span>
+
+  superPower(); <span class="c">// =&gt; ReferenceError superPower is not defined (Ошибка ссылки: переменная superPower не найдена в этой области видимости)</span>
+
+  <span class="k">var</span> <span class="en">named</span> <span class="k">=</span> <span class="k">function</span> <span class="en">superPower</span>() {
+    <span class="en">console</span><span class="c1">.log</span>(<span class="s"><span class="pds">'</span>Я лечууууу<span class="pds">'</span></span>);
+  };
+}
+
+<span class="c">// То же самое происходит, когда имя функции и имя переменной совпадают.</span>
+<span class="c">// var named доступно изнутри области видимости функции example.</span>
+<span class="c">// function named доступна только изнутри ее самой.</span>
+<span class="k">function</span> <span class="en">example</span>() {
+  <span class="en">console</span><span class="c1">.log</span>(named); <span class="c">// =&gt; undefined</span>
+
+  named(); <span class="c">// =&gt; TypeError named is not a function</span>
+  <span class="c">// Ошибка типов: переменная named не является функцией и не может быть вызвана</span>
+
+  <span class="k">var</span> <span class="en">named</span> <span class="k">=</span> <span class="k">function</span> <span class="en">named</span>() {
+    <span class="en">console</span><span class="c1">.log</span>(<span class="s"><span class="pds">'</span>именованная функция<span class="pds">'</span></span>);
+  }
+}</pre></div></li>
+<li><p>Объявления функции поднимают на верх текущей области видимости и имя, и свое значение.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="k">function</span> <span class="en">example</span>() {
+  superPower(); <span class="c">// =&gt; Я лечууууу</span>
+
+  <span class="k">function</span> <span class="en">superPower</span>() {
+    <span class="en">console</span><span class="c1">.log</span>(<span class="s"><span class="pds">'</span>Я лечууууу<span class="pds">'</span></span>);
+  }
+}</pre></div></li>
+<li><p>Более подробно можно прочитать в статье <a rel="nofollow" href="http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting">JavaScript Scoping &amp; Hoisting</a> от <a rel="nofollow" href="http://www.adequatelygood.com/">Ben Cherry</a></p>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="Условные-выражения-и-равенства" class="anchor" href="#Условные-выражения-и-равенства" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="conditionals">Условные выражения и равенства</a></h2>
+
+<ul>
+<li>Используйте <code>===</code> и <code>!==</code> вместо <code>==</code> и <code>!=</code>.</li>
+<li><p>Условные выражения вычисляются посредством приведения к логическому типу Boolean через метод <code>ToBoolean</code> и всегда следуют следующим правилам:</p>
+
+<ul>
+<li><strong>Object</strong> всегда соответствует <strong>true</strong></li>
+<li><strong>Undefined</strong> всегда соответствует <strong>false</strong></li>
+<li><strong>Null</strong> всегда соответствует <strong>false</strong></li>
+<li><strong>Boolean</strong> остается неизменным</li>
+<li><strong>Number</strong> соответствует <strong>false</strong>, если является <strong>+0, -0, или NaN</strong>, в противном случае соответствует <strong>true</strong></li>
+<li><strong>String</strong> означает <strong>false</strong>, если является пустой строкой <code>''</code>, в противном случае <strong>true</strong>. Условно говоря, для строки происходит сравнение не ее самой, а ее длины – в соответствии с типом number.</li>
+</ul>
+
+<div class="highlight highlighter-rouge"><pre><span class="k">if</span> ([<span class="c1">0</span>]) {
+  <span class="c">// true</span>
+  <span class="c">// Массив(Array) является объектом, объекты преобразуются в true</span>
+}</pre></div></li>
+<li><p>Используйте короткий синтаксис.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">if</span> (name <span class="k">!==</span> <span class="s"><span class="pds">'</span><span class="pds">'</span></span>) {
+  <span class="c">// ...код...</span>
+}
+
+<span class="c">// хорошо</span>
+<span class="k">if</span> (name) {
+  <span class="c">// ...код...</span>
+}
+
+<span class="c">// плохо</span>
+<span class="k">if</span> (collection.<span class="c1">length</span> <span class="k">&gt;</span> <span class="c1">0</span>) {
+  <span class="c">// ...код...</span>
+}
+
+<span class="c">// хорошо</span>
+<span class="k">if</span> (collection.<span class="c1">length</span>) {
+  <span class="c">// ...код...</span>
+}</pre></div></li>
+<li><p>Более подробно можно прочитать в статье <a rel="nofollow" href="https://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/">Truth Equality and JavaScript</a> от Angus Croll</p>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="Блоки-кода" class="anchor" href="#Блоки-кода" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="blocks">Блоки кода</a></h2>
+
+<ul>
+<li><p>Используйте фигурные скобки для всех многострочных блоков.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">if</span> (test)
+  <span class="k">return</span> <span class="c1">false</span>;
+
+<span class="c">// хорошо</span>
+<span class="k">if</span> (test) <span class="k">return</span> <span class="c1">false</span>;
+
+<span class="c">// хорошо</span>
+<span class="k">if</span> (test) {
+  <span class="k">return</span> <span class="c1">false</span>;
+}
+
+<span class="c">// плохо</span>
+<span class="k">function</span>() { <span class="k">return</span> <span class="c1">false</span>; }
+
+<span class="c">// хорошо</span>
+<span class="k">function</span>() {
+  <span class="k">return</span> <span class="c1">false</span>;
+}</pre></div>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="Комментарии" class="anchor" href="#Комментарии" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="comments">Комментарии</a></h2>
+
+<ul>
+<li><p>Используйте <code>/** ... */</code> для многострочных комментариев. Включите описание, опишите типы и значения для всех параметров и возвращаемых значений в формате jsdoc.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="c">// make() возвращает новый элемент</span>
+<span class="c">// основываясь на получаемом имени тэга</span>
+<span class="c">//</span>
+<span class="c">// @param &lt;String&gt; tag</span>
+<span class="c">// @return &lt;Element&gt; element</span>
+<span class="k">function</span> <span class="en">make</span>(<span class="smi">tag</span>) {
+
+  <span class="c">// ...создаем element...</span>
+
+  <span class="k">return</span> element;
+}
+
+<span class="c">// хорошо</span>
+<span class="c">/**</span>
+<span class="c"> * make() возвращает новый элемент</span>
+<span class="c"> * основываясь на получаемом имени тэга</span>
+<span class="c"> *</span>
+<span class="c"> * <span class="k">@param</span> &lt;String&gt; tag</span>
+<span class="c"> * <span class="k">@return</span> &lt;Element&gt; element</span>
+<span class="c"> */</span>
+<span class="k">function</span> <span class="en">make</span>(<span class="smi">tag</span>) {
+
+  <span class="c">// ...создаем element...</span>
+
+  <span class="k">return</span> element;
+}</pre></div></li>
+<li><p>Используйте <code>//</code> для комментариев в одну строку. Размещайте комментарии на новой строке над темой комментария. Добавляйте пустую строку над комментарием.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">var</span> active <span class="k">=</span> <span class="c1">true</span>;  <span class="c">// устанавливаем активным элементом</span>
+
+<span class="c">// хорошо</span>
+<span class="c">// устанавливаем активным элементом</span>
+<span class="k">var</span> active <span class="k">=</span> <span class="c1">true</span>;
+
+<span class="c">// плохо</span>
+<span class="k">function</span> <span class="en">getType</span>() {
+  <span class="en">console</span><span class="c1">.log</span>(<span class="s"><span class="pds">'</span>проверяем тип...<span class="pds">'</span></span>);
+  <span class="c">// задаем тип по умолчанию 'no type'</span>
+  <span class="k">var</span> type <span class="k">=</span> <span class="v">this</span>._type <span class="k">||</span> <span class="s"><span class="pds">'</span>no type<span class="pds">'</span></span>;
+
+  <span class="k">return</span> type;
+}
+
+<span class="c">// хорошо</span>
+<span class="k">function</span> <span class="en">getType</span>() {
+  <span class="en">console</span><span class="c1">.log</span>(<span class="s"><span class="pds">'</span>проверяем тип...<span class="pds">'</span></span>);
+
+  <span class="c">// задаем тип по умолчанию 'no type'</span>
+  <span class="k">var</span> type <span class="k">=</span> <span class="v">this</span>._type <span class="k">||</span> <span class="s"><span class="pds">'</span>no type<span class="pds">'</span></span>;
+
+  <span class="k">return</span> type;
+}</pre></div></li>
+<li><p>Префикс <code>TODO</code> помогает другим разработчикам быстро понять, что вы указываете на проблему, к которой нужно вернуться в дальнейшем, или если вы предлагете решение проблемы, которое должно быть реализовано. Эти комментарии отличаются от обычных комментариев, так как не описывают текущее поведение, а призывают к действию, например <code>TODO -- нужно реализовать интерфейс</code>. Такие комментарии также автоматически обнаруживаются многими IDE и редакторами кода, что позволяет быстро перемещаться между ними.</p></li>
+<li><p>Используйте <code>// TODO FIXME:</code> для аннотирования проблем</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="k">function</span> <span class="en">Calculator</span>() {
+
+  <span class="c">// TODO FIXME: тут не нужно использовать глобальную переменную</span>
+  total <span class="k">=</span> <span class="c1">0</span>;
+
+  <span class="k">return</span> <span class="v">this</span>;
+}</pre></div></li>
+<li><p>Используйте <code>// TODO:</code> для указания решений проблем</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="k">function</span> <span class="en">Calculator</span>() {
+
+  <span class="c">// TODO: должна быть возможность изменять значение через параметр функции</span>
+  <span class="v">this</span>.total <span class="k">=</span> <span class="c1">0</span>;
+
+  <span class="k">return</span> <span class="v">this</span>;
+}</pre></div>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="Пробелы" class="anchor" href="#Пробелы" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="whitespace">Пробелы</a></h2>
+
+<ul>
+<li><p>Используйте программную табуляцию (ее поддерживают все современные редакторы кода и IDE) из двух пробелов.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">function</span>() {
+∙∙∙∙<span class="k">var</span> name;
+}
+
+<span class="c">// плохо</span>
+<span class="k">function</span>() {
+∙<span class="k">var</span> name;
+}
+
+<span class="c">// хорошо</span>
+<span class="k">function</span>() {
+∙∙<span class="k">var</span> name;
+}</pre></div></li>
+<li><p>Устанавливайте один пробел перед открывающей скобкой.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">function</span> <span class="en">test</span>(){
+  <span class="en">console</span><span class="c1">.log</span>(<span class="s"><span class="pds">'</span>test<span class="pds">'</span></span>);
+}
+
+<span class="c">// хорошо</span>
+<span class="k">function</span> <span class="en">test</span>() {
+  <span class="en">console</span><span class="c1">.log</span>(<span class="s"><span class="pds">'</span>test<span class="pds">'</span></span>);
+}
+
+<span class="c">// плохо</span>
+dog.set(<span class="s"><span class="pds">'</span>attr<span class="pds">'</span></span>,{
+  age<span class="k">:</span> <span class="s"><span class="pds">'</span>1 year<span class="pds">'</span></span>,
+  breed<span class="k">:</span> <span class="s"><span class="pds">'</span>Bernese Mountain Dog<span class="pds">'</span></span>
+});
+
+<span class="c">// хорошо</span>
+dog.set(<span class="s"><span class="pds">'</span>attr<span class="pds">'</span></span>, {
+  age<span class="k">:</span> <span class="s"><span class="pds">'</span>1 year<span class="pds">'</span></span>,
+  breed<span class="k">:</span> <span class="s"><span class="pds">'</span>Bernese Mountain Dog<span class="pds">'</span></span>
+});</pre></div></li>
+<li><p>Оставляйте новую строку в конце файла.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+(<span class="k">function</span>(<span class="smi">global</span>) {
+  <span class="c">// ...код...</span>
+})(<span class="v">this</span>);</pre></div>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// хорошо</span>
+(<span class="k">function</span>(<span class="smi">global</span>) {
+  <span class="c">// ...код...</span>
+})(<span class="v">this</span>);
+</pre></div></li>
+<li><p>Используйте отступы, когда делаете цепочки вызовов.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+$(<span class="s"><span class="pds">'</span>#items<span class="pds">'</span></span>).<span class="c1">find</span>(<span class="s"><span class="pds">'</span>.selected<span class="pds">'</span></span>).highlight().end().<span class="c1">find</span>(<span class="s"><span class="pds">'</span>.open<span class="pds">'</span></span>).updateCount();
+
+<span class="c">// хорошо</span>
+$(<span class="s"><span class="pds">'</span>#items<span class="pds">'</span></span>)
+  .<span class="c1">find</span>(<span class="s"><span class="pds">'</span>.selected<span class="pds">'</span></span>)
+    .highlight()
+    .end()
+  .<span class="c1">find</span>(<span class="s"><span class="pds">'</span>.open<span class="pds">'</span></span>)
+    .updateCount();
+
+<span class="c">// плохо</span>
+<span class="k">var</span> leds <span class="k">=</span> stage.selectAll(<span class="s"><span class="pds">'</span>.led<span class="pds">'</span></span>).<span class="c1">data</span>(data).enter().append(<span class="s"><span class="pds">'</span>svg:svg<span class="pds">'</span></span>).class(<span class="s"><span class="pds">'</span>led<span class="pds">'</span></span>, <span class="c1">true</span>)
+    .attr(<span class="s"><span class="pds">'</span>width<span class="pds">'</span></span>,  (radius <span class="k">+</span> margin) <span class="k">*</span> <span class="c1">2</span>).append(<span class="s"><span class="pds">'</span>svg:g<span class="pds">'</span></span>)
+    .attr(<span class="s"><span class="pds">'</span>transform<span class="pds">'</span></span>, <span class="s"><span class="pds">'</span>translate(<span class="pds">'</span></span> <span class="k">+</span> (radius <span class="k">+</span> margin) <span class="k">+</span> <span class="s"><span class="pds">'</span>,<span class="pds">'</span></span> <span class="k">+</span> (radius <span class="k">+</span> margin) <span class="k">+</span> <span class="s"><span class="pds">'</span>)<span class="pds">'</span></span>)
+    .<span class="c1">call</span>(tron.led);
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> leds <span class="k">=</span> stage.selectAll(<span class="s"><span class="pds">'</span>.led<span class="pds">'</span></span>)
+    .<span class="c1">data</span>(data)
+  .enter().append(<span class="s"><span class="pds">'</span>svg:svg<span class="pds">'</span></span>)
+    .class(<span class="s"><span class="pds">'</span>led<span class="pds">'</span></span>, <span class="c1">true</span>)
+    .attr(<span class="s"><span class="pds">'</span>width<span class="pds">'</span></span>,  (radius <span class="k">+</span> margin) <span class="k">*</span> <span class="c1">2</span>)
+  .append(<span class="s"><span class="pds">'</span>svg:g<span class="pds">'</span></span>)
+    .attr(<span class="s"><span class="pds">'</span>transform<span class="pds">'</span></span>, <span class="s"><span class="pds">'</span>translate(<span class="pds">'</span></span> <span class="k">+</span> (radius <span class="k">+</span> margin) <span class="k">+</span> <span class="s"><span class="pds">'</span>,<span class="pds">'</span></span> <span class="k">+</span> (radius <span class="k">+</span> margin) <span class="k">+</span> <span class="s"><span class="pds">'</span>)<span class="pds">'</span></span>)
+    .<span class="c1">call</span>(tron.led);</pre></div>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="Запятые" class="anchor" href="#Запятые" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="commas">Запятые</a></h2>
+
+<ul>
+<li><p>Запятые в начале строки: <strong>Нет.</strong></p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">var</span> once
+  , upon
+  , aTime;
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> once,
+    upon,
+    aTime;
+
+<span class="c">// плохо</span>
+<span class="k">var</span> hero <span class="k">=</span> {
+    firstName<span class="k">:</span> <span class="s"><span class="pds">'</span>Bob<span class="pds">'</span></span>
+  , lastName<span class="k">:</span> <span class="s"><span class="pds">'</span>Parr<span class="pds">'</span></span>
+  , heroName<span class="k">:</span> <span class="s"><span class="pds">'</span>Mr. Incredible<span class="pds">'</span></span>
+  , superPower<span class="k">:</span> <span class="s"><span class="pds">'</span>strength<span class="pds">'</span></span>
+};
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> hero <span class="k">=</span> {
+  firstName<span class="k">:</span> <span class="s"><span class="pds">'</span>Bob<span class="pds">'</span></span>,
+  lastName<span class="k">:</span> <span class="s"><span class="pds">'</span>Parr<span class="pds">'</span></span>,
+  heroName<span class="k">:</span> <span class="s"><span class="pds">'</span>Mr. Incredible<span class="pds">'</span></span>,
+  superPower<span class="k">:</span> <span class="s"><span class="pds">'</span>strength<span class="pds">'</span></span>
+};</pre></div></li>
+<li><p>Дополнительная запятая в конце объектов: <strong>Нет</strong>. Она способна вызвать проблемы с IE6/7 и IE9 в режиме совместимости. В некоторых реализациях ES3 запятая в конце массива увеличивает его длину на 1, что может вызвать проблемы. Этот вопрос был прояснен только в ES5 (<a rel="nofollow" href="http://es5.github.io/#D">оригинал</a>):</p>
+
+<blockquote>
+<p>Редакция ECMAScript 5 однозначно устанавливает факт, что запятая в конце ArrayInitialiser не должна увеличивать длину массива. Это несемантическое изменение от Редакции ECMAScript 3, но некоторые реализации до этого некорректно разрешали этот вопрос.</p>
+</blockquote>
+
+<div class="highlight highlighter-rouge"><pre>  <span class="c">// плохо</span>
+  <span class="k">var</span> hero <span class="k">=</span> {
+    firstName<span class="k">:</span> <span class="s"><span class="pds">'</span>Kevin<span class="pds">'</span></span>,
+    lastName<span class="k">:</span> <span class="s"><span class="pds">'</span>Flynn<span class="pds">'</span></span>,
+  };
+
+  <span class="k">var</span> heroes <span class="k">=</span> [
+    <span class="s"><span class="pds">'</span>Batman<span class="pds">'</span></span>,
+    <span class="s"><span class="pds">'</span>Superman<span class="pds">'</span></span>,
+  ];
+
+  <span class="c">// хорошо</span>
+  <span class="k">var</span> hero <span class="k">=</span> {
+    firstName<span class="k">:</span> <span class="s"><span class="pds">'</span>Kevin<span class="pds">'</span></span>,
+    lastName<span class="k">:</span> <span class="s"><span class="pds">'</span>Flynn<span class="pds">'</span></span>
+  };
+
+  <span class="k">var</span> heroes <span class="k">=</span> [
+    <span class="s"><span class="pds">'</span>Batman<span class="pds">'</span></span>,
+    <span class="s"><span class="pds">'</span>Superman<span class="pds">'</span></span>
+  ];</pre></div>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="Точки-с-запятой" class="anchor" href="#Точки-с-запятой" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="semicolons">Точки с запятой</a></h2>
+
+<ul>
+<li><p><strong>Да.</strong></p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+(<span class="k">function</span>() {
+  <span class="k">var</span> name <span class="k">=</span> <span class="s"><span class="pds">'</span>Skywalker<span class="pds">'</span></span>
+  <span class="k">return</span> name
+})()
+
+<span class="c">// хорошо</span>
+(<span class="k">function</span>() {
+  <span class="k">var</span> name <span class="k">=</span> <span class="s"><span class="pds">'</span>Skywalker<span class="pds">'</span></span>;
+  <span class="k">return</span> name;
+})();
+
+<span class="c">// хорошо</span>
+;(<span class="k">function</span>() {
+  <span class="k">var</span> name <span class="k">=</span> <span class="s"><span class="pds">'</span>Skywalker<span class="pds">'</span></span>;
+  <span class="k">return</span> name;
+})();</pre></div>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="Приведение-типов" class="anchor" href="#Приведение-типов" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="type-coercion">Приведение типов</a></h2>
+
+<ul>
+<li>Выполняйте приведение типов в начале операции, но не делайте его избыточным.</li>
+<li><p>Строки:</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">//  =&gt; this.reviewScore = 9;</span>
+
+<span class="c">// плохо</span>
+<span class="k">var</span> totalScore <span class="k">=</span> <span class="v">this</span>.reviewScore <span class="k">+</span> <span class="s"><span class="pds">'</span><span class="pds">'</span></span>;
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> totalScore <span class="k">=</span> <span class="s"><span class="pds">'</span><span class="pds">'</span></span> <span class="k">+</span> <span class="v">this</span>.reviewScore;
+
+<span class="c">// плохо</span>
+<span class="k">var</span> totalScore <span class="k">=</span> <span class="s"><span class="pds">'</span><span class="pds">'</span></span> <span class="k">+</span> <span class="v">this</span>.reviewScore <span class="k">+</span> <span class="s"><span class="pds">'</span> итого<span class="pds">'</span></span>;
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> totalScore <span class="k">=</span> <span class="v">this</span>.reviewScore <span class="k">+</span> <span class="s"><span class="pds">'</span> итого<span class="pds">'</span></span>;</pre></div></li>
+<li><p>Используйте <code>parseInt</code> для чисел и всегда указывайте основание для приведения типов.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="k">var</span> inputValue <span class="k">=</span> <span class="s"><span class="pds">'</span>4<span class="pds">'</span></span>;
+
+<span class="c">// плохо</span>
+<span class="k">var</span> val <span class="k">=</span> <span class="k">new</span> <span class="en">Number</span>(inputValue);
+
+<span class="c">// плохо</span>
+<span class="k">var</span> val <span class="k">=</span> <span class="k">+</span>inputValue;
+
+<span class="c">// плохо</span>
+<span class="k">var</span> val <span class="k">=</span> inputValue <span class="k">&gt;&gt;</span> <span class="c1">0</span>;
+
+<span class="c">// плохо</span>
+<span class="k">var</span> val <span class="k">=</span> <span class="c1">parseInt</span>(inputValue);
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> val <span class="k">=</span> <span class="c1">Number</span>(inputValue);
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> val <span class="k">=</span> <span class="c1">parseInt</span>(inputValue, <span class="c1">10</span>);</pre></div></li>
+<li><p>Если по какой-либо причине вы делаете что-то дикое, и именно на <code>parseInt</code> тратится больше всего ресурсов, используйте побитовый сдвиг <a rel="nofollow" href="https://jsperf.com/coercion-vs-casting/3">из соображений быстродействия</a>, но обязательно оставьте комментарий с объяснением причин.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// хорошо</span>
+<span class="c">/**</span>
+<span class="c"> * этот код медленно работал из-за parseInt</span>
+<span class="c"> * побитовый сдвиг строки для приведения ее к числу</span>
+<span class="c"> * работает значительно быстрее.</span>
+<span class="c"> */</span>
+<span class="k">var</span> val <span class="k">=</span> inputValue <span class="k">&gt;&gt;</span> <span class="c1">0</span>;</pre></div></li>
+<li><p><strong>Примечание:</strong> Будьте осторожны с побитовыми операциями. Числа в JavaScript являются <a rel="nofollow" href="http://es5.github.io/#x4.3.19">64-битными значениями</a>, но побитовые операции всегда возвращают 32-битные значенения. <a rel="nofollow" href="http://es5.github.io/#x11.7">Источник</a>. Побитовые операции над числами, значение которых выходит за 32 бита (верхний предел: 2,147,483,647).</p>
+
+<pre><code>2147483647 &gt;&gt; 0 //=&gt; 2147483647
+2147483648 &gt;&gt; 0 //=&gt; -2147483648
+2147483649 &gt;&gt; 0 //=&gt; -2147483647
+</code></pre></li>
+<li><p>логические типы(Boolean):</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="k">var</span> age <span class="k">=</span> <span class="c1">0</span>;
+
+<span class="c">// плохо</span>
+<span class="k">var</span> hasAge <span class="k">=</span> <span class="k">new</span> <span class="en">Boolean</span>(age);
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> hasAge <span class="k">=</span> <span class="c1">Boolean</span>(age);
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> hasAge <span class="k">=</span> <span class="k">!!</span>age;</pre></div>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="Соглашение-об-именовании" class="anchor" href="#Соглашение-об-именовании" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="naming-conventions">Соглашение об именовании</a></h2>
+
+<ul>
+<li><p>Избегайте однобуквенных имен функций. Имена должны давать представление о том, что делает эта функция.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">function</span> <span class="en">q</span>() {
+  <span class="c">// ...код...</span>
+}
+
+<span class="c">// хорошо</span>
+<span class="k">function</span> <span class="en">query</span>() {
+  <span class="c">// ...код...</span>
+}</pre></div></li>
+<li><p>Используйте camelCase для именования объектов, функций и переменных.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">var</span> OBJEcttsssss <span class="k">=</span> {};
+<span class="k">var</span> this_is_my_object <span class="k">=</span> {};
+<span class="k">function</span> <span class="en">c</span>() {};
+<span class="k">var</span> u <span class="k">=</span> <span class="k">new</span> <span class="en">user</span>({
+  name<span class="k">:</span> <span class="s"><span class="pds">'</span>Bob Parr<span class="pds">'</span></span>
+});
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> thisIsMyObject <span class="k">=</span> {};
+<span class="k">function</span> <span class="en">thisIsMyFunction</span>() {};
+<span class="k">var</span> user <span class="k">=</span> <span class="k">new</span> <span class="en">User</span>({
+  name<span class="k">:</span> <span class="s"><span class="pds">'</span>Bob Parr<span class="pds">'</span></span>
+});</pre></div></li>
+<li><p>Используйте PascalCase для именования конструкторов классов</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">function</span> <span class="en">user</span>(<span class="smi">options</span>) {
+  <span class="v">this</span>.<span class="c1">name</span> <span class="k">=</span> options.<span class="c1">name</span>;
+}
+
+<span class="k">var</span> bad <span class="k">=</span> <span class="k">new</span> <span class="en">user</span>({
+  name<span class="k">:</span> <span class="s"><span class="pds">'</span>Плохиш<span class="pds">'</span></span>
+});
+
+<span class="c">// хорошо</span>
+<span class="k">function</span> <span class="en">User</span>(<span class="smi">options</span>) {
+  <span class="v">this</span>.<span class="c1">name</span> <span class="k">=</span> options.<span class="c1">name</span>;
+}
+
+<span class="k">var</span> good <span class="k">=</span> <span class="k">new</span> <span class="en">User</span>({
+  name<span class="k">:</span> <span class="s"><span class="pds">'</span>Кибальчиш<span class="pds">'</span></span>
+});</pre></div></li>
+<li><p>Используйте подчеркивание <code>_</code> в качестве префикса для именования внутренних методов и переменных объекта.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="v">this</span>.__firstName__ <span class="k">=</span> <span class="s"><span class="pds">'</span>Panda<span class="pds">'</span></span>;
+<span class="v">this</span>.firstName_ <span class="k">=</span> <span class="s"><span class="pds">'</span>Panda<span class="pds">'</span></span>;
+
+<span class="c">// хорошо</span>
+<span class="v">this</span>._firstName <span class="k">=</span> <span class="s"><span class="pds">'</span>Panda<span class="pds">'</span></span>;</pre></div></li>
+<li><p>Создавая ссылку на <code>this</code>, используйте <code>_this</code>.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">function</span>() {
+  <span class="k">var</span> self <span class="k">=</span> <span class="v">this</span>;
+  <span class="k">return</span> <span class="k">function</span>() {
+    <span class="en">console</span><span class="c1">.log</span>(self);
+  };
+}
+
+<span class="c">// плохо</span>
+<span class="k">function</span>() {
+  <span class="k">var</span> that <span class="k">=</span> <span class="v">this</span>;
+  <span class="k">return</span> <span class="k">function</span>() {
+    <span class="en">console</span><span class="c1">.log</span>(that);
+  };
+}
+
+<span class="c">// хорошо</span>
+<span class="k">function</span>() {
+  <span class="k">var</span> _this <span class="k">=</span> <span class="v">this</span>;
+  <span class="k">return</span> <span class="k">function</span>() {
+    <span class="en">console</span><span class="c1">.log</span>(_this);
+  };
+}</pre></div></li>
+<li><p>Задавайте имена для функций. Это повышает читаемость сообщений об ошибках кода.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">var</span> <span class="en">log</span> <span class="k">=</span> <span class="k">function</span>(<span class="smi">msg</span>) {
+  <span class="en">console</span><span class="c1">.log</span>(msg);
+};
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> <span class="en">log</span> <span class="k">=</span> <span class="k">function</span> <span class="en">log</span>(<span class="smi">msg</span>) {
+  <span class="en">console</span><span class="c1">.log</span>(msg);
+};</pre></div>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="Геттеры-и-сеттеры-функции-для-доступа-к-значениям-объекта" class="anchor" href="#Геттеры-и-сеттеры-функции-для-доступа-к-значениям-объекта" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="accessors">Геттеры и сеттеры: функции для доступа к значениям объекта</a></h2>
+
+<ul>
+<li>Функции универсального доступа к свойствам не требуются</li>
+<li><p>Если вам необходимо создать функцию для доступа к переменной, используйте раздельные функции getVal() и setVal('hello')</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+dragon.age();
+
+<span class="c">// хорошо</span>
+dragon.getAge();
+
+<span class="c">// плохо</span>
+dragon.age(<span class="c1">25</span>);
+
+<span class="c">// хорошо</span>
+dragon.setAge(<span class="c1">25</span>);</pre></div></li>
+<li><p>Если свойство является логическим(boolean), используйте isVal() или hasVal()</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">if</span> (<span class="k">!</span>dragon.age()) {
+  <span class="k">return</span> <span class="c1">false</span>;
+}
+
+<span class="c">// хорошо</span>
+<span class="k">if</span> (<span class="k">!</span>dragon.hasAge()) {
+  <span class="k">return</span> <span class="c1">false</span>;
+}</pre></div></li>
+<li><p>Вы можете создавать функции get() и set(), но будьте логичны и последовательны – то есть не добавляйте свойства, которые не могут быть изменены через эти функции.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="k">function</span> <span class="en">Jedi</span>(<span class="smi">options</span>) {
+  options <span class="k">||</span> (options <span class="k">=</span> {});
+  <span class="k">var</span> lightsaber <span class="k">=</span> options.lightsaber <span class="k">||</span> <span class="s"><span class="pds">'</span>blue<span class="pds">'</span></span>;
+  <span class="v">this</span>.set(<span class="s"><span class="pds">'</span>lightsaber<span class="pds">'</span></span>, lightsaber);
+}
+
+<span class="c1">Jedi</span>.<span class="c1">prototype</span>.<span class="en">set</span> <span class="k">=</span> <span class="k">function</span>(<span class="smi">key</span>, <span class="smi">val</span>) {
+  <span class="v">this</span>[key] <span class="k">=</span> val;
+};
+
+<span class="c1">Jedi</span>.<span class="c1">prototype</span>.<span class="en">get</span> <span class="k">=</span> <span class="k">function</span>(<span class="smi">key</span>) {
+  <span class="k">return</span> <span class="v">this</span>[key];
+};</pre></div>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="Конструкторы" class="anchor" href="#Конструкторы" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="constructors">Конструкторы</a></h2>
+
+<ul>
+<li><p>Присваивайте метод прототипу вместо замены прототипа на другой объект. Замена прототипа на другой объект делает наследование невозможным.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="k">function</span> <span class="en">Jedi</span>() {
+  <span class="en">console</span><span class="c1">.log</span>(<span class="s"><span class="pds">'</span>new jedi<span class="pds">'</span></span>);
+}
+
+<span class="c">// плохо</span>
+<span class="c1">Jedi</span>.<span class="c1">prototype</span> <span class="k">=</span> {
+  <span class="en">fight</span><span class="k">:</span> <span class="k">function</span> <span class="en">fight</span>() {
+    <span class="en">console</span><span class="c1">.log</span>(<span class="s"><span class="pds">'</span>fighting<span class="pds">'</span></span>);
+  },
+
+  <span class="en">block</span><span class="k">:</span> <span class="k">function</span> <span class="en">block</span>() {
+    <span class="en">console</span><span class="c1">.log</span>(<span class="s"><span class="pds">'</span>blocking<span class="pds">'</span></span>);
+  }
+};
+
+<span class="c">// хорошо</span>
+<span class="c1">Jedi</span>.<span class="c1">prototype</span>.<span class="en">fight</span> <span class="k">=</span> <span class="k">function</span> <span class="en">fight</span>() {
+  <span class="en">console</span><span class="c1">.log</span>(<span class="s"><span class="pds">'</span>fighting<span class="pds">'</span></span>);
+};
+
+<span class="c1">Jedi</span>.<span class="c1">prototype</span>.<span class="en">block</span> <span class="k">=</span> <span class="k">function</span> <span class="en">block</span>() {
+  <span class="en">console</span><span class="c1">.log</span>(<span class="s"><span class="pds">'</span>blocking<span class="pds">'</span></span>);
+};</pre></div></li>
+<li><p>Методы могут возвращать <code>this</code> для создания цепочек вызовов. Но стоит оставаться последовательным и обеспечить одинаковое поведение для всех методов, кроме геттеров.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="c1">Jedi</span>.<span class="c1">prototype</span>.<span class="en">jump</span> <span class="k">=</span> <span class="k">function</span>() {
+  <span class="v">this</span>.jumping <span class="k">=</span> <span class="c1">true</span>;
+  <span class="k">return</span> <span class="c1">true</span>;
+};
+
+<span class="c1">Jedi</span>.<span class="c1">prototype</span>.<span class="en">setHeight</span> <span class="k">=</span> <span class="k">function</span>(<span class="smi">height</span>) {
+  <span class="v">this</span>.<span class="c1">height</span> <span class="k">=</span> height;
+};
+
+<span class="k">var</span> luke <span class="k">=</span> <span class="k">new</span> <span class="en">Jedi</span>();
+luke.jump(); <span class="c">// =&gt; true</span>
+luke.setHeight(<span class="c1">20</span>) <span class="c">// =&gt; undefined</span>
+
+<span class="c">// хорошо</span>
+<span class="c1">Jedi</span>.<span class="c1">prototype</span>.<span class="en">jump</span> <span class="k">=</span> <span class="k">function</span>() {
+  <span class="v">this</span>.jumping <span class="k">=</span> <span class="c1">true</span>;
+  <span class="k">return</span> <span class="v">this</span>;
+};
+
+<span class="c1">Jedi</span>.<span class="c1">prototype</span>.<span class="en">setHeight</span> <span class="k">=</span> <span class="k">function</span>(<span class="smi">height</span>) {
+  <span class="v">this</span>.<span class="c1">height</span> <span class="k">=</span> height;
+  <span class="k">return</span> <span class="v">this</span>;
+};
+
+<span class="k">var</span> luke <span class="k">=</span> <span class="k">new</span> <span class="en">Jedi</span>();
+
+luke.jump()
+  .setHeight(<span class="c1">20</span>);</pre></div></li>
+<li><p>Вы можете заменить стандартный метод toString(), но убедитесь, что он работает и не вызывает побочных эффектов.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="k">function</span> <span class="en">Jedi</span>(<span class="smi">options</span>) {
+  options <span class="k">||</span> (options <span class="k">=</span> {});
+  <span class="v">this</span>.<span class="c1">name</span> <span class="k">=</span> options.<span class="c1">name</span> <span class="k">||</span> <span class="s"><span class="pds">'</span>no name<span class="pds">'</span></span>;
+}
+
+<span class="c1">Jedi</span>.<span class="c1">prototype</span>.<span class="en">getName</span> <span class="k">=</span> <span class="k">function</span> <span class="en">getName</span>() {
+  <span class="k">return</span> <span class="v">this</span>.<span class="c1">name</span>;
+};
+
+<span class="c1">Jedi</span>.<span class="c1">prototype</span>.<span class="en">toString</span> <span class="k">=</span> <span class="k">function</span> <span class="en">toString</span>() {
+  <span class="k">return</span> <span class="s"><span class="pds">'</span>Jedi - <span class="pds">'</span></span> <span class="k">+</span> <span class="v">this</span>.getName();
+};</pre></div>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="События" class="anchor" href="#События" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="events">События</a></h2>
+
+<ul>
+<li><p>Подключая набор данных к событиям (как DOM-событиям, так и js-событиям, например, в Backbone), передавайте объект вместо простой переменной. Это позволяет в процессе всплытия событий добавлять к данному объекту дополнительную информацию.</p>
+
+<div class="highlight highlight-js"><pre><span class="c">// плохо</span>
+$(<span class="v">this</span>).trigger(<span class="s"><span class="pds">'</span>listingUpdated<span class="pds">'</span></span>, listing.<span class="c1">id</span>);
+
+...
+
+$(<span class="v">this</span>).on(<span class="s"><span class="pds">'</span>listingUpdated<span class="pds">'</span></span>, <span class="k">function</span>(<span class="smi">e</span>, <span class="smi">listing</span>) {
+     <span class="c">//делаем что-нибудь с listing, например:</span>
+     listing.<span class="c1">name</span> <span class="k">=</span> listings[listing.<span class="c1">id</span>]
+});</pre></div>
+
+<p>prefer:</p>
+
+<div class="highlight highlight-js"><pre><span class="c">// хорошо</span>
+$(<span class="v">this</span>).trigger(<span class="s"><span class="pds">'</span>listingUpdated<span class="pds">'</span></span>, { listingId <span class="k">:</span> listing.<span class="c1">id</span> });
+
+...
+
+$(<span class="v">this</span>).on(<span class="s"><span class="pds">'</span>listingUpdated<span class="pds">'</span></span>, <span class="k">function</span>(<span class="smi">e</span>, <span class="smi">data</span>) {
+  <span class="c">// делаем что-нибудь с data.listingId</span>
+});</pre></div>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="Модули" class="anchor" href="#Модули" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="modules">Модули</a></h2>
+
+<ul>
+<li>Модуль должен начинаться с <code>!</code>. За счет этого даже некорректно сформированный модуль, в конце которого отсутствует точка с запятой, не вызовет ошибок при автоматической сборке скриптов. <a rel="nofollow" href="https://github.com/airbnb/javascript/issues/44#issuecomment-13063933">Объяснение</a></li>
+<li>Файл должен быть именован с camelCase, находиться в папке с тем же именем, и совпадать с именем экспортируемой переменной.</li>
+<li>Добавьте метод noConflict(), устанавливающий экспортируемый модуль в состояние предыдущей версии.</li>
+<li><p>Всегда объявляйте <code>'use strict';</code> в начале модуля.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// fancyInput/fancyInput.js</span>
+
+<span class="k">!</span><span class="k">function</span>(<span class="smi">global</span>) {
+  <span class="s"><span class="pds">'</span>use strict<span class="pds">'</span></span>;
+
+  <span class="k">var</span> previousFancyInput <span class="k">=</span> <span class="c1">global</span>.FancyInput;
+
+  <span class="k">function</span> <span class="en">FancyInput</span>(<span class="smi">options</span>) {
+    <span class="v">this</span>.<span class="c1">options</span> <span class="k">=</span> options <span class="k">||</span> {};
+  }
+
+  <span class="c1">FancyInput</span>.<span class="en">noConflict</span> <span class="k">=</span> <span class="k">function</span> <span class="en">noConflict</span>() {
+    <span class="c1">global</span>.FancyInput <span class="k">=</span> previousFancyInput;
+    <span class="k">return</span> FancyInput;
+  };
+
+  <span class="c1">global</span>.FancyInput <span class="k">=</span> FancyInput;
+}(<span class="v">this</span>);</pre></div>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="jquery" class="anchor" href="#jquery" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="jquery">jQuery</a></h2>
+
+<ul>
+<li><p>Для jQuery-переменных используйте префикс <code>$</code>.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">var</span> sidebar <span class="k">=</span> $(<span class="s"><span class="pds">'</span>.sidebar<span class="pds">'</span></span>);
+
+<span class="c">// хорошо</span>
+<span class="k">var</span> $sidebar <span class="k">=</span> $(<span class="s"><span class="pds">'</span>.sidebar<span class="pds">'</span></span>);</pre></div></li>
+<li><p>Кэшируйте jQuery-запросы. Каждый новый jQuery-запрос делает повторный поиск по DOM-дереву, и приложение начинает работать медленнее.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+<span class="k">function</span> <span class="en">setSidebar</span>() {
+  $(<span class="s"><span class="pds">'</span>.sidebar<span class="pds">'</span></span>).hide();
+
+  <span class="c">// ...код...</span>
+
+  $(<span class="s"><span class="pds">'</span>.sidebar<span class="pds">'</span></span>).css({
+    <span class="s"><span class="pds">'</span>background-color<span class="pds">'</span></span><span class="k">:</span> <span class="s"><span class="pds">'</span>pink<span class="pds">'</span></span>
+  });
+}
+
+<span class="c">// хорошо</span>
+<span class="k">function</span> <span class="en">setSidebar</span>() {
+  <span class="k">var</span> $sidebar <span class="k">=</span> $(<span class="s"><span class="pds">'</span>.sidebar<span class="pds">'</span></span>);
+  $sidebar.hide();
+
+  <span class="c">// ...код...</span>
+
+  $sidebar.css({
+    <span class="s"><span class="pds">'</span>background-color<span class="pds">'</span></span><span class="k">:</span> <span class="s"><span class="pds">'</span>pink<span class="pds">'</span></span>
+  });
+}</pre></div></li>
+<li><p>Для DOM-запросов используйте классический каскадный CSS-синтаксис <code>$('.sidebar ul')</code> или родитель &gt; потомок <code>$('.sidebar &gt; ul')</code>. <a rel="nofollow" href="https://jsperf.com/jquery-find-vs-context-sel/16">jsPerf</a></p></li>
+<li><p>Используйте <code>find</code> для поиска внутри DOM-объекта.</p>
+
+<div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
+$(<span class="s"><span class="pds">'</span>ul<span class="pds">'</span></span>, <span class="s"><span class="pds">'</span>.sidebar<span class="pds">'</span></span>).hide();
+
+<span class="c">// плохо</span>
+$(<span class="s"><span class="pds">'</span>.sidebar<span class="pds">'</span></span>).<span class="c1">find</span>(<span class="s"><span class="pds">'</span>ul<span class="pds">'</span></span>).hide();
+
+<span class="c">// хорошо</span>
+$(<span class="s"><span class="pds">'</span>.sidebar ul<span class="pds">'</span></span>).hide();
+
+<span class="c">// хорошо</span>
+$(<span class="s"><span class="pds">'</span>.sidebar &gt; ul<span class="pds">'</span></span>).hide();
+
+<span class="c">// хорошо</span>
+$sidebar.<span class="c1">find</span>(<span class="s"><span class="pds">'</span>ul<span class="pds">'</span></span>);</pre></div>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="Совместимость-ecmascript-5" class="anchor" href="#Совместимость-ecmascript-5" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="es5">Совместимость ECMAScript 5</a></h2>
+
+<ul>
+<li><p>Опирайтесь на <a rel="nofollow" href="http://kangax.github.com/es5-compat-table/">таблицу совместимости</a> с ES5 от <a rel="nofollow" href="https://twitter.com/kangax/">Kangax</a></p>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="Тестирование" class="anchor" href="#Тестирование" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="testing">Тестирование</a></h2>
+
+<ul>
+<li><p><strong>Да.</strong></p>
+
+<div class="highlight highlighter-rouge"><pre><span class="k">function</span>() {
+  <span class="k">return</span> <span class="c1">true</span>;
+}</pre></div>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="Быстродействие" class="anchor" href="#Быстродействие" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="performance">Быстродействие</a></h2>
+
+<ul>
+<li><a rel="nofollow" href="http://kellegous.com/j/2013/01/26/layout-performance/">On Layout &amp; Web Performance</a></li>
+<li><a rel="nofollow" href="https://jsperf.com/string-vs-array-concat/2">String vs Array Concat</a></li>
+<li><a rel="nofollow" href="https://jsperf.com/try-catch-in-loop-cost">Try/Catch Cost In a Loop</a></li>
+<li><a rel="nofollow" href="https://jsperf.com/bang-function">Bang Function</a></li>
+<li><a rel="nofollow" href="https://jsperf.com/jquery-find-vs-context-sel/13">jQuery Find vs Context, Selector</a></li>
+<li><a rel="nofollow" href="https://jsperf.com/innerhtml-vs-textcontent-for-script-text">innerHTML vs textContent for script text</a></li>
+<li><a rel="nofollow" href="https://jsperf.com/ya-string-concat">Long String Concatenation</a></li>
+<li><p>В процессе наполнения...</p>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="Ресурсы" class="anchor" href="#Ресурсы" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="resources">Ресурсы</a></h2>
+
+<p><strong>Прочитайте это</strong></p>
+
+<ul>
+<li><a rel="nofollow" href="http://es5.github.io/">Annotated ECMAScript 5.1</a></li>
+</ul>
+
+<p><strong>Другие руководства по стилю</strong></p>
+
+<ul>
+<li><a rel="nofollow" href="https://google.github.io/styleguide/javascriptguide.xml">Google JavaScript Style Guide</a></li>
+<li><a rel="nofollow" href="http://docs.jquery.com/JQuery_Core_Style_Guidelines">jQuery Core Style Guidelines</a></li>
+<li><a rel="nofollow" href="https://github.com/rwldrn/idiomatic.js/">Principles of Writing Consistent, Idiomatic JavaScript</a></li>
+</ul>
+
+<p><strong>Другие стили</strong></p>
+
+<ul>
+<li><a rel="nofollow" href="http://gist.github.com/4135065">Naming this in nested functions</a> - Christian Johansen</li>
+<li><a rel="nofollow" href="https://github.com/airbnb/javascript/issues/52">Conditional Callbacks</a></li>
+<li><a rel="nofollow" href="http://sideeffect.kr/popularconvention/#javascript">Popular JavaScript Coding Conventions on Github</a></li>
+</ul>
+
+<p><strong>Дальнейшее прочтение</strong></p>
+
+<ul>
+<li><a rel="nofollow" href="https://javascriptweblog.wordpress.com/2010/10/25/understanding-javascript-closures/">Understanding JavaScript Closures</a> - Angus Croll</li>
+<li><a rel="nofollow" href="http://www.2ality.com/2013/06/basic-javascript.html">Basic JavaScript for the impatient programmer</a> - Dr. Axel Rauschmayer</li>
+</ul>
+
+<p><strong>Книги</strong></p>
+
+<ul>
+<li><a rel="nofollow" href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742">JavaScript: The Good Parts</a> - Douglas Crockford</li>
+<li><a rel="nofollow" href="http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752">JavaScript Patterns</a> - Stoyan Stefanov</li>
+<li><a rel="nofollow" href="http://www.amazon.com/JavaScript-Design-Patterns-Recipes-Problem-Solution/dp/159059908X">Pro JavaScript Design Patterns</a>  - Ross Harmes and Dustin Diaz</li>
+<li><a rel="nofollow" href="http://www.amazon.com/High-Performance-Web-Sites-Essential/dp/0596529309">High Performance Web Sites: Essential Knowledge for Front-End Engineers</a> - Steve Souders</li>
+<li><a rel="nofollow" href="http://www.amazon.com/Maintainable-JavaScript-Nicholas-C-Zakas/dp/1449327680">Maintainable JavaScript</a> - Nicholas C. Zakas</li>
+<li><a rel="nofollow" href="http://www.amazon.com/JavaScript-Web-Applications-Alex-MacCaw/dp/144930351X">JavaScript Web Applications</a> - Alex MacCaw</li>
+<li><a rel="nofollow" href="http://www.amazon.com/Pro-JavaScript-Techniques-John-Resig/dp/1590597273">Pro JavaScript Techniques</a> - John Resig</li>
+<li><a rel="nofollow" href="http://www.amazon.com/Smashing-Node-js-JavaScript-Everywhere-Magazine/dp/1119962595">Smashing Node.js: JavaScript Everywhere</a> - Guillermo Rauch</li>
+<li><a rel="nofollow" href="http://www.amazon.com/Secrets-JavaScript-Ninja-John-Resig/dp/193398869X">Secrets of the JavaScript Ninja</a> - John Resig and Bear Bibeault</li>
+<li><a rel="nofollow" href="http://humanjavascript.com/">Human JavaScript</a> - Henrik Joreteg</li>
+<li><a rel="nofollow" href="http://superherojs.com/">Superhero.js</a> - Kim Joar Bekkelund, Mads Mobæk, &amp; Olav Bjorkoy</li>
+<li><a rel="nofollow" href="http://jsbooks.revolunet.com/">JSBooks</a></li>
+</ul>
+
+<p><strong>Блоги</strong></p>
+
+<ul>
+<li><a rel="nofollow" href="http://dailyjs.com/">DailyJS</a></li>
+<li><a rel="nofollow" href="http://javascriptweekly.com/">JavaScript Weekly</a></li>
+<li><a rel="nofollow" href="https://javascriptweblog.wordpress.com/">JavaScript, JavaScript...</a></li>
+<li><a rel="nofollow" href="http://weblog.bocoup.com/">Bocoup Weblog</a></li>
+<li><a rel="nofollow" href="http://www.adequatelygood.com/">Adequately Good</a></li>
+<li><a rel="nofollow" href="https://www.nczonline.net/">NCZOnline</a></li>
+<li><a rel="nofollow" href="http://perfectionkills.com/">Perfection Kills</a></li>
+<li><a rel="nofollow" href="http://benalman.com/">Ben Alman</a></li>
+<li><a rel="nofollow" href="http://dmitry.baranovskiy.com/">Dmitry Baranovskiy</a></li>
+<li><a rel="nofollow" href="http://dustindiaz.com/">Dustin Diaz</a></li>
+<li><p><a rel="nofollow" href="http://net.tutsplus.com/?s=javascript">nettuts</a></p>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+</ul>
+
+<h2><a id="В-реальном-мире" class="anchor" href="#В-реальном-мире" aria-hidden="true"><span class="octicon octicon-link"></span></a><a id="in-the-wild">В реальном мире</a></h2>
+
+<p>Вот неполный список организаций, которые опираются на оригинальное руководство от AirBnB. Если вы собираетесь использовать это переведенное руководство, сделайте pull request, и мы сможем начать отдельный список компаний, использующих данный перевод.</p>
+
+<ul>
+<li><strong>Aan Zee</strong>: <a rel="nofollow" href="https://github.com/AanZee/javascript">AanZee/javascript</a></li>
+<li><strong>Airbnb</strong>: <a rel="nofollow" href="https://github.com/airbnb/javascript">airbnb/javascript</a></li>
+<li><strong>Compass Learning</strong>: <a rel="nofollow" href="https://github.com/compasslearning/javascript-style-guide">compasslearning/javascript-style-guide</a></li>
+<li><strong>ExactTarget</strong>: <a rel="nofollow" href="https://github.com/ExactTarget/javascript">ExactTarget/javascript</a></li>
+<li><strong>Gawker Media</strong>: <a rel="nofollow" href="https://github.com/gawkermedia/javascript">gawkermedia/javascript</a></li>
+<li><strong>GeneralElectric</strong>: <a rel="nofollow" href="https://github.com/GeneralElectric/javascript">GeneralElectric/javascript</a></li>
+<li><strong>GoodData</strong>: <a rel="nofollow" href="https://github.com/gooddata/gdc-js-style">gooddata/gdc-js-style</a></li>
+<li><strong>Grooveshark</strong>: <a rel="nofollow" href="https://github.com/grooveshark/javascript">grooveshark/javascript</a></li>
+<li><strong>How About We</strong>: <a rel="nofollow" href="https://github.com/howaboutwe/javascript">howaboutwe/javascript</a></li>
+<li><strong>Mighty Spring</strong>: <a rel="nofollow" href="https://github.com/mightyspring/javascript">mightyspring/javascript</a></li>
+<li><strong>MinnPost</strong>: <a rel="nofollow" href="https://github.com/MinnPost/javascript">MinnPost/javascript</a></li>
+<li><strong>ModCloth</strong>: <a rel="nofollow" href="https://github.com/modcloth/javascript">modcloth/javascript</a></li>
+<li><strong>National Geographic</strong>: <a rel="nofollow" href="https://github.com/natgeo/javascript">natgeo/javascript</a></li>
+<li><strong>Razorfish</strong>: <a rel="nofollow" href="https://github.com/razorfish/javascript-style-guide">razorfish/javascript-style-guide</a></li>
+<li><strong>Shutterfly</strong>: <a rel="nofollow" href="https://github.com/shutterfly/javascript">shutterfly/javascript</a></li>
+<li><strong>Zillow</strong>: <a rel="nofollow" href="https://github.com/zillow/javascript">zillow/javascript</a></li>
+<li><strong>ZocDoc</strong>: <a rel="nofollow" href="https://github.com/ZocDoc/javascript">ZocDoc/javascript</a></li>
+</ul>
+
+<p><strong><a href="#Оглавление">[⬆]</a></strong></p>

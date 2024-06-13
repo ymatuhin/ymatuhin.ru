@@ -1,5 +1,35 @@
 ---
 import DefaultLayout from "../layouts/default.astro";
+import { getCollection, getEntry } from "astro:content";
+
+const allBlogPosts = await getCollection("blog");
+console.info(`🔥 allBlogPosts (index.astro)`, allBlogPosts);
 ---
 
-<DefaultLayout title="Юрий Матюхин, фронтенд разработчик">&nbsp;</DefaultLayout>
+<DefaultLayout title="Юрий Матюхин, фронтенд разработчик">
+  <main class="main">
+    <div class="articles-header">
+      <div class="articles-header__left">Последние статьи (6)</div>
+      <a class="articles-header__right" href="#"> Все статьи <span>↗</span></a>
+    </div>
+    <div class="articles"></div>
+  </main>
+</DefaultLayout>
+
+<style lang="scss">
+  .main {
+    margin-top: calc(5rem + 5vh);
+    margin-bottom: calc(5rem + 5vh);
+  }
+
+  .articles-header {
+    display: flex;
+    justify-content: space-between;
+
+    &__right {
+      // text-decoration: underline;
+      // text-underline-offset: 4px;
+      // text-decoration-thickness: 1.5px;
+    }
+  }
+</style>

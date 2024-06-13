@@ -4,22 +4,19 @@
 
 html {
   margin: $page-space;
+  color-scheme: dark;
+  font-family: "Ubuntu";
 }
 
 body {
   max-width: 1420px;
   margin-left: auto;
   margin-right: auto;
-}
-
-:root {
-  --color-bg: #{$color-white};
-  --color-text: #{$color-dark-gray};
-  --color-header: #{$color-black};
-  --color-border: #{$color-light-gray};
+  background: $color-background;
+  color: $color-text;
 }
 
 a {
-  color: var(--color-header);
+  color: $color-heading;
   text-decoration: none;
 }
