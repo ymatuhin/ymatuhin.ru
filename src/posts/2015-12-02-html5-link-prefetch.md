@@ -12,7 +12,7 @@ image:
   height: 564
 ---
 
-{% comment %} include media-post-image.html {% endcomment %} %}
+{% include "media-post-image.html" %}
 
 Сегодня мы рассмотрим «HTML5 Link Prefetch», а именно dns-prefetch, prefetch, preconnect, subresource, prerender и еще неработающий preload. HTML5 Link Prefetch уменьшит время загрузки для ресурсов, которые нам понадобятся позже.
 

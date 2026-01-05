@@ -12,7 +12,7 @@ image:
   caption: Горизонтальное выравнивание в CSS
 ---
 
-{% comment %} include media-post-image.html {% endcomment %} %}
+{% include "media-post-image.html" %}
 
 Вчера, на работе, я пытался выровнять блочный элемент по правому краю. Такая задача встречается не часто, но даже когда она встречается, я использую `inline-block` или `float`, но можно обойтись без них.
 

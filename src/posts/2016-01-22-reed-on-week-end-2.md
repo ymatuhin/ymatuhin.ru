@@ -11,7 +11,7 @@ image:
   caption: Размеры изображений при шаринге в социальных сетях
 ---
 
-{% comment %} include media-post-image.html {% endcomment %} %}
+{% include "media-post-image.html" %}
 
 ## Статьи и видео
 

@@ -15,7 +15,7 @@ image:
 
 Clearfix — вспомогательный класс в css, с помощью которого мы исправляем схлопывающиеся размеры контейнера у плавающих элементов.
 
-{% comment %} include media-post-image.html {% endcomment %} %}
+{% include "media-post-image.html" %}
 
 
 

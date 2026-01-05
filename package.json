@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Hi, it's my Jekyll powered website — <a href=\"https://ymatuhin.ru\">ymatuhin.ru</a>",
   "scripts": {
-    "start": "eleventy --serve",
+    "start": "rm -rf _site && eleventy --serve",
     "build": "rm -rf _site && eleventy",
     "debug": "DEBUG=Eleventy* eleventy"
   },

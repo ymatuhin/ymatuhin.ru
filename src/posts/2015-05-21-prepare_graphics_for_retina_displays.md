@@ -15,13 +15,7 @@ tags: >
 
 ## Photoshop плагин Retinize It
 
-{% comment %} {%
-	include media-image.html
-	url="retina/retinizeit.png"
-	width="520"
-	height="340"
-	caption="Retinize It — плагин для фотошопа для оптимизации графики под ретина"
-%} {% endcomment %}
+{% include "media-image.html", url: "retina/retinizeit.png", width: "520", height: "340", caption: "Retinize It — плагин для фотошопа для оптимизации графики под ретина" %}
 
 Как написано на официальном сайте: «Лучший плагин к Photoshop для оптимизации графики на сайте для iOS и Retina-дисплеев». Скачать его можно на [странице проекта][1].
 
@@ -33,13 +27,7 @@ tags: >
 * Назовите ваши файлы
 * Получите ваши нарезанные изображения
 
-{% comment %} {%
-	include media-image.html
-	url="retina/install.png"
-	width="940"
-	height="220"
-	caption="Как работает плагин Retinize It"
-%} {% endcomment %}
+{% include "media-image.html", url: "retina/install.png", width: "940", height: "220", caption: "Как работает плагин Retinize It" %}
 
 Для дальнейшего использования рекомендую сохранять файлы с постфиксами @2x, @3x. К примеру: `file.png`, `file@2x.png`, `file@3x.png`.
 

@@ -11,7 +11,7 @@ image:
   height: 159
 ---
 
-{% comment %} include media-post-image.html {% endcomment %} %}
+{% include "media-post-image.html" %}
 
 При появлении диалога, по умолчанию у нас нет возможности переключить фокус на другую кнопку с помощью клавиатуры, только мышкой или трекпадом. Но это поведение легко исправить.
 
@@ -19,23 +19,11 @@ image:
 
 Нужно только в настройках (System Preferences —> Keyboard & Mouse —> Keyboard Shortcuts) указать внизу пункт «__All controls__».
 
-{% comment %} {%
-	include media-image.html
-	url="mac/preferences.png"
-	caption="Mac OS окно настроек клавиатуры"
-	width="668"
-	height="581"
-%} {% endcomment %}
+{% include "media-image.html", url: "mac/preferences.png", caption: "Mac OS окно настроек клавиатуры", width: "668", height: "581" %}
 
 Теперь, чтобы переключить фокус между кнопками, нажмите `tab` или `shift + tab`, а чтобы выбрать нужный пункт нажмите пробел.
 
-{% comment %} {%
-	include media-image.html
-	url="mac/dialog.gif"
-	caption="Mac OS — смена расширения файла через клавиатуру"
-	width="453"
-	height="181"
-%} {% endcomment %}
+{% include "media-image.html", url: "mac/dialog.gif", caption: "Mac OS — смена расширения файла через клавиатуру", width: "453", height: "181" %}
 
 Я пользуюсь маком уже полтора года, и только сегодня узнал как изменить это поведение. Удивляюсь только почему разработчики не включили эту настройку по умолчанию.
 

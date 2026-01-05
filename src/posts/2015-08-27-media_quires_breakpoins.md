@@ -13,7 +13,7 @@ image:
   alt: Контрольные точки медиа выражений Twitter Bootstrap
 ---
 
-{% comment %} include media-post-image.html {% endcomment %} %}
+{% include "media-post-image.html" %}
 
 Twitter Bootstrap &mdash; самый популярный CSS фреймворк. У него более 85 495 звезд и 35 055 форков на <a href="https://github.com/twbs/bootstrap" rel="nofollow">GitHub</a>. А 19 августа вышла <a href="http://blog.getbootstrap.com/2015/08/19/bootstrap-4-alpha/" rel="nofollow">4 альфа версия</a>, в которой разработчики используют `rem` для адаптивной верстки. Но не в медиа выражениях, которые остаются такими-же как и были.
 

@@ -11,7 +11,7 @@ image:
     caption: Альтернативная версия иконки для VS Code, автор <a href='https://dribbble.com/shots/2436746-Visual-Studio-Code-replacement-icon'>James Gilyead</a>
 ---
 
-{% comment %} include media-post-image.html {% endcomment %} %}
+{% include "media-post-image.html" %}
 
 Уже 2 недели я использую [Visual Studio Code](https://code.visualstudio.com/) для работы. Он пришел на замену, моему любимому, атому. В этой статье я расскажу почему так произошло и поделюсь впечатлениями.
 

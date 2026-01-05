@@ -13,7 +13,7 @@ image:
   alt: Логотип SVG
 ---
 
-{% comment %} include media-post-image.html {% endcomment %} %}
+{% include "media-post-image.html" %}
 
 Раньше я не использовал SVG, поскольку рабочие проекты были с поддержкой Internet Explorer 6/7. Да и не требовалось поддержки ретины. Но сейчас, спустя время, настало время использовать SVG на полную.
 

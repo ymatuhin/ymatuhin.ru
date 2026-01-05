@@ -1,7 +1,19 @@
 {% if categories.first %}
-    {% if categories.first == 'blog' %}Блог{% endif %}
-    {% if categories.first == 'front-end' %}Фронтенд{% endif %}
-    {% if categories.first == 'tools' %}Инструменты{% endif %}
+    {% assign cats = categories %}
 {% else %}
-    {{ categories }}
+    {% assign cats = categories | split: "," %}
 {% endif %}
+
+{% for category in cats %}
+    {% assign category_trimmed = category | strip %}
+    <a href="/{{ category_trimmed }}/">
+        {% if category_trimmed == 'blog' %}Блог{% endif %}
+        {% if category_trimmed == 'front-end' %}Фронтенд{% endif %}
+        {% if category_trimmed == 'tools' %}Инструменты{% endif %}
+        {% if category_trimmed == 'books' %}Книги{% endif %}
+        {% unless category_trimmed == 'blog' or category_trimmed == 'front-end' or category_trimmed == 'tools' or category_trimmed == 'books' %}
+            {{ category_trimmed }}
+        {% endunless %}
+    </a>
+    {% unless forloop.last %}, {% endunless %}
+{% endfor %}

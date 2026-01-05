@@ -13,7 +13,7 @@ image:
   alt: San Francisco
 ---
 
-{% comment %} include media-post-image.html {% endcomment %} %}
+{% include "media-post-image.html" %}
 
 Вместе с выпуском Apple Watch, компания представила новый шрифт <em>San Francisco</em>, который теперь будет использоваться во всей экосистеме Apple. Уже сейчас можно посмотреть на этот шрифт в публичных бетах <a href="/blog/review_ios9_and_osx_el_capitan/">OSX и El Capitan</a>.
 
@@ -29,13 +29,7 @@ body {
 
 К сожалению, в свежих версиях El Capitan шрифт San Francisco не установлен. Однако это же системный шрифт, как такое возможно?
 
-{% comment %} {%
-	include media-image.html
-	url="san_francisco/all_fonts.png"
-	width="766"
-	height="468"
-	caption="Ищем шрифт San Francisco в El Capitan"
-%} {% endcomment %}
+{% include "media-image.html", url: "san_francisco/all_fonts.png", width: "766", height: "468", caption: "Ищем шрифт San Francisco в El Capitan" %}
 
 Apple сделал свой новый шрифт приватным в системе, но это не значит что мы не можем до него добраться 😉
 

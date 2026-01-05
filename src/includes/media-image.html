@@ -1,13 +1,13 @@
-{% if include.url %}
+{% if url %}
 <figure>
-	<img src="{{ include.url | prepend: '/assets/img/' }}"
-		alt="{% if include.alt %}{{ include.alt | xml_escape }}{% else %}{{ include.caption | xml_escape }}{% endif %}"
-		{% if include.width %}width="{{ include.width }}"{% endif %}
-		{% if include.height %}height="{{ include.height }}"{% endif %}
-		{% if include.pixelart %}class="pixel-art"{% endif %}>
+	<img src="{{ url | prepend: '/assets/img/' }}"
+		alt="{% if alt %}{{ alt | xml_escape }}{% else %}{{ caption | xml_escape }}{% endif %}"
+		{% if width %}width="{{ width }}"{% endif %}
+		{% if height %}height="{{ height }}"{% endif %}
+		{% if pixelart %}class="pixel-art"{% endif %}>
 
-	{% if include.caption %}
-		<figcaption>{{ include.caption }}</figcaption>
+	{% if caption %}
+		<figcaption>{{ caption }}</figcaption>
 	{% endif %}
 </figure>
 {% endif %}

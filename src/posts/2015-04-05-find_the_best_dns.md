@@ -22,35 +22,17 @@ description: >
 
 После того как программа скачалась, запустите её. В настройках менять, на сколько я знаю, практически ничего не нужно. Могу только порекомендовать поставить параметр `Health Check Perfomance` на `Slow` если у вас нестабильная сеть.
 
-{% comment %} {%
-	include media-image.html
-	url="find_the_best_dns/programm.png"
-	width="599"
-	height="393"
-	caption="Namebench — программа для поиска быстрого DNS сервера"
-%} {% endcomment %}
+{% include "media-image.html", url: "find_the_best_dns/programm.png", width: "599", height: "393", caption: "Namebench — программа для поиска быстрого DNS сервера" %}
 
 Теперь остается только нажать на `Start`. Хочу предупредить что проверка может занять весьма длительное время (порядка 3-4 часов), а результат — бесполезным (может оказаться что у вас и так самый быстрый DNS).
 
 После окончания проверки в браузере откроется окно с результатами.
 
-{% comment %} {%
-	include media-image.html
-	url="find_the_best_dns/rezults.png"
-	width="1029"
-	height="605"
-	caption="Результаты поиска"
-%} {% endcomment %}
+{% include "media-image.html", url: "find_the_best_dns/rezults.png", width: "1029", height: "605", caption: "Результаты поиска" %}
 
 В моем скриншоте мне не нужно ничего менять в настройках. Но вам могут порекомендовать изменить ваши настройки DNS. На скриншоте ниже в правом верхнем углу написаны рекомендованные настройки в порядке скорости.
 
-{% comment %} {%
-	include media-image.html
-	url="find_the_best_dns/rezults2.jpg"
-	width="747"
-	height="442"
-	caption="Результаты поиска #2"
-%} {% endcomment %}
+{% include "media-image.html", url: "find_the_best_dns/rezults2.jpg", width: "747", height: "442", caption: "Результаты поиска #2" %}
 
 Теперь вам нужно будет указать эти настройки в своей операционной системе. Как это сделать вы можете <a href="https://www.google.ru/search?newwindow=1&safe=off&hl=en-RU&q=как+вручную+указать+dns+серверы">найти в гугле</a>.
 

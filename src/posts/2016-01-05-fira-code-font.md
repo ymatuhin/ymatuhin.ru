@@ -12,7 +12,7 @@ image:
   height: 340
 ---
 
-{% comment %} include media-post-image.html {% endcomment %} %}
+{% include "media-post-image.html" %}
 
 В языках программирования много составных операторов, таких как `:=`, `>=`, `<=`, `===`, `!==`. Это одна логическая единица, но она занимает 2 или 3 символа. Это затрудняет чтение и анализ кода, хоть мы и привыкли к этому.
 
@@ -22,12 +22,7 @@ image:
 
 ## Возможности шрифта
 
-{% comment %} include media-image.html {% endcomment %}
-	url="fira-code/all_ligatures.png"
-	caption="Символы заменяемые лигатурами шрифта Fira Code"
-	width="1836"
-	height="1726"
-	%}
+{% include "media-image.html", url: "fira-code/all_ligatures.png", caption: "Символы заменяемые лигатурами шрифта Fira Code", width: "1836", height: "1726" %}
 
 ## Поддержка терминалами
 
@@ -76,53 +71,25 @@ image:
 ## Примеры шрифта
 
 ### Ruby
-{% comment %} include media-image.html {% endcomment %}
-	url="fira-code/ruby.png"
-	width="1836"
-	height="417"
-	%}
+{% include "media-image.html", url: "fira-code/ruby.png", width: "1836", height: "417" %}
 
 ### JavaScript
-{% comment %} include media-image.html {% endcomment %}
-	url="fira-code/javascript.png"
-	width="1836"
-	height="745"
-	%}
+{% include "media-image.html", url: "fira-code/javascript.png", width: "1836", height: "745" %}
 
 ### Erlang
-{% comment %} include media-image.html {% endcomment %}
-	url="fira-code/erlang.png"
-	width="1836"
-	height="803"
-	%}
+{% include "media-image.html", url: "fira-code/erlang.png", width: "1836", height: "803" %}
 
 ### Go
-{% comment %} include media-image.html {% endcomment %}
-	url="fira-code/go.png"
-	width="1836"
-	height="502"
-	%}
+{% include "media-image.html", url: "fira-code/go.png", width: "1836", height: "502" %}
 
 ### Haskell
-{% comment %} include media-image.html {% endcomment %}
-	url="fira-code/haskell.png"
-	width="1836"
-	height="360"
-	%}
+{% include "media-image.html", url: "fira-code/haskell.png", width: "1836", height: "360" %}
 
 ### В браузере
-{% comment %} include media-image.html {% endcomment %}
-	url="fira-code/in-browser.png"
-	width="576"
-	height="96"
-	%}
+{% include "media-image.html", url: "fira-code/in-browser.png", width: "576", height: "96" %}
 
 ### В редакторе
-{% comment %} include media-image.html {% endcomment %}
-	url="fira-code/in-editor.png"
-	width="756"
-	height="106"
-	%}
+{% include "media-image.html", url: "fira-code/in-editor.png", width: "756", height: "106" %}
 
 ### Альтернативы
 

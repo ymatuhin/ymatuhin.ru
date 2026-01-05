@@ -13,7 +13,7 @@ image:
 has_youtube: true
 ---
 
-{% comment %} include media-post-image.html {% endcomment %} %}
+{% include "media-post-image.html" %}
 
 Когда вы загружаете шрифт через `font-face`, браузер решает что отобразить пока шрифт загружается. Браузеры ждут некоторое время, перед тем как решить что делать дальше.
 
@@ -79,11 +79,7 @@ Safari | нет ожидания | - | -
 
 ## Видео пример работы свойства font-display
 
-{% comment %} include media-youtube.html {% endcomment %}
-    url="CciEEVHZRgw"
-    width="421"
-    height="315"
-    caption="Пример работы CSS свойства font-display" %}
+{% include "media-youtube.html", url: "CciEEVHZRgw", width: "421", height: "315", caption: "Пример работы CSS свойства font-display" %} %}
 
 ## Как протестировать
 

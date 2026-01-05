@@ -14,7 +14,7 @@ image:
   alt: 'Разбор вопросов на собеседовании разработчика интерфейсов #1'
 ---
 
-{% comment %} include media-post-image.html {% endcomment %} %}
+{% include "media-post-image.html" %}
 
 Это первый пост из серии ответов на вопросы, которые спрашивают у разработчиков интерфейсов на собеседованиях. Я разберу интересную задачку, которая мне встретилась только один раз и сильно меня впечатлила. Если вы собеседуете разработчиков, можете так-же задавать этот вопрос во время собеседований.
 
@@ -24,13 +24,7 @@ image:
 
 Пустая `html` страница, открытая в последней версии хрома, в которой мы написали следующий код:
 
-{% comment %} {%
-	include media-image.html
-	url="front_end_interview/ex/tree.png"
-	width="320"
-	height="49"
-	alt="Задача на собеседовании разработчика интерфейсов #1"
-%} {% endcomment %}
+{% include "media-image.html", url: "front_end_interview/ex/tree.png", width: "320", height: "49", alt: "Задача на собеседовании разработчика интерфейсов #1" %}
 
 ## Вопросы
 
@@ -42,26 +36,14 @@ image:
 <br><br><br>
 
 ## Ответ на первый вопрос
-{% comment %} {%
-	include media-image.html
-	url="front_end_interview/ex/view.png"
-	width="300"
-	height="250"
-	caption="Скриншот результата"
-%} {% endcomment %}
+{% include "media-image.html", url: "front_end_interview/ex/view.png", width: "300", height: "250", caption: "Скриншот результата" %}
 
 **Удивлены?**
 Чтобы понять почему произошло именно так, нужно посмотреть в DOM получившееся дерево. Мне смотря на код было понятно, что все надписи будут на новой строке. Но откуда взялся отступ после первой строки?
 
 ## Ответ на второй вопрос
 
-{% comment %} {%
-	include media-image.html
-	url="front_end_interview/ex/dom.png"
-	width="353"
-	height="319"
-	caption="DOM дерево страницы"
-%} {% endcomment %}
+{% include "media-image.html", url: "front_end_interview/ex/dom.png", width: "353", height: "319", caption: "DOM дерево страницы" %}
 
 Многие слышали, что внутри тега `p` не должно быть блочных элементов, но не все видели это на практике. Любопытно что `Text3` остался вообще без тегов, а после него стоит пустой `<p></p>`.
 

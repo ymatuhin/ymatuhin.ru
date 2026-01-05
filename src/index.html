@@ -1,13 +1,22 @@
 ---
 layout: default
-pagination:
-  data: collections.posts
-  size: 10
-  alias: posts
 ---
+{% assign homePosts = "" | split: "" %}
+{% for category in collections.categories %}
+    {% assign categoryPosts = collections.posts | where: "data.categories", category %}
+    {% if categoryPosts.size > 2 %}
+        {% assign recentPosts = categoryPosts | slice: 0, 2 %}
+        {% for post in recentPosts %}
+            {% unless homePosts contains post %}
+                {% assign homePosts = homePosts | push: post %}
+            {% endunless %}
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+{% assign sortedPosts = homePosts | sort: "date" | reverse %}
 
 <div class="cards">
-    {% for post in posts %}
+    {% for post in sortedPosts %}
         {% include "card.html"
             tag: "h2",
             categories: post.data.categories,
@@ -16,18 +25,4 @@ pagination:
             title: post.data.title,
             description: post.data.description %}
     {% endfor %}
-</div>
-
-
-<div class="more-box">
-    {% if pagination.href.previous %}
-        <a class="round-btn" href="{{ pagination.href.previous }}">Предыдущая страница</a>
-    {% endif %}
-    {% if pagination.href.previous and pagination.href.next %}
-        &nbsp;
-        &nbsp;
-    {% endif %}
-    {% if pagination.href.next %}
-        <a class="round-btn" href="{{ pagination.href.next }}">Следующая страница</a>
-    {% endif %}
 </div>

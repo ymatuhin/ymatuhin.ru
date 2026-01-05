@@ -53,12 +53,6 @@ html {
 
 Приведу пример, опубликованный Полом, в котором он сравнивает производительность сайта New York Times со стандартной моделью W3C и с моделью `border-box`:
 
-{% comment %} {%
-	include media-image.html
-	url="box_sizing/w3c_vs_borderbox.png"
-	width="607"
-	height="291"
-	caption="Производительность New York Times со моделью W3C и с border-box"
-%} {% endcomment %}
+{% include "media-image.html", url: "box_sizing/w3c_vs_borderbox.png", width: "607", height: "291", caption: "Производительность New York Times со моделью W3C и с border-box" %}
 
 Разница не превысила порог в 5%

@@ -15,27 +15,15 @@ image:
 has_youtube: true
 ---
 
-{% comment %} include media-post-image.html {% endcomment %} %}
+{% include "media-post-image.html" %}
 
 ## Что нового в iOS 9 и El Capitan?
 
 Я прочитал кучу статей, хотел оставить здесь ссылки на них. Но потом нашел эти крутые короткие видосы с обзором новых OS. Приятного просмотра 👍
 
-{% comment %} {%
-	include media-youtube.html
-	url="dVupItayMmM"
-	width="560"
-	height="315"
-	caption="Что нового в iOS 9 public beta?"
-%} {% endcomment %}
+{% include "media-youtube.html", url: "dVupItayMmM", width: "560", height: "315", caption: "Что нового в iOS 9 public beta?" %}
 
-{% comment %} {%
-	include media-youtube.html
-	url="qwWnfZu6YjM"
-	width="560"
-	height="315"
-	caption="Что нового в OSX El Capitan public beta?"
-%} {% endcomment %}
+{% include "media-youtube.html", url: "qwWnfZu6YjM", width: "560", height: "315", caption: "Что нового в OSX El Capitan public beta?" %}
 
 ## Когда выйдет финальная версия
 Официальный релиз будет как всегда осенью, в сентябре. А до этого будет обновляться бета по мере фикса багов.

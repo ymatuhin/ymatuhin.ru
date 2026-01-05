@@ -10,13 +10,7 @@ has_iframe: true
 
 Когда я нахожу интересные ссылки, то хочу ими поделиться. Поэтому я собираю эти ссылки в Wunderlist, а когда набирается 15, публикую в дайджесте. Поехали...
 
-{% comment %} {%
-	include media-iframe.html
-	url="https://codepen.io/rgg/full/QbRyOq/"
-	width="960"
-	height="480"
-	caption="3D прогресс бар на CSS"
-%} {% endcomment %}
+{% include "media-iframe.html", url: "https://codepen.io/rgg/full/QbRyOq/", width: "960", height: "480", caption: "3D прогресс бар на CSS" %}
 
 
 

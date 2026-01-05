@@ -16,17 +16,11 @@ image:
 
 В моем городе стал доступен для подключения мобильный оператор — Yota. Что привлекательного в нем? Цена 240 рублей в месяц и **безлимитный мобильный интернет** c поддержкой 4G.
 
-{% comment %} include media-post-image.html {% endcomment %} %}
+{% include "media-post-image.html" %}
 
 Но есть одна проблема, этим интернетом нельзя поделиться на ваш компьютер (через wifi к примеру). Точнее говоря можно, но у вас ограничится скорость и только на пол часа. О том как обойти это ограничение скорости я расскажу далее.
 
-{% comment %} {%
-	include media-image.html
-	url="yota/yota_sharing.png"
-	width="675"
-	height="626"
-	caption="Ограничение на раздачу интернета — Yota"
-%} {% endcomment %}
+{% include "media-image.html", url: "yota/yota_sharing.png", width: "675", height: "626", caption: "Ограничение на раздачу интернета — Yota" %}
 
 ## Обход ограничения скорости Yota
 
@@ -34,13 +28,7 @@ image:
 
 Если у вас операционная система **Windows**, тогда вам нужно открыть командную строку (<mark>Выполнить</mark>), ввести в ней `regedit.exe` и следовать по следующему пути: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters`. Затем нужно нажать правой кнопкой на пустом пространстве (в правом окне) и выбрать `NEW > QWORD (64-bit) Value`. Назовите её `DefaultTTL`, после двойным щелчком мыши по ней в правой части переключите радиокнопку на `Decimal (Десятичное)` и введите значение `65`.
 
-{% comment %} {%
-	include media-image.html
-	url="yota/regedit.png"
-	width="400"
-	height="241"
-	caption="Командная строка в Windows — yota без ограничения скорости"
-%} {% endcomment %}
+{% include "media-image.html", url: "yota/regedit.png", width: "400", height: "241", caption: "Командная строка в Windows — yota без ограничения скорости" %}
 
 Для **Mac OS** все куда проще :-) Нужно открыть <mark>Терминал</mark> и вставить туда следующую команду: `sudo sysctl -w net.inet.ip.ttl=65`
 

@@ -11,7 +11,7 @@ image:
   height: 128
 ---
 
-{% comment %} include media-post-image.html {% endcomment %} %}
+{% include "media-post-image.html" %}
 
 > Cравнить блокировщики можно на [сайте с рекламой](https://checkadblock.ru){:class="bigger"}.
 

@@ -11,7 +11,7 @@ image:
   alt: Убрать дубликаты из массива в JavaScript
 ---
 
-{% comment %} include media-post-image.html {% endcomment %} %}
+{% include "media-post-image.html" %}
 
 ## ES5
 

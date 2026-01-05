@@ -51,13 +51,7 @@ description: >
         <br>При нажатии на
         <code>cmd+shift+e</code> все первые буквы слов заменяются, и вам нужно набрать их чтобы перейти к началу этого слова. Так-же есть комбинация для перехода в конец слова. Как это происходит:
 
-        {% comment %} {%
-        	include media-image.html
-        	url="atom/atom_easy-motion.gif"
-        	width="696"
-        	height="647"
-        	caption="Easy motion — плагин для Atom"
-        %} {% endcomment %}
+        {% include "media-image.html", url: "atom/atom_easy-motion.gif", width: "696", height: "647", caption: "Easy motion — плагин для Atom" %}
     </li>
     <li><b>emmet</b> (~115 000)
         <br>Думаю не нуждается в представлении :-)
@@ -67,13 +61,7 @@ description: >
     <li><b>file-icons</b> (~113 000)
         <br>Заменяет стандартные иконки в боковом меню на красивые и под каждый тип файлов
 
-        {% comment %} {%
-        	include media-image.html
-        	url="atom/atom_file-icons.jpg"
-        	width="260"
-        	height="117"
-        	alt="File icons — плагин для Atom, который меняет иконки в сайдбаре"
-        %} {% endcomment %}
+        {% include "media-image.html", url: "atom/atom_file-icons.jpg", width: "260", height: "117", alt: "File icons — плагин для Atom, который меняет иконки в сайдбаре" %}
     </li>
     <li><b>jekyll</b> (~1 500)
         <br>Добавляет снипеты для работы с jekyll и некоторые функции (но я редко им пользуюсь, думаю удалить)
@@ -108,24 +96,12 @@ description: >
     <li><b>project-palette-finder</b> (~5 000)
         <br>Ищет использованные цвета в проекте и показывает их в отдельном окне
 
-        {% comment %} {%
-        	include media-image.html
-        	url="atom/atom_palette_finder.jpg"
-        	width="413"
-        	height="313"
-        	alt="Project palette finder — плагин для Atom"
-        %} {% endcomment %}
+        {% include "media-image.html", url: "atom/atom_palette_finder.jpg", width: "413", height: "313", alt: "Project palette finder — плагин для Atom" %}
     </li>
 </ol>
 
 <p>Если вы очень скучаете по этому чудесному окошку в Sublime Text, которое выскакивает на каждое 20е сохранение, то для Atom есть дополнение для этого — <a href="https://github.com/thiagopnts/unregistered">unregistered</a>.</p>
 
-{% comment %} {%
-    include media-image.html
-    url="atom/atom_unregistered.jpg"
-    width="413"
-    height="228"
-    alt="Unregistered — плагин для Atom"
-%} {% endcomment %}
+{% include "media-image.html", url: "atom/atom_unregistered.jpg", width: "413", height: "228", alt: "Unregistered — плагин для Atom" %}
 
 <p>А какие плагины/дополнения используете вы? Напишите об этом в комментариях.</p>

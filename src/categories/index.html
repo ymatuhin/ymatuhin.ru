@@ -1,0 +1,37 @@
+---
+layout: default
+pagination:
+  data: collections.categories
+  size: 1
+  alias: category
+  addAllPagesToCollections: true
+permalink: /{{ category }}/index.html
+---
+
+<div class="cards">
+    {% assign category_posts = collections.posts %}
+    {% for post in category_posts %}
+        {% assign is_in_category = false %}
+        {% if post.data.categories.first %}
+            {% for cat in post.data.categories %}
+                {% if cat == category %}
+                    {% assign is_in_category = true %}
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            {% if post.data.categories == category %}
+                {% assign is_in_category = true %}
+            {% endif %}
+        {% endif %}
+
+        {% if is_in_category %}
+            {% include "card.html"
+                tag: "h2",
+                categories: post.data.categories,
+                image: post.data.image.path,
+                link: post.url,
+                title: post.data.title,
+                description: post.data.description %}
+        {% endif %}
+    {% endfor %}
+</div>

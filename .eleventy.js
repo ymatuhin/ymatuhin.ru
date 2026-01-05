@@ -31,6 +31,21 @@ module.exports = function(eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/posts/*.{md,html}").reverse();
   });
 
+  eleventyConfig.addCollection("categories", function(collectionApi) {
+    let categories = new Set();
+    let posts = collectionApi.getFilteredByGlob("src/posts/*.{md,html}");
+    posts.forEach(item => {
+      if (item.data.categories) {
+        if (Array.isArray(item.data.categories)) {
+          item.data.categories.forEach(cat => categories.add(cat));
+        } else {
+          categories.add(item.data.categories);
+        }
+      }
+    });
+    return Array.from(categories);
+  });
+
   // Base config
   return {
     templateFormats: ["md", "njk", "html", "liquid"],

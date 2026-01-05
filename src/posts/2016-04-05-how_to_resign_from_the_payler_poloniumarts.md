@@ -12,7 +12,7 @@ image:
   caption: Payler
 ---
 
-{% comment %} include media-post-image.html {% endcomment %} %}
+{% include "media-post-image.html" %}
 
 Еще одна статья о том как разработчика кинули. Надеюсь в будущем, программисты найдут эту информацию, прежде чем устроятся в эти компании.
 
