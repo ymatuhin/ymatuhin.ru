@@ -25,6 +25,7 @@
     "canvas-confetti": "^1.9.4",
     "eleventy-plugin-seo": "^0.5.2",
     "luxon": "^3.7.2",
+    "markdown-it-attrs": "^4.3.1",
     "purgecss": "^7.0.2",
     "sass": "^1.97.1"
   }

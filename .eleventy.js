@@ -1,9 +1,17 @@
 const { DateTime } = require("luxon");
+const markdownIt = require("markdown-it");
+const markdownItAttrs = require("markdown-it-attrs");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const eleventyNavigation = require("@11ty/eleventy-navigation");
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.setLibrary("md", markdownIt({
+    html: true,
+    breaks: true,
+    linkify: false
+  }).use(markdownItAttrs));
+
   // Plugins
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
@@ -11,7 +19,7 @@ module.exports = function(eleventyConfig) {
 
   // Passthrough copy
   eleventyConfig.addPassthroughCopy({ "public": "/" });
-  eleventyConfig.addPassthroughCopy({ "src/assets/*.css": "assets" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/*": "assets" });
 
   // Filters
   eleventyConfig.addFilter("readableDate", (dateObj) => {

@@ -1,11 +1,11 @@
-{% if page.image %}
-	{% capture imageUrl %}{{ page.image.path | replace: '/assets/img/', '' }}{% endcapture %}
+{% if image %}
+	{% capture imageUrl %}{{ image.path | replace: '/assets/img/', '' }}{% endcapture %}
 
 	{% include "media-image.html",
 		url: imageUrl,
-		width: page.image.width,
-		height: page.image.height,
-		caption: page.image.caption,
-		pixelart: page.image.pixelart
+		width: image.width,
+		height: image.height,
+		caption: image.caption,
+		pixelart: image.pixelart
 	%}
 {% endif %}
