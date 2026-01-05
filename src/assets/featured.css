@@ -1,0 +1,41 @@
+.card .tags {
+  margin-bottom: 7.5px;
+  font-size: 14px;
+}
+.card .tags span::after {
+  content: ", ";
+}
+.card .tags span:last-child::after {
+  content: "";
+}
+.card .title {
+  margin: 0;
+  font-size: 3rem;
+  line-height: 1.2;
+}
+.card .title a {
+  font-weight: inherit;
+}
+.card .title + p {
+  margin-top: var(--gap-xsm);
+}
+.card p {
+  margin-bottom: 0;
+  color: var(--c-gray);
+  font-size: 1.5rem;
+}
+
+.featured {
+  -webkit-column-count: 2;
+  column-count: 2;
+  -webkit-column-width: 32rem;
+  column-width: 32rem;
+  -webkit-column-gap: 4rem;
+  column-gap: 4rem;
+}
+.featured p {
+  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+  page-break-inside: avoid; /* Firefox */
+  break-inside: avoid; /* IE 10+ */
+  margin-bottom: 7.5px;
+}

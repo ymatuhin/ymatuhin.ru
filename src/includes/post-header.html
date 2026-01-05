@@ -1,0 +1,10 @@
+<header class="post-header / wrap-inner">
+    <span class="post-header__info">
+        {% include "pubdate.html" date: date %} &nbsp;/&nbsp;
+        <span class="post-category">
+        {% include "categories.html" categories: categories %}
+        </span>
+    </span>
+    <h1 class="post-header__title"
+        itemprop="name headline">{{ title | escape }}</h1>
+</header>

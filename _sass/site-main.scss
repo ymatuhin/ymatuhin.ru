@@ -1,7 +1,0 @@
-.site-main {
-  margin-left: $sidebar-width;
-
-  @media (max-width: $sidebar-min-width), (max-height: $hide-footer-height) {
-    margin-left: 0;
-  }
-}

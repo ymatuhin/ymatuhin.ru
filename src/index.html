@@ -1,0 +1,33 @@
+---
+layout: default
+pagination:
+  data: collections.posts
+  size: 10
+  alias: posts
+---
+
+<div class="cards">
+    {% for post in posts %}
+        {% include "card.html"
+            tag: "h2",
+            categories: post.data.categories,
+            image: post.data.image.path,
+            link: post.url,
+            title: post.data.title,
+            description: post.data.description %}
+    {% endfor %}
+</div>
+
+
+<div class="more-box">
+    {% if pagination.href.previous %}
+        <a class="round-btn" href="{{ pagination.href.previous }}">Предыдущая страница</a>
+    {% endif %}
+    {% if pagination.href.previous and pagination.href.next %}
+        &nbsp;
+        &nbsp;
+    {% endif %}
+    {% if pagination.href.next %}
+        <a class="round-btn" href="{{ pagination.href.next }}">Следующая страница</a>
+    {% endif %}
+</div>

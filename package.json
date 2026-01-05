@@ -1,12 +1,11 @@
 {
   "name": "ymatuhin.ru",
   "version": "1.0.0",
-  "description":
-    "Hi, it's my Jekyll powered website — <a href=\"https://ymatuhin.ru\">ymatuhin.ru</a>",
+  "description": "Hi, it's my Jekyll powered website — <a href=\"https://ymatuhin.ru\">ymatuhin.ru</a>",
   "scripts": {
-    "postinstall": "bundle",
-    "dev": "bundle exec jekyll server --limit_posts 15",
-    "start": "bundle exec jekyll server"
+    "start": "eleventy --serve",
+    "build": "rm -rf _site && eleventy",
+    "debug": "DEBUG=Eleventy* eleventy"
   },
   "repository": {
     "type": "git",
@@ -17,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/ymatuhin/ymatuhin.github.io/issues"
   },
-  "homepage": "https://github.com/ymatuhin/ymatuhin.github.io#readme"
+  "homepage": "https://github.com/ymatuhin/ymatuhin.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-navigation": "^1.0.5",
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "canvas-confetti": "^1.9.4",
+    "eleventy-plugin-seo": "^0.5.2",
+    "luxon": "^3.7.2",
+    "purgecss": "^7.0.2",
+    "sass": "^1.97.1"
+  }
 }

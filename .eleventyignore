@@ -1,0 +1,19 @@
+# _drafts
+# posts
+_sass
+Gemfile
+Gemfile.lock
+_config.yml
+comment_includes.py
+node_modules
+README.md
+readme.md
+LICENSE
+package.json
+package-lock.json
+.git
+.gitignore
+.eleventy.js
+_data/site.js
+google*.html
+yandex*.html

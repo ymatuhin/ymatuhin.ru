@@ -1,0 +1,4 @@
+{
+  "layout": "post",
+  "permalink": "/{{ categories }}/{{ page.fileSlug | stripDate }}/index.html"
+}

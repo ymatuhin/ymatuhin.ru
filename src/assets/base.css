@@ -1,0 +1,30 @@
+body {
+  height: 100%;
+  font-size: 10px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  max-width: var(--max-website-width);
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--ff-base);
+  font-size: 18px;
+  line-height: 1.6666666667;
+  font-weight: 400;
+  color: #000;
+  background: var(--c-bg);
+  word-break: break-word;
+}
+
+a {
+  color: var(--c-brand);
+  text-decoration: none;
+}
+a:hover {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip: ink;
+  text-decoration: underline;
+}

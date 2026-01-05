@@ -1,0 +1,27 @@
+<div class="card">
+    {% if image %}
+        {% if link %}<a href="{{ link }}">{% endif %}
+        <img src="{{ image }}" alt="{{ title | escape }}">
+        {% if link %}</a>{% endif %}
+    {% endif %}
+
+    <div class="padding">
+        {% if categories %}
+            <div class="tags">
+                {% include "categories.html" categories: categories %}
+            </div>
+        {% endif %}
+
+        {% if tag and title %}
+            <{{ tag }} class="title">
+                {% if link %}<a href="{{ link }}">{% endif %}
+                    {{ title }}
+                {% if link %}</a>{% endif %}
+            </{{ tag }}>
+        {% endif %}
+
+        {% if description %}
+            <p>{{ description }}</p>
+        {% endif %}
+    </div>
+</div>

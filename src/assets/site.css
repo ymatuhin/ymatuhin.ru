@@ -1,0 +1,12 @@
+.mac-spacer {
+  margin: var(--gap-sm) 0;
+  text-align: center;
+}
+
+p.email-subscribe {
+  margin-bottom: var(--gap-sm);
+}
+
+.ya-share2 ul {
+  padding: 0 !important;
+}
