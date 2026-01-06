@@ -1,11 +1,11 @@
-const { DateTime } = require("luxon");
-const markdownIt = require("markdown-it");
-const markdownItAttrs = require("markdown-it-attrs");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const eleventyNavigation = require("@11ty/eleventy-navigation");
+import { DateTime } from "luxon";
+import markdownIt from "markdown-it";
+import markdownItAttrs from "markdown-it-attrs";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import eleventyNavigation from "@11ty/eleventy-navigation";
 
-module.exports = function(eleventyConfig) {
+export default function(eleventyConfig) {
   eleventyConfig.setLibrary("md", markdownIt({
     html: true,
     breaks: true,
@@ -36,7 +36,7 @@ module.exports = function(eleventyConfig) {
 
   // Collections
   eleventyConfig.addCollection("posts", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/posts/*.{md,html}").reverse();
+    return collectionApi.getFilteredByGlob("src/posts/*.{md,html}").sort((a, b) => b.date - a.date);
   });
 
   eleventyConfig.addCollection("categories", function(collectionApi) {

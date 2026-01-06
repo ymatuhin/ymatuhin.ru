@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   lang: "ru",
   title: "Юрий Матюхин",
   author: "ymatuhin",
