@@ -1,45 +1,49 @@
-import { DateTime } from "luxon";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import {feedPlugin} from "@11ty/eleventy-plugin-rss";
+import eleventyNavigation from "@11ty/eleventy-navigation";
 import markdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
-import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import pluginRss from "@11ty/eleventy-plugin-rss";
-import eleventyNavigation from "@11ty/eleventy-navigation";
 
-export default function(eleventyConfig) {
-  eleventyConfig.setLibrary("md", markdownIt({
-    html: true,
-    breaks: true,
-    linkify: false
-  }).use(markdownItAttrs));
+export default function (eleventyConfig) {
+  const mdOptions = {html: true, breaks: true, linkify: false};
+  eleventyConfig.setLibrary("md", markdownIt(mdOptions).use(markdownItAttrs));
 
   // Plugins
   eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyNavigation);
+  eleventyConfig.addPlugin(feedPlugin, {
+    outputPath: "/feed.xml",
+    collection: {
+      name: "posts", // iterate over `collections.posts`
+      limit: 10,     // 0 means no limit
+    },
+    metadata: {
+      language: "en",
+      title: "Blog Title",
+      subtitle: "This is a longer description about your blog.",
+      base: "https://example.com/",
+      author: {
+        name: "Your Name",
+        email: "", // Optional
+      }
+    }
+  });
 
   // Passthrough copy
-  eleventyConfig.addPassthroughCopy({ "public": "/" });
-  eleventyConfig.addPassthroughCopy({ "src/assets/*": "assets" });
+  eleventyConfig.addPassthroughCopy({"public": "/"});
+  eleventyConfig.addPassthroughCopy({"src/assets/*": "assets"});
 
   // Filters
-  eleventyConfig.addFilter("readableDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("dd LLL yyyy");
-  });
-
-  eleventyConfig.addFilter("htmlDateString", (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
-  });
-
   eleventyConfig.addFilter("stripDate", (slug) => {
     return slug.replace(/^\d{4}-\d{2}-\d{2}-/, "");
   });
 
   // Collections
-  eleventyConfig.addCollection("posts", function(collectionApi) {
+  eleventyConfig.addCollection("posts", function (collectionApi) {
     return collectionApi.getFilteredByGlob("src/posts/*.{md,html}").sort((a, b) => b.date - a.date);
   });
 
-  eleventyConfig.addCollection("categories", function(collectionApi) {
+  eleventyConfig.addCollection("categories", function (collectionApi) {
     let categories = new Set();
     let posts = collectionApi.getFilteredByGlob("src/posts/*.{md,html}");
     posts.forEach(item => {
@@ -54,12 +58,9 @@ export default function(eleventyConfig) {
     return Array.from(categories);
   });
 
-  // Base config
   return {
-    templateFormats: ["md", "njk", "html", "liquid"],
-    markdownTemplateEngine: "liquid",
-    htmlTemplateEngine: "liquid",
-    dataTemplateEngine: "njk",
+    // njk is required for feed plugin
+    templateFormats: ["md", "html", "liquid", "njk"],
     dir: {
       input: "src",
       includes: "includes",

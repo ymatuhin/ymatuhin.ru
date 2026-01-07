@@ -1,165 +1,39 @@
-@charset "UTF-8";
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
+*, *::before, *::after {
   box-sizing: border-box;
-}
-
-
-main {
-  display: block;
-}
-
-/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
-/* Document
-   ========================================================================== */
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in
- *    IE on Windows Phone and in iOS.
- */
-html {
-  line-height: 1.15; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
-
-/* Sections
-   ========================================================================== */
-/**
- * Remove the margin in all browsers (opinionated).
- */
-body {
   margin: 0;
-}
-
-/**
- * Add the correct display in IE 9-.
- */
-article,
-aside,
-footer,
-header,
-nav {
-  display: block;
-}
-
-/**
- * Add the correct display in IE 9-.
- * 1. Add the correct display in IE.
- */
-
-main { /* 1 */
-  display: block;
-}
-
-/**
- * 1. Remove the gray background on active links in IE 10.
- * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
- */
-a {
-  background-color: transparent; /* 1 */
-  -webkit-text-decoration-skip: objects; /* 2 */
-}
-
-b,
-strong {
-  font-weight: bolder;
-}
-
-mark {
-  background-color: #ff0;
-  color: #000;
-}
-
-img {
-  border-style: none;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-* {
   padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
-
-main {
-  display: block;
-}
-
-/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
-/* Document
-   ========================================================================== */
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in
- *    IE on Windows Phone and in iOS.
- */
 html {
-  line-height: 1.15; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  hanging-punctuation: first allow-end last;
+  /*color-scheme: light dark;*/
+  text-rendering: optimizeLegibility;
 }
 
-/* Sections
-   ========================================================================== */
-/**
- * Remove the margin in all browsers (opinionated).
- */
-body {
-  margin: 0;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
 }
 
-/**
- * Add the correct display in IE 9-.
- */
-article,
-aside,
-footer,
-header,
-nav {
+img, picture, video, canvas, svg {
   display: block;
+  max-width: 100%;
 }
 
-/**
- * Add the correct display in IE 9-.
- * 1. Add the correct display in IE.
- */
-
-main { /* 1 */
-  display: block;
+input, button, textarea, select {
+  font: inherit;
 }
 
-/**
- * 1. Remove the gray background on active links in IE 10.
- * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
- */
-a {
-  background-color: transparent; /* 1 */
-  -webkit-text-decoration-skip: objects; /* 2 */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
 }
 
-b,
-strong {
-  font-weight: bolder;
+p {
+  text-wrap: pretty;
 }
 
-mark {
-  background-color: #ff0;
-  color: #000;
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+  -webkit-font-smoothing: antialiased;
 }
-
-img {
-  border-style: none;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-

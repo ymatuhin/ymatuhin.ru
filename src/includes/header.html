@@ -1,21 +1,42 @@
-<aside class="site-header" role="complementary">
-  <a href="/" class="site-header__title">
-    Юрий
-    </br>
-    Матюхин
+<header class="global-header">
+  <a href="/" class="global-logo">
+    <img src="/assets/logo.svg" alt="Юрий Матюхин, логотип">
   </a>
-  <p class="site-header__description">
-    Фронтенд разработчик, минималист
-  </p>
 
-  <nav class="site-navigation" role="navigation">
-    {% if page.url == '/' %}<b class="site-navigation__item">Заметки</b>
-    {% else %}<a class="site-navigation__item" href="/archive/">Заметки</a>{% endif %}
+  <nav class="global-navigation" role="navigation">
+    <!--    {% if page.url == '/' %}<b class="global-navigation__item">Заметки</b>-->
+    <!--    {% else %}<a class="global-navigation__item" href="/archive/">Заметки</a>{% endif %}-->
 
-    {% if page.url == '/projects/' %}<b class="site-navigation__item">Проекты</b>
-    {% else %}<a class="site-navigation__item" href="/projects/">Проекты</a>{% endif %}
 
-    {% if page.url == '/about/' %}<b class="site-navigation__item">Обо мне</b>
-    {% else %}<a class="site-navigation__item" href="/about/">Обо мне</a>{% endif %}
+    {% if page.url == '/projects/' %}<b class="global-navigation__item">Категории</b>
+    {% else %}<a class="global-navigation__item" href="/projects/">Категории</a>{% endif %}
+
+    {% if page.url == '/about/' %}<b class="global-navigation__item">Обо мне</b>
+    {% else %}<a class="global-navigation__item" href="/about/">Обо мне</a>{% endif %}
+
+    <a class="global-navigation__item" href="/projects/">v0.1.1</a>
   </nav>
-</aside>
+
+  <nav class="global-socials">
+    <a href="#" class="global-socials__link">
+      {% include "icons/github.svg" %}
+    </a>
+    <a href="#" class="global-socials__link">
+      {% include "icons/telegram.svg" %}
+    </a>
+    <a href="#" class="global-socials__link">
+      {% include "icons/email.svg" %}
+    </a>
+    <a href="#" class="global-socials__link">
+      {% include "icons/rss.svg" %}
+    </a>
+    <!--    <a href="#" class="global-socials__link">-->
+    <!--      Eng-->
+    <!--       {% include "icons/en.svg" %}-->
+    <!--    </a>-->
+    <div class="global-socials__spacer"></div>
+    <button type="button" class="global-socials__button">
+      {% include "icons/moon.svg" %}
+    </button>
+  </nav>
+</header>

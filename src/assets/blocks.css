@@ -1,9 +1,0 @@
-.blocks-wrapper {
-  padding: var(--gap);
-  padding-left: 0;
-}
-@media (max-width: var(--sidebar-min-width)), (max-height: var(--hide-footer-height)) {
-  .blocks-wrapper {
-    padding: 0 var(--gap-sm);
-  }
-}

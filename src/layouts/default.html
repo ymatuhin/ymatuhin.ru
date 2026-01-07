@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{ lang | default: site.lang | default: 'en' }}">
+<head>
   {% include "head.html" %}
+</head>
+<body>
+{% include "header.html" %}
 
-  {% include "header.html" %}
-  <main class="site-main" role="main">
-    {{ content }}
-  </main>
+<main class="site-main" role="main">
+  {{ content }}
+</main>
 
-  {% include "footer.html" %}
-  {% include "scripts.html" %}
+<!--{% include "footer.html" %}-->
+
+<img src="https://mc.yandex.ru/watch/28017147" style="position:absolute; left:-9999px;" alt=""/>
+</body>
 </html>

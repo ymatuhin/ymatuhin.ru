@@ -1,8 +1,0 @@
-.site-main {
-  margin-left: var(--sidebar-width);
-}
-@media (max-width: var(--sidebar-min-width)), (max-height: var(--hide-footer-height)) {
-  .site-main {
-    margin-left: 0;
-  }
-}

@@ -5,7 +5,6 @@ code[class*=language-],
 pre[class*=language-] {
   color: #abb2bf;
   background: none;
-  font-family: var(--ff-code);
   text-align: left;
   white-space: pre;
   word-spacing: normal;

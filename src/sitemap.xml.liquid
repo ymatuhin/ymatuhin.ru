@@ -1,0 +1,26 @@
+---
+permalink: /sitemap.xml
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- comment -%}
+    Collect pages and posts. You can extend with other collections if needed.
+  {%- endcomment -%}
+
+  {%- assign all_pages = collections.posts | concat: collections.categories -%}
+  {%- assign all_pages = collections.posts -%}
+
+  {%- for page in all_pages -%}
+    {%- unless page.sitemap_ignore == true or page.permalink == "/sitemap.xml" -%}
+      <url>
+        <loc>{{ site.url }}{{ page.url }}</loc>
+        {%- if page.last_modified_at -%}
+          <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
+        {%- elsif page.date -%}
+          <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+        {%- endif -%}
+      </url>
+    {%- endunless -%}
+  {%- endfor -%}
+</urlset>

@@ -2,7 +2,6 @@
 layout: default
 ---
 
-{% include "ads.html" %}
 <article class="post typo white-content" itemscope itemtype="http://schema.org/BlogPosting">
   {% include "post-header.html" %}
 
@@ -16,16 +15,16 @@ layout: default
   <script src="//yastatic.net/share2/share.js"
           async="async"></script>
   <div class="ya-share2"
-      data-services="vkontakte,facebook,gplus,twitter,evernote,pocket,telegram"
-      data-lang=""
-      data-counter="{% if lang == 'ru' %}ru{% else %}en{% endif %}"></div>
+       data-services="vkontakte,facebook,gplus,twitter,evernote,pocket,telegram"
+       data-lang=""
+       data-counter="{% if lang == 'ru' %}ru{% else %}en{% endif %}"></div>
 
   <p class="email-subscribe">
-    Еше можно подписаться на <a href="http://eepurl.com/bkY7hb"><b>email рассылку</b></a> новых заметок. Не чаще раза в неделю, без спама.
+    Еше можно подписаться на <a href="http://eepurl.com/bkY7hb"><b>email рассылку</b></a> новых заметок. Не чаще раза в
+    неделю, без спама.
   </p>
   {% include "comments.html" %}
 </article>
-{% include "ads.html" %}
 
-{% include "related.html" %}
+<!--{% include "related.html" %}-->
 

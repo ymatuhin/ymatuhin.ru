@@ -1,32 +1,30 @@
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  {% if site.feed_url %}
-    <link rel="alternate" href="{{ site.feed_url }}" type="application/atom+xml" title="{{ site.title }}">
-  {% endif %}
-  <title>{{ title | default: site.title }}</title>
-  <meta name="description" content="{{ description | default: site.description }}">
+{% if site.feed_url %}
+<link rel="alternate" href="{{ site.feed_url }}" type="application/atom+xml" title="{{ site.title }}">
+{% endif %}
+<title>{{ title | default: site.title }}</title>
+<meta name="description" content="{{ description | default: site.description }}">
 
-  <!-- inline css -->
-  <link rel="stylesheet" href="/assets/index.css">
+<!-- inline css -->
+<link rel="stylesheet" href="/assets/index.css">
 
-  {% if content contains "pre" %}
-    <link rel="stylesheet" href="/assets/prism.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="/assets/prism.css"></noscript>
-  {% endif %}
+{% if content contains "pre" %}
+<link rel="stylesheet" href="/assets/prism.css" media="print" onload="this.media='all'">
+<noscript>
+  <link rel="stylesheet" href="/assets/prism.css">
+</noscript>
+{% endif %}
 
-  <!-- Icons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png?v=JymzngPEmg2">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png?v=JymzngPEmg2">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png?v=JymzngPEmg2">
-  <link rel="manifest" href="/assets/icons/manifest.json?v=JymzngPEmg2">
-  <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg?v=JymzngPEmg2" color="#0c00ff">
-  <link rel="shortcut icon" href="/assets/icons/favicon.ico?v=JymzngPEmg2">
-  <meta name="msapplication-config" content="/assets/icons/browserconfig.xml?v=JymzngPEmg2">
-  <meta name="theme-color" content="#0c00ff">
+<!-- Icons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png?v=JymzngPEmg2">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png?v=JymzngPEmg2">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png?v=JymzngPEmg2">
+<link rel="manifest" href="/assets/icons/manifest.json?v=JymzngPEmg2">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg?v=JymzngPEmg2" color="#0c00ff">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico?v=JymzngPEmg2">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml?v=JymzngPEmg2">
+<meta name="theme-color" content="#0c00ff">
 
-  <link rel="manifest" href="/manifest.json">
-  <script src="https://ymatuhin.ru/ads/ads.js?v=1" defer></script>
-</head>
+<link rel="manifest" href="/manifest.json">
