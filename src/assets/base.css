@@ -1,13 +1,10 @@
 body {
-  max-width: var(--max-website-width);
-  margin-left: auto;
-  margin-right: auto;
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.6666666667;
   font-weight: 400;
-  color: #000;
-  background: var(--c-bg);
+  color: var(--color-text);
+  background: var(--color-background);
 }
 
 a {

@@ -1,20 +1,20 @@
-<header class="global-header">
+<header class="global-header / container">
   <a href="/" class="global-logo">
-    <img src="/assets/logo.svg" alt="Юрий Матюхин, логотип">
+    <img src="/assets/logo.svg" height="20" alt="Юрий Матюхин, логотип">
   </a>
 
   <nav class="global-navigation" role="navigation">
-    <!--    {% if page.url == '/' %}<b class="global-navigation__item">Заметки</b>-->
-    <!--    {% else %}<a class="global-navigation__item" href="/archive/">Заметки</a>{% endif %}-->
+    {% if page.url == '/' %}<p class="global-navigation__item">Заметки</p>
+    {% else %}<a class="global-navigation__item" href="/archive/">Заметки</a>{% endif %}
 
 
-    {% if page.url == '/projects/' %}<b class="global-navigation__item">Категории</b>
-    {% else %}<a class="global-navigation__item" href="/projects/">Категории</a>{% endif %}
+    {% if page.url == '/projects/' %}<b class="global-navigation__item">Проекты</b>
+    {% else %}<a class="global-navigation__item" href="/projects/">Проекты</a>{% endif %}
 
     {% if page.url == '/about/' %}<b class="global-navigation__item">Обо мне</b>
     {% else %}<a class="global-navigation__item" href="/about/">Обо мне</a>{% endif %}
 
-    <a class="global-navigation__item" href="/projects/">v0.1.1</a>
+    <!--    <a class="global-navigation__item" href="/projects/">v0.1.1</a>-->
   </nav>
 
   <nav class="global-socials">
