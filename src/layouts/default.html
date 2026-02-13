@@ -5,25 +5,37 @@
 </head>
 <body>
 
-<div class="background">
-  <div class="container">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
+<div class="default-layout">
+  <div class="default-layout__content">
+    {% include "header.html" %}
+    <br>
+    <main class="site-main / container" role="main">
+      {{ content }}
+    </main>
+  </div>
+  <div class="default-layout__footer">
+    2
   </div>
 </div>
 
-{% include "header.html" %}
+<!--<div class="background">-->
+<!--  <div class="container">-->
+<!--    <div class="line"></div>-->
+<!--    <div class="line"></div>-->
+<!--    <div class="line"></div>-->
+<!--    <div class="line"></div>-->
+<!--    <div class="line"></div>-->
+<!--    <div class="line"></div>-->
+<!--    <div class="line"></div>-->
+<!--    <div class="line"></div>-->
+<!--    <div class="line"></div>-->
+<!--  </div>-->
+<!--</div>-->
 
-<main class="site-main / container" role="main">
-  {{ content }}
-</main>
+
+<!--<main class="site-main / container" role="main">-->
+<!--  {{ content }}-->
+<!--</main>-->
 
 <!--{% include "footer.html" %}-->
 

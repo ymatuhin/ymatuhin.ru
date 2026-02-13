@@ -1,42 +1,86 @@
-<header class="global-header / container">
-  <a href="/" class="global-logo">
-    <img src="/assets/logo.svg" height="20" alt="Юрий Матюхин, логотип">
-  </a>
+<div class="header__inner">
+  <div class="header__logo"><a href="/">
+    <div class="logo">
+      <svg fill="none" viewBox="0 0 642 78" height="17" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="m44.6295.86459h38.6853l-36.7403 56.19101v19.4507h-9.6173v-19.4507l-36.95636235-56.19101h11.23816235l30.3648 46.57371 24.3134-37.2806h-27.231zm92.9115 40.63041 33.067-40.63041h8.752v75.64171h-83.6377v-75.64171h8.7527zm-32.201 25.7182h64.403v-51.0041l-32.202 39.4417-32.201-39.4417zm85.863 9.2931 42.143-76.5061826 42.144 76.5061826zm42.143-57.1635-25.826 47.8704h51.761zm51.852-18.47821h71.86v9.29311h-31.121v66.3486h-9.618v-66.3486h-31.121zm86.465 0h68.942v41.60301c0 9.7253-3.026 17.9379-9.185 24.6376-6.16 6.8077-14.588 10.1576-25.286 10.1576s-19.127-3.3499-25.286-10.1576c-6.16-6.6997-9.185-14.9123-9.185-24.6376zm15.993 59.64891c4.214 5.0788 10.373 7.6723 18.478 7.6723 8.104 0 14.372-2.5935 18.586-7.6723s6.267-11.0221 6.267-17.8298v-32.526h-49.707v32.526c0 6.8077 2.161 12.751 6.376 17.8298zm130.329-20.2071v-39.44181h9.617v75.64171h-9.617v-26.9068h-51.004v26.9068h-9.618v-75.64171h9.618v39.44181zm26.86 36.1999v-75.64171h9.617v75.64171zm87.207-15.6686v-59.97311h9.617v75.64171h-68.834v-75.64171h8.645zm-6.376 6.3755-43.224-51.0041v51.0041z"
+          fill="currentColor"/>
+      </svg>
+    </div>
+  </a></div>
+  <select id="fontFamily" name="fontFamily">
+    <option name="fira-code" value="fira-code" selected="">RU</option>
+    <option name="jetbrains-mono" value="jetbrains-mono">EN</option>
+  </select>
+  <!--  <ul class="menu menu&#45;&#45;mobile">-->
+  <!--    <li class="menu__trigger">Menu&nbsp;▾</li>-->
+  <!--    <li>-->
+  <!--      <ul class="menu__dropdown">-->
+  <!--        <li><a href="/hugo-theme-terminal-demo/about">About</a></li>-->
+  <!--        <li><a href="/hugo-theme-terminal-demo/posts/showcase">Showcase</a></li>-->
+  <!--        <li><a href="/hugo-theme-terminal-demo/posts/rich-content">Rich Content</a></li>-->
+  <!--        <hr>-->
+  <!--        <li><a href="https://panr.github.io/hugo-theme-terminal-demo/">English</a></li>-->
+  <!--        <li><a href="https://panr.github.io/hugo-theme-terminal-demo/pl/">Polski</a></li>-->
+  <!--      </ul>-->
+  <!--    </li>-->
+  <!--  </ul>-->
+  <!--  <ul class="menu menu&#45;&#45;desktop menu&#45;&#45;language-selector">-->
+  <!--    <li class="menu__trigger">English&nbsp;▾</li>-->
+  <!--    <li>-->
+  <!--      <ul class="menu__dropdown">-->
+  <!--        <li><a href="https://panr.github.io/hugo-theme-terminal-demo/">English</a></li>-->
+  <!--        <li><a href="https://panr.github.io/hugo-theme-terminal-demo/pl/">Polski</a></li>-->
+  <!--      </ul>-->
+  <!--    </li>-->
+  <!--  </ul>-->
+</div>
 
-  <nav class="global-navigation" role="navigation">
-    {% if page.url == '/' %}<p class="global-navigation__item">Заметки</p>
-    {% else %}<a class="global-navigation__item" href="/archive/">Заметки</a>{% endif %}
+<!--<header class="global-header / container">-->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  <a href="/" class="global-logo">-->
 
 
-    {% if page.url == '/projects/' %}<b class="global-navigation__item">Проекты</b>
-    {% else %}<a class="global-navigation__item" href="/projects/">Проекты</a>{% endif %}
+<!--    &lt;!&ndash;    <img src="/assets/logo.svg" height="20" alt="Юрий Матюхин, логотип">&ndash;&gt;-->
+<!--  </a>-->
 
-    {% if page.url == '/about/' %}<b class="global-navigation__item">Обо мне</b>
-    {% else %}<a class="global-navigation__item" href="/about/">Обо мне</a>{% endif %}
+<!--  <nav class="global-navigation" role="navigation">-->
+<!--    {% if page.url == '/' %}<p class="global-navigation__item">Заметки</p>-->
+<!--    {% else %}<a class="global-navigation__item" href="/archive/">Заметки</a>{% endif %}-->
 
-    <!--    <a class="global-navigation__item" href="/projects/">v0.1.1</a>-->
-  </nav>
 
-  <nav class="global-socials">
-    <a href="#" class="global-socials__link">
-      {% include "icons/github.svg" %}
-    </a>
-    <a href="#" class="global-socials__link">
-      {% include "icons/telegram.svg" %}
-    </a>
-    <a href="#" class="global-socials__link">
-      {% include "icons/email.svg" %}
-    </a>
-    <a href="#" class="global-socials__link">
-      {% include "icons/rss.svg" %}
-    </a>
-    <!--    <a href="#" class="global-socials__link">-->
-    <!--      Eng-->
-    <!--       {% include "icons/en.svg" %}-->
-    <!--    </a>-->
-    <div class="global-socials__spacer"></div>
-    <button type="button" class="global-socials__button">
-      {% include "icons/moon.svg" %}
-    </button>
-  </nav>
-</header>
+<!--    {% if page.url == '/projects/' %}<b class="global-navigation__item">Проекты</b>-->
+<!--    {% else %}<a class="global-navigation__item" href="/projects/">Проекты</a>{% endif %}-->
+
+<!--    {% if page.url == '/about/' %}<b class="global-navigation__item">Обо мне</b>-->
+<!--    {% else %}<a class="global-navigation__item" href="/about/">Обо мне</a>{% endif %}-->
+
+<!--    &lt;!&ndash;    <a class="global-navigation__item" href="/projects/">v0.1.1</a>&ndash;&gt;-->
+<!--  </nav>-->
+
+<!--  <nav class="global-socials">-->
+<!--    <a href="#" class="global-socials__link">-->
+<!--      {% include "icons/github.svg" %}-->
+<!--    </a>-->
+<!--    <a href="#" class="global-socials__link">-->
+<!--      {% include "icons/telegram.svg" %}-->
+<!--    </a>-->
+<!--    <a href="#" class="global-socials__link">-->
+<!--      {% include "icons/email.svg" %}-->
+<!--    </a>-->
+<!--    <a href="#" class="global-socials__link">-->
+<!--      {% include "icons/rss.svg" %}-->
+<!--    </a>-->
+<!--    &lt;!&ndash;    <a href="#" class="global-socials__link">&ndash;&gt;-->
+<!--    &lt;!&ndash;      Eng&ndash;&gt;-->
+<!--    &lt;!&ndash;       {% include "icons/en.svg" %}&ndash;&gt;-->
+<!--    &lt;!&ndash;    </a>&ndash;&gt;-->
+<!--    <div class="global-socials__spacer"></div>-->
+<!--    <button type="button" class="global-socials__button">-->
+<!--      {% include "icons/moon.svg" %}-->
+<!--    </button>-->
+<!--  </nav>-->
+<!--</header>-->
