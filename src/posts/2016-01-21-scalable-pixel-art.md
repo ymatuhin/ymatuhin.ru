@@ -12,7 +12,7 @@ image:
   pixelart: true
 ---
 
-{% include "media-post-image.html" %}
+{% include "media-post-image.liquid" %}
 
 Мне нравится пиксель арт. Только взгляните на этот предмет искусства выше. Восьмибитная ностальгия, красота и простота. Но с пиксель артом в вебе одна проблема — **сглаживание**.
 
@@ -22,19 +22,19 @@ image:
 
 Как пример, я возьму анимацию бегущего война. Оригинальный размер 32×32 пикселя. С таким размером нельзя демонстрировать анимацию людям, её нужно растянуть хотя бы до 256×256. И тут начинается проблема. Посмотрите как это выглядит.
 
-{% include "media-image.html", url: "pixel-art/walking_man.gif", alt: "Бегущий воин, pixel Art, стандартное сглаживание в браузере", caption: "Автор: <a href='http://www.manningkrull.com/' rel='nofollow'>Leonard Krull</a>", width: "256", height: "256" %}
+{% include "media-image.liquid", url: "pixel-art/walking_man.gif", alt: "Бегущий воин, pixel Art, стандартное сглаживание в браузере", caption: "Автор: <a href='http://www.manningkrull.com/' rel='nofollow'>Leonard Krull</a>", width: "256", height: "256" %}
 
 Ужасно, не правда ли? Конечно можно сделать саму анимацию в размере 256×256, но это не поможет если рисунок должен масштабироваться или на него посмотрят на экранах с большой плотностью пикселей. Монитор размоет анимацию.
 
 Но что если мы можем на это повлиять? Посмотрите на следующую анимацию.
 
-{% include "media-image.html", url: "pixel-art/walking_man.gif", alt: "Бегущий воин, pixel Art, улучшеное сглаживание в браузере", caption: "Автор: <a href='http://www.manningkrull.com/' rel='nofollow'>Leonard Krull</a>", width: "256", height: "256", pixelart: "" %}
+{% include "media-image.liquid", url: "pixel-art/walking_man.gif", alt: "Бегущий воин, pixel Art, улучшеное сглаживание в браузере", caption: "Автор: <a href='http://www.manningkrull.com/' rel='nofollow'>Leonard Krull</a>", width: "256", height: "256", pixelart: "" %}
 
 Другое дело, и работает в IE 7+, Safari 6+, Firefox 3.6+, Opera 12, 26+, Chrome 41+.
 Впечатляет? Вот наглядная разница в масштабировании между стандартным методом и пиксельным в формате «было — стало».
 
 
-{% include "media-image.html", url: "pixel-art/difference.png", caption: "Разница между двумя методами", pixelart: "", width: "557", height: "286" %}
+{% include "media-image.liquid", url: "pixel-art/difference.png", caption: "Разница между двумя методами", pixelart: "", width: "557", height: "286" %}
 
 ## Как сделать
 

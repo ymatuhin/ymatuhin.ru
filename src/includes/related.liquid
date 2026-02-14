@@ -24,7 +24,7 @@
     {% if sameTagCount >= minCommonTags %}
         {% assign postsTitles = postsTitles | append: post.title %}
 
-        {% include card.html
+        {% include card.liquid
             tag="h2"
             categories=post.categories
             image=post.image.path
@@ -44,7 +44,7 @@
 
     {% for post in site.related_posts | limit: limitCounter %}
       {% unless postsTitles contains post.title %}
-        {% include card.html
+        {% include card.liquid
                 tag="h2"
                 categories=post.categories
                 image=post.image.path

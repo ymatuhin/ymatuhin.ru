@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default: site.lang | default: 'ru' }}">
+
+{% getBundle "html", "head" %}
+
+<div class="default-layout">
+  <div class="default-layout__content">
+    {% include "header.liquid" %}
+
+    <main class="site-main" role="main">
+      {{ content }}
+    </main>
+  </div>
+  <footer class="default-layout__footer / footer" role="contentinfo">
+    <div class="footer__inner">
+      Юра Матюхин © 2026 :: Вдохновлено темой <a href="https://github.com/panr/hugo-theme-terminal"
+                                                 target="_blank">Terminal</a>, работает на <a href="https://gohugo.io">11ty</a>
+    </div>
+  </footer>
+</div>
+
+<img src="https://mc.yandex.ru/watch/28017147" style="position:absolute; left:-9999px;" alt=""/>
+</html>

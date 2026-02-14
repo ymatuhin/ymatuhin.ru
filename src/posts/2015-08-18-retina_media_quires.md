@@ -40,7 +40,7 @@ tags: [css, retina, лучшие практики, media quires, медиа вы
 Ответ найдем в поддержке браузерами этих свойств. Открываем <a href="http://caniuse.com/#feat=css-media-resolution">caniuse</a> и видим следующее:
 
 
-{% include "media-image.html", url: "media_queries/support.png", width: "1145", height: "549", caption: "Поддержка Media Queries в браузерах" %}
+{% include "media-image.liquid", url: "media_queries/support.png", width: "1145", height: "549", caption: "Поддержка Media Queries в браузерах" %}
 
 Зеленые столбцы и столбцы с номером 1 — поддерживают min/max resolution с единицами измерения `dpi`, а столбцы с номером 3 — поддерживают `-webkit-device-pixel-ratio`. То есть нам требуются только эти два свойства.
 

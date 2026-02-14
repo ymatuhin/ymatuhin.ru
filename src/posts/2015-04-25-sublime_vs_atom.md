@@ -13,7 +13,7 @@ description: >
   Обзор нового текстового редактора Atom от команды Github в сравнении c Sublime Text 3. Atom vs Sublime.
 ---
 
-{% include "media-post-image.html" %}
+{% include "media-post-image.liquid" %}
 
 В пятницу я пробовал в работе разные текстовые редакторы. Большинство из них очень плохи. Тот-же _Brackets_ от Adobe — вообще не изменился, те-же проблемы, в том числе со шрифтами и не очень приятный внешний вид. Но один из редакторов оказался наоборот очень крутым.
 
@@ -28,10 +28,10 @@ description: >
 
 <div class="full-width clearfix">
 	<div class="column-50">
-		{% include "media-image.html", url: "atom/atom_post.jpg", width: "1280", height: "773", caption: "Пример поста в текстовом редакторе Atom" %}
+		{% include "media-image.liquid", url: "atom/atom_post.jpg", width: "1280", height: "773", caption: "Пример поста в текстовом редакторе Atom" %}
 	</div>
 	<div class="column-50">
-		{% include "media-image.html", url: "atom/sublime_post.jpg", width: "1280", height: "773", caption: "Пример поста в текстовом редакторе Sublime Text 3" %}
+		{% include "media-image.liquid", url: "atom/sublime_post.jpg", width: "1280", height: "773", caption: "Пример поста в текстовом редакторе Sublime Text 3" %}
 	</div>
 </div>
 
@@ -41,10 +41,10 @@ description: >
 
 <div class="full-width clearfix">
 	<div class="column-50">
-		{% include "media-image.html", url: "atom/atom_settings.jpg", width: "1280", height: "773", caption: "Окно настроек в текстовом редакторе Atom" %}
+		{% include "media-image.liquid", url: "atom/atom_settings.jpg", width: "1280", height: "773", caption: "Окно настроек в текстовом редакторе Atom" %}
 	</div>
 	<div class="column-50">
-		{% include "media-image.html", url: "atom/sublime_settings.jpg", width: "1280", height: "773", caption: "Окно настроек в текстовом редакторе Sublime Text 3" %}
+		{% include "media-image.liquid", url: "atom/sublime_settings.jpg", width: "1280", height: "773", caption: "Окно настроек в текстовом редакторе Sublime Text 3" %}
 	</div>
 </div>
 
@@ -52,7 +52,7 @@ description: >
 В Sublime Text это делалось с помощью плагина Package Control, который нужно было еще установить.
 В Atom есть визуальный интерфейс для настроек и установки плагинов, в котором можно почитать описание дополнения и количество установок прямо в редакторе.
 
-{% include "media-image.html", url: "atom/atom_install_package.jpg", width: "1280", height: "773", caption: "Установка дополнений в текстовом редакторе Atom от Github" %}
+{% include "media-image.liquid", url: "atom/atom_install_package.jpg", width: "1280", height: "773", caption: "Установка дополнений в текстовом редакторе Atom от Github" %}
 
 ## Переход на Atom c Sublime Text
 Это единственный текстовый редактор на который можно перейти с Sublime без проблем и переучиваний. Все сочетания клавиш работаю так-же как и там. Это просто бомба!

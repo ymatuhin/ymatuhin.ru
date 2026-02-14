@@ -12,14 +12,14 @@ image:
   caption: Темная темя для Chrome Dev Tools
 ---
 
-{% include "media-post-image.html" %}
+{% include "media-post-image.liquid" %}
 
 Совсем недавно я узнал, что Chrome поддерживает темы для dev tools. Мне сразу-же захотелось попробовать это. Сразу скажу результат меня не совсем порадовал :-)
 
 ## Подготовка
 Для того, чтобы установить тему для dev tools, нужно включить экспериментальные функции. Чтобы это сделать введите в адресной строке Google Chrome `chrome://flags/#enable-devtools-experiments`. Рядом с пунктом _Enable Developer Tools experiments_ нажмите _Enable_. Теперь перезапустите браузер (внизу должна быть кнопка).
 
-{% include "media-image.html", url: "dev_tools/flags.png", width: "700", height: "60", caption: "Google Chrome — флаги" %}
+{% include "media-image.liquid", url: "dev_tools/flags.png", width: "700", height: "60", caption: "Google Chrome — флаги" %}
 
 Откройте инструменты разработчика (`cmd + shif + i / F12`), зайдите в настройки (иконка шестеренки), перейдите во вкладку <strong>Experiments</strong> и поставьте галочку рядом с пунктом «Allow custom UI themes».
 Теперь можно спокойно устанавливать темы из магазина.

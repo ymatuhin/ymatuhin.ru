@@ -12,7 +12,7 @@ image:
   height: 400
 ---
 
-{% include "media-post-image.html" %}
+{% include "media-post-image.liquid" %}
 
 В <a href="/front-end/plan_for_frontend_developer/">двух из трех</a> вакансиях для фронтеда требуют знания **REST / RESTful API**. Разберемся что это и в чем разница.
 

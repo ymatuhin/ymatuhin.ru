@@ -1,8 +1,8 @@
 <header class="post-header / wrap-inner">
     <span class="post-header__info">
-        {% include "pubdate.html", date: page.date %} &nbsp;/&nbsp;
+        {% include "pubdate.liquid", date: page.date %} &nbsp;/&nbsp;
         <span class="post-category">
-        {% include "categories.html" categories: categories %}
+        {% include "categories.liquid" categories: categories %}
         </span>
     </span>
     <h1 class="post-header__title"

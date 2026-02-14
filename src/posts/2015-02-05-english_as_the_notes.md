@@ -19,6 +19,6 @@ has_youtube: true
 
 ## Английский как по нотам смотреть онлайн
 
-{% include "media-youtube.html", url: "7JSggwopqoE" width="560" height="315" caption="Английский как по нотам — Диалоги из Бойцовского клуба" %} %}
+{% include "media-youtube.liquid", url: "7JSggwopqoE" width="560" height="315" caption="Английский как по нотам — Диалоги из Бойцовского клуба" %} %}
 
-{% include "media-youtube.html", url: "cgpr2XazMnI" width="560" height="315" caption="Английский как по нотам — Диалоги из Матрицы" %} %}
+{% include "media-youtube.liquid", url: "cgpr2XazMnI" width="560" height="315" caption="Английский как по нотам — Диалоги из Матрицы" %} %}

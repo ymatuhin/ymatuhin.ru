@@ -11,7 +11,7 @@ image:
   caption: Http-server статики в терминале
 ---
 
-{% include "media-post-image.html" %}
+{% include "media-post-image.liquid" %}
 
 Каждая из нижеприведенных команд запускает статичный http сервер в текущей директории. Сервер будет доступен по адресу [http://localhost:8000](http://localhost:8000){:rel="nofollow"}
 

@@ -13,7 +13,7 @@ image:
 has_youtube: true
 ---
 
-{% include "media-post-image.html" %}
+{% include "media-post-image.liquid" %}
 
 Хочу поделиться вебинарами от Geekbrains (Школа Программирования). Я недавно нашел эти вебинары, поэтому успел посмотреть только несколько записей. Но общее впечатление очень хорошее. Хотя тут все зависит от того, кто ведет эти вебинары.
 
@@ -21,6 +21,6 @@ has_youtube: true
 
 Приведу несколько вебинаров которые мне понравились:
 
-{% include "media-youtube.html", url: "GGmbRM0Khvo", width: "560", height: "315", caption: "Вопросы личностного развития. Часть 1. Эффективная постановка личных целей" %}
+{% include "media-youtube.liquid", url: "GGmbRM0Khvo", width: "560", height: "315", caption: "Вопросы личностного развития. Часть 1. Эффективная постановка личных целей" %}
 
-{% include "media-youtube.html", url: "MufNlCv8o5Y", width: "560", height: "315", caption: "Карьера в ИТ: Путь джедая" %}
+{% include "media-youtube.liquid", url: "MufNlCv8o5Y", width: "560", height: "315", caption: "Карьера в ИТ: Путь джедая" %}

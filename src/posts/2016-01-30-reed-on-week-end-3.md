@@ -10,7 +10,7 @@ has_youtube: true
 
 Горячие новости 🔥 — Sublime Text [жив](https://sublimetext.com/3dev){:rel='nofollow'}! Сборка 3099 вышла 29 января 2016.
 
-{% include "media-youtube.html", url: "20BySC_6HyY", width: "960", height: "720", caption: "Wat by Gary Bernhardt" %} %}
+{% include "media-youtube.liquid", url: "20BySC_6HyY", width: "960", height: "720", caption: "Wat by Gary Bernhardt" %} %}
 
 > **UPD**. Совсем забыл о классном видео Андрея Листочкина с Харьков JS — [Как не гнаться за технологиями и начать жить](https://www.youtube.com/watch?v=xPFRUM_oDKA). Рекомендую 👍
 
@@ -47,7 +47,7 @@ has_youtube: true
 1. 🇺🇸  [JS совет каждый день][24]{:rel='nofollow'} 🔥
 1. 🇺🇸  [The Fuck][3]{:rel='nofollow'} — терминальный сервис, который исправляет ошибки в предыдущем запросе.
 
-{% include "media-image.html", url: "week-ends/the-fuck.gif", width: "686", height: "379" %}
+{% include "media-image.liquid", url: "week-ends/the-fuck.gif", width: "686", height: "379" %}
 
 
 

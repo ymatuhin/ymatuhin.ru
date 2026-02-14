@@ -11,7 +11,7 @@ image:
     alt: Пример css свойства text-decoration-skip
 ---
 
-{% include "media-post-image.html" %}
+{% include "media-post-image.liquid" %}
 
 Стандартное подчеркивание — ад перфекциониста. Оно нагло перекрывает висячие символы в тексте, его становится сложнее читать, и это режет глаза.
 
@@ -28,7 +28,7 @@ a {
 
 [Демка](https://codepen.io/ymatuhin/pen/rwRvQr?editors=1100){:class="bigger"} и поддержка бразузерами.
 
-{% include "media-image.html", url: "text-decoration/support.png", width: "1236", height: "365", caption: "Данные о свойстве text-decoration-skip c сайта caniuse.com" %}
+{% include "media-image.liquid", url: "text-decoration/support.png", width: "1236", height: "365", caption: "Данные о свойстве text-decoration-skip c сайта caniuse.com" %}
 
 ### Примечания
 

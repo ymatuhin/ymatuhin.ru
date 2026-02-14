@@ -25,7 +25,7 @@ permalink: /{{ category }}/index.html
         {% endif %}
 
         {% if is_in_category %}
-            {% include "card.html"
+            {% include "card.liquid"
                 tag: "h2",
                 categories: post.data.categories,
                 image: post.data.image.path,

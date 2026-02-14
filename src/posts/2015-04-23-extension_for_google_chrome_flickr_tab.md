@@ -15,7 +15,7 @@ image:
 
 Вот такой милый пес появился у меня при открытии новой вкладки в Google Chrome. И про это я хочу сегодня рассказать вам.
 
-{% include "media-post-image.html" %}
+{% include "media-post-image.liquid" %}
 
 > Flickr — фотохостинг, предназначенный для хранения и дальнейшего использования пользователем цифровых фотографий и видеороликов. Один из самых популярных сайтов среди блогеров для размещения фотографий.
 
@@ -27,10 +27,10 @@ image:
 
 Перед тем, как вы побежите скачивать это расширение (или Google Chrome), я предлагаю вам посмотреть еще пару снимков из этого расширения:
 
-{% include "media-image.html", url: "flickr_extension/new_tab_by_flickr_2.png", width: "1280", height: "773", caption: "Завтрак, Google Chrome, Flickr" %}
+{% include "media-image.liquid", url: "flickr_extension/new_tab_by_flickr_2.png", width: "1280", height: "773", caption: "Завтрак, Google Chrome, Flickr" %}
 
-{% include "media-image.html", url: "flickr_extension/new_tab_by_flickr_3.png", width: "1280", height: "773", caption: "Черно-белая улочка, Google Chrome, Flickr" %}
+{% include "media-image.liquid", url: "flickr_extension/new_tab_by_flickr_3.png", width: "1280", height: "773", caption: "Черно-белая улочка, Google Chrome, Flickr" %}
 
-{% include "media-image.html", url: "flickr_extension/new_tab_by_flickr_4.png", width: "1280", height: "773", caption: "Ночной город, Google Chrome, Flickr" %}
+{% include "media-image.liquid", url: "flickr_extension/new_tab_by_flickr_4.png", width: "1280", height: "773", caption: "Ночной город, Google Chrome, Flickr" %}
 
 Как по мне — очень оригинально и радует глаз :-)

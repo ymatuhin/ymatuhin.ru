@@ -13,7 +13,7 @@ image:
 has_youtube: true
 ---
 
-{% include "media-post-image.html" %}
+{% include "media-post-image.liquid" %}
 
 Бегущий динозавр перепрыгивающий через кактусы — пасхалка в хроме c 2014 года, о которой я узнал только вчера.
 
@@ -32,6 +32,6 @@ has_youtube: true
 
 ## Геймплей T-Rex runner
 
-{% include "media-youtube.html", url: "buPl0vnusls", width: "560", height: "315", caption: "Пасхалка в гугл хроме — динозавр T-Rex" %}
+{% include "media-youtube.liquid", url: "buPl0vnusls", width: "560", height: "315", caption: "Пасхалка в гугл хроме — динозавр T-Rex" %}
 
 Если вам интересно посмотреть, как написана эта игра, то вы откройте дебагер на странице и найдите в одном из `script` исходники.

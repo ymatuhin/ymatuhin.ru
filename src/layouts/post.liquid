@@ -3,7 +3,7 @@ layout: default
 ---
 
 <article class="post typo white-content" itemscope itemtype="http://schema.org/BlogPosting">
-  {% include "post-header.html" %}
+  {% include "post-header.liquid" %}
 
   <div itemprop="articleBody">
     {{ content }}
@@ -23,8 +23,5 @@ layout: default
     Еше можно подписаться на <a href="http://eepurl.com/bkY7hb"><b>email рассылку</b></a> новых заметок. Не чаще раза в
     неделю, без спама.
   </p>
-  {% include "comments.html" %}
+  {% include "comments.liquid" %}
 </article>
-
-<!--{% include "related.html" %}-->
-

@@ -18,7 +18,7 @@ description: >
 
 
 {%
-	include "media-image.html",
+	include "media-image.liquid",
 	url: "autoprefixer/autoprefixer.png",
 	width: "1280",
 	height: "701",
@@ -30,7 +30,7 @@ description: >
 Часто у&nbsp;людей, не&nbsp;знакомых с&nbsp;синтаксисом автопрефиксера, возникают проблемы с&nbsp;фильтром для браузеров.
 
 {%
-	include "media-image.html",
+	include "media-image.liquid",
 	url: "autoprefixer/filter.png",
 	width: "397",
 	height: "40",

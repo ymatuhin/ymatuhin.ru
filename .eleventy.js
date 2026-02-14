@@ -5,6 +5,9 @@ import markdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
 
 export default function (eleventyConfig) {
+  eleventyConfig.addBundle("css");
+  eleventyConfig.addBundle("html");
+
   const mdOptions = {html: true, breaks: true, linkify: false};
   eleventyConfig.setLibrary("md", markdownIt(mdOptions).use(markdownItAttrs));
 

@@ -11,7 +11,7 @@ image:
   height: 128
 ---
 
-{% include "media-post-image.html" %}
+{% include "media-post-image.liquid" %}
 
 > Cравнить блокировщики можно на [сайте с рекламой](https://checkadblock.ru){:class="bigger"}.
 

@@ -1,3 +1,4 @@
+<br>
 <div class="card">
     {% if image %}
         {% if link %}<a href="{{ link }}">{% endif %}
@@ -8,7 +9,7 @@
     <div class="padding">
         {% if categories %}
             <div class="tags">
-                {% include "categories.html" categories: categories %}
+                {% include "categories.liquid" categories: categories %}
             </div>
         {% endif %}
 

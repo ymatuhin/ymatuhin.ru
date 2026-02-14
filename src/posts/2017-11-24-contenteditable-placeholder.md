@@ -11,7 +11,7 @@ image:
     alt: '[contenteditable]'
 ---
 
-{% include "media-post-image.html" %}
+{% include "media-post-image.liquid" %}
 
 Я&nbsp;уже сильно привык к&nbsp;аттрибуту `placeholder`, и&nbsp;немного грустил зная что `<pre contenteditable></pre>` не&nbsp;работает с `placeholder`. Но&nbsp;чутка погуглив я&nbsp;нашел инетресное решение, которым хочу поделиться с&nbsp;вами.
 

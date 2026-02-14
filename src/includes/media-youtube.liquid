@@ -1,7 +1,7 @@
 {% if url %}
 	{% capture embedUrl %}https://www.youtube.com/embed/{{ url }}{% endcapture %}
 
-	{% include "media-iframe.html",
+	{% include "media-iframe.liquid",
 		url: embedUrl,
 		width: width,
 		height: height,

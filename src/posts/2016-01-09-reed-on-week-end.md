@@ -12,7 +12,7 @@ image:
 has_iframe: true
 ---
 
-{% include "media-post-image.html" %}
+{% include "media-post-image.liquid" %}
 
 Я читал на этой неделе Оруэлла — 1984. Давно собирался и вот, к новому году, приобрел себе книженцию и прочитал. До сих пор не выходит из головы, сильный финал. Рекомендую.
 
@@ -22,7 +22,7 @@ has_iframe: true
 
 Я перешел на Pocket для сохранения статей. До этого складывал их в Wunderlist и Notes, а теперь выбрал годное из них и составил списочки ниже. Чтива хватит на пару выходных.
 
-{% include "media-iframe.html",
+{% include "media-iframe.liquid",
     url: "//codepen.io/joshnh/embed/JCGoF/?height=320&theme-id=0&default-tab=result",
     width: "960",
     height: "320",
