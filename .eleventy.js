@@ -1,5 +1,6 @@
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import {feedPlugin} from "@11ty/eleventy-plugin-rss";
+import {IdAttributePlugin} from "@11ty/eleventy";
 import markdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
 
@@ -11,6 +12,15 @@ export default function (eleventyConfig) {
   eleventyConfig.setLibrary("md", markdownIt(mdOptions).use(markdownItAttrs));
 
   // Plugins
+  eleventyConfig.addPlugin(IdAttributePlugin, {
+    filter({page}) {
+      if (page.inputPath.endsWith("javascript_styleguide.liquid")) {
+        return false; // skip
+      }
+
+      return true;
+    }
+  });
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(feedPlugin, {
     outputPath: "/feed.xml",
@@ -32,12 +42,6 @@ export default function (eleventyConfig) {
 
   // Passthrough copy
   eleventyConfig.addPassthroughCopy({"public": "/"});
-  eleventyConfig.addPassthroughCopy({"src/assets/*": "assets"});
-
-  // Filters
-  eleventyConfig.addFilter("stripDate", (slug) => {
-    return slug.replace(/^\d{4}-\d{2}-\d{2}-/, "");
-  });
 
   // Collections
   eleventyConfig.addCollection("posts", function (collectionApi) {
@@ -50,7 +54,7 @@ export default function (eleventyConfig) {
     posts.forEach(item => {
       if (item.data.categories) {
         if (Array.isArray(item.data.categories)) {
-          item.data.categories.forEach(cat => categories.add(cat));
+          item.data.categories.forEach(category => categories.add(category));
         } else {
           categories.add(item.data.categories);
         }

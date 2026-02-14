@@ -1,4 +1,0 @@
-{
-  "layout": "post",
-  "permalink": "/{% if categories.first %}{{ categories.first }}{% else %}{{ categories }}{% endif %}/{{ page.fileSlug | stripDate }}/index.html"
-}

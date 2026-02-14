@@ -1,9 +1,0 @@
-@layer base, layout, components;
-
-@import "vars.css" layer(base);
-@import "font.css" layer(base);
-@import "base.css" layer(base);
-@import "prism.css" layer(base);
-@import "layout.css" layer(layout);
-@import "header.css" layer(components);
-@import "footer.css" layer(components);

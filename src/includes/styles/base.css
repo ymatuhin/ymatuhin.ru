@@ -1,0 +1,56 @@
+@layer base {
+  :root {
+    --font-family: "Ubuntu Sans Mono", Monaco, Consolas, "Ubuntu Mono";
+    --background-color: #181825;
+    --deeper-background-color: #11111b;
+    --accent-color: #cba6f7;
+    --text-color: #d6e8ee;
+    --text-font-size: 17px;
+    --text-line-height: 28px;
+    --heading-font-size: 19px;
+    --heading-line-height: 32px;
+  }
+
+  html {
+    box-sizing: border-box;
+    height: 100%;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: var(--font-family), monospace;
+    min-height: 100vh;
+    font-weight: 400;
+    font-size: var(--text-font-size);
+    line-height: var(--text-line-height);
+    background-color: var(--deeper-background-color);
+    color: var(--text-color);
+    text-rendering: optimizeLegibility;
+    font-variant-ligatures: contextual;
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: var(--accent-color);
+    text-underline-offset: 2px;
+  }
+
+  a:focus-visible, a:hover {
+    text-decoration: none;
+  }
+
+  a:focus-visible {
+    outline: 1px solid;
+    outline-offset: 2px;
+  }
+}

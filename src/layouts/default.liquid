@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ lang | default: site.lang | default: 'ru' }}">
 
-{% getBundle "html", "head" %}
+{% include "head.liquid" %}
 
 <div class="default-layout">
   <div class="default-layout__content">
@@ -20,4 +20,8 @@
 </div>
 
 <img src="https://mc.yandex.ru/watch/28017147" style="position:absolute; left:-9999px;" alt=""/>
+
+{% css %}
+{% include "styles/layout.css" %}
+{% endcss %}
 </html>
