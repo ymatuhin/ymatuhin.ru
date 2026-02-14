@@ -1,0 +1,11 @@
+<footer class="footer / {{ class }}">
+  <p>
+    Юра Матюхин (ymatuhin) © <a href="https://web.archive.org/web/20260000000000*/http://ymatuhin.ru/" target="_blank" rel="noopener noreferrer">2013–{{ "now" | date: "%Y" }}</a>
+    <br>
+    Вдохновлено темой <a href="https://github.com/panr/hugo-theme-terminal" target="_blank" rel="noopener noreferrer">Terminal</a>, работает на <a href="https://www.11ty.dev/" target="_blank" rel="noopener noreferrer">11ty</a>, есть на <a href="/en/" hreflang="en" lang="en">английском</a>.
+  </p>
+</footer>
+
+{% css "defer" %}
+{% include "styles/footer.css" %}
+{% endcss %}

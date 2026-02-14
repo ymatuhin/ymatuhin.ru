@@ -1,0 +1,16 @@
+@layer component {
+  fieldset {
+    display: inline-block;
+    border: 2px solid var(--text-color);
+    padding: 1rem 1.5rem 1.5rem;
+  }
+
+  fieldset.intro {
+    border-color: var(--accent-color);
+  }
+
+  fieldset legend {
+    padding: 0 0.75rem;
+    margin-left: -0.75rem;
+  }
+}

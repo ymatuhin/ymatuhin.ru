@@ -1,19 +1,12 @@
-<div class="header">
+<header class="header">
   <div class="header__inner">
-    <div class="header__logo">
-      <a class="logo" href="/">
-        {% include "svg/logo.svg" %}
-      </a>
-    </div>
-    <select id="fontFamily" name="fontFamily">
-      <option name="fira-code" value="fira-code" selected>ru</option>
-      <option name="jetbrains-mono" value="jetbrains-mono">en</option>
-    </select>
+    <a class="header__logo" href="/" aria-label="Юра Матюхин — главная страница">
+      {% include "svg/logo.svg" %}
+    </a>
   </div>
 
-
   <div class="nav-container">
-    <nav class="global-navigation" role="navigation">
+    <nav class="global-navigation" aria-label="Основные категории">
       {% if page.url == '/front-end/' %}<b class="global-navigation__item">фронтенд</b>
       {% else %}<a class="global-navigation__item" href="/front-end/">фронтенд</a>{% endif %}
 
@@ -23,11 +16,15 @@
       {% if page.url == '/blog/' %}<b class="global-navigation__item">блог</b>
       {% else %}<a class="global-navigation__item" href="/blog/">блог</a>{% endif %}
     </nav>
-    <nav>
-      <a href="https://github.com/ymatuhin" target="_blank">гитхаб</a>
-      <a href="https://t.me/ymatuhin" target="_blank">телега</a>
+    <nav aria-label="Социальные ссылки: GitHub, Telegram, почта и RSS">
+      <a href="https://github.com/ymatuhin" target="_blank" rel="noopener noreferrer">гитхаб</a>
+      <a href="https://t.me/ymatuhin" target="_blank" rel="noopener noreferrer">телега</a>
       <a href="#">почта</a>
       <a href="#">рсс</a>
     </nav>
   </div>
-</div>
+</header>
+
+{% css %}
+{% include "styles/header.css" %}
+{% endcss %}
