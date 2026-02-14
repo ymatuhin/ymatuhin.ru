@@ -1,0 +1,6 @@
+hr {
+  width: 100%;
+  border: none;
+  background: var(--accent-color);
+  height: 2px;
+}

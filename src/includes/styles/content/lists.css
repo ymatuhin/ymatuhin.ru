@@ -1,0 +1,21 @@
+ul,
+ol {
+  margin-left: 4ch;
+  padding: 0;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-top: 0;
+}
+
+li::marker {
+  color: var(--accent-color);
+}
+
+ul li,
+ol li {
+  position: relative;
+}

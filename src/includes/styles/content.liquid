@@ -1,0 +1,67 @@
+@layer content {
+  {% assign contentToCheck = contentHtml | default: content | default: "" %}
+  {% assign hasH1 = contentToCheck contains "<h1" %}
+  {% assign hasH2 = contentToCheck contains "<h2" %}
+  {% assign hasAnyHeading = hasH1 or hasH2 or contentToCheck contains "<h3" or contentToCheck contains "<h4" or contentToCheck contains "<h5" or contentToCheck contains "<h6" %}
+  {% assign hasP = contentToCheck contains "<p" %}
+  {% assign hasUl = contentToCheck contains "<ul" %}
+  {% assign hasOl = contentToCheck contains "<ol" %}
+  {% assign hasList = hasUl or hasOl %}
+  {% assign hasImg = contentToCheck contains "<img" %}
+  {% assign hasFigure = contentToCheck contains "<figure" %}
+  {% assign hasVideo = contentToCheck contains "<video" %}
+  {% assign hasTable = contentToCheck contains "<table" %}
+  {% assign hasCode = contentToCheck contains "<code" %}
+  {% assign hasPre = contentToCheck contains "<pre" %}
+  {% assign hasKbd = contentToCheck contains "<kbd" %}
+  {% assign hasSup = contentToCheck contains "<sup" %}
+  {% assign hasSub = contentToCheck contains "<sub" %}
+  {% assign hasAbbr = contentToCheck contains "<abbr" %}
+  {% assign hasMark = contentToCheck contains "<mark" %}
+  {% assign hasBlockquote = contentToCheck contains "<blockquote" %}
+  {% assign hasHr = contentToCheck contains "<hr" %}
+  {% assign hasStrong = contentToCheck contains "<strong" %}
+  {% assign hasB = contentToCheck contains "<b" %}
+  {% assign hasTh = contentToCheck contains "<th" %}
+  {% assign hasButton = contentToCheck contains "<button" %}
+
+  {% if hasAnyHeading %}
+    {% include "styles/content/headings.css" %}
+  {% endif %}
+
+  {% if hasP or hasList or hasImg or hasFigure or hasVideo or hasTable %}
+    {% include "styles/content/spacing.css" %}
+  {% endif %}
+
+  {% if hasList %}
+    {% include "styles/content/lists.css" %}
+  {% endif %}
+
+  {% if hasImg or hasFigure or hasVideo %}
+    {% include "styles/content/media.css" %}
+  {% endif %}
+
+  {% if hasCode or hasPre or hasKbd %}
+    {% include "styles/content/code.css" %}
+  {% endif %}
+
+  {% if hasSup or hasSub or hasAbbr or hasMark %}
+    {% include "styles/content/inline-elements.css" %}
+  {% endif %}
+
+  {% if hasBlockquote %}
+    {% include "styles/content/blockquote.css" %}
+  {% endif %}
+
+  {% if hasTable or hasTh %}
+    {% include "styles/content/table.css" %}
+  {% endif %}
+
+  {% if hasHr %}
+    {% include "styles/content/hr.css" %}
+  {% endif %}
+
+  {% if hasAnyHeading or hasB or hasStrong or hasTh or hasButton %}
+    {% include "styles/content/bold.css" %}
+  {% endif %}
+}

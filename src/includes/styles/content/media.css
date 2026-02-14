@@ -1,0 +1,21 @@
+img {
+  display: block;
+  max-width: 100%;
+  border: 8px solid var(--accent-color);
+  padding: 8px;
+  overflow: hidden;
+}
+
+figure img,
+figure video {
+  margin-bottom: 0;
+}
+
+figure figcaption {
+  background: var(--accent-color);
+  color: var(--background-color);
+  text-align: center;
+  font-size: 1em;
+  font-weight: normal;
+  margin-top: -8px;
+}

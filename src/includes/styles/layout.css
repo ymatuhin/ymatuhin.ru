@@ -1,16 +1,18 @@
-.layout {
-  position: relative;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  padding: 3rem;
-  max-width: 58rem;
-  min-height: 100vh;
-  border-left: 1px solid #313244;
-  border-right: 1px solid #313244;
-  background-color: var(--background-color);
-}
+@layer layout {
+  .layout {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    max-width: 58rem;
+    min-height: 100vh;
+    border-left: 1px solid #313244;
+    border-right: 1px solid #313244;
+    background-color: var(--background-color);
+  }
 
-.layout__content {
-  flex: 1 0 auto;
+  .layout__content {
+    flex: 1 0 auto;
+  }
 }

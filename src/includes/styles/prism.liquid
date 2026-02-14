@@ -1,0 +1,5 @@
+{% assign contentToCheck = contentHtml | default: content | default: "" %}
+{% assign hasCodeBlock = contentToCheck contains "<pre" or contentToCheck contains "language-" %}
+{% if hasCodeBlock %}
+  {% include "styles/prism.css" %}
+{% endif %}

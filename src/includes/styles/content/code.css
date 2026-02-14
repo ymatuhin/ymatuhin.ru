@@ -1,0 +1,46 @@
+code,
+kbd {
+  font-family: "Fira Code", "JetBrains Mono", Monaco, Consolas, Ubuntu Mono, monospace !important;
+  font-feature-settings: normal;
+  background: color-mix(in srgb, var(--text-color) 5%, transparent);
+  color: color-mix(in srgb, var(--text-color) 5%, var(--accent-color));
+  padding: 0 6px;
+  margin: 0 2px;
+  font-size: 0.95em;
+}
+
+code {
+  border: 1px solid color-mix(in srgb, var(--text-color) 25%, transparent);
+}
+
+kbd {
+  border-top: 1px solid color-mix(in srgb, var(--accent-color) 25%, transparent);
+  border-left: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  border-bottom: 4px solid var(--accent-color);
+  border-radius: 4px;
+}
+
+code code {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+pre {
+  tab-size: 4;
+  background: color-mix(in srgb, var(--text-color) 5%, transparent) !important;
+  color: color-mix(in srgb, var(--text-color) 5%, var(--accent-color));
+  padding: 20px 10px;
+  font-size: 0.95em !important;
+  overflow: auto;
+  border: 1px solid color-mix(in srgb, var(--text-color) 25%, transparent);
+}
+
+pre code {
+  background: none !important;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  border: none;
+}

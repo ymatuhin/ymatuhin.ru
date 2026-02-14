@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="{{ lang | default: site.lang | default: 'ru' }}">
+  {% include "page/head.liquid" %}
 
-{% include "page/head.liquid" %}
+  <div class="layout">
+    <div class="layout__content">
+      {% include "page/header.liquid" %}
 
-<div class="layout">
-  <div class="layout__content">
-    {% include "page/header.liquid" %}
+      <main class="site-main">{{ content }}</main>
+    </div>
 
-    <main class="site-main">{{ content }}</main>
+    {% include "page/footer.liquid", class: 'layout__footer' %}
   </div>
 
-  {% include "page/footer.liquid", class: 'layout__footer' %}
-</div>
+  {% comment %} Simple analytics {% endcomment %}
+  <img src="https://mc.yandex.ru/watch/28017147" style="position:absolute; left:-9999px;" alt="" />
 
-{% comment %} Simple analytics {% endcomment %}
-<img src="https://mc.yandex.ru/watch/28017147" style="position:absolute; left:-9999px;" alt="" />
-
-{% css %}
-{% include "styles/layout.css" %}
-{% endcss %}
+  {% css %}
+  {% include "styles/layout.css" %}
+  {% endcss %}
 </html>

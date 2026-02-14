@@ -11,21 +11,14 @@
 
   {% comment %} Inline CSS {% endcomment %}
   <style>
-    @layer base, forms, content, layout, components, utilities;
+    @layer base, content, layout, components, utilities;
 
     {% include "styles/base.css" %}
-    {% include "styles/content.css" %}
-    {% include "styles/utilities.css" %}
+    {% include "styles/content.liquid", contentHtml: content %}
+    {% include "styles/prism.liquid", contentHtml: content %}
 
     {% getBundle "css" %}
   </style>
-
-
-  {% comment %} Async CSS {% endcomment %}
-  {% css "defer" %}
-  {% include "styles/prism.css" %}
-  {% endcss %}
-  <link rel="stylesheet" href="{% getBundleFileUrl 'css', 'defer' %}" media="print" onload="this.media='all'">
 
   {% comment %} Icons {% endcomment %}
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png?v=JymzngPEmg2">

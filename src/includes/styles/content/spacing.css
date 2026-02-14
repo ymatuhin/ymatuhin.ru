@@ -1,0 +1,9 @@
+p,
+ul,
+ol,
+img,
+figure,
+video,
+table {
+  margin-bottom: 1rem;
+}

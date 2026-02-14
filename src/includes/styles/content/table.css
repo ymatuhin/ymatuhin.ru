@@ -1,0 +1,19 @@
+table {
+  table-layout: auto;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 2px solid var(--text-color);
+  padding: 10px;
+}
+
+th {
+  border-style: solid;
+  color: var(--text-color);
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
