@@ -1,6 +1,5 @@
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import {feedPlugin} from "@11ty/eleventy-plugin-rss";
-import eleventyNavigation from "@11ty/eleventy-navigation";
 import markdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
 
@@ -13,7 +12,6 @@ export default function (eleventyConfig) {
 
   // Plugins
   eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPlugin(eleventyNavigation);
   eleventyConfig.addPlugin(feedPlugin, {
     outputPath: "/feed.xml",
     collection: {
