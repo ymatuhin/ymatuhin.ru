@@ -1,12 +1,11 @@
-export function buildRelatedPosts(data) {
+export function buildRelatedPosts(allPosts, page, tags) {
   // Only compute for pages that are part of the posts collection
-  if (!data?.page?.url || !data?.collections?.posts) return [];
+  if (!page?.url || !allPosts) return [];
 
-  const allPosts = data.collections.posts;
-  const currentUrl = data.page.url;
+  const currentUrl = page.url;
 
   const currentTags = new Set(
-    (Array.isArray(data.tags) ? data.tags : [])
+    (Array.isArray(tags) ? tags : [])
       .filter(Boolean)
       // optional: ignore common meta tags
       .filter((t) => !['post', 'posts', 'all'].includes(t)),

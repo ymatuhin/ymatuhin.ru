@@ -3,4 +3,5 @@ hr {
   border: none;
   background: var(--accent-color);
   height: 2px;
+  margin: 1rem 0;
 }

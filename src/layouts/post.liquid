@@ -15,9 +15,9 @@ layout: default
   </heading-anchors>
 </article>
 
-relatedPosts: {{ relatedPosts }}
-
-{% if relatedPosts and relatedPosts.size > 0 %}
+<hr>
+{% assign relatedPosts = collections.posts | relatedPosts: page, tags %}
+{% if relatedPosts.size > 0 %}
   <aside class="similar-articles" aria-label="Similar articles">
     <h2>Similar articles</h2>
     <ul>
