@@ -1,11 +1,22 @@
 {% assign titleTag = tag | default: "h2" %}
+{% assign inPostMode = in-post | default: in_post | default: false %}
+{% assign cardRootTag = "article" %}
+{% assign cardRootClass = "post-card" %}
+{% assign titleItemprop = "" %}
 
-<article class="post-card">
-  <{{ titleTag }} class="post-card__title">
-{% if link %}<a href="{{ link }}">{% endif %}{{ title }}{% if link %}</a>{% endif %}
+{% if inPostMode %}
+  {% assign cardRootTag = "header" %}
+  {% assign cardRootClass = "post-card post-card_in-post" %}
+  {% assign titleItemprop = ' itemprop="name headline"' %}
+{% endif %}
+
+<{{ cardRootTag }} class="{{ cardRootClass }}">
+{% if link %}<a href="{{ link }}" class="post-card__link">{% endif %}
+  <{{ titleTag }} class="post-card__title"{{ titleItemprop }}>
+  {{ title }}
+  <hr class="post-card__divider">
 </{{ titleTag }}>
-<hr class="post-card__divider">
-
+  {% if link %}</a>{% endif %}
 
 {% if date or tags %}
   <div class="post-card__meta">
@@ -17,12 +28,7 @@
 
     {% if tags %}
       <span class="post-card__tags">
-          {% if tags.first %}
-            {% assign tagsList = tags %}
-          {% else %}
-            {% assign tagsList = tags | split: "," %}
-          {% endif %}
-        {% for itemTag in tagsList %}
+        {% for itemTag in tags %}
           {% assign tagTrimmed = itemTag | strip %}
           {% assign tagSlug = tagTrimmed | tagSlug %}
           {% assign tagUrl = "/tag/" | append: tagSlug | append: "/" %}
@@ -34,7 +40,7 @@
     </div>
 {% endif %}
 
-{% if imagePath %}
+{% if imagePath and inPostMode != true %}
   <div class="post-card__cover">
         {% if link %}<a href="{{ link }}">{% endif %}
             {% assign cardImageAlt = imageAlt | default: title %}
@@ -43,12 +49,12 @@
     </div>
 {% endif %}
 
-{% if description %}
+{% if description and inPostMode != true %}
   <div class="post-card__content">
       <p>{{ description }}</p>
     </div>
 {% endif %}
-</article>
+</{{ cardRootTag }}>
 
 {% css %}
 {% include "styles/post-card.css" %}

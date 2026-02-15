@@ -3,6 +3,10 @@
     margin-top: 3rem;
   }
 
+  .post-card_in-post {
+    margin-bottom: 2rem;
+  }
+
   .post-card + .post-card {
     margin-top: 2rem;
     padding-top: 2rem;
@@ -23,13 +27,22 @@
 
   .post-card__divider {
     margin: 0.5rem 0;
-    border-top: 3px dotted var(--accent-color);
     height: 9px;
     background: initial;
+    border-top: 3px dotted var(--accent-color);
     border-bottom: 3px dotted var(--accent-color);
   }
 
-  .post-card__title a {
+  .post-card_in-post .post-card__divider {
+    border-top: 3px dotted var(--text-color);
+    border-bottom: 3px dotted var(--text-color);
+  }
+
+  .post-card__title {
+    text-decoration: none;
+  }
+
+  .post-card__link {
     text-decoration: none;
   }
 

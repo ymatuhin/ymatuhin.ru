@@ -9,7 +9,6 @@ tags:
   - frontend
   - javascript
   - contenteditable
-  - placeholders
 image:
   path: contenteditable.jpg
   alt: '[contenteditable]'

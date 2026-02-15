@@ -3,7 +3,12 @@ layout: default
 ---
 
 <article class="post typo white-content" itemscope itemtype="http://schema.org/BlogPosting">
-  {% include "post-header.liquid" %}
+  {% include "post-card.liquid",
+    tag: "h1",
+    tags: tags,
+    date: page.date,
+    title: title,
+    in-post: true %}
 
   <div itemprop="articleBody">
     {{ content }}

@@ -12,7 +12,7 @@ permalink: /projects/
     {% for proj in projects %}
         {% include "post-card.liquid",
             tag: "h2",
-            tags: proj.category,
+            tags: proj.category | split: ",",
             imagePath: proj.image,
             link: proj.url,
             title: proj.title,
