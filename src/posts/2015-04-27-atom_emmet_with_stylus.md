@@ -17,7 +17,7 @@ redirects:
   - /tools/atom_emmet_with_stylus/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 Расширение **Emmet** отлично работает с html, css, sass, scss, less. Но есть одна проблема — *Stylus*. Видимо из-за того,
 что этот препроцессор не так распространен то в Emmet официально нет его поддержки. То есть наши правила на подобии

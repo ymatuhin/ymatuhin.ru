@@ -16,7 +16,7 @@ redirects:
   - /front-end/styling-broken-images-user-care-or-not/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 Восьмого марта 2016 года, Ире Адеринокун опубликовала пост «[Styling Broken Images][1]{:rel='nofollow'}», в котором
 рассказала о способе оформления не загрузившихся изображений через псевдоэлементы `before/after`. Эта статья, вызвала

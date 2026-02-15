@@ -17,7 +17,7 @@ redirects:
   - /blog/review_ios9_and_osx_el_capitan/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 ## Что нового в iOS 9 и El Capitan?
 

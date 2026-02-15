@@ -17,7 +17,7 @@ redirects:
   - /front-end/three-plugins-for-single-page/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 Ваши пользователи разные. У кого-то быстрый компьютер и интернет, а кто-то пользуется приложением из глуши со слабеньким
 2G интернетом. Мы, разработчики, редко задумываемся об этом, ведь у нас сайт «летает».

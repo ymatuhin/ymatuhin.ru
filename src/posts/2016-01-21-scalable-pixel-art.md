@@ -17,7 +17,7 @@ redirects:
   - /front-end/scalable-pixel-art/
 ---
 
-{% mediaImage image.path, image.alt, image.pixelated %}
+{% mediaImage image.path, image.alt, "eager", image.pixelated %}
 
 Мне нравится пиксель арт. Только взгляните на этот предмет искусства выше. Восьмибитная ностальгия, красота и простота.
 Но с пиксель артом в вебе одна проблема — **сглаживание**.

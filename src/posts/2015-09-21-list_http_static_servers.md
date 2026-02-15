@@ -16,7 +16,7 @@ redirects:
   - /front-end/list_http_static_servers/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 Каждая из нижеприведенных команд запускает статичный http сервер в текущей директории. Сервер будет доступен по
 адресу [http://localhost:8000](http://localhost:8000){:rel="nofollow"}

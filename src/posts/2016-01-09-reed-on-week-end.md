@@ -15,7 +15,7 @@ redirects:
   - /front-end/reed-on-week-end/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 Я читал на этой неделе Оруэлла — 1984. Давно собирался и вот, к новому году, приобрел себе книженцию и прочитал. До сих
 пор не выходит из головы, сильный финал. екомендую.

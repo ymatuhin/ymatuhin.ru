@@ -15,7 +15,7 @@ redirects:
   - /blog/mac-os-confirm-from-keyboard/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 При появлении диалога, по умолчанию у нас нет возможности переключить фокус на другую кнопку с помощью клавиатуры,
 только мышкой или трекпадом. Но это поведение легко исправить.

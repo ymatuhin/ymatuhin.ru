@@ -16,7 +16,7 @@ redirects:
   - /front-end/smooth-native-scroll/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 Плавная прокрутка до определенного места на странице — очень распространенная фича, особенно в лендингах. Еще один
 классический случай — плавный переход по хэшу для навигации по странице.

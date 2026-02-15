@@ -16,7 +16,7 @@ redirects:
   - /front-end/javascript_styleguide/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 <blockquote>
   <p>Перевод AirBnB Style Guide — [Airbnb JavaScript Style

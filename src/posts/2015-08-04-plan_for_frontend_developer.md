@@ -16,7 +16,7 @@ redirects:
   - /front-end/plan_for_frontend_developer/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 После анализа [требований][6]{:rel='nofollow'} к front end разработчикам в топовых компаниях, расставим приоритеты,
 накидаем *план* действий, добавим полезные ссылки и советы.

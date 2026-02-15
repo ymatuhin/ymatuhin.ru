@@ -18,7 +18,7 @@ redirects:
 Clearfix — вспомогательный класс в css, с помощью которого мы исправляем схлопывающиеся размеры контейнера у
 плавающих элементов.
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 ## Clearfix раньше
 

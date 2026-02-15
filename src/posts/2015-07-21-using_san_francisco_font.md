@@ -17,7 +17,7 @@ redirects:
   - /front-end/using_san_francisco_font/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 Вместе с выпуском Apple Watch, компания представила новый шрифт <em>San Francisco</em>, который теперь будет
 использоваться во всей экосистеме Apple. Уже сейчас можно посмотреть на этот шрифт в публичных

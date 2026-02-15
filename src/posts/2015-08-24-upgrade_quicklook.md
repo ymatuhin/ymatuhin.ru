@@ -15,7 +15,7 @@ redirects:
   - /blog/upgrade_quicklook/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 Quick Look незаменимая вещь для маководов, жаль что она не работает с некоторыми файлами, которые относятся к веб
 разработке. Было бы неплохо просматривать markdown, JSON, файлы без расширений, подсветка синтаксиса, показ webp

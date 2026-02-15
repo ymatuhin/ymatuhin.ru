@@ -9,12 +9,17 @@ permalink: index.html
 
 <div class="cards">
   {% for post in collections.posts limit: 10 %}
+  {% assign cardImageLoading = "lazy" %}
+  {% if forloop.first %}
+    {% assign cardImageLoading = "eager" %}
+  {% endif %}
   {% include "posts/post-card.liquid"
     tag: "h2",
     tags: post.data.tags,
     date: post.date,
     imagePath: post.data.image.path,
     imageAlt: post.data.image.alt,
+    imageLoading: cardImageLoading,
     link: post.url,
     title: post.data.title,
     description: post.data.description %}

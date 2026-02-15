@@ -15,7 +15,7 @@ redirects:
   - /front-end/emoji-fallback/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 Emoji набирают популярность. В блоге я тоже использовал их несколько раз, но получил отзыв о том, что они не везде
 показываются. На тот момент я прикрутил к сайту [Twemoji](https://github.com/twitter/twemoji){:rel='nofollow'}, но мне

@@ -16,7 +16,7 @@ redirects:
   - /front-end/vadim_makishvili_36/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 Хочу поделиться с теми, кто возможно еще не видел этот доклад от Вадима, особенно он касается айтишников, но и людям
 других профессий я думаю будет интересно послушать. Происходило все это в рамках FrontTalks, а сам Вадим работает в

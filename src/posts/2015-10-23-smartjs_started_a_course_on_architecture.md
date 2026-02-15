@@ -17,7 +17,7 @@ redirects:
   - /front-end/smartjs_started_a_course_on_architecture/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 Вчера, 22 октября 2015 года, начался второй курс по архитектуре современных JavaScript приложений
 в [SmartJS академии](http://smartjs.academy). Его ведет, как и другие курсы, Илья Климов. Я буду вести свой отчет и

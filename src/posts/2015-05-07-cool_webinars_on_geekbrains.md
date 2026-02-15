@@ -16,7 +16,7 @@ redirects:
   - /front-end/cool_webinars_on_geekbrains/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 Хочу поделиться вебинарами от Geekbrains (Школа Программирования). Я недавно нашел эти вебинары, поэтому успел
 посмотреть только несколько записей. Но общее впечатление очень хорошее. Хотя тут все зависит от того, кто ведет эти

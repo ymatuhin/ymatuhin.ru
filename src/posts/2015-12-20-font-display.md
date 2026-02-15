@@ -17,7 +17,7 @@ redirects:
   - /front-end/font-display/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 Когда вы загружаете шрифт через `font-face`, браузер решает что отобразить пока шрифт загружается. Браузеры ждут
 некоторое время, перед тем как решить что делать дальше.

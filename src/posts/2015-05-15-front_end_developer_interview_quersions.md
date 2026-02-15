@@ -15,7 +15,7 @@ redirects:
   - /front-end/front_end_developer_interview_quersions/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 *Это перевод популярного репозитория от
 html5bp — [Front-end Job Interview Questions](//h5bp.github.io/Front-end-Developer-Interview-Questions/) (en), который

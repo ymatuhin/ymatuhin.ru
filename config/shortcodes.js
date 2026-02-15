@@ -1,8 +1,20 @@
 import Image from '@11ty/eleventy-img';
 
-export async function mediaImageShortcode(url, alt, pixelated) {
+export async function mediaImageShortcode(url, alt, loading = 'lazy', pixelated = false) {
   const imageUrl = url;
   const imageAlt = (alt || '').toString();
+  let imageLoading = 'lazy';
+  let isPixelated = Boolean(pixelated);
+
+  // Backward compatibility: old call order was (url, alt, pixelated, loading)
+  if (typeof loading === 'boolean') {
+    isPixelated = loading;
+  } else if (typeof loading === 'string') {
+    const normalizedLoading = loading.toLowerCase();
+    if (normalizedLoading === 'eager' || normalizedLoading === 'lazy') {
+      imageLoading = normalizedLoading;
+    }
+  }
 
   if (!imageUrl) return '';
 
@@ -19,8 +31,8 @@ export async function mediaImageShortcode(url, alt, pixelated) {
 
   const imageAttributes = {
     alt: imageAlt,
-    style: pixelated ? 'image-rendering: pixelated' : undefined,
-    loading: 'lazy',
+    style: isPixelated ? 'image-rendering: pixelated' : undefined,
+    loading: imageLoading,
     decoding: 'async',
   };
 

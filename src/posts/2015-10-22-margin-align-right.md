@@ -15,7 +15,7 @@ redirects:
   - /front-end/margin-align-right/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 Вчера, на работе, я пытался выровнять блочный элемент по правому краю. Такая задача встречается не часто, но даже
 когда она встречается, я использую `inline-block` или `float`, но можно обойтись без них.

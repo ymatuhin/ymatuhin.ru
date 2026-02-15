@@ -16,7 +16,7 @@ redirects:
   - /front-end/height_transition_css/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 Пытались ли вы анимировать высоту (`height`) через CSS? Если пытались, то скорее всего вы знаете, что через `transition`
 можно задать анимацию от одного значения, до другого. И в этом есть небольшая проблема, что делать если нам нужно

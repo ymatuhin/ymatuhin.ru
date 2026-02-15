@@ -16,7 +16,7 @@ redirects:
   - /front-end/speed_up_jekyll_server/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 [Jekyll](https://jekyllrb.com/) — генератор статических сайтов. Чаще всего используется для блогов как альтернатива
 WordPress. Набрал свою популярность вместе с GitHub, который позволяет разместить в GitHub Pages ваш сайт на Jekyll.

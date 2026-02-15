@@ -15,7 +15,7 @@ redirects:
   - /blog/t_rex_runner_google_chrome/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 Бегущий динозавр перепрыгивающий через кактусы — пасхалка в хроме c 2014 года, о которой я узнал только вчера.
 

@@ -15,7 +15,7 @@ redirects:
   - /blog/blocking-incoming-calls-on-your-iphone/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 У меня мобильный оператор YOTA с безлимитным 4G интернетом, который я раздаю себе на Mac. Я писал об этом в
 статье «[Как снять ограничения Yota на раздачу интернета][1]». Но в этом способе одна проблема — если мне звонят, то

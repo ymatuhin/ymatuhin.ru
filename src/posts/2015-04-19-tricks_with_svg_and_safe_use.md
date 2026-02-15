@@ -15,7 +15,7 @@ redirects:
   - /front-end/tricks_with_svg_and_safe_use/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 аньше я не использовал SVG, поскольку рабочие проекты были с поддержкой Internet Explorer 6/7. Да и не требовалось
 поддержки ретины. Но сейчас, спустя время, настало время использовать SVG на полную.

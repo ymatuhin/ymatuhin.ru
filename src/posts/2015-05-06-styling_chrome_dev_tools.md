@@ -18,7 +18,7 @@ redirects:
   - /tools/styling_chrome_dev_tools/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 Совсем недавно я узнал, что Chrome поддерживает темы для dev tools. Мне сразу-же захотелось попробовать это. Сразу скажу
 результат меня не совсем порадовал :-)

@@ -17,7 +17,7 @@ redirects:
   - /front-end/font_smoothing_for_the_developer_and_user_on_mac_os/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 Я давно интересовался сглаживанием шрифта для веб страниц на CSS. Но «волшебные» свойства, такие как
 `-webkit-font-smoothing`, не работали на моем Win 7. Поэтому никакого смысла в этих css свойствах я не видел. Но

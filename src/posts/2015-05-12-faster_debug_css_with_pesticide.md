@@ -17,7 +17,7 @@ redirects:
   - /front-end/faster_debug_css_with_pesticide/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 Как часто у вас бывали проблемы со схлопыванием плавающих элементов? Или элемент уезжал непонятно куда? Эти и другое
 проблемы, связанные с позиционированием элементов на странице решает маленькая CSS/Sass/LESS библиотека — **Pesticide

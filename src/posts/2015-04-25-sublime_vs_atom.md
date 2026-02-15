@@ -16,7 +16,7 @@ redirects:
   - /tools/sublime_vs_atom/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 В пятницу я пробовал в работе разные текстовые редакторы. Большинство из них очень плохи. Тот-же _Brackets_ от Adobe —
 вообще не изменился, те-же проблемы, в том числе со шрифтами и не очень приятный внешний вид. Но один из редакторов

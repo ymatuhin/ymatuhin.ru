@@ -14,7 +14,7 @@ redirects:
   - /front-end/restful_api_for_frontender/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 В [двух из трех](/frontend/plan_for_frontend_developer/) вакансиях для фронтеда требуют знания **REST /
 RESTful API**. Разберемся что это и в чем разница.

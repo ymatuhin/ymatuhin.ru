@@ -17,7 +17,7 @@ redirects:
   - /front-end/remove-duplicates-from-array/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 ## ES5
 

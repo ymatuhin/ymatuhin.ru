@@ -16,7 +16,7 @@ redirects:
   - /tools/atom_packages_2/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 Продолжение стати «[Лучшие плагины для текстового редактора Atom](/tools/atom_packages_1/)». Я расскажу о новых
 плагинах, которые часто мне помогают. Надеюсь, они помогут и вам.

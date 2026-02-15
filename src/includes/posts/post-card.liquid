@@ -42,7 +42,8 @@
   <div class="post-card__cover">
         {% if link %}<a href="{{ link }}">{% endif %}
             {% assign cardImageAlt = imageAlt | default: title %}
-            {% mediaImage imagePath, cardImageAlt %}
+            {% assign cardImageLoading = imageLoading | default: "lazy" %}
+            {% mediaImage imagePath, cardImageAlt, cardImageLoading %}
             {% if link %}</a>{% endif %}
     </div>
 {% endif %}

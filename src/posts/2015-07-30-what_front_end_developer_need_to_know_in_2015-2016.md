@@ -16,7 +16,7 @@ redirects:
   - /front-end/what_front_end_developer_need_to_know_in_2015-2016/
 ---
 
-{% mediaImage image.path, image.alt %}
+{% mediaImage image.path, image.alt, "eager" %}
 
 Вчера, в твитере, я выяснял [какие скилы нужны](https://twitter.com/ymatuhin/status/626380078721683457) супер
 крутому фронту. Но, кроме пары полезных ссылок и рекомендаций я ничего не нашел. Поэтому сегодня, просмотрев 40 самых
