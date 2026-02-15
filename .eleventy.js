@@ -6,7 +6,7 @@ import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import { feedConfig, idAttributeFilter } from './config/plugins.js';
 import { mediaImageShortcode } from './config/shortcodes.js';
 import { buildCategoriesCollection, buildPostsCollection } from './config/collections.js';
-import { applyTypography, minifyHtmlAndInlineCss } from './config/transforms.js';
+import { addExternalLinkSecurityAttrs, applyTypography, minifyHtmlAndInlineCss } from './config/transforms.js';
 import siteData from './config/site.js';
 
 export default function (eleventyConfig) {
@@ -46,6 +46,7 @@ export default function (eleventyConfig) {
 
   // Transforms
   eleventyConfig.addTransform('apply-typography', applyTypography);
+  eleventyConfig.addTransform('add-external-link-security-attrs', addExternalLinkSecurityAttrs);
   eleventyConfig.addTransform('minify-html-and-inline-css', minifyHtmlAndInlineCss);
 
   return {
