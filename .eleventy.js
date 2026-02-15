@@ -5,7 +5,7 @@ import { feedPlugin } from '@11ty/eleventy-plugin-rss';
 import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import { feedConfig, idAttributeFilter } from './config/plugins.js';
 import { mediaImageShortcode } from './config/shortcodes.js';
-import { buildTagsCollection, buildPostsCollection } from './config/collections.js';
+import { buildPostTypesCollection, buildTagPagesCollection, buildTagsCollection, buildPostsCollection } from './config/collections.js';
 import { addExternalLinkSecurityAttrs, applyTypography, minifyHtmlAndInlineCss } from './config/transforms.js';
 import siteData from './config/site.js';
 
@@ -33,6 +33,12 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(feedPlugin, feedConfig);
 
+  // Filters
+  eleventyConfig.addFilter('tagSlug', (value) => {
+    const normalized = String(value || '').trim().toLowerCase().replace(/\s+/g, '-');
+    return encodeURIComponent(normalized);
+  });
+
   // Shortcodes
   eleventyConfig.addAsyncShortcode('mediaImage', mediaImageShortcode);
 
@@ -43,6 +49,8 @@ export default function (eleventyConfig) {
   // Collections
   eleventyConfig.addCollection('posts', buildPostsCollection);
   eleventyConfig.addCollection('tags', buildTagsCollection);
+  eleventyConfig.addCollection('postTypes', buildPostTypesCollection);
+  eleventyConfig.addCollection('tagPages', buildTagPagesCollection);
 
   // Transforms
   eleventyConfig.addTransform('apply-typography', applyTypography);

@@ -9,7 +9,7 @@ permalink: index.html
 <br>
 
 {% assign homePosts = "" | split: "" %}
-{% for tag in collections.tags %}
+{% for tag in collections.postTypes %}
 {% assign categoryPosts = collections.posts | where_exp: "post", "post.data.tags contains tag" %}
 {% if categoryPosts.size > 2 %}
 {% assign recentPosts = categoryPosts | slice: 0, 2 %}

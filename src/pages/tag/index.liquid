@@ -1,0 +1,17 @@
+---
+layout: default
+title: 'Теги'
+permalink: /tags/
+---
+
+<article class="post typo white-content wrap-inner">
+  <header class="post-header">
+    <h1 class="post-header__title">Все теги</h1>
+  </header>
+
+  <ul>
+    {% for tagPage in collections.tagPages %}
+      <li><a href="/tag/{{ tagPage.slug }}/">{{ tagPage.name }}</a></li>
+    {% endfor %}
+  </ul>
+</article>
