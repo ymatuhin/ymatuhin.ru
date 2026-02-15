@@ -1,13 +1,27 @@
 ---
-layout: post
-title: Динозавр T-Rex — пасхалочка в Google Chrome
-description: >
-  Пасхалка и браузере Google Chrome — бегающий диназавр T-Rex прыгающий через кактусы на странице «Нет соединения с интернетом».
-categories: blog
-tags: >
-  пасхалки google, динозавр гугл хром, динозавр в хроме, как играть в динозавра в хроме, пасхалки chrome
+layout: 'post'
+title: 'Динозавр T-Rex — пасхалочка в Google Chrome'
+description: 'Пасхалка и браузере Google Chrome — бегающий диназавр T-Rex прыгающий через кактусы на странице «Нет соединения с интернетом».'
+categories: 'blog'
+tags:
+  - 'пасхалки'
+  - 'google'
+  - 'динозавр'
+  - 'гугл'
+  - 'хром'
+  - 'динозавр'
+  - 'в'
+  - 'хроме'
+  - 'как'
+  - 'играть'
+  - 'в'
+  - 'динозавра'
+  - 'в'
+  - 'хроме'
+  - 'пасхалки'
+  - 'chrome'
 image:
-  path: eastern_eggs/t-rex-runner.png
+  path: 'eastern_eggs/t-rex-runner.png'
 has_youtube: true
 ---
 

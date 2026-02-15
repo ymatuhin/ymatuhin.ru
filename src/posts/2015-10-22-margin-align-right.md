@@ -1,13 +1,14 @@
 ---
-layout: post
-title: CSS. Выравнивание блочного элемента по правому краю.
-categories: front-end
-description: Способ горизонтального выравнивания по центру и правому краю для блочных элементов через CSS
-tags: [css, выравнивание]
-
+layout: 'post'
+title: 'CSS. Выравнивание блочного элемента по правому краю.'
+description: 'Способ горизонтального выравнивания по центру и правому краю для блочных элементов через CSS'
+categories: 'front-end'
+tags:
+  - 'css'
+  - 'выравнивание'
 image:
-  path: margin/margin_right_alignment.gif
-  alt: Горизонтальное выравнивание в CSS
+  path: 'margin/margin_right_alignment.gif'
+  alt: 'Горизонтальное выравнивание в CSS'
 ---
 
 {% mediaImage image.path, image.alt %}

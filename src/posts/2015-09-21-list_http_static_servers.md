@@ -1,12 +1,13 @@
 ---
-layout: post
-title: Список статичных HTTP серверов для терминала
-categories: front-end
-tags: [http, server]
-
+layout: 'post'
+title: 'Список статичных HTTP серверов для терминала'
+categories: 'front-end'
+tags:
+  - 'http'
+  - 'server'
 image:
-  path: server/http-server.png
-  alt: Http-server статики в терминале
+  path: 'server/http-server.png'
+  alt: 'Http-server статики в терминале'
 ---
 
 {% mediaImage image.path, image.alt %}

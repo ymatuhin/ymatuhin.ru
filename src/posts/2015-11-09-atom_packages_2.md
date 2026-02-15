@@ -1,13 +1,14 @@
 ---
-layout: post
+layout: 'post'
 title: 'Плагины для Atom #2'
-categories: tools
-description: >
-  Плагины и дополнения для текстового редактора Atom: advanced-open-file, ternjs, auto-update, autocomplete-paths, git-projects, highlight-selected, jumpy, minimap, pigments, regex-railroad-diagram, space-tab, symbols-tree-view, synced-sidebar, mechanical-keyboard, zen.
-tags: [Atom, плагины, текстовый редактор]
-
+description: 'Плагины и дополнения для текстового редактора Atom: advanced-open-file, ternjs, auto-update, autocomplete-paths, git-projects, highlight-selected, jumpy, minimap, pigments, regex-railroad-diagram, space-tab, symbols-tree-view, synced-sidebar, mechanical-keyboard, zen.'
+categories: 'tools'
+tags:
+  - 'Atom'
+  - 'плагины'
+  - 'текстовый редактор'
 image:
-  path: atom/plugins_2/atom-logo.png
+  path: 'atom/plugins_2/atom-logo.png'
 ---
 
 {% mediaImage image.path, image.alt %}

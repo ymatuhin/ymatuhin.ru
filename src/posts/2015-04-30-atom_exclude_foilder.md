@@ -1,11 +1,20 @@
 ---
-layout: post
-title: Исключаем папки из обычного и Fuzzy поиска в Atom
-categories: tools
-tags: >
-  atom github текстовый редактор кода поиск fuzzy node modules bower components
-description: >
-  Как исключить некоторые папки (к примеру node_modules, bower_components) из поиска в текстовом редакторе Atom.
+layout: 'post'
+title: 'Исключаем папки из обычного и Fuzzy поиска в Atom'
+description: 'Как исключить некоторые папки (к примеру node_modules, bower_components) из поиска в текстовом редакторе Atom.'
+categories: 'tools'
+tags:
+  - 'atom'
+  - 'github'
+  - 'текстовый'
+  - 'редактор'
+  - 'кода'
+  - 'поиск'
+  - 'fuzzy'
+  - 'node'
+  - 'modules'
+  - 'bower'
+  - 'components'
 ---
 
 Порой, чтобы открыть нужный файл, нужно знать все его название. А все из-за того, что у нас очень много файлов в папках `node_modules` и `bower_components` и они мешают открытию написанных нами файлов.

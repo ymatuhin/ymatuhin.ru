@@ -1,11 +1,14 @@
 ---
-layout: post
+layout: 'post'
 title: 'Код. Плейсхолдер для [contenteditable]'
-description: Placeholder полифил для contenteditable элемента
-categories: front-end
-tags: [ js, contenteditable, placeholder ]
+description: 'Placeholder полифил для contenteditable элемента'
+categories: 'front-end'
+tags:
+  - 'js'
+  - 'contenteditable'
+  - 'placeholder'
 image:
-  path: contenteditable.jpg
+  path: 'contenteditable.jpg'
   alt: '[contenteditable]'
 ---
 

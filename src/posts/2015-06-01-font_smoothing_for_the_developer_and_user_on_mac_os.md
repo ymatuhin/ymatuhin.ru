@@ -1,12 +1,15 @@
 ---
-layout: post
-title: Сглаживание шрифтов для разработчика и пользователя на Mac OS
-categories: front-end
-tags: [css, сглаживание шрифта, mac os, расширение]
-
+layout: 'post'
+title: 'Сглаживание шрифтов для разработчика и пользователя на Mac OS'
+categories: 'front-end'
+tags:
+  - 'css'
+  - 'сглаживание шрифта'
+  - 'mac os'
+  - 'расширение'
 image:
-  path: font-smooth/compare.png
-  alt: Сглаживание шрифтов CSS
+  path: 'font-smooth/compare.png'
+  alt: 'Сглаживание шрифтов CSS'
 ---
 
 {% mediaImage image.path, image.alt %}

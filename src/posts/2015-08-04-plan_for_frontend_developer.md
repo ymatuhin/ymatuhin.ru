@@ -1,12 +1,11 @@
 ---
-layout: post
-title: План развития для фронтенд разработчика
-description: >
-  После анализа требований к кандидату на должность ведущего разработчика интерфейсов я составил фронтенд штуки, которые я буду изучать.
-categories: front-end
+layout: 'post'
+title: 'План развития для фронтенд разработчика'
+description: 'После анализа требований к кандидату на должность ведущего разработчика интерфейсов я составил фронтенд штуки, которые я буду изучать.'
+categories: 'front-end'
 image:
-  path: need_to_frontend/i-have-a-plan.jpg
-  alt: "Кажется у меня есть план…"
+  path: 'need_to_frontend/i-have-a-plan.jpg'
+  alt: 'Кажется у меня есть план…'
 ---
 
 {% mediaImage image.path, image.alt %}

@@ -1,12 +1,11 @@
 ---
-layout: post
+layout: 'post'
 title: 'Что нужно знать и уметь front end разработчику в 2015/2016'
-description: >
-  Список знаний, технологий, методологий и общих принципов необходимых хорошему front end разработчику в 2015/2016 году.
-categories: front-end
+description: 'Список знаний, технологий, методологий и общих принципов необходимых хорошему front end разработчику в 2015/2016 году.'
+categories: 'front-end'
 image:
-  path: need_to_frontend/what-need-to-know-as-frontend.png
-  alt: Какими знаниями должен обладать фронтенд разработчик в 2015/2016
+  path: 'need_to_frontend/what-need-to-know-as-frontend.png'
+  alt: 'Какими знаниями должен обладать фронтенд разработчик в 2015/2016'
 ---
 
 {% mediaImage image.path, image.alt %}

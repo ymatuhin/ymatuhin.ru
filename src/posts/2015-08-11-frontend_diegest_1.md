@@ -1,10 +1,22 @@
 ---
-layout: post
+layout: 'post'
 title: 'Фронтенд дайджест #1 — Awesome lists, bower, regexp, RSS, Git'
-description: >
-  Дайджест интересных материалов для front end разработчиков. Awesome lists, bower, regexp, RSS, Git…
-categories: front-end
-tags: [дайджест, css, javascrip, cubic-bezier, типографика, текст, bower, регулярные выражения, микроразметка, rss, git, seo, чеклист]
+description: 'Дайджест интересных материалов для front end разработчиков. Awesome lists, bower, regexp, RSS, Git…'
+categories: 'front-end'
+tags:
+  - 'дайджест'
+  - 'css'
+  - 'javascrip'
+  - 'cubic-bezier'
+  - 'типографика'
+  - 'текст'
+  - 'bower'
+  - 'регулярные выражения'
+  - 'микроразметка'
+  - 'rss'
+  - 'git'
+  - 'seo'
+  - 'чеклист'
 has_iframe: true
 ---
 

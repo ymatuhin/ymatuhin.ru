@@ -1,12 +1,14 @@
 ---
-layout: post
-title: Подтверждение диалогов через клавиатуру в Mac OS
-categories: blog
-description: Как включить опцию изменения фокуса в диалогах Mac OS и подтверждать их с клавиатуры.
-tags: [mac, osx]
+layout: 'post'
+title: 'Подтверждение диалогов через клавиатуру в Mac OS'
+description: 'Как включить опцию изменения фокуса в диалогах Mac OS и подтверждать их с клавиатуры.'
+categories: 'blog'
+tags:
+  - 'mac'
+  - 'osx'
 image:
-  path: mac/dialog.png
-  alt: Диалог смены расширения у файла в Mac OS
+  path: 'mac/dialog.png'
+  alt: 'Диалог смены расширения у файла в Mac OS'
 ---
 
 {% mediaImage image.path, image.alt %}

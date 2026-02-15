@@ -1,13 +1,19 @@
 ---
-layout: post
-title: Как увольняться из «Payler» и «Polonium Arts», чтобы вас не кинули
-categories: blog
-tags: [payler, polonium art, увольнение, константин копыльцов, кидалово, обман, Брянск]
-
-published: false
+layout: 'post'
+title: 'Как увольняться из «Payler» и «Polonium Arts», чтобы вас не кинули'
+categories: 'blog'
+tags:
+  - 'payler'
+  - 'polonium art'
+  - 'увольнение'
+  - 'константин копыльцов'
+  - 'кидалово'
+  - 'обман'
+  - 'Брянск'
 image:
-  path: payler/payler.jpg
-  alt: Payler
+  path: 'payler/payler.jpg'
+  alt: 'Payler'
+published: false
 ---
 
 {% mediaImage image.path, image.alt %}

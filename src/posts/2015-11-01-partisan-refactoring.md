@@ -1,12 +1,16 @@
 ---
-layout: post
-title: Партизанский рефакторинг. Как улучшить проект, чтобы заказчик этого не понял.
-categories: front-end
-description: Как незаметно проводить рефакторинг одновременно улучшая архитектуру приложения.
-tags: [react, smartjs, архитектура, рефакторинг]
+layout: 'post'
+title: 'Партизанский рефакторинг. Как улучшить проект, чтобы заказчик этого не понял.'
+description: 'Как незаметно проводить рефакторинг одновременно улучшая архитектуру приложения.'
+categories: 'front-end'
+tags:
+  - 'react'
+  - 'smartjs'
+  - 'архитектура'
+  - 'рефакторинг'
 image:
-  path: refactoring/cat.jpg
-  alt: ""
+  path: 'refactoring/cat.jpg'
+  alt: ''
 ---
 
 {% mediaImage image.path, image.alt %}

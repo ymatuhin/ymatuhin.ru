@@ -1,13 +1,14 @@
 ---
-layout: post
-title: Логирование в JavaScript
-description: Логирование — незаменимый инструмент в отладке JS кода. Расставьте логи в критические места и при возникновении ошибки вы сможете посмотреть что произошло в консоли.
-categories: front-end
-tags: [JS, Debug]
-
+layout: 'post'
+title: 'Логирование в JavaScript'
+description: 'Логирование — незаменимый инструмент в отладке JS кода. Расставьте логи в критические места и при возникновении ошибки вы сможете посмотреть что произошло в консоли.'
+categories: 'front-end'
+tags:
+  - 'JS'
+  - 'Debug'
 image:
-  path: logs/bear.jpg
-  alt: Вася следит за логами
+  path: 'logs/bear.jpg'
+  alt: 'Вася следит за логами'
 has_youtube: true
 ---
 

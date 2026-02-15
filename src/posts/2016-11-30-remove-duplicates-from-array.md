@@ -1,12 +1,15 @@
 ---
-layout: post
+layout: 'post'
 title: 'Код. Удаляем дубликаты из массива'
-description: Простые способы для ES5 и ES2015
-categories: front-end
-tags: [ JS, Tips, Array ]
+description: 'Простые способы для ES5 и ES2015'
+categories: 'front-end'
+tags:
+  - 'JS'
+  - 'Tips'
+  - 'Array'
 image:
-  path: tips/array_uniq.jpg
-  alt: Убрать дубликаты из массива в JavaScript
+  path: 'tips/array_uniq.jpg'
+  alt: 'Убрать дубликаты из массива в JavaScript'
 ---
 
 {% mediaImage image.path, image.alt %}

@@ -1,14 +1,16 @@
 ---
-layout: post
-title: Переносим межбуквенный интервал из Фотошопа в CSS
-categories: front-end
-description: Межбуквенный интервал в Фотошопе регулирует расстояние между символами в тексте. В CSS это свойство letter-spacing.
-excerpt: Межбуквенный интервал в Фотошопе регулирует расстояние между символами в тексте. В CSS это свойство letter-spacing.
-tags: [css, межбуквенный интервал, tools]
-
+layout: 'post'
+title: 'Переносим межбуквенный интервал из Фотошопа в CSS'
+description: 'Межбуквенный интервал в Фотошопе регулирует расстояние между символами в тексте. В CSS это свойство letter-spacing.'
+categories: 'front-end'
+tags:
+  - 'css'
+  - 'межбуквенный интервал'
+  - 'tools'
 image:
-  path: letter-spacing/table_of_contents.gif
-  alt: Виллу Тоотс. Современный шрифт.
+  path: 'letter-spacing/table_of_contents.gif'
+  alt: 'Виллу Тоотс. Современный шрифт.'
+excerpt: 'Межбуквенный интервал в Фотошопе регулирует расстояние между символами в тексте. В CSS это свойство letter-spacing.'
 ---
 
 {% mediaImage image.path, image.alt %}

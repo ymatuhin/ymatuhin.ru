@@ -1,11 +1,24 @@
 ---
-layout: post
-title: Безопасное использование CDN для jQuery, Angular, Bootstrap и других библиотек
-categories: front-end
-tags: >
-  CDN, jQuery, fallback, jquery cdn google bootstrap бесплатные free yandex сервисы для сайта angular Modernizr
-description: >
-  Безопасно загружаем JavaScript библиотеки из публичных CDN с fallback-ом на локальную библиотеку. Jquery, Angular JS, Bootstrap и другие.
+layout: 'post'
+title: 'Безопасное использование CDN для jQuery, Angular, Bootstrap и других библиотек'
+description: 'Безопасно загружаем JavaScript библиотеки из публичных CDN с fallback-ом на локальную библиотеку. Jquery, Angular JS, Bootstrap и другие.'
+categories: 'front-end'
+tags:
+  - 'CDN'
+  - 'jQuery'
+  - 'fallback'
+  - 'jquery'
+  - 'cdn'
+  - 'google'
+  - 'bootstrap'
+  - 'бесплатные'
+  - 'free'
+  - 'yandex'
+  - 'сервисы'
+  - 'для'
+  - 'сайта'
+  - 'angular'
+  - 'Modernizr'
 ---
 
 Один из главных советов для оптимизации скорости загрузки сайтов является использование публичных <abbr title="Content Delivery Network">CDN</abbr> с популярными библиотеками, такими как jQuery или AngularJS.

@@ -1,14 +1,21 @@
 ---
-layout: post
-title: Все еще сидите на Sublime? Тогда мы, вместе с Atom, идем к вам!
-categories: tools
+layout: 'post'
+title: 'Все еще сидите на Sublime? Тогда мы, вместе с Atom, идем к вам!'
+description: 'Обзор нового текстового редактора Atom от команды Github в сравнении c Sublime Text 3. Atom vs Sublime.'
+categories: 'tools'
+tags:
+  - 'atom'
+  - 'github'
+  - 'текстовый'
+  - 'редактор'
+  - 'кода'
+  - 'sublime'
+  - 'vs'
+  - 'обзор'
+  - 'редактора'
 image:
-  path: atom/atom_vs_sublime.jpg
-  alt: Atom
-tags: >
-  atom github текстовый редактор кода sublime vs обзор редактора
-description: >
-  Обзор нового текстового редактора Atom от команды Github в сравнении c Sublime Text 3. Atom vs Sublime.
+  path: 'atom/atom_vs_sublime.jpg'
+  alt: 'Atom'
 ---
 
 {% mediaImage image.path, image.alt %}

@@ -1,10 +1,18 @@
 ---
-layout: post
+layout: 'post'
 title: 'Фронтенд дайджест #2 — БЭМ, CSS матрицы, SVG логотипы, Vivaldi, Bootstrap, Canvas'
-description: >
-  Дайджест ссылок для разработчиков интерфейсов и frontend разработчиков. 3D прогресс бар, БЭМ, CSS матрицы, SVG логотипы, Vivaldi, Bootstrap, Canvas, шпаргалка, Electron...
-categories: front-end
-tags: [дайджест, CSS, БЭМ, SVG, Emoji, Vivaldi, Bootsrap, вектора, canvas]
+description: 'Дайджест ссылок для разработчиков интерфейсов и frontend разработчиков. 3D прогресс бар, БЭМ, CSS матрицы, SVG логотипы, Vivaldi, Bootstrap, Canvas, шпаргалка, Electron...'
+categories: 'front-end'
+tags:
+  - 'дайджест'
+  - 'CSS'
+  - 'БЭМ'
+  - 'SVG'
+  - 'Emoji'
+  - 'Vivaldi'
+  - 'Bootsrap'
+  - 'вектора'
+  - 'canvas'
 has_iframe: true
 ---
 

@@ -1,9 +1,12 @@
 ---
-layout: post
-title: Связывание текстового редактора с Git
-description: Как указать текстовый редактор по умолчанию для Git. VSCode, Atom, TextMate, Nano, Sublime Text и другие
-categories: tools
-tags: [git, tools, editor]
+layout: 'post'
+title: 'Связывание текстового редактора с Git'
+description: 'Как указать текстовый редактор по умолчанию для Git. VSCode, Atom, TextMate, Nano, Sublime Text и другие'
+categories: 'tools'
+tags:
+  - 'git'
+  - 'tools'
+  - 'editor'
 ---
 
 При редактировании сообщений комита Git по умолчанию открывает Vim. Для тех кто с ним не знаком, это может стать серьезной проблемой. Хорошо что это поведение легко изменить выполнив одну команду в терминале.

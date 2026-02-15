@@ -1,13 +1,18 @@
 ---
-layout: post
-title: Стилизуем инструменты разработчика (dev tools) в Google Chrome
-categories: front-end
-tags: >
-  dev tools инструменты разработчика google chrome темы
-
+layout: 'post'
+title: 'Стилизуем инструменты разработчика (dev tools) в Google Chrome'
+categories: 'front-end'
+tags:
+  - 'dev'
+  - 'tools'
+  - 'инструменты'
+  - 'разработчика'
+  - 'google'
+  - 'chrome'
+  - 'темы'
 image:
-  path: dev_tools/dev_tools.png
-  alt: Темная темя для Chrome Dev Tools
+  path: 'dev_tools/dev_tools.png'
+  alt: 'Темная темя для Chrome Dev Tools'
 ---
 
 {% mediaImage image.path, image.alt %}

@@ -1,11 +1,18 @@
 ---
-layout: post
-title: Лайфхак. Блокировка входящих без дисконектов на iPhone
-categories: [blog]
-description:
-tags: [лайфхак, блокировка, входящие, звонки, iphone, yota, включить]
+layout: 'post'
+title: 'Лайфхак. Блокировка входящих без дисконектов на iPhone'
+description: null
+categories: 'blog'
+tags:
+  - 'лайфхак'
+  - 'блокировка'
+  - 'входящие'
+  - 'звонки'
+  - 'iphone'
+  - 'yota'
+  - 'включить'
 image:
-  path: phones/phone.jpeg
+  path: 'phones/phone.jpeg'
 ---
 
 {% mediaImage image.path, image.alt %}

@@ -1,15 +1,25 @@
 ---
-layout: post
-title: Руководства по GIT на русском языке
-categories: front-end
-tags: >
-  git руководства, git книга, git учебник и обучение, pro git книга, git ресурсы
-description: >
-  Список лучших руководств, книг, ресурсов, учебников для обучения основам GIT на русском языке.
-
+layout: 'post'
+title: 'Руководства по GIT на русском языке'
+description: 'Список лучших руководств, книг, ресурсов, учебников для обучения основам GIT на русском языке.'
+categories: 'front-end'
+tags:
+  - 'git'
+  - 'руководства'
+  - 'git'
+  - 'книга'
+  - 'git'
+  - 'учебник'
+  - 'и'
+  - 'обучение'
+  - 'pro'
+  - 'git'
+  - 'книга'
+  - 'git'
+  - 'ресурсы'
 image:
-  path: git/git_guide.png
-  alt: Руководства по GIT на русском языке
+  path: 'git/git_guide.png'
+  alt: 'Руководства по GIT на русском языке'
 ---
 
 {% mediaImage image.path, image.alt %}

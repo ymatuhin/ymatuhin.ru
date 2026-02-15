@@ -1,14 +1,15 @@
 ---
-layout: post
-title: Контрольные точки медиа выражений Bootstrap
-description: >
-  Какие контрольные точки для media queries используются в css фреймворке Bootstrap для мобильных устройств? Почему медиа выражения с EM лучше чем с PX?
-categories: front-end
-tags: [bootstrap, media quires, медиа выражения]
-
+layout: 'post'
+title: 'Контрольные точки медиа выражений Bootstrap'
+description: 'Какие контрольные точки для media queries используются в css фреймворке Bootstrap для мобильных устройств? Почему медиа выражения с EM лучше чем с PX?'
+categories: 'front-end'
+tags:
+  - 'bootstrap'
+  - 'media quires'
+  - 'медиа выражения'
 image:
-  path: media_queries/bootstrap.png
-  alt: Контрольные точки медиа выражений Twitter Bootstrap
+  path: 'media_queries/bootstrap.png'
+  alt: 'Контрольные точки медиа выражений Twitter Bootstrap'
 ---
 
 {% mediaImage image.path, image.alt %}

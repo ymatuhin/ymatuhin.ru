@@ -1,13 +1,15 @@
 ---
-layout: post
-title: Быстрый дебаг CSS слоев с Pesticide
-categories: front-end
-tags: css debug дебаг
-description: Дебажим CSS слои с помощью библиотеки Pesticide и расширений для Chrome и Firefox.
-
+layout: 'post'
+title: 'Быстрый дебаг CSS слоев с Pesticide'
+description: 'Дебажим CSS слои с помощью библиотеки Pesticide и расширений для Chrome и Firefox.'
+categories: 'front-end'
+tags:
+  - 'css'
+  - 'debug'
+  - 'дебаг'
 image:
-  path: pesticide/logo.png
-  alt: Pesticide — библиотека для дебага CSS
+  path: 'pesticide/logo.png'
+  alt: 'Pesticide — библиотека для дебага CSS'
 ---
 
 {% mediaImage image.path, image.alt %}

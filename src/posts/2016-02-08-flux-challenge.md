@@ -1,13 +1,18 @@
 ---
-layout: post
-title: На чем тестировать JavaScript фреймворки
-categories: front-end
-description: На чем испробовать новую технологию или фреймоврк если нет сайд/пет проекта? Пара интересных задачек в этой заметке.
-tags: [frameworks, js, react, flux, redux, testing]
-
+layout: 'post'
+title: 'На чем тестировать JavaScript фреймворки'
+description: 'На чем испробовать новую технологию или фреймоврк если нет сайд/пет проекта? Пара интересных задачек в этой заметке.'
+categories: 'front-end'
+tags:
+  - 'frameworks'
+  - 'js'
+  - 'react'
+  - 'flux'
+  - 'redux'
+  - 'testing'
 image:
-  path: test-framework/frameworks.jpg
-  alt: Разнообразие JavaScript фреймворков
+  path: 'test-framework/frameworks.jpg'
+  alt: 'Разнообразие JavaScript фреймворков'
 ---
 
 {% mediaImage image.path, image.alt %}

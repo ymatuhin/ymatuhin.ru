@@ -1,12 +1,13 @@
 ---
-layout: post
-title: Масштабируемый пиксель арт
-categories: front-end
-description: Управляем сглаживаем для pixel art иллюстраций в браузере через CSS свойство image-rendering.
-tags: [pixel art]
+layout: 'post'
+title: 'Масштабируемый пиксель арт'
+description: 'Управляем сглаживаем для pixel art иллюстраций в браузере через CSS свойство image-rendering.'
+categories: 'front-end'
+tags:
+  - 'pixel art'
 image:
-  path: pixel-art/pixel-art.gif
-  alt: "Пиратский сюжет, автор: <a href='http://bugpixel.com/' rel='nofollow'>bugpixel</a>."
+  path: 'pixel-art/pixel-art.gif'
+  alt: 'Пиратский сюжет, автор: <a href=''http://bugpixel.com/'' rel=''nofollow''>bugpixel</a>.'
   pixelated: true
 ---
 

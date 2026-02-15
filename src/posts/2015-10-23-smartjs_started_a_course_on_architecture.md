@@ -1,13 +1,16 @@
 ---
-layout: post
-title: Старт курса по архитектуре JavaScript приложений в SmartJS академии
-categories: front-end
-description: Краткое содержание вводной лекции курса по архитектуре современных JavaScript приложений в SmartJS академии
-tags: [css, smartjs, архитектура]
-updated: 24-05-2016
+layout: 'post'
+title: 'Старт курса по архитектуре JavaScript приложений в SmartJS академии'
+description: 'Краткое содержание вводной лекции курса по архитектуре современных JavaScript приложений в SmartJS академии'
+categories: 'front-end'
+tags:
+  - 'css'
+  - 'smartjs'
+  - 'архитектура'
 image:
-  path: smartjs/logo.jpg
-  alt: "Логотип SmartJS академии"
+  path: 'smartjs/logo.jpg'
+  alt: 'Логотип SmartJS академии'
+updated: '24-05-2016'
 ---
 
 {% mediaImage image.path, image.alt %}

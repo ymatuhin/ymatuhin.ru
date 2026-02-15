@@ -1,12 +1,13 @@
 ---
-layout: post
-title: Ускоряем сборку блога на Jekyll
-categories: front-end
-tags: [jekyll, блог]
-
+layout: 'post'
+title: 'Ускоряем сборку блога на Jekyll'
+categories: 'front-end'
+tags:
+  - 'jekyll'
+  - 'блог'
 image:
-  path: jekyll/jekyll-logo.png
-  alt: Логотип Jekyll
+  path: 'jekyll/jekyll-logo.png'
+  alt: 'Логотип Jekyll'
 ---
 
 {% mediaImage image.path, image.alt %}

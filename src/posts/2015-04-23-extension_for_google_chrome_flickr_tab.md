@@ -1,14 +1,16 @@
 ---
-layout: post
-title: Добавляем красоты в наш Google Chrome с расширением Flickr Tab
-categories: blog
-tags: [flickr, расширения, браузер, Google]
-description: >
-  Новое расширение для Google Chrome — Flickr Tab, которое делает работу с каждой новой вкладкой удивительной.
-
+layout: 'post'
+title: 'Добавляем красоты в наш Google Chrome с расширением Flickr Tab'
+description: 'Новое расширение для Google Chrome — Flickr Tab, которое делает работу с каждой новой вкладкой удивительной.'
+categories: 'blog'
+tags:
+  - 'flickr'
+  - 'расширения'
+  - 'браузер'
+  - 'Google'
 image:
-  path: flickr_extension/new_tab_by_flickr_1.png
-  alt: Расширение для Google Chrome — Flickr Tab
+  path: 'flickr_extension/new_tab_by_flickr_1.png'
+  alt: 'Расширение для Google Chrome — Flickr Tab'
 ---
 
 Вот такой милый пес появился у меня при открытии новой вкладки в Google Chrome. И про это я хочу сегодня рассказать вам.

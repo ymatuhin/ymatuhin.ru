@@ -1,13 +1,16 @@
 ---
-layout: post
-title: Управляем поведением font-face в CSS
-categories: front-end
-description: Поведением текста, отображаемого во время загрузки font-face, можно управлять с помощью свойства font-display. Как работает и какие значения поддерживет свойсто font-display читайте в статье.
-tags: [web fonts, font, font-display, css]
-
+layout: 'post'
+title: 'Управляем поведением font-face в CSS'
+description: 'Поведением текста, отображаемого во время загрузки font-face, можно управлять с помощью свойства font-display. Как работает и какие значения поддерживет свойсто font-display читайте в статье.'
+categories: 'front-end'
+tags:
+  - 'web fonts'
+  - 'font'
+  - 'font-display'
+  - 'css'
 image:
-  path: font-display/font-display.png
-  alt: Font display
+  path: 'font-display/font-display.png'
+  alt: 'Font display'
 has_youtube: true
 ---
 

@@ -1,11 +1,14 @@
 ---
-layout: post
-title: Фоллбэчим Emoji
-categories: front-end
-description: Проверяем поддержку эмодзи у пользователя и какая у него операционная система. После этого подключаем любые эмодзи для корректного отображения смайликов.
-tags: [emoji, twitter, fallback]
+layout: 'post'
+title: 'Фоллбэчим Emoji'
+description: 'Проверяем поддержку эмодзи у пользователя и какая у него операционная система. После этого подключаем любые эмодзи для корректного отображения смайликов.'
+categories: 'front-end'
+tags:
+  - 'emoji'
+  - 'twitter'
+  - 'fallback'
 image:
-  path: emoji/emoji.jpg
+  path: 'emoji/emoji.jpg'
 ---
 
 {% mediaImage image.path, image.alt %}

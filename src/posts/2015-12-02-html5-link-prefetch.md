@@ -1,13 +1,18 @@
 ---
-layout: post
+layout: 'post'
 title: 'Ускоряем загрузку ресурсов для сайта: preconnect, prefetch, prerender, preloading…'
-categories: front-end
-description: HTML5 Link Prefetch указывает браузеру какие ресурсы вам понадобятся в будущем на сайте и максимально подготовит их дальнейшую загрузку.
-tags: [cdn, preconnect, prefetch, prerender, preloading, оптимизация]
-
+description: 'HTML5 Link Prefetch указывает браузеру какие ресурсы вам понадобятся в будущем на сайте и максимально подготовит их дальнейшую загрузку.'
+categories: 'front-end'
+tags:
+  - 'cdn'
+  - 'preconnect'
+  - 'prefetch'
+  - 'prerender'
+  - 'preloading'
+  - 'оптимизация'
 image:
-  path: link_prefetch/html5_link_prefetch.png
-  alt: Стадии загрузки ресурса / HTML5 Link Prefetch
+  path: 'link_prefetch/html5_link_prefetch.png'
+  alt: 'Стадии загрузки ресурса / HTML5 Link Prefetch'
 ---
 
 {% mediaImage image.path, image.alt %}

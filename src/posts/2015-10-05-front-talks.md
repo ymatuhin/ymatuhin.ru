@@ -1,12 +1,15 @@
 ---
-layout: post
-title: Видео и презентации с конференции «FrontTalks» 2015
-categories: front-end
-description: Краткое содержание докладов с конференции «FrontTalks» 2015 года, ссылки на видео, презентации и материалы из докладов.
-tags: [видео, конференция, fronttalks]
+layout: 'post'
+title: 'Видео и презентации с конференции «FrontTalks» 2015'
+description: 'Краткое содержание докладов с конференции «FrontTalks» 2015 года, ссылки на видео, презентации и материалы из докладов.'
+categories: 'front-end'
+tags:
+  - 'видео'
+  - 'конференция'
+  - 'fronttalks'
 image:
-  path: fronttalks/fronttalks_2015.jpg
-  alt: FrontTalks 2015
+  path: 'fronttalks/fronttalks_2015.jpg'
+  alt: 'FrontTalks 2015'
 ---
 
 {% mediaImage image.path, image.alt %}

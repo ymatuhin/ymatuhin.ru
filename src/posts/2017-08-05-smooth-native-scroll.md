@@ -1,12 +1,14 @@
 ---
-layout: post
-title: Плавный, нативный скрол
-description: Выкиньте лишние библиотеки для прокрутки внутри страницы
-categories: front-end
-tags: [js, scroll]
+layout: 'post'
+title: 'Плавный, нативный скрол'
+description: 'Выкиньте лишние библиотеки для прокрутки внутри страницы'
+categories: 'front-end'
+tags:
+  - 'js'
+  - 'scroll'
 image:
-    path: scroll/scrollbar-windows.jpg
-    alt: Полосы прокрутки семейства Windows
+  path: 'scroll/scrollbar-windows.jpg'
+  alt: 'Полосы прокрутки семейства Windows'
 ---
 
 {% mediaImage image.path, image.alt %}

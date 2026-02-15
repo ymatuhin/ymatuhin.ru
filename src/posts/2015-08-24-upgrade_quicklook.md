@@ -1,13 +1,12 @@
 ---
-layout: post
-title: Улучшаем «быстрый просмотр» (Quick Look) в Mac OS
-description: >
-  Как установить плагины для просмотра markdown, файлов без расширений, webp изображений, JSON и подсветка синтаксиса к «быстрому просмотру» (Quick Look) в Mac OS
-categories: blog
-tags: [mac os]
-
+layout: 'post'
+title: 'Улучшаем «быстрый просмотр» (Quick Look) в Mac OS'
+description: 'Как установить плагины для просмотра markdown, файлов без расширений, webp изображений, JSON и подсветка синтаксиса к «быстрому просмотру» (Quick Look) в Mac OS'
+categories: 'blog'
+tags:
+  - 'mac os'
 image:
-  path: quicklook/preview.png
+  path: 'quicklook/preview.png'
 ---
 
 {% mediaImage image.path, image.alt %}

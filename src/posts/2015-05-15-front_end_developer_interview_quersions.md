@@ -1,12 +1,19 @@
 ---
-layout: post
-title: Вопросы для собеседования кандидату на должность Front-end разработчика
-categories: front-end
-tags: >
-  front end собеседование работа вопросы перевод должность кандидат
+layout: 'post'
+title: 'Вопросы для собеседования кандидату на должность Front-end разработчика'
+categories: 'front-end'
+tags:
+  - 'front'
+  - 'end'
+  - 'собеседование'
+  - 'работа'
+  - 'вопросы'
+  - 'перевод'
+  - 'должность'
+  - 'кандидат'
 image:
-  path: front_end_interview/mem.jpg
-  alt: На собеседовании фронтенд разработчика
+  path: 'front_end_interview/mem.jpg'
+  alt: 'На собеседовании фронтенд разработчика'
 ---
 
 {% mediaImage image.path, image.alt %}

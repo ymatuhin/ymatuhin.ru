@@ -1,14 +1,21 @@
 ---
-layout: post
-title: Время обновить clearfix
-description: >
-  Исправляем поведение плавающих классов и контейнера с помощью css класса clearfix и его новой, короткой версией.
-categories: front-end
-tags: clearfix css after div плавающие элементы float обновить класс
-
+layout: 'post'
+title: 'Время обновить clearfix'
+description: 'Исправляем поведение плавающих классов и контейнера с помощью css класса clearfix и его новой, короткой версией.'
+categories: 'front-end'
+tags:
+  - 'clearfix'
+  - 'css'
+  - 'after'
+  - 'div'
+  - 'плавающие'
+  - 'элементы'
+  - 'float'
+  - 'обновить'
+  - 'класс'
 image:
-  path: clearfix/clearfix.png
-  alt: Как работает Clearfix CSS
+  path: 'clearfix/clearfix.png'
+  alt: 'Как работает Clearfix CSS'
 ---
 
 Clearfix — вспомогательный класс в css, с помощью которого мы исправляем схлопывающиеся размеры контейнера у плавающих элементов.

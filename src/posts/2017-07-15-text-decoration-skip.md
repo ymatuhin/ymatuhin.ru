@@ -1,12 +1,15 @@
 ---
-layout: post
-title: Адекватное подчеркивание ссылок
+layout: 'post'
+title: 'Адекватное подчеркивание ссылок'
 description: 'Как исправить поведение text-decoration: underline'
-categories: front-end
-tags: [css, link, underline]
+categories: 'front-end'
+tags:
+  - 'css'
+  - 'link'
+  - 'underline'
 image:
-    path: text-decoration/preview.png
-    alt: Пример css свойства text-decoration-skip
+  path: 'text-decoration/preview.png'
+  alt: 'Пример css свойства text-decoration-skip'
 ---
 
 {% mediaImage image.path, image.alt %}

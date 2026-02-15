@@ -1,11 +1,17 @@
 ---
-layout: post
-title: Три плагина, которые сделают Single Page Application лучше
-categories: front-end
-description: Три плагина улучшат приложение для пользователей с нестабильным или медленным интернетом и тех, кто пользуется телефоном для просмотра. Pace.js, Offline.js, FastClick.js.
-tags: [spa, angular, plugins, offline, loading, mobile]
+layout: 'post'
+title: 'Три плагина, которые сделают Single Page Application лучше'
+description: 'Три плагина улучшат приложение для пользователей с нестабильным или медленным интернетом и тех, кто пользуется телефоном для просмотра. Pace.js, Offline.js, FastClick.js.'
+categories: 'front-end'
+tags:
+  - 'spa'
+  - 'angular'
+  - 'plugins'
+  - 'offline'
+  - 'loading'
+  - 'mobile'
 image:
-  path: spa_plugins/spa_plugins.jpg
+  path: 'spa_plugins/spa_plugins.jpg'
 ---
 
 {% mediaImage image.path, image.alt %}
