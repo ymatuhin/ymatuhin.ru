@@ -6,7 +6,7 @@ blockquote {
   padding: 25px;
 }
 
-blockquote:before {
+blockquote::before {
   content: ">";
   display: block;
   position: absolute;

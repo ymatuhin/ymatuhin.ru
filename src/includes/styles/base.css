@@ -1,8 +1,11 @@
 @layer base {
   :root {
-    --font-family: "Ubuntu Sans Mono", Monaco, Consolas, "Ubuntu Mono";
+    --font-family: "Ubuntu Sans Mono", Monaco, Consolas, "Ubuntu Mono", monospace;
+    --code-font-family: var(--font-family);
     --background-color: #181825;
     --deeper-background-color: #11111b;
+    --lighter-background-color: #1e1e2e;
+    --border-color: #313244;
     --accent-color: #cba6f7;
     --text-color: #d6e8ee;
     --text-font-size: 17px;
@@ -17,8 +20,8 @@
   }
 
   *,
-  *:before,
-  *:after {
+  *::before,
+  *::after {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
@@ -33,9 +36,7 @@
     background-color: var(--deeper-background-color);
     color: var(--text-color);
     text-rendering: optimizeLegibility;
-    font-variant-ligatures: contextual;
-    -webkit-overflow-scrolling: touch;
-    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
     margin: 0;
     padding: 0;
   }
