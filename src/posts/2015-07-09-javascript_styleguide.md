@@ -8,7 +8,10 @@ tags:
 image: null
 path: styleguide/styleguide.jpg
 alt: Гайд по стилю кода на JavaScript от AirBnB
+redirects:
+  - /front-end/javascript_styleguide/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 <blockquote>

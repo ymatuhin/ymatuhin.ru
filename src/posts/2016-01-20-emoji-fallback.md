@@ -9,6 +9,8 @@ tags:
   - fallback
 image:
   path: emoji/emoji.jpg
+redirects:
+  - /front-end/emoji-fallback/
 ---
 
 {% mediaImage image.path, image.alt %}

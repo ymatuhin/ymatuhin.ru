@@ -9,6 +9,8 @@ tags:
   - реклама
 image:
   path: adblock/logo_adblock.png
+redirects:
+  - /front-end/detect-adblock/
 ---
 
 {% mediaImage image.path, image.alt %}

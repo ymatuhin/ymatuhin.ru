@@ -16,7 +16,10 @@ tags:
 image:
   path: clearfix/clearfix.png
   alt: Как работает Clearfix CSS
+redirects:
+  - /front-end/float_and_clearfix/
 ---
+
 Clearfix — вспомогательный класс в css, с помощью которого мы исправляем схлопывающиеся размеры контейнера у
 плавающих элементов.
 

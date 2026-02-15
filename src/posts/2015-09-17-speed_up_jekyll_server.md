@@ -8,7 +8,10 @@ tags:
 image:
   path: jekyll/jekyll-logo.png
   alt: Логотип Jekyll
+redirects:
+  - /front-end/speed_up_jekyll_server/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 [Jekyll](https://jekyllrb.com/) — генератор статических сайтов. Чаще всего используется для блогов как альтернатива

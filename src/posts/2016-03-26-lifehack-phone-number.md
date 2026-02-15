@@ -12,7 +12,11 @@ tags:
   - блокировка в нерабочее время
 image:
   path: phones/phones.jpeg
+redirects:
+  - /blog/lifehack-phone-number/
+  - /front-end/lifehack-phone-number/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Если у вас небольшой бизнес, магазин или рабочий номер телефона, который отображается на сайте, и нет средств на

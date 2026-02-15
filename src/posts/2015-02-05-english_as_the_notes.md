@@ -17,7 +17,10 @@ tags:
   - ютуб
   - Яндекс
 has_youtube: true
+redirects:
+  - /blog/english_as_the_notes/
 ---
+
 Если вы изучаете английский язык, и еще не видели этот видеокурс, то я рекомендую посмотреть его. Представляю вам
 _youtube_ канал — «[Английский как по нотам](https://www.youtube.com/user/krutopridumal/featured){:rel='nofollow'}»  (*
 *krutopridumal**). У этого проекта так-же есть группа [Вконтакте](http://vk.com/krutopridumal){:rel='nofollow'}.

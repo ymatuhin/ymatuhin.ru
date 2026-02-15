@@ -13,7 +13,10 @@ tags:
 image:
   path: test-framework/frameworks.jpg
   alt: ' азнообразие JavaScript фреймворков'
+redirects:
+  - /front-end/flux-challenge/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Вы увидели новый фреймворк, который конечно в миллион раз лучше текущего. Заманчиво, но использовать его в боевом

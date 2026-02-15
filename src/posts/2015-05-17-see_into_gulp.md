@@ -18,6 +18,8 @@ image:
   path: gulp/logo.png
   alt: Gulp — системы сборки фронтенда
 image_link: http://gulpjs.com
+redirects:
+  - /front-end/see_into_gulp/
 ---
 
 {% mediaImage image.path, image.alt %}

@@ -13,7 +13,10 @@ tags:
 image:
   path: broken-icons/broken-icons.png
   alt: Браузеры отображают незагруженное изображение
+redirects:
+  - /front-end/styling-broken-images-user-care-or-not/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Восьмого марта 2016 года, Ире Адеринокун опубликовала пост «[Styling Broken Images][1]{:rel='nofollow'}», в котором

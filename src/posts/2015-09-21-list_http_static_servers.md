@@ -8,7 +8,10 @@ tags:
 image:
   path: server/http-server.png
   alt: Http-server статики в терминале
+redirects:
+  - /front-end/list_http_static_servers/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Каждая из нижеприведенных команд запускает статичный http сервер в текущей директории. Сервер будет доступен по

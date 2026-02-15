@@ -15,7 +15,10 @@ tags:
   - modules
   - bower
   - components
+redirects:
+  - /tools/atom_exclude_foilder/
 ---
+
 Порой, чтобы открыть нужный файл, нужно знать все его название. А все из-за того, что у нас очень много файлов в папках
 `node_modules` и `bower_components` и они мешают открытию написанных нами файлов.
 

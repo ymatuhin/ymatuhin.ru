@@ -13,7 +13,11 @@ tags:
 image:
   path: dev_tools/dev_tools.png
   alt: Темная темя для Chrome Dev Tools
+redirects:
+  - /front-end/styling_chrome_dev_tools/
+  - /tools/styling_chrome_dev_tools/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Совсем недавно я узнал, что Chrome поддерживает темы для dev tools. Мне сразу-же захотелось попробовать это. Сразу скажу

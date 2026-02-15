@@ -7,7 +7,10 @@ tags:
   - mac os
 image:
   path: quicklook/preview.png
+redirects:
+  - /blog/upgrade_quicklook/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Quick Look незаменимая вещь для маководов, жаль что она не работает с некоторыми файлами, которые относятся к веб

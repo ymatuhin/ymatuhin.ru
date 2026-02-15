@@ -10,6 +10,8 @@ tags:
 image:
   path: fronttalks/fronttalks_2015.jpg
   alt: FrontTalks 2015
+redirects:
+  - /front-end/front-talks/
 ---
 
 {% mediaImage image.path, image.alt %}

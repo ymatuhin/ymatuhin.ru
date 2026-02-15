@@ -9,7 +9,10 @@ tags:
   - текстовый редактор
 image:
   path: atom/plugins_2/atom-logo.png
+redirects:
+  - /tools/atom_packages_2/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Продолжение стати «[Лучшие плагины для текстового редактора Atom](/tools/atom_packages_1/)». Я расскажу о новых

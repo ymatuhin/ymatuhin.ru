@@ -14,7 +14,10 @@ image:
   path: geekbrains/logo.png
   alt: Geekbrains
 has_youtube: true
+redirects:
+  - /front-end/cool_webinars_on_geekbrains/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Хочу поделиться вебинарами от Geekbrains (Школа Программирования). Я недавно нашел эти вебинары, поэтому успел

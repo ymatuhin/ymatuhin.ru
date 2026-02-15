@@ -10,6 +10,8 @@ tags:
 image:
   path: font-smooth/compare.png
   alt: Сглаживание шрифтов CSS
+redirects:
+  - /front-end/font_smoothing_for_the_developer_and_user_on_mac_os/
 ---
 
 {% mediaImage image.path, image.alt %}

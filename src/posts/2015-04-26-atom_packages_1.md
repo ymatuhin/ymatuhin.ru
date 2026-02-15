@@ -9,6 +9,8 @@ tags:
   - atom github текстовый редактор кода плагины дополнения лучшие список sublime
 description: |
   Плагины и дополнения для текстового редактора Atom: linter, stylus, beautify, autocomplete-plus, color-picker, easy-motion, emmet, file-icons, jekyll, angularjs, project-manager, merge-conflicts, minimap, open-in-browser, project-palette-finder, unregistered.
+redirects:
+  - /tools/atom_packages_1/
 ---
 
 Вчера я писал про текстовый редактор *Atom* ([Все еще сидите на Sublime? Тогда мы, вместе с Atom, идем к вам!](/blog/sublime_vs_atom/)), а сегодня хочу продолжить о нем разговор и рассказать о лучших дополнениях к этому текстовому редактору.

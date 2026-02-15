@@ -9,7 +9,10 @@ tags:
   - http
 image:
   path: rest_api/restful.png
+redirects:
+  - /front-end/restful_api_for_frontender/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 В [двух из трех](/frontend/plan_for_frontend_developer/) вакансиях для фронтеда требуют знания **REST /

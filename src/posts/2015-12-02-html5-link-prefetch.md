@@ -13,7 +13,10 @@ tags:
 image:
   path: link_prefetch/html5_link_prefetch.png
   alt: Стадии загрузки ресурса / HTML5 Link Prefetch
+redirects:
+  - /front-end/html5-link-prefetch/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Сегодня мы рассмотрим «HTML5 Link Prefetch», а именно dns-prefetch, prefetch, preconnect, subresource, prerender и

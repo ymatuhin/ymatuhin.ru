@@ -8,6 +8,8 @@ tags:
 image:
   path: variables/variables.jpg
   alt: Как называть переменные
+redirects:
+  - /front-end/how-to-name-variables/
 ---
 
 {% mediaImage image.path, image.alt %}

@@ -16,6 +16,8 @@ tags:
 image:
   path: jekyll/jekyll-logo.png
   alt: Логотип Jekyll
+redirects:
+  - /front-end/migrate-to-jekyll-3/
 ---
 
 елиз третьей версии генератора статических сайтов Jekyll прошел 27 октября 2015 года. А 1 февраля 2016 года GitHub

@@ -15,7 +15,10 @@ tags:
 image:
   path: git/git_guide.png
   alt: Руководства по GIT на русском языке
+redirects:
+  - /front-end/git_guidelines_in_russian/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 уководств по Git на английском языке великое множество, но на русском их на порядок меньше. Я, конечно, согласен с тем,

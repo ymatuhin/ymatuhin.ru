@@ -17,6 +17,8 @@ tags:
 image:
   path: animate_height/transition_sign.jpg
   alt: CSS анимация высоты через transition
+redirects:
+  - /front-end/height_transition_css/
 ---
 
 {% mediaImage image.path, image.alt %}

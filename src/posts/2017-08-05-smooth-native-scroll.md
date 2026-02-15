@@ -9,7 +9,10 @@ tags:
 image:
   path: scroll/scrollbar-windows.jpg
   alt: Полосы прокрутки семейства Windows
+redirects:
+  - /front-end/smooth-native-scroll/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Плавная прокрутка до определенного места на странице — очень распространенная фича, особенно в лендингах. Еще один

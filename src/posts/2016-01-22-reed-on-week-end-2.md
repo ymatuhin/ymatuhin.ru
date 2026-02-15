@@ -10,7 +10,10 @@ tags:
 image:
   path: week-ends/social-previews.png
   alt: ' азмеры изображений при шаринге в социальных сетях'
+redirects:
+  - /front-end/reed-on-week-end-2/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 ## Статьи и видео

@@ -9,7 +9,10 @@ tags:
 image:
   path: mac/dialog.png
   alt: Диалог смены расширения у файла в Mac OS
+redirects:
+  - /blog/mac-os-confirm-from-keyboard/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 При появлении диалога, по умолчанию у нас нет возможности переключить фокус на другую кнопку с помощью клавиатуры,

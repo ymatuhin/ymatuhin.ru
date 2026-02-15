@@ -10,6 +10,8 @@ tags:
 image:
   path: svg/svg_logo.png
   alt: Логотип SVG
+redirects:
+  - /front-end/tricks_with_svg_and_safe_use/
 ---
 
 {% mediaImage image.path, image.alt %}

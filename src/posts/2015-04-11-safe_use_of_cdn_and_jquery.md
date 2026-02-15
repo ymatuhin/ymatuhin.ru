@@ -19,7 +19,10 @@ tags:
   - сайта
   - angular
   - Modernizr
+redirects:
+  - /front-end/safe_use_of_cdn_and_jquery/
 ---
+
 Один из главных советов для оптимизации скорости загрузки сайтов является использование
 публичных <abbr title="Content Delivery Network">CDN</abbr> с популярными библиотеками, такими как jQuery или
 AngularJS.

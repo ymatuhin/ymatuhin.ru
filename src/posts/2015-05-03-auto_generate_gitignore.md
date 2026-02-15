@@ -15,7 +15,10 @@ image:
   path: git/gitignore.png
   alt: Сервис для автоматической генерации файла .gitignore для git — gitignore.io
 image_link: https://www.gitignore.io/
+redirects:
+  - /tools/auto_generate_gitignore/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Каждый раз создавать новый файл gitignore немного непрофессионально. Особенно когда ты что-то забываешь и ненужные файлы вываливаются в общий репозиторий. Но уже все придумано за нас, нам остается только вписать наши технологии и редакторы в нужное поле и скачать получившийся файл. Хватит самому настривать и создавать файлы gitignore!

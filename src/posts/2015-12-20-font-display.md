@@ -12,6 +12,8 @@ image:
   path: font-display/font-display.png
   alt: Font display
 has_youtube: true
+redirects:
+  - /front-end/font-display/
 ---
 
 {% mediaImage image.path, image.alt %}

@@ -17,6 +17,8 @@ tags:
 image:
   path: san_francisco/san_francisco.jpg
   alt: San Francisco
+redirects:
+  - /front-end/using_san_francisco_font/
 ---
 
 {% mediaImage image.path, image.alt %}

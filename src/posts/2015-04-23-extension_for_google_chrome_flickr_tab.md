@@ -11,7 +11,10 @@ tags:
 image:
   path: flickr_extension/new_tab_by_flickr_1.png
   alt: ' асширение для Google Chrome — Flickr Tab'
+redirects:
+  - /blog/extension_for_google_chrome_flickr_tab/
 ---
+
 Вот такой милый пес появился у меня при открытии новой вкладки в Google Chrome. И про это я хочу сегодня рассказать вам.
 
 {% mediaImage image.path, image.alt %}

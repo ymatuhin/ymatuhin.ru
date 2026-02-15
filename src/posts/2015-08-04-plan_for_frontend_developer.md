@@ -7,7 +7,10 @@ image:
   alt: Кажется у меня есть план…
 tags:
   - frontend
+redirects:
+  - /front-end/plan_for_frontend_developer/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 После анализа [требований][6]{:rel='nofollow'} к front end разработчикам в топовых компаниях, расставим приоритеты,

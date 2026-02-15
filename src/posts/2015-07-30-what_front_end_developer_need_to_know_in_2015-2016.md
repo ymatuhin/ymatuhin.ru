@@ -7,6 +7,8 @@ image:
   alt: Какими знаниями должен обладать фронтенд разработчик в 2015/2016
 tags:
   - frontend
+redirects:
+  - /front-end/what_front_end_developer_need_to_know_in_2015-2016/
 ---
 
 {% mediaImage image.path, image.alt %}

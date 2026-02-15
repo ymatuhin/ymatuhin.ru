@@ -15,7 +15,10 @@ tags:
   - экономия
   - трафика
   - beta
+redirects:
+  - /blog/review_about_chrome_data_saver_extension/
 ---
+
 Совсем недавно, Google выпустила расширение экономящее трафик под
 названием [Data
 Saver (beta)](https://chrome.google.com/webstore/detail/data-saver-beta/pfmgfdlgomnbgkofeojodiodmgpgmkac). Такой аналог режима турбо от Оперы, но только для браузеров на движке хромиума.

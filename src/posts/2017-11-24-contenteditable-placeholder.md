@@ -10,7 +10,10 @@ tags:
 image:
   path: contenteditable.jpg
   alt: '[contenteditable]'
+redirects:
+  - /front-end/contenteditable-placeholder/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Я уже сильно привык к атрибуту `placeholder`, и немного грустил зная что `<pre contenteditable></pre>`

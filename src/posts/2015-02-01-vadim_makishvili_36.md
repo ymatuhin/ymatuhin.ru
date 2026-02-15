@@ -21,6 +21,8 @@ image:
   path: 36/vadim.jpg
   alt: Вадим Макишвили выступает на FrontTalks
 has_youtube: true
+redirects:
+  - /front-end/vadim_makishvili_36/
 ---
 
 {% mediaImage image.path, image.alt %}

@@ -10,7 +10,10 @@ tags:
 image:
   path: tips/array_uniq.jpg
   alt: Убрать дубликаты из массива в JavaScript
+redirects:
+  - /front-end/remove-duplicates-from-array/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 ## ES5

@@ -1,5 +1,5 @@
 const postsGlob = 'src/posts/*.{md,html}';
-const postTypeTags = new Set(['blog', 'fronted', 'tools', 'books']);
+const postTypeTags = new Set(['blog', 'frontend', 'tools', 'books']);
 const hashTag = (value) => {
   let hash = 5381;
   for (let i = 0; i < value.length; i += 1) {
@@ -63,4 +63,26 @@ export function buildTagPagesCollection(collectionApi) {
   }
 
   return pages.sort((a, b) => a.name.localeCompare(b.name, 'ru'));
+}
+
+export function buildFrontmatterRedirectsCollection(collectionApi) {
+  const redirects = [];
+  const redirectKeys = new Set();
+  const items = collectionApi.getAll();
+
+  for (const item of items) {
+    if (!item.url || !item.data || !item.data.redirects) continue;
+
+    const targets = Array.isArray(item.data.redirects) ? item.data.redirects : [item.data.redirects];
+    for (const source of targets) {
+      const from = String(source || '').trim();
+      if (!from) continue;
+      const key = `${from}->${item.url}`;
+      if (redirectKeys.has(key) || from === item.url) continue;
+      redirectKeys.add(key);
+      redirects.push({ from, to: item.url });
+    }
+  }
+
+  return redirects.sort((a, b) => a.from.localeCompare(b.from));
 }

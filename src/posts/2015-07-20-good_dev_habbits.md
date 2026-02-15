@@ -17,7 +17,10 @@ tags:
 image:
   path: habbits/good_habbits.png
   alt: Полезные привычки разработчика
+redirects:
+  - /front-end/good_dev_habbits/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Пару дней назад я прочел книгу «Цельная жизнь». В ней огромное внимание уделялось привычкам, в особенности полезным. И

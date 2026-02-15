@@ -17,7 +17,10 @@ tags:
 image:
   path: atom/atom_stylus_emmet.jpg
   alt: Atom + Emmet + Stylus
+redirects:
+  - /tools/atom_emmet_with_stylus/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 асширение **Emmet** отлично работает с html, css, sass, scss, less. Но есть одна проблема — *Stylus*. Видимо из-за того,

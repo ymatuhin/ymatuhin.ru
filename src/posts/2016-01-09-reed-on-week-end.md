@@ -11,6 +11,8 @@ image:
   path: week-ends/1984.jpg
   alt: Джордж Оруэлл — 1984
 has_iframe: true
+redirects:
+  - /front-end/reed-on-week-end/
 ---
 
 {% mediaImage image.path, image.alt %}

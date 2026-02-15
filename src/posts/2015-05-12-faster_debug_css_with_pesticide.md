@@ -10,7 +10,10 @@ tags:
 image:
   path: pesticide/logo.png
   alt: Pesticide — библиотека для дебага CSS
+redirects:
+  - /front-end/faster_debug_css_with_pesticide/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Как часто у вас бывали проблемы со схлопыванием плавающих элементов? Или элемент уезжал непонятно куда? Эти и другое

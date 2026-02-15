@@ -14,6 +14,8 @@ tags:
 image:
   path: front_end_interview/mem.jpg
   alt: На собеседовании фронтенд разработчика
+redirects:
+  - /front-end/front_end_developer_interview_quersions/
 ---
 
 {% mediaImage image.path, image.alt %}

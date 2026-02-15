@@ -9,7 +9,10 @@ tags:
 image:
   path: vscode/icon-dribbble.png
   alt: Альтернативная версия иконки для VS Code, автор <a href='https://dribbble.com/shots/2436746-Visual-Studio-Code-replacement-icon'>James Gilyead</a>
+redirects:
+  - /tools/migrate-to-vs-studio-code/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Уже 2 недели я использую [Visual Studio Code](https://code.visualstudio.com/) для работы. Он пришел на замену, моему

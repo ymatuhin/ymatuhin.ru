@@ -10,6 +10,8 @@ image:
   path: logs/bear.jpg
   alt: Вася следит за логами
 has_youtube: true
+redirects:
+  - /front-end/logs-in-javascript/
 ---
 
 Логирование — незаменимый инструмент в отладке JS кода. асставьте логи в критические места и при возникновении ошибки вы

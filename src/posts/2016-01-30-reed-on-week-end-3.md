@@ -9,7 +9,10 @@ tags:
   - дайджест
 updated: 14-03-2016
 has_youtube: true
+redirects:
+  - /front-end/reed-on-week-end-3/
 ---
+
 Горячие новости 🔥 — Sublime Text [жив](https://sublimetext.com/3dev){:rel='nofollow'}! Сборка 3099 вышла 29 января 2016.
 
 {% include "media-youtube.liquid", url: "20BySC_6HyY", width: "960", height: "720", caption: "Wat by Gary

@@ -16,7 +16,10 @@ tags:
 image:
   path: atom/atom_vs_sublime.jpg
   alt: Atom
+redirects:
+  - /tools/sublime_vs_atom/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 В пятницу я пробовал в работе разные текстовые редакторы. Большинство из них очень плохи. Тот-же _Brackets_ от Adobe —
