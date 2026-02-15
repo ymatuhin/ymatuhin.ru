@@ -35,7 +35,7 @@ _youtube_ канал — «[Английский как по нотам](https:/
 ## Английский как по нотам смотреть онлайн
 
 {% include "media-youtube.liquid", url: "7JSggwopqoE" width="560" height="315" caption="Английский как по нотам —
-Диалоги из Бойцовского клуба" %} %}
+Диалоги из Бойцовского клуба" %}
 
 {% include "media-youtube.liquid", url: "cgpr2XazMnI" width="560" height="315" caption="Английский как по нотам —
-Диалоги из Матрицы" %} %}
+Диалоги из Матрицы" %}
