@@ -1,6 +1,6 @@
 <header class="header">
-  {% assign developmentTagSlug = "разработка" | tagSlug %}
-  {% assign nonDevelopmentTagSlug = "не разработка" | tagSlug %}
+  {% assign developmentTagSlug = "development" | tagSlug %}
+  {% assign nonDevelopmentTagSlug = "non-development" | tagSlug %}
   {% assign developmentTagUrl = "/tag/" | append: developmentTagSlug | append: "/" %}
   {% assign nonDevelopmentTagUrl = "/tag/" | append: nonDevelopmentTagSlug | append: "/" %}
 
@@ -20,6 +20,9 @@
 
       {% if page.url == '/tags/' %}<b>все теги</b>
       {% else %}<a href="/tags/">все теги</a>{% endif %}
+
+      {% if page.url == '/about/' %}<b>про меня</b>
+      {% else %}<a href="/about/">про меня</a>{% endif %}
     </nav>
     <nav aria-label="Социальные ссылки: GitHub, Telegram, почта и RSS">
       <a href="https://github.com/ymatuhin">гитхаб</a>

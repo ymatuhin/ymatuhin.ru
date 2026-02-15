@@ -31,7 +31,7 @@ redirects:
 
 ## Геймплей T-Rex runner
 
-{% include "media-iframe.liquid", url: "https://www.youtube.com/embed/buPl0vnusls", width: "560", height: "315", caption: "Пасхалка в гугл хроме —
+{% include "posts/media-iframe.liquid", url: "https://www.youtube.com/embed/buPl0vnusls", width: "560", height: "315", caption: "Пасхалка в гугл хроме —
 динозавр T-Rex" %}
 
 Если вам интересно посмотреть, как написана эта игра, то вы откройте дебагер на странице и найдите в одном из `script`

@@ -10,7 +10,7 @@ permalink: /projects/
 <br>
 <div class="cards">
     {% for proj in projects %}
-        {% include "post-card.liquid",
+        {% include "posts/post-card.liquid",
             tag: "h2",
             tags: proj.category | split: ",",
             imagePath: proj.image,

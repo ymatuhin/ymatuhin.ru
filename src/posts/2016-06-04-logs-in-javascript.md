@@ -137,7 +137,7 @@ redirects:
 
 О логировании и `console.log` рассказал Антон Шувалов выступая на конференции DUMB 2016 в секции FrontTalks.
 
-{% include "media-iframe.liquid", url: "https://www.youtube.com/embed/nPYmp586EE0", width: "560", height: "315", caption: "Антон Шувалов — «Отладка
+{% include "posts/media-iframe.liquid", url: "https://www.youtube.com/embed/nPYmp586EE0", width: "560", height: "315", caption: "Антон Шувалов — «Отладка
 кода в браузере»" %}
 
 Ссылки на записи выступлений с FrontTalks 2016 на [хабре](https://habrahabr.ru/company/it_people/blog/302286/), а за

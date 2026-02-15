@@ -25,7 +25,7 @@ permalink: "/tag/{{ currentTagPage.slug }}/index.html"
     {% endfor %}
 
     {% if showPost %}
-      {% include "post-card.liquid"
+      {% include "posts/post-card.liquid"
         tag: "h2",
         tags: post.data.tags,
         date: post.date,

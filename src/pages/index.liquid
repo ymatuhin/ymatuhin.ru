@@ -3,13 +3,13 @@ layout: default
 permalink: index.html
 ---
 
-<h1 class="visually-hidden">Юрий Матюхин</h1>
+<h1 class="visually-hidden">Юрий Матюхин, фронтенд разработчик</h1>
 
 {% include "page/intro.liquid" %}
 
 <div class="cards">
   {% for post in collections.posts limit: 10 %}
-  {% include "post-card.liquid"
+  {% include "posts/post-card.liquid"
     tag: "h2",
     tags: post.data.tags,
     date: post.date,

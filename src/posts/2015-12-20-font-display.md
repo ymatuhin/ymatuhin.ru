@@ -95,7 +95,7 @@ Safari | нет ожидания | - | -
 
 ## Видео пример работы свойства font-display
 
-{% include "media-iframe.liquid", url: "https://www.youtube.com/embed/CciEEVHZRgw", width: "421", height: "315", caption: "Пример работы CSS свойства
+{% include "posts/media-iframe.liquid", url: "https://www.youtube.com/embed/CciEEVHZRgw", width: "421", height: "315", caption: "Пример работы CSS свойства
 font-display" %}
 
 ## Как протестировать

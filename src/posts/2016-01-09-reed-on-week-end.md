@@ -25,7 +25,7 @@ redirects:
 Я перешел на Pocket для сохранения статей. До этого складывал их в Wunderlist и Notes, а теперь выбрал годное из них и
 составил списочки ниже. Чтива хватит на пару выходных.
 
-{% include "media-iframe.liquid",
+{% include "posts/media-iframe.liquid",
 url: "//codepen.io/joshnh/embed/JCGoF/?height=320&theme-id=0&default-tab=result",
 width: "960",
 height: "320",

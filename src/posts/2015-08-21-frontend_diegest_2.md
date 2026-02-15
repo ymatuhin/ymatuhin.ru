@@ -16,7 +16,7 @@ redirects:
 Когда я нахожу интересные ссылки, то хочу ими поделиться. Поэтому я собираю эти ссылки в Wunderlist, а когда набирается
 15, публикую в дайджесте. Поехали...
 
-{% include "media-iframe.liquid", url: "https://codepen.io/rgg/full/QbRyOq/", width: "960", height: "480", caption: "3D
+{% include "posts/media-iframe.liquid", url: "https://codepen.io/rgg/full/QbRyOq/", width: "960", height: "480", caption: "3D
 прогресс бар на CSS" %}
 
 * БЭМ с каждым годом набирате популярность. Однако многие пишут плохой БЭМ. Игорь Зенич в

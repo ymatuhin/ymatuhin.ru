@@ -16,7 +16,7 @@ redirects:
 
 Горячие новости 🔥 — Sublime Text [жив](https://sublimetext.com/3dev){:rel='nofollow'}! Сборка 3099 вышла 29 января 2016.
 
-{% include "media-iframe.liquid", url: "https://www.youtube.com/embed/20BySC_6HyY", width: "960", height: "720",
+{% include "posts/media-iframe.liquid", url: "https://www.youtube.com/embed/20BySC_6HyY", width: "960", height: "720",
 caption: "Wat by Gary
 Bernhardt" %}
 

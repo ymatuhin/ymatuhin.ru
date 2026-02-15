@@ -16,7 +16,7 @@ redirects:
 Когда я нахожу интересные ссыки, то хочу ими поделиться. Поэтому я собираю эти ссылки в Wunderlist, а когда набирается
 15, публикую в дайджесте. Поехали…
 
-{% include "media-iframe.liquid", url: "https://codepen.io/Yakudoo/full/YXxmYR/", width: "960", height: "480",
+{% include "posts/media-iframe.liquid", url: "https://codepen.io/Yakudoo/full/YXxmYR/", width: "960", height: "480",
 caption: "Демка с милейшим львом на svg" %}
 
 1. Испытывали ли вы чувство, когда непонятно как назвать переменную для цвета? Если да, то

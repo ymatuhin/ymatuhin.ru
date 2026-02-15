@@ -19,7 +19,7 @@
 {% if date or tags %}
   <div class="post-card__meta">
       {% if date %}
-        <span class="post-card__date">{% include "pubdate.liquid", date: date %}</span>
+        <span class="post-card__date">{% include "posts/pubdate.liquid", date: date %}</span>
       {% endif %}
 
     {% if date and tags %}:::{% endif %}
