@@ -17,25 +17,13 @@ description: >
 
 
 
-{%
-	include "media-image.liquid",
-	url: "autoprefixer/autoprefixer.png",
-	width: "1280",
-	height: "701",
-	caption: "Autoprefixer online"
-%}
+{% mediaImage "autoprefixer/autoprefixer.png", "Autoprefixer online" %}
 
 ## <a id="browsers_settings"></a>Настройка поддерживаемых браузеров
 
 Часто у&nbsp;людей, не&nbsp;знакомых с&nbsp;синтаксисом автопрефиксера, возникают проблемы с&nbsp;фильтром для браузеров.
 
-{%
-	include "media-image.liquid",
-	url: "autoprefixer/filter.png",
-	width: "397",
-	height: "40",
-	caption: "Фильтер браузеров для autoprefixer online"
-%}
+{% mediaImage "autoprefixer/filter.png", "Фильтер браузеров для autoprefixer online" %}
 
 По&nbsp;умолчанию автопрефиксер поддерживает последние 2&nbsp;версии основных браузеров (таких как google chrome и&nbsp;т.д.). Но&nbsp;вы&nbsp;можете выбрать, какие браузеры вам нужны по&nbsp;имени (к&nbsp;примеру `&quot;ff 21&quot;` &mdash; это Firefox 21&nbsp;версии) или по&nbsp;шаблонам.
 

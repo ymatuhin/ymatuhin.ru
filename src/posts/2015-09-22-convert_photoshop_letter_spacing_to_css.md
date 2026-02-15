@@ -17,7 +17,7 @@ image:
 
 Межбуквенный интервал в Фотошопе регулирует расстояние между символами в тексте. В CSS это свойство `letter-spacing`. Проблема в том, что межбуквенный интервал в Фотошопе не конвертируется 1:1 к межбуквенному интервалу в CSS.
 
-{% include "media-image.liquid", url: "letter-spacing/letter-spacing.png", width: "108", height: "22", alt: "Межбуквенный интервал letter-spacing в Фотошопе" %}
+{% mediaImage "letter-spacing/letter-spacing.png", "Межбуквенный интервал letter-spacing в Фотошопе" %}
 
 Хотя это легко считается по пропорции **1000** межбуквенного интервала в Фотошопе = **1em** в CSS.
 

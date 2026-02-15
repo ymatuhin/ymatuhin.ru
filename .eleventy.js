@@ -42,18 +42,18 @@ export default function (eleventyConfig) {
     }
   });
 
-  eleventyConfig.addAsyncShortcode("mediaImage", async function (url, alt, caption, width, height, pixelated) {
-    if (!url) return "";
+  eleventyConfig.addAsyncShortcode("mediaImage", async function (url, alt, pixelated) {
+    const imageUrl = url;
+    const imageAlt = (alt || "").toString();
 
-    const source = `./public/assets/img/${url}`;
-    const imageWidth = Number.parseInt(width, 10);
-    const imageHeight = Number.parseInt(height, 10);
-    const imageAlt = (alt || caption || "").toString();
-    const extension = url.split(".").pop()?.toLowerCase();
+    if (!imageUrl) return "";
+
+    const source = `./public/assets/img/${imageUrl}`;
+    const extension = imageUrl.split(".").pop()?.toLowerCase();
     const formats = extension === "svg" || extension === "gif" ? ["auto"] : ["avif", "webp", "auto"];
 
     const metadata = await Image(source, {
-      widths: [imageWidth || null],
+      widths: ["auto"],
       formats,
       outputDir: "./_site/assets/img/optimized/",
       urlPath: "/assets/img/optimized/"
@@ -66,17 +66,7 @@ export default function (eleventyConfig) {
       decoding: "async"
     };
 
-    if (imageWidth) {
-      imageAttributes.width = imageWidth;
-    }
-    if (imageHeight) {
-      imageAttributes.height = imageHeight;
-    }
-
-    const imageMarkup = Image.generateHTML(metadata, imageAttributes);
-    const figcaption = caption ? `<figcaption>${caption}</figcaption>` : "";
-
-    return `<figure>${imageMarkup}${figcaption}</figure>`;
+    return `<figure>${Image.generateHTML(metadata, imageAttributes)}</figure>`;
   });
 
   // Passthrough copy

@@ -28,10 +28,10 @@ description: >
 
 <div class="full-width clearfix">
 	<div class="column-50">
-		{% include "media-image.liquid", url: "atom/atom_post.jpg", width: "1280", height: "773", caption: "Пример поста в текстовом редакторе Atom" %}
+		{% mediaImage "atom/atom_post.jpg", "Пример поста в текстовом редакторе Atom" %}
 	</div>
 	<div class="column-50">
-		{% include "media-image.liquid", url: "atom/sublime_post.jpg", width: "1280", height: "773", caption: "Пример поста в текстовом редакторе Sublime Text 3" %}
+		{% mediaImage "atom/sublime_post.jpg", "Пример поста в текстовом редакторе Sublime Text 3" %}
 	</div>
 </div>
 
@@ -41,10 +41,10 @@ description: >
 
 <div class="full-width clearfix">
 	<div class="column-50">
-		{% include "media-image.liquid", url: "atom/atom_settings.jpg", width: "1280", height: "773", caption: "Окно настроек в текстовом редакторе Atom" %}
+		{% mediaImage "atom/atom_settings.jpg", "Окно настроек в текстовом редакторе Atom" %}
 	</div>
 	<div class="column-50">
-		{% include "media-image.liquid", url: "atom/sublime_settings.jpg", width: "1280", height: "773", caption: "Окно настроек в текстовом редакторе Sublime Text 3" %}
+		{% mediaImage "atom/sublime_settings.jpg", "Окно настроек в текстовом редакторе Sublime Text 3" %}
 	</div>
 </div>
 
@@ -52,7 +52,7 @@ description: >
 В Sublime Text это делалось с помощью плагина Package Control, который нужно было еще установить.
 В Atom есть визуальный интерфейс для настроек и установки плагинов, в котором можно почитать описание дополнения и количество установок прямо в редакторе.
 
-{% include "media-image.liquid", url: "atom/atom_install_package.jpg", width: "1280", height: "773", caption: "Установка дополнений в текстовом редакторе Atom от Github" %}
+{% mediaImage "atom/atom_install_package.jpg", "Установка дополнений в текстовом редакторе Atom от Github" %}
 
 ## Переход на Atom c Sublime Text
 Это единственный текстовый редактор на который можно перейти с Sublime без проблем и переучиваний. Все сочетания клавиш работаю так-же как и там. Это просто бомба!

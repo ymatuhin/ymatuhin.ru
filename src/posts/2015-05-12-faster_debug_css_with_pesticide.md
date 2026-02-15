@@ -29,9 +29,9 @@ image:
 Сам CSS файл до смешного прост, познакомиться подробнее с Pesticide можно на официальном сайте <a href="http://pesticide.io">pesticide.io</a>. Посмотреть исходники и скачать файл можно с <a href="https://github.com/mrmrs/pesticide" rel="nofollow">github</a>.
 
 
-{% include "media-image.liquid", url: "pesticide/github.png", width: "640", height: "400", caption: "Пример использования Pesticide на Github" %}
+{% mediaImage "pesticide/github.png", "Пример использования Pesticide на Github" %}
 
-{% include "media-image.liquid", url: "pesticide/ya.png", width: "640", height: "400", caption: "Пример использования Pesticide на Yandex" %}
+{% mediaImage "pesticide/ya.png", "Пример использования Pesticide на Yandex" %}
 
 Мне кажется, что подключать эту библиотеку как css файл на свой проект не рационально. Особенно когда у неё есть расширения для браузеров (<a href="https://chrome.google.com/webstore/detail/bblbgcheenepgnnajgfpiicnbbdmmooh" rel="nofollow">Chrome</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/pesticide/" rel="nofollow">Firefox</a>).
 

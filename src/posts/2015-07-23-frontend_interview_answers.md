@@ -24,7 +24,7 @@ image:
 
 Пустая `html` страница, открытая в последней версии хрома, в которой мы написали следующий код:
 
-{% include "media-image.liquid", url: "front_end_interview/ex/tree.png", width: "320", height: "49", alt: "Задача на собеседовании разработчика интерфейсов #1" %}
+{% mediaImage "front_end_interview/ex/tree.png", "Задача на собеседовании разработчика интерфейсов #1" %}
 
 ## Вопросы
 
@@ -36,14 +36,14 @@ image:
 <br><br><br>
 
 ## Ответ на первый вопрос
-{% include "media-image.liquid", url: "front_end_interview/ex/view.png", width: "300", height: "250", caption: "Скриншот результата" %}
+{% mediaImage "front_end_interview/ex/view.png", "Скриншот результата" %}
 
 **Удивлены?**
 Чтобы понять почему произошло именно так, нужно посмотреть в DOM получившееся дерево. Мне смотря на код было понятно, что все надписи будут на новой строке. Но откуда взялся отступ после первой строки?
 
 ## Ответ на второй вопрос
 
-{% include "media-image.liquid", url: "front_end_interview/ex/dom.png", width: "353", height: "319", caption: "DOM дерево страницы" %}
+{% mediaImage "front_end_interview/ex/dom.png", "DOM дерево страницы" %}
 
 Многие слышали, что внутри тега `p` не должно быть блочных элементов, но не все видели это на практике. Любопытно что `Text3` остался вообще без тегов, а после него стоит пустой `<p></p>`.
 

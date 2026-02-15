@@ -28,7 +28,7 @@ a {
 
 [Демка](https://codepen.io/ymatuhin/pen/rwRvQr?editors=1100){:class="bigger"} и поддержка бразузерами.
 
-{% include "media-image.liquid", url: "text-decoration/support.png", width: "1236", height: "365", caption: "Данные о свойстве text-decoration-skip c сайта caniuse.com" %}
+{% mediaImage "text-decoration/support.png", "Данные о свойстве text-decoration-skip c сайта caniuse.com" %}
 
 ### Примечания
 

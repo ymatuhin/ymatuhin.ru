@@ -19,11 +19,11 @@ image:
 
 Нужно только в настройках (System Preferences —> Keyboard & Mouse —> Keyboard Shortcuts) указать внизу пункт «__All controls__».
 
-{% include "media-image.liquid", url: "mac/preferences.png", caption: "Mac OS окно настроек клавиатуры", width: "668", height: "581" %}
+{% mediaImage "mac/preferences.png", "Mac OS окно настроек клавиатуры" %}
 
 Теперь, чтобы переключить фокус между кнопками, нажмите `tab` или `shift + tab`, а чтобы выбрать нужный пункт нажмите пробел.
 
-{% include "media-image.liquid", url: "mac/dialog.gif", caption: "Mac OS — смена расширения файла через клавиатуру", width: "453", height: "181" %}
+{% mediaImage "mac/dialog.gif", "Mac OS — смена расширения файла через клавиатуру" %}
 
 Я пользуюсь маком уже полтора года, и только сегодня узнал как изменить это поведение. Удивляюсь только почему разработчики не включили эту настройку по умолчанию.
 

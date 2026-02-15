@@ -30,23 +30,23 @@ Quick Look поддерживает установку сторонних пла
 
 * **[QLMarkdown](https://github.com/toland/qlmarkdown)** — добавляет просмотр `markdown` файлов // [скачать файл](https://github.com/downloads/toland/qlmarkdown/QLMarkdown-1.3.zip)
 
-{% include "media-image.liquid", url: "quicklook/markdown.png", width: "806", height: "640", alt: "Плагин для Quick Look — QLMarkdown" %}
+{% mediaImage "quicklook/markdown.png", "Плагин для Quick Look — QLMarkdown" %}
 
 * **[QLColorCode](https://code.google.com/p/qlcolorcode/)** — добавляет подсветку синтаксиса // [скачать файл](https://qlcolorcode.googlecode.com/files/QLColorCode-2.0.2.tgz)
 
-{% include "media-image.liquid", url: "quicklook/highlight.png", width: "964", height: "402", alt: "Плагин для Quick Look — QLColorCode" %}
+{% mediaImage "quicklook/highlight.png", "Плагин для Quick Look — QLColorCode" %}
 
 * **[QLStephen](https://github.com/whomwah/qlstephen/releases)** — для просмотра файлов без расширения (README, CHANGELOG и т.д.) // [скачать файл](https://github.com/whomwah/qlstephen/releases)
 
-{% include "media-image.liquid", url: "quicklook/changelog.png", width: "418", height: "220", alt: "Плагин для Quick Look — QLStephen" %}
+{% mediaImage "quicklook/changelog.png", "Плагин для Quick Look — QLStephen" %}
 
 * **[QuickLookJSON](http://www.sagtau.com/quicklookjson.html)** — предпросмотр JSON с поддержкой фолдинга // [скачать файл](http://www.sagtau.com/media/QuickLookJSON.qlgenerator.zip)
 
-{% include "media-image.liquid", url: "quicklook/json.png", width: "496", height: "368", alt: "Плагин для Quick Look — QuickLookJSON" %}
+{% mediaImage "quicklook/json.png", "Плагин для Quick Look — QuickLookJSON" %}
 
 * **[qlImageSize](https://github.com/Nyx0uf/qlImageSize)** — добавление размера и разрешения в заголовок «быстрого просмотра» // [скачать файл](https://github.com/Nyx0uf/qlImageSize#installation)
 
-{% include "media-image.liquid", url: "quicklook/images.png", width: "375", height: "220", alt: "Плагин для Quick Look — qlImageSize" %}
+{% mediaImage "quicklook/images.png", "Плагин для Quick Look — qlImageSize" %}
 
 * **[WebP](https://github.com/dchest/webp-quicklook)** — поддержка формата WebP // [скачать файл](https://github.com/dchest/webp-quicklook/releases)
 

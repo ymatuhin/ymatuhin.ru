@@ -27,10 +27,10 @@ image:
 
 Перед тем, как вы побежите скачивать это расширение (или Google Chrome), я предлагаю вам посмотреть еще пару снимков из этого расширения:
 
-{% include "media-image.liquid", url: "flickr_extension/new_tab_by_flickr_2.png", width: "1280", height: "773", caption: "Завтрак, Google Chrome, Flickr" %}
+{% mediaImage "flickr_extension/new_tab_by_flickr_2.png", "Завтрак, Google Chrome, Flickr" %}
 
-{% include "media-image.liquid", url: "flickr_extension/new_tab_by_flickr_3.png", width: "1280", height: "773", caption: "Черно-белая улочка, Google Chrome, Flickr" %}
+{% mediaImage "flickr_extension/new_tab_by_flickr_3.png", "Черно-белая улочка, Google Chrome, Flickr" %}
 
-{% include "media-image.liquid", url: "flickr_extension/new_tab_by_flickr_4.png", width: "1280", height: "773", caption: "Ночной город, Google Chrome, Flickr" %}
+{% mediaImage "flickr_extension/new_tab_by_flickr_4.png", "Ночной город, Google Chrome, Flickr" %}
 
 Как по мне — очень оригинально и радует глаз :-)

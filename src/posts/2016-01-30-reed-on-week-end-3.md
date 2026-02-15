@@ -47,7 +47,7 @@ has_youtube: true
 1. 🇺🇸  [JS совет каждый день][24]{:rel='nofollow'} 🔥
 1. 🇺🇸  [The Fuck][3]{:rel='nofollow'} — терминальный сервис, который исправляет ошибки в предыдущем запросе.
 
-{% include "media-image.liquid", url: "week-ends/the-fuck.gif", width: "686", height: "379" %}
+{% mediaImage "week-ends/the-fuck.gif", "" %}
 
 
 

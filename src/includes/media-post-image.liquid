@@ -1,11 +1,5 @@
 {% if image %}
   {% capture imageUrl %}{{ image.path | replace: '/assets/img/', '' }}{% endcapture %}
 
-  {% include "media-image.liquid",
-    url: imageUrl,
-    width: image.width,
-    height: image.height,
-    caption: image.caption,
-    pixelated: image.pixelated
-  %}
+  {% mediaImage imageUrl, image.caption, image.pixelated %}
 {% endif %}

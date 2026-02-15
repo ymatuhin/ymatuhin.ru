@@ -22,7 +22,7 @@ image:
 
 ## Возможности шрифта
 
-{% include "media-image.liquid", url: "fira-code/all_ligatures.png", caption: "Символы заменяемые лигатурами шрифта Fira Code", width: "1836", height: "1726" %}
+{% mediaImage "fira-code/all_ligatures.png", "Символы заменяемые лигатурами шрифта Fira Code" %}
 
 ## Поддержка терминалами
 
@@ -71,25 +71,25 @@ image:
 ## Примеры шрифта
 
 ### Ruby
-{% include "media-image.liquid", url: "fira-code/ruby.png", width: "1836", height: "417" %}
+{% mediaImage "fira-code/ruby.png", "" %}
 
 ### JavaScript
-{% include "media-image.liquid", url: "fira-code/javascript.png", width: "1836", height: "745" %}
+{% mediaImage "fira-code/javascript.png", "" %}
 
 ### Erlang
-{% include "media-image.liquid", url: "fira-code/erlang.png", width: "1836", height: "803" %}
+{% mediaImage "fira-code/erlang.png", "" %}
 
 ### Go
-{% include "media-image.liquid", url: "fira-code/go.png", width: "1836", height: "502" %}
+{% mediaImage "fira-code/go.png", "" %}
 
 ### Haskell
-{% include "media-image.liquid", url: "fira-code/haskell.png", width: "1836", height: "360" %}
+{% mediaImage "fira-code/haskell.png", "" %}
 
 ### В браузере
-{% include "media-image.liquid", url: "fira-code/in-browser.png", width: "576", height: "96" %}
+{% mediaImage "fira-code/in-browser.png", "" %}
 
 ### В редакторе
-{% include "media-image.liquid", url: "fira-code/in-editor.png", width: "756", height: "106" %}
+{% mediaImage "fira-code/in-editor.png", "" %}
 
 ### Альтернативы
 

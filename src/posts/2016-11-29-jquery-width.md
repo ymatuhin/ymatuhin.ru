@@ -32,6 +32,6 @@ $(".element").get(0).getBoundingClientRect().height
 
 Методу в обед сто лет, а узнал только вчера о нем.
 
-{% include "media-image.liquid", url: "jquery/support.png", alt: "Поддержка метода getBoundingClientRect", width: "1280", height: "440" %}
+{% mediaImage "jquery/support.png", "Поддержка метода getBoundingClientRect" %}
 
 Полезная информация этого поста влезает в твит, но твиты уходят в небытие и больше их никто не прочитает. Поэтому я публикую это в блоге.
