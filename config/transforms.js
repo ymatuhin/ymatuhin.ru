@@ -1,8 +1,5 @@
 import { minify } from 'html-minifier-terser';
 import Typograf from 'typograf';
-import { parseDocument } from 'htmlparser2';
-import { findAll } from 'domutils';
-import domSerializer from 'dom-serializer';
 
 const typograf = new Typograf({
   locale: ['ru', 'en-US'],
@@ -16,23 +13,25 @@ export function applyTypography(content) {
 export function addExternalLinkSecurityAttrs(content) {
   if (!this.outputPath || !this.outputPath.endsWith('.html')) return content;
 
-  const doc = parseDocument(content, { decodeEntities: false });
-  const anchors = findAll((node) => node.name === 'a', doc.children);
+  return content.replaceAll(/<a\b[^>]*>/gi, (openTag) => {
+    const href = openTag.match(/\bhref\s*=\s*(['"])(.*?)\1/i)?.[2]?.trim() || '';
+    const isExternalHttpLink = /^https?:\/\//i.test(href) || href.startsWith('//');
+    if (!isExternalHttpLink) return openTag;
 
-  for (const anchor of anchors) {
-    const href = anchor.attribs?.href?.trim() || '';
-    const isExternalHttpLink = /^https?:\/\//i.test(href) || /^\/\//.test(href);
-    if (!isExternalHttpLink) continue;
+    const withTarget = /\btarget\s*=/i.test(openTag)
+      ? openTag.replace(/\btarget\s*=\s*(['"])(.*?)\1/i, 'target="_blank"')
+      : openTag.replace(/>$/, ' target="_blank">');
 
-    anchor.attribs.target = '_blank';
-
-    const relValues = new Set((anchor.attribs.rel || '').split(/\s+/).filter(Boolean));
+    const existingRel = withTarget.match(/\brel\s*=\s*(['"])(.*?)\1/i)?.[2] || '';
+    const relValues = new Set(existingRel.split(/\s+/).filter(Boolean));
     relValues.add('noopener');
     relValues.add('noreferrer');
-    anchor.attribs.rel = [...relValues].join(' ');
-  }
+    const rel = [...relValues].join(' ');
 
-  return domSerializer.default(doc, { encodeEntities: false });
+    return /\brel\s*=/i.test(withTarget)
+      ? withTarget.replace(/\brel\s*=\s*(['"])(.*?)\1/i, `rel="${rel}"`)
+      : withTarget.replace(/>$/, ` rel="${rel}">`);
+  });
 }
 
 export async function minifyHtmlAndInlineCss(content) {
