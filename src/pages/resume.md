@@ -8,7 +8,7 @@ permalink: /resume/
 
 &nbsp;
 
-### Январь 2017&nbsp;&mdash; сегодня
+## Январь 2017&nbsp;&mdash; сегодня
 
 **ООО «Студворк»**, Самара, [studwork.org](https://studwork.org/)
 
@@ -16,7 +16,7 @@ permalink: /resume/
 
 &nbsp;
 
-### Февраль 2016&nbsp;&mdash; &nbsp;Январь 2017 (1 год)
+## Февраль 2016&nbsp;&mdash; &nbsp;Январь 2017 (1 год)
 
 **RideWithLocal**, Москва, [ridewithlocal.com](https://ridewithlocal.com)
 
@@ -24,7 +24,7 @@ permalink: /resume/
 
 &nbsp;
 
-### Апрель 2015&nbsp;&mdash; Февраль 2016 (9 месяцев) <br>Март 2014&nbsp;&mdash; август 2014 (6 месяцев)
+## Апрель 2015&nbsp;&mdash; Февраль 2016 (9 месяцев) <br>Март 2014&nbsp;&mdash; август 2014 (6 месяцев)
 
 **Poloniumarts**, Брянск, [poloniumarts.com](http://poloniumarts.com)
 
@@ -32,7 +32,7 @@ permalink: /resume/
 
 &nbsp;
 
-### Сентябрь 2014&nbsp;&mdash; Январь 2015 (5 месяцев)
+## Сентябрь 2014&nbsp;&mdash; Январь 2015 (5 месяцев)
 
 **Pyrus**, Москва, [pyrus.com](https://pyrus.com)
 
@@ -40,7 +40,7 @@ permalink: /resume/
 
 &nbsp;
 
-### Сентябрь 2012&nbsp;&mdash; Март 2014 (1 год 7&nbsp;месяцев)
+## Сентябрь 2012&nbsp;&mdash; Март 2014 (1 год 7&nbsp;месяцев)
 
 **M-social**, Брянск, [msocialproduction.ru](https://msocialproduction.ru/)
 
@@ -48,7 +48,7 @@ permalink: /resume/
 
 &nbsp;
 
-### Январь 2012&nbsp;&mdash; Cентябрь 2012 (6 месяцев)
+## Январь 2012&nbsp;&mdash; Cентябрь 2012 (6 месяцев)
 
 **Фриланс**
 

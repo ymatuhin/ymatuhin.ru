@@ -2,17 +2,15 @@
 {% assign inPostMode = in-post | default: in_post | default: false %}
 {% assign cardRootTag = "article" %}
 {% assign cardRootClass = "post-card" %}
-{% assign titleItemprop = "" %}
 
 {% if inPostMode %}
   {% assign cardRootTag = "header" %}
   {% assign cardRootClass = "post-card post-card_in-post" %}
-  {% assign titleItemprop = ' itemprop="name headline"' %}
 {% endif %}
 
 <{{ cardRootTag }} class="{{ cardRootClass }}">
 {% if link %}<a href="{{ link }}" class="post-card__link">{% endif %}
-  <{{ titleTag }} class="post-card__title"{{ titleItemprop }}>
+  <{{ titleTag }} class="post-card__title">
   {{ title }}
   <hr class="post-card__divider">
 </{{ titleTag }}>

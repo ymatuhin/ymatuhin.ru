@@ -18,9 +18,7 @@ redirects:
 
 {% mediaImage image.path, image.alt %}
 
-Я уже сильно привык к атрибуту `placeholder`, и немного грустил зная что `<pre contenteditable></pre>`
-не работает с `placeholder`. Но чутка погуглив я нашел инетресное решение, которым хочу поделиться
-с вами.
+Я уже сильно привык к атрибуту `placeholder`, и немного грустил зная что `<pre contenteditable></pre>` не работает с `placeholder`. Но чутка погуглив я нашел инетресное решение, которым хочу поделиться с вами.
 
 ```css
 [contenteditable]:empty:before {

@@ -40,7 +40,7 @@ a {
 
 {% mediaImage "text-decoration/support.png", "Данные о свойстве text-decoration-skip c сайта caniuse.com" %}
 
-### Примечания
+## Примечания
 
 * В сафари на macOS подчеркивание выглядит хорошо и без text-decoration-skip
 * В хроме можно установить

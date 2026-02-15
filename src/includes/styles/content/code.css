@@ -6,10 +6,15 @@ kbd {
   border: 1px solid var(--border-color);
 }
 
+:not(pre) > code {
+  white-space: nowrap;
+}
+
 pre {
   background: var(--lighter-background-color);
   padding: 0.75rem 1rem;
-  overflow: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
   border: 1px solid var(--border-color);
   tab-size: 2;
   font-size: 1rem;
@@ -21,4 +26,6 @@ pre code {
   padding: 0;
   margin: 0;
   border: none;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }

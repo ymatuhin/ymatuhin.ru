@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<article class="post typo white-content" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post typo white-content">
   {% include "post-card.liquid",
     tag: "h1",
     tags: tags,
@@ -10,7 +10,7 @@ layout: default
     title: title,
     in-post: true %}
 
-  <div itemprop="articleBody">
+  <div>
     {{ content }}
   </div>
 </article>
