@@ -60,7 +60,7 @@ body {
 Хотя меня не очень радует перспектива использовать шрифт Roboto или какой-то другой, отличный от яблочных. Поэтому я бы
 убрал `system`.
 
-Если у вас есть El Capitan или iOS 9, вы можете посмотреть на мой блог, на котором уже стоит San Francisco. Так-же я
+Если у вас есть El Capitan или iOS 9, вы можете посмотреть на мой блог, на котором уже стоит San Francisco. Также я
 подготовил небольшую [демонстрацию](https://codepen.io/ymatuhin/pen/MoLWLv?editors=1100#0).
 
 Подсмотрено у [Craig Hockenberry](http://furbo.org/2015/07/09/i-left-my-system-fonts-in-san-francisco/).

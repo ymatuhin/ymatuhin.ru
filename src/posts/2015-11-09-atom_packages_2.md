@@ -43,7 +43,7 @@ redirects:
   {% mediaImage "atom/plugins_2/selected.gif", "Highlight Selected" %}
 
 * [Jumpy][jumpy]{:rel='nofollow'} — замена устаревшему плагину easy-motion. Советую задать размер шрифта 1. С помощью
-  него можно так-же выделять участки текста.
+  него можно также выделять участки текста.
 
   {% mediaImage "atom/plugins_2/jump.gif", "Jumpy" %}
 

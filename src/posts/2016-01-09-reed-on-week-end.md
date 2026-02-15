@@ -18,7 +18,7 @@ redirects:
 {% mediaImage image.path, image.alt, "eager" %}
 
 Я читал на этой неделе Оруэлла — 1984. Давно собирался и вот, к новому году, приобрел себе книженцию и прочитал. До сих
-пор не выходит из головы, сильный финал. екомендую.
+пор не выходит из головы, сильный финал. рекомендую.
 
 А теперь что касается фронтенда...
 
@@ -92,7 +92,7 @@ Hibbert ([@joshnh](http://codepen.io/joshnh)) on CodePen'
 
 ### Шорткат недели
 
-В Google Chrome `CMD + L` выделяет адрессную строку. Мне лень тянуться мышкой, поэтому хватит это терпеть.
+В Google Chrome `CMD + L` выделяет адресную строку. Мне лень тянуться мышкой, поэтому хватит это терпеть.
 
 [1]: http://reactfordesigners.com/labs/reactjs-introduction-for-people-who-know-just-enough-jquery-to-get-by/
 

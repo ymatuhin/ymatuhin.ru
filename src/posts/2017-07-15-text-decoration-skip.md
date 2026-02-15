@@ -36,7 +36,7 @@ a {
 }
 ```
 
-[Демка](https://codepen.io/ymatuhin/pen/rwRvQr?editors=1100){:class="bigger"} и поддержка бразузерами.
+[Демка](https://codepen.io/ymatuhin/pen/rwRvQr?editors=1100){:class="bigger"} и поддержка браузерами.
 
 {% mediaImage "text-decoration/support.png", "Данные о свойстве text-decoration-skip c сайта caniuse.com" %}
 
