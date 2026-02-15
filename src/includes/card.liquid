@@ -2,7 +2,7 @@
 <div class="card">
     {% if image %}
         {% if link %}<a href="{{ link }}">{% endif %}
-        <img src="{{ image }}" alt="{{ title | escape }}">
+        {% mediaImage image, title %}
         {% if link %}</a>{% endif %}
     {% endif %}
 

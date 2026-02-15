@@ -7,10 +7,10 @@ categories: blog
 tags: [mac os]
 
 image:
-  path: /assets/img/quicklook/preview.png
+  path: quicklook/preview.png
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Quick Look незаменимая вещь для маководов, жаль что она не работает с некоторыми файлами, которые относятся к веб разработке. Было бы неплохо просматривать markdown, JSON, файлы без расширений, подсветка синтаксиса, показ webp изображений...
 

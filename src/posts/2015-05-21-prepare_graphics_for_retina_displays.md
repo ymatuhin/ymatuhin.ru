@@ -50,13 +50,13 @@ tags: >
 ~~~css
 #logo {
   background-image:
-  path: /assets/img/url('/images/my_image.png');
+  path: url('/images/my_image.png');
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   #logo {
     background-image:
-  path: /assets/img/url('/images/my_image@2x.png');
+  path: url('/images/my_image@2x.png');
     background-size: 200px 100px;
   }
 }

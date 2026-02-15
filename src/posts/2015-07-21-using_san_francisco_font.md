@@ -7,11 +7,11 @@ categories: front-end
 tags: >
   привычка разработчика разработчик front end проверяй код перед комитом программиста
 image:
-  path: /assets/img/san_francisco/san_francisco.jpg
+  path: san_francisco/san_francisco.jpg
   alt: San Francisco
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Вместе с выпуском Apple Watch, компания представила новый шрифт <em>San Francisco</em>, который теперь будет использоваться во всей экосистеме Apple. Уже сейчас можно посмотреть на этот шрифт в публичных бетах <a href="/blog/review_ios9_and_osx_el_capitan/">OSX и El Capitan</a>.
 

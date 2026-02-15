@@ -5,11 +5,11 @@ description: 'Как исправить поведение text-decoration: unde
 categories: front-end
 tags: [css, link, underline]
 image:
-    path: /assets/img/text-decoration/preview.png
+    path: text-decoration/preview.png
     alt: Пример css свойства text-decoration-skip
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Стандартное подчеркивание — ад перфекциониста. Оно нагло перекрывает висячие символы в тексте, его становится сложнее читать, и это режет глаза.
 

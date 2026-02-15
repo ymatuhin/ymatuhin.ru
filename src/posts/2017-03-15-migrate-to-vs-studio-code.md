@@ -5,11 +5,11 @@ description: Как безболезненно мигрировать с Atom/Su
 categories: tools
 tags: [vscode, tools, editor]
 image:
-    path: /assets/img/vscode/icon-dribbble.png
-    caption: Альтернативная версия иконки для VS Code, автор <a href='https://dribbble.com/shots/2436746-Visual-Studio-Code-replacement-icon'>James Gilyead</a>
+    path: vscode/icon-dribbble.png
+    alt: Альтернативная версия иконки для VS Code, автор <a href='https://dribbble.com/shots/2436746-Visual-Studio-Code-replacement-icon'>James Gilyead</a>
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Уже 2 недели я использую [Visual Studio Code](https://code.visualstudio.com/) для работы. Он пришел на замену, моему любимому, атому. В этой статье я расскажу почему так произошло и поделюсь впечатлениями.
 

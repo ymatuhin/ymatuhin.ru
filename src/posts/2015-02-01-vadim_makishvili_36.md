@@ -8,12 +8,12 @@ tags: >
   Вадим Макиашвили 90 лет жизни человека в неделях 36 доклад выступление FrontTalks Яндекс
 
 image:
-  path: /assets/img/36/vadim.jpg
-  caption: Вадим Макишвили выступает на FrontTalks
+  path: 36/vadim.jpg
+  alt: Вадим Макишвили выступает на FrontTalks
 has_youtube: true
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Хочу поделиться с теми, кто возможно еще не видел этот доклад от Вадима, особенно он касается айтишников, но и людям других профессий я думаю будет интересно послушать. Происходило все это в рамках FrontTalks, а сам Вадим работает в Яндексе.
 

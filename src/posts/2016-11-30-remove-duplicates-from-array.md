@@ -5,11 +5,11 @@ description: Простые способы для ES5 и ES2015
 categories: front-end
 tags: [ JS, Tips, Array ]
 image:
-  path: /assets/img/tips/array_uniq.jpg
+  path: tips/array_uniq.jpg
   alt: Убрать дубликаты из массива в JavaScript
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 ## ES5
 

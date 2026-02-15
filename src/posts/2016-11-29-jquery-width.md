@@ -6,11 +6,11 @@ description: >
   Как взять ширину элемента без округления значений до целых чисел без jQuery.
 tags: [ Tips, JS, jQuery ]
 image:
-  path: /assets/img/jquery/jquery.jpg
+  path: jquery/jquery.jpg
   alt: jQuery.width
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Я обнаружил что `jQuery.width()` округляет значения. Так-же, как и `.height()`. Из-за этого у меня была проблема в `1px` при некоторых разрешениях.
 

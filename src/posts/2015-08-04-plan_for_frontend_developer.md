@@ -5,11 +5,11 @@ description: >
   После анализа требований к кандидату на должность ведущего разработчика интерфейсов я составил фронтенд штуки, которые я буду изучать.
 categories: front-end
 image:
-  path: /assets/img/need_to_frontend/i-have-a-plan.jpg
-  caption: "Кажется у меня есть план…"
+  path: need_to_frontend/i-have-a-plan.jpg
+  alt: "Кажется у меня есть план…"
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 После анализа [требований][6]{:rel='nofollow'} к front end разработчикам в топовых компаниях, расставим приоритеты, накидаем *план* действий, добавим полезные ссылки и советы.
 

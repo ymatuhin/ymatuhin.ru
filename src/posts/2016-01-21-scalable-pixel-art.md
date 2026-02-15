@@ -5,12 +5,12 @@ categories: front-end
 description: Управляем сглаживаем для pixel art иллюстраций в браузере через CSS свойство image-rendering.
 tags: [pixel art]
 image:
-  path: /assets/img/pixel-art/pixel-art.gif
-  caption: "Пиратский сюжет, автор: <a href='http://bugpixel.com/' rel='nofollow'>bugpixel</a>."
+  path: pixel-art/pixel-art.gif
+  alt: "Пиратский сюжет, автор: <a href='http://bugpixel.com/' rel='nofollow'>bugpixel</a>."
   pixelated: true
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt, image.pixelated %}
 
 Мне нравится пиксель арт. Только взгляните на этот предмет искусства выше. Восьмибитная ностальгия, красота и простота.
 Но с пиксель артом в вебе одна проблема — **сглаживание**.

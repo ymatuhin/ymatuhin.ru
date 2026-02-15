@@ -7,12 +7,12 @@ categories: front-end
 tags: >
   gulp watch task src dist сборка front end клиент pipe
 image:
-  path: /assets/img/gulp/logo.png
+  path: gulp/logo.png
   alt: Gulp — системы сборки фронтенда
 image_link: http://gulpjs.com
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 В последнее время **Gulp** набирает большую популярность, и понятно почему. Он быстрее, красивее и проще чем **Grunt**. Мне приходилось часто с ним работать, но я всегда брал готовые решения и не до конца понимал как же он все это делает. На этих выходных я решил разобрать и закрыть эту небольшую проблему. Об этом и поговорим сегодня.
 

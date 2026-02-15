@@ -6,11 +6,11 @@ tags: [payler, polonium art, увольнение, константин копы
 
 published: false
 image:
-  path: /assets/img/payler/payler.jpg
-  caption: Payler
+  path: payler/payler.jpg
+  alt: Payler
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Еще одна статья о том как разработчика кинули. Надеюсь в будущем, программисты найдут эту информацию, прежде чем устроятся в эти компании.
 

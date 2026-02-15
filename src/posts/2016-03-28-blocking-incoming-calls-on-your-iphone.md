@@ -5,10 +5,10 @@ categories: [blog]
 description:
 tags: [лайфхак, блокировка, входящие, звонки, iphone, yota, включить]
 image:
-  path: /assets/img/phones/phone.jpeg
+  path: phones/phone.jpeg
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 У меня мобильный оператор YOTA с безлимитным 4G интернетом, который я раздаю себе на Mac. Я писал об этом в статье «[Как снять ограничения Yota на раздачу интернета][1]». Но в этом способе одна проблема — если мне звонят, то интернет обрывается. Неприятно, когда это происходит во время работы или звонков по скайпу.
 

@@ -1,5 +1,0 @@
-{% if image %}
-  {% capture imageUrl %}{{ image.path | replace: '/assets/img/', '' }}{% endcapture %}
-
-  {% mediaImage imageUrl, image.caption, image.pixelated %}
-{% endif %}

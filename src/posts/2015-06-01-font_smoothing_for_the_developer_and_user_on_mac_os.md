@@ -5,11 +5,11 @@ categories: front-end
 tags: [css, сглаживание шрифта, mac os, расширение]
 
 image:
-  path: /assets/img/font-smooth/compare.png
+  path: font-smooth/compare.png
   alt: Сглаживание шрифтов CSS
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Я давно интересовался сглаживанием шрифта для веб страниц на CSS. Но «волшебные» свойства, такие как `-webkit-font-smoothing`, не работали на моем Win 7. Поэтому никакого смысла в этих css свойствах я не видел. Но сейчас у меня Mac OS и они работают! Сразу скажу я проверял только Win 7, может в более поздних версиях эти свойства тоже хоть как-то работают.
 

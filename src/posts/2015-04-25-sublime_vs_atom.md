@@ -3,7 +3,7 @@ layout: post
 title: Все еще сидите на Sublime? Тогда мы, вместе с Atom, идем к вам!
 categories: tools
 image:
-  path: /assets/img/atom/atom_vs_sublime.jpg
+  path: atom/atom_vs_sublime.jpg
   alt: Atom
 tags: >
   atom github текстовый редактор кода sublime vs обзор редактора
@@ -11,7 +11,7 @@ description: >
   Обзор нового текстового редактора Atom от команды Github в сравнении c Sublime Text 3. Atom vs Sublime.
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 В пятницу я пробовал в работе разные текстовые редакторы. Большинство из них очень плохи. Тот-же _Brackets_ от Adobe — вообще не изменился, те-же проблемы, в том числе со шрифтами и не очень приятный внешний вид. Но один из редакторов оказался наоборот очень крутым.
 

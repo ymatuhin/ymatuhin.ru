@@ -7,13 +7,13 @@ description: >
   Новое расширение для Google Chrome — Flickr Tab, которое делает работу с каждой новой вкладкой удивительной.
 
 image:
-  path: /assets/img/flickr_extension/new_tab_by_flickr_1.png
+  path: flickr_extension/new_tab_by_flickr_1.png
   alt: Расширение для Google Chrome — Flickr Tab
 ---
 
 Вот такой милый пес появился у меня при открытии новой вкладки в Google Chrome. И про это я хочу сегодня рассказать вам.
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 > Flickr — фотохостинг, предназначенный для хранения и дальнейшего использования пользователем цифровых фотографий и видеороликов. Один из самых популярных сайтов среди блогеров для размещения фотографий.
 

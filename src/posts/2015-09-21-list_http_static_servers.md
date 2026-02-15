@@ -5,11 +5,11 @@ categories: front-end
 tags: [http, server]
 
 image:
-  path: /assets/img/server/http-server.png
-  caption: Http-server статики в терминале
+  path: server/http-server.png
+  alt: Http-server статики в терминале
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Каждая из нижеприведенных команд запускает статичный http сервер в текущей директории. Сервер будет доступен по адресу [http://localhost:8000](http://localhost:8000){:rel="nofollow"}
 

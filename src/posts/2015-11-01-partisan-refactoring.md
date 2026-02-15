@@ -5,11 +5,11 @@ categories: front-end
 description: Как незаметно проводить рефакторинг одновременно улучшая архитектуру приложения.
 tags: [react, smartjs, архитектура, рефакторинг]
 image:
-  path: /assets/img/refactoring/cat.jpg
-  caption: ""
+  path: refactoring/cat.jpg
+  alt: ""
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Сегодня мы поговорим о говнокоде. В следующих статьях мы обсудим архитектуру, но знание как построить «хорошую» архитектуру может разбиться о рабочие будни. Дома вы напишите «идеальный проект», но на работе вас поджидает jQuery. Но мы, как профессионалы, будем готовы к этому.
 

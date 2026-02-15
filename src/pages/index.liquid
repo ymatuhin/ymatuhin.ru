@@ -25,11 +25,11 @@ permalink: index.html
 <div class="cards">
   {% for post in sortedPosts %}
   {% include "card.liquid"
-  tag: "h2",
-  categories: post.data.categories,
-  image: post.data.image.path,
-  link: post.url,
-  title: post.data.title,
-  description: post.data.description %}
+    tag: "h2",
+    categories: post.data.categories,
+    image: post.data.image.path,
+    link: post.url,
+    title: post.data.title,
+    description: post.data.description %}
   {% endfor %}
 </div>

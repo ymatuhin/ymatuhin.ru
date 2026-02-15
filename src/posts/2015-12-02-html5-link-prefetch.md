@@ -6,11 +6,11 @@ description: HTML5 Link Prefetch указывает браузеру какие 
 tags: [cdn, preconnect, prefetch, prerender, preloading, оптимизация]
 
 image:
-  path: /assets/img/link_prefetch/html5_link_prefetch.png
-  caption: Стадии загрузки ресурса / HTML5 Link Prefetch
+  path: link_prefetch/html5_link_prefetch.png
+  alt: Стадии загрузки ресурса / HTML5 Link Prefetch
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Сегодня мы рассмотрим «HTML5 Link Prefetch», а именно dns-prefetch, prefetch, preconnect, subresource, prerender и еще неработающий preload. HTML5 Link Prefetch уменьшит время загрузки для ресурсов, которые нам понадобятся позже.
 

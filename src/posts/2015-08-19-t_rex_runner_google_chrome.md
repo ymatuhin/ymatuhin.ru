@@ -7,11 +7,11 @@ categories: blog
 tags: >
   пасхалки google, динозавр гугл хром, динозавр в хроме, как играть в динозавра в хроме, пасхалки chrome
 image:
-  path: /assets/img/eastern_eggs/t-rex-runner.png
+  path: eastern_eggs/t-rex-runner.png
 has_youtube: true
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Бегущий динозавр перепрыгивающий через кактусы — пасхалка в хроме c 2014 года, о которой я узнал только вчера.
 

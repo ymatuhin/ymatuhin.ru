@@ -6,10 +6,10 @@ description: Как определить, что у пользователя у�
 tags: [adblock, ads, реклама]
 
 image:
-  path: /assets/img/adblock/logo_adblock.png
+  path: adblock/logo_adblock.png
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 > Cравнить блокировщики можно на [сайте с рекламой](https://checkadblock.ru){:class="bigger"}.
 

@@ -7,10 +7,10 @@ categories: front-end
 tags: [rest, api, http]
 
 image:
-  path: /assets/img/rest_api/restful.png
+  path: rest_api/restful.png
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 В <a href="/front-end/plan_for_frontend_developer/">двух из трех</a> вакансиях для фронтеда требуют знания **REST / RESTful API**. Разберемся что это и в чем разница.
 

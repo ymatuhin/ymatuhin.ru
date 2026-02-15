@@ -7,13 +7,13 @@ categories: front-end
 tags: clearfix css after div плавающие элементы float обновить класс
 
 image:
-  path: /assets/img/clearfix/clearfix.png
+  path: clearfix/clearfix.png
   alt: Как работает Clearfix CSS
 ---
 
 Clearfix — вспомогательный класс в css, с помощью которого мы исправляем схлопывающиеся размеры контейнера у плавающих элементов.
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 
 

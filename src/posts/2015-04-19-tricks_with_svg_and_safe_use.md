@@ -7,11 +7,11 @@ description: >
   Как безопасно использовать SVG, поддержка браузерами, несколько fallback-ов для старых браузеров.
 
 image:
-  path: /assets/img/svg/svg_logo.png
+  path: svg/svg_logo.png
   alt: Логотип SVG
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Раньше я не использовал SVG, поскольку рабочие проекты были с поддержкой Internet Explorer 6/7. Да и не требовалось поддержки ретины. Но сейчас, спустя время, настало время использовать SVG на полную.
 

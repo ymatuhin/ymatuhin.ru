@@ -6,11 +6,11 @@ description: Моноширинный шрифт Fira Code объединяет 
 tags: [font, text editor, settings]
 
 image:
-  path: /assets/img/fira-code/fira-code.png
-  caption: 'Fira Code: шрифт с лигатурами для кода'
+  path: fira-code/fira-code.png
+  alt: 'Fira Code: шрифт с лигатурами для кода'
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 В языках программирования много составных операторов, таких как `:=`, `>=`, `<=`, `===`, `!==`. Это одна логическая единица, но она занимает 2 или 3 символа. Это затрудняет чтение и анализ кода, хоть мы и привыкли к этому.
 

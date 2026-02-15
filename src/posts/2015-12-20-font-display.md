@@ -6,12 +6,12 @@ description: Поведением текста, отображаемого во 
 tags: [web fonts, font, font-display, css]
 
 image:
-  path: /assets/img/font-display/font-display.png
+  path: font-display/font-display.png
   alt: Font display
 has_youtube: true
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Когда вы загружаете шрифт через `font-face`, браузер решает что отобразить пока шрифт загружается. Браузеры ждут некоторое время, перед тем как решить что делать дальше.
 

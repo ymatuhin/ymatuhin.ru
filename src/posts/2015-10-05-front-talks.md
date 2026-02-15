@@ -5,11 +5,11 @@ categories: front-end
 description: Краткое содержание докладов с конференции «FrontTalks» 2015 года, ссылки на видео, презентации и материалы из докладов.
 tags: [видео, конференция, fronttalks]
 image:
-  path: /assets/img/fronttalks/fronttalks_2015.jpg
-  caption: FrontTalks 2015
+  path: fronttalks/fronttalks_2015.jpg
+  alt: FrontTalks 2015
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Конференция «FrontTalks» в 2015 году проходила в Екатеринбурге. На ней выступало 10 человек. Двое из них — англоговорящие и выступали на английском. Я не побывал на этой конференции, но к моей радости есть [запись прямой трансляции](https://www.youtube.com/watch?v=mXRkFMg4PR0).
 

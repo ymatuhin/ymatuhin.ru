@@ -6,11 +6,11 @@ description: На чем испробовать новую технологию 
 tags: [frameworks, js, react, flux, redux, testing]
 
 image:
-  path: /assets/img/test-framework/frameworks.jpg
-  caption: Разнообразие JavaScript фреймворков
+  path: test-framework/frameworks.jpg
+  alt: Разнообразие JavaScript фреймворков
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Вы увидели новый фреймворк, который конечно в миллион раз лучше текущего. Заманчиво, но использовать его в боевом проекте нельзя, т.к. нет опыта работы с ним, непонятны сильные и слабые стороны.
 

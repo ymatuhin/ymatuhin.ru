@@ -7,10 +7,10 @@ description: >
 tags: [Atom, плагины, текстовый редактор]
 
 image:
-  path: /assets/img/atom/plugins_2/atom-logo.png
+  path: atom/plugins_2/atom-logo.png
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Продолжение стати «[Лучшие плагины для текстового редактора Atom](/tools/atom_packages_1/)». Я расскажу о новых плагинах, которые часто мне помогают. Надеюсь, они помогут и вам.
 Осторожно, много картинок.

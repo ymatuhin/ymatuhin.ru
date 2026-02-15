@@ -3,28 +3,28 @@
         "title": "Гугл динозаврик",
         "description": "Прыгает через кактусы и птеродактелей",
         "category": "Игра",
-        "image": "/assets/projects/googledino.png",
+        "image": "projects/googledino.png",
         "url": "http://googledino.ru/"
     },
     {
         "title": "Автопрефиксер онлайн",
         "description": "Расставляет префиксы в CSS",
         "category": "Сервис",
-        "image": "/assets/projects/autoprefixer.png",
+        "image": "projects/autoprefixer.png",
         "url": "https://autoprefixer.github.io/"
     },
     {
         "title": "Какая сейчас неделя",
         "description": "Подсказывает студентам четная неделя или нет",
         "category": "Сервис",
-        "image": "/assets/projects/whataweek.png",
+        "image": "projects/whataweek.png",
         "url": "http://whataweek.github.io/"
     },
     {
         "title": "Сайт с рекламой",
         "description": "Показывает рекламу, чтобы можно было проверить блокировщики",
         "category": "Сервис",
-        "image": "/assets/projects/adblock.jpg",
+        "image": "projects/adblock.jpg",
         "url": "https://checkadblock.ru/"
     }
 ]

@@ -8,11 +8,11 @@ description: >
   Фиксим работоспособность плагина Emmet под Atom для препроцессора Stylus.
 
 image:
-  path: /assets/img/atom/atom_stylus_emmet.jpg
+  path: atom/atom_stylus_emmet.jpg
   alt: Atom + Emmet + Stylus
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Расширение **Emmet** отлично работает с html, css, sass, scss, less. Но есть одна проблема — *Stylus*. Видимо из-за того, что этот препроцессор не так распространен то в Emmet официально нет его поддержки. То есть наши правила на подобии `bd+` не раскрываются.
 

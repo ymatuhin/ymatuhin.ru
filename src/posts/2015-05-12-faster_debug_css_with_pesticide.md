@@ -6,11 +6,11 @@ tags: css debug дебаг
 description: Дебажим CSS слои с помощью библиотеки Pesticide и расширений для Chrome и Firefox.
 
 image:
-  path: /assets/img/pesticide/logo.png
+  path: pesticide/logo.png
   alt: Pesticide — библиотека для дебага CSS
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Как часто у вас бывали проблемы со схлопыванием плавающих элементов? Или элемент уезжал непонятно куда? Эти и другое проблемы, связанные с позиционированием элементов на странице решает маленькая CSS/Sass/LESS библиотека — **Pesticide**.
 

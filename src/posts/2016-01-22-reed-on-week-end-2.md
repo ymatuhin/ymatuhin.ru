@@ -5,11 +5,11 @@ categories: front-end
 description: Список статей, библиотек, фреймворков и сервисов для ковыряния на выходных или в свободное время для фронтенд разработчика.
 tags: [почитать, список, дайджест]
 image:
-  path: /assets/img/week-ends/social-previews.png
-  caption: Размеры изображений при шаринге в социальных сетях
+  path: week-ends/social-previews.png
+  alt: Размеры изображений при шаринге в социальных сетях
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 ## Статьи и видео
 

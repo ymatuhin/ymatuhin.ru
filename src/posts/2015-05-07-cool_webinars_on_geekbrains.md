@@ -6,12 +6,12 @@ tags: geekbrains школа программирования вебинары к
 description: >
   Вебинары по программированию, карьере, личностному росту и не только от Geekbrains (Школа Программирования).
 image:
-  path: /assets/img/geekbrains/logo.png
+  path: geekbrains/logo.png
   alt: Geekbrains
 has_youtube: true
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Хочу поделиться вебинарами от Geekbrains (Школа Программирования). Я недавно нашел эти вебинары, поэтому успел посмотреть только несколько записей. Но общее впечатление очень хорошее. Хотя тут все зависит от того, кто ведет эти вебинары.
 

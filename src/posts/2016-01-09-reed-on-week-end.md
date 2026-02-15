@@ -5,12 +5,12 @@ categories: front-end
 description: Список статей, библиотек, фреймворков и сервисов для ковыряния на выходных или в свободное время для фронтенд разработчика.
 tags: [почитать, список, дайджест]
 image:
-  path: /assets/img/week-ends/1984.jpg
-  caption: Джордж Оруэлл — 1984
+  path: week-ends/1984.jpg
+  alt: Джордж Оруэлл — 1984
 has_iframe: true
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Я читал на этой неделе Оруэлла — 1984. Давно собирался и вот, к новому году, приобрел себе книженцию и прочитал. До сих пор не выходит из головы, сильный финал. Рекомендую.
 
@@ -24,7 +24,7 @@ has_iframe: true
     url: "//codepen.io/joshnh/embed/JCGoF/?height=320&theme-id=0&default-tab=result",
     width: "960",
     height: "320",
-    caption: '<a href="http://codepen.io/joshnh/pen/JCGoF/" rel="nofollow">Single Element Pure CSS MacBook Pro</a> by Joshua Hibbert (<a href="http://codepen.io/joshnh" rel="nofollow">@joshnh</a>) on CodePen'
+    alt: '<a href="http://codepen.io/joshnh/pen/JCGoF/" rel="nofollow">Single Element Pure CSS MacBook Pro</a> by Joshua Hibbert (<a href="http://codepen.io/joshnh" rel="nofollow">@joshnh</a>) on CodePen'
 %}
 
 ## Статьи и видео

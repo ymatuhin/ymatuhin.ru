@@ -5,11 +5,11 @@ description: >
   Список знаний, технологий, методологий и общих принципов необходимых хорошему front end разработчику в 2015/2016 году.
 categories: front-end
 image:
-  path: /assets/img/need_to_frontend/what-need-to-know-as-frontend.png
+  path: need_to_frontend/what-need-to-know-as-frontend.png
   alt: Какими знаниями должен обладать фронтенд разработчик в 2015/2016
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Вчера, в твитере, я выяснял <a href="https://twitter.com/ymatuhin/status/626380078721683457">какие скилы нужны</a> супер крутому фронту. Но, кроме пары полезных ссылок и рекомендаций я ничего не нашел. Поэтому сегодня, просмотрев 40 самых высокооплачиваемых вакансий Front end разработчиков / JavaScript программистов, я проанализировал требования к кандидату. Отталкивайтесь от этого списка и смотрете что изучать в дальнейшем.
 

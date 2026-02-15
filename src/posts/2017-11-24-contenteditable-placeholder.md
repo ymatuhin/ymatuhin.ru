@@ -5,11 +5,11 @@ description: Placeholder полифил для contenteditable элемента
 categories: front-end
 tags: [ js, contenteditable, placeholder ]
 image:
-  path: /assets/img/contenteditable.jpg
+  path: contenteditable.jpg
   alt: '[contenteditable]'
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Я&nbsp;уже сильно привык к&nbsp;атрибуту `placeholder`, и&nbsp;немного грустил зная что `<pre contenteditable></pre>`
 не&nbsp;работает с `placeholder`. Но&nbsp;чутка погуглив я&nbsp;нашел инетресное решение, которым хочу поделиться

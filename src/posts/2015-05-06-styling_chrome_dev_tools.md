@@ -6,11 +6,11 @@ tags: >
   dev tools инструменты разработчика google chrome темы
 
 image:
-  path: /assets/img/dev_tools/dev_tools.png
-  caption: Темная темя для Chrome Dev Tools
+  path: dev_tools/dev_tools.png
+  alt: Темная темя для Chrome Dev Tools
 ---
 
-{% include "media-post-image.liquid" %}
+{% mediaImage image.path, image.alt %}
 
 Совсем недавно я узнал, что Chrome поддерживает темы для dev tools. Мне сразу-же захотелось попробовать это. Сразу скажу результат меня не совсем порадовал :-)
 
