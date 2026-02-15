@@ -21,7 +21,7 @@
   {% assign hasBlockquote = contentToCheck contains "<blockquote" %}
   {% assign hasHr = contentToCheck contains "<hr" %}
   {% assign hasStrong = contentToCheck contains "<strong" %}
-  {% assign hasB = contentToCheck contains "<b" %}
+  {% assign hasB = contentToCheck contains "<b>" or contentToCheck contains "<b " %}
   {% assign hasTh = contentToCheck contains "<th" %}
   {% assign hasButton = contentToCheck contains "<button" %}
 
