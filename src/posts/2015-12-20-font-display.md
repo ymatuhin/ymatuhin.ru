@@ -14,6 +14,7 @@ has_youtube: true
 redirects:
   - /front-end/font-display/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Когда вы загружаете шрифт через `font-face`, браузер решает что отобразить пока шрифт загружается. Браузеры ждут
@@ -92,7 +93,7 @@ Safari | нет ожидания | - | -
 
 ## Видео пример работы свойства font-display
 
-{% include "media-youtube.liquid", url: "CciEEVHZRgw", width: "421", height: "315", caption: "Пример работы CSS свойства
+{% include "media-iframe.liquid", url: "https://www.youtube.com/embed/CciEEVHZRgw", width: "421", height: "315", caption: "Пример работы CSS свойства
 font-display" %}
 
 ## Как протестировать

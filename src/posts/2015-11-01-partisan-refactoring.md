@@ -13,6 +13,7 @@ image:
 redirects:
   - /front-end/partisan-refactoring/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Сегодня мы поговорим о говнокоде. В следующих статьях мы обсудим архитектуру, но знание как построить «хорошую»

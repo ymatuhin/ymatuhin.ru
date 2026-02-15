@@ -13,6 +13,7 @@ image:
 redirects:
   - /front-end/detect-adblock/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 > Cравнить блокировщики можно на [сайте с рекламой](https://checkadblock.ru){:class="bigger"}.

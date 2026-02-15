@@ -28,6 +28,7 @@ permalink: "/tag/{{ currentTagPage.slug }}/index.html"
       {% include "card.liquid"
         tag: "h2",
         categories: post.data.tags,
+        date: post.date,
         image: post.data.image.path,
         link: post.url,
         title: post.data.title,

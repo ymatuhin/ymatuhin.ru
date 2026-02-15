@@ -12,6 +12,7 @@ image:
 redirects:
   - /front-end/emoji-fallback/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Emoji набирают популярность. В блоге я тоже использовал их несколько раз, но получил отзыв о том, что они не везде

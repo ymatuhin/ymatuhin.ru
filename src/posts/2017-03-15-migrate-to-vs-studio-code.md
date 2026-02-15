@@ -13,6 +13,7 @@ image:
 redirects:
   - /tools/migrate-to-vs-studio-code/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Уже 2 недели я использую [Visual Studio Code](https://code.visualstudio.com/) для работы. Он пришел на замену, моему

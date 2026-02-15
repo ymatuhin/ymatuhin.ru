@@ -14,6 +14,7 @@ image:
 redirects:
   - /front-end/three-plugins-for-single-page/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Ваши пользователи разные. У кого-то быстрый компьютер и интернет, а кто-то пользуется приложением из глуши со слабеньким

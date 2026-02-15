@@ -14,6 +14,7 @@ updated: 24-05-2016
 redirects:
   - /front-end/smartjs_started_a_course_on_architecture/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Вчера, 22 октября 2015 года, начался второй курс по архитектуре современных JavaScript приложений

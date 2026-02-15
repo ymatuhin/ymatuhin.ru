@@ -15,6 +15,7 @@ redirects:
   - /front-end/convert_photoshop_letter_spacing_to_css/
   - /tools/convert_photoshop_letter_spacing_to_css/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Межбуквенный интервал в Фотошопе регулирует расстояние между символами в тексте. В CSS это свойство `letter-spacing`.

@@ -27,8 +27,8 @@ redirects:
 
 Приведу несколько вебинаров которые мне понравились:
 
-{% include "media-youtube.liquid", url: "GGmbRM0Khvo", width: "560", height: "315", caption: "Вопросы личностного
+{% include "media-iframe.liquid", url: "https://www.youtube.com/embed/GGmbRM0Khvo", width: "560", height: "315", caption: "Вопросы личностного
 развития. Часть 1. Эффективная постановка личных целей" %}
 
-{% include "media-youtube.liquid", url: "MufNlCv8o5Y", width: "560", height: "315", caption: "Карьера в ИТ: Путь
+{% include "media-iframe.liquid", url: "https://www.youtube.com/embed/MufNlCv8o5Y", width: "560", height: "315", caption: "Карьера в ИТ: Путь
 джедая" %}

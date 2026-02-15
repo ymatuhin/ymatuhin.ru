@@ -1,28 +1,74 @@
-<br>
-<div class="card">
-    {% if image %}
-        {% if link %}<a href="{{ link }}">{% endif %}
-        {% mediaImage image, title %}
-        {% if link %}</a>{% endif %}
+{% assign titleTag = tag | default: "h2" %}
+{% assign itemTags = tags | default: categories %}
+
+<article class="card post on-list">
+    {% if title %}
+        <{{ titleTag }} class="post-title">
+            {% if link %}<a href="{{ link }}">{% endif %}
+                {{ title }}
+            {% if link %}</a>{% endif %}
+        </{{ titleTag }}>
     {% endif %}
 
-    <div class="padding">
-        {% if categories %}
-            <div class="tags">
-                {% include "categories.liquid" categories: categories %}
-            </div>
-        {% endif %}
+    {% if date or itemTags %}
+        <div class="post-meta">
+            {% if date %}
+                <time class="post-date" datetime="{{ date | date: '%Y-%m-%d' }}">
+                    {{ date | date: '%Y-%m-%d' }}
+                </time>
+            {% endif %}
 
-        {% if tag and title %}
-            <{{ tag }} class="title">
-                {% if link %}<a href="{{ link }}">{% endif %}
-                    {{ title }}
-                {% if link %}</a>{% endif %}
-            </{{ tag }}>
-        {% endif %}
+            {% if date and itemTags %}&nbsp;·&nbsp;{% endif %}
 
-        {% if description %}
+            {% if itemTags %}
+                <span class="post-tags">
+                    {% if itemTags.first %}
+                        {% assign tagsList = itemTags %}
+                    {% else %}
+                        {% assign tagsList = itemTags | split: "," %}
+                    {% endif %}
+                    {% for itemTag in tagsList %}
+                        {% assign tagTrimmed = itemTag | strip %}
+                        {% assign isPostType = tagTrimmed == 'blog' or tagTrimmed == 'frontend' or tagTrimmed == 'tools' or tagTrimmed == 'books' %}
+                        {% if isPostType %}
+                            {% assign tagUrl = "/" | append: tagTrimmed | append: "/" %}
+                        {% else %}
+                            {% assign tagSlug = tagTrimmed | tagSlug %}
+                            {% assign tagUrl = "/tag/" | append: tagSlug | append: "/" %}
+                            {% assign tagLabel = tagTrimmed | tagLabel %}
+                        {% endif %}
+                        <a href="{{ tagUrl }}">
+                            {% if tagTrimmed == 'blog' %}Блог{% endif %}
+                            {% if tagTrimmed == 'frontend' %}Фронтенд{% endif %}
+                            {% if tagTrimmed == 'tools' %}Инструменты{% endif %}
+                            {% if tagTrimmed == 'books' %}Книги{% endif %}
+                            {% unless tagTrimmed == 'blog' or tagTrimmed == 'frontend' or tagTrimmed == 'tools' or tagTrimmed == 'books' %}
+                                {{ tagLabel }}
+                            {% endunless %}
+                        </a>{% unless forloop.last %}, {% endunless %}
+                    {% endfor %}
+                </span>
+            {% endif %}
+        </div>
+    {% endif %}
+
+    {% if image %}
+        <div class="post-cover">
+            {% if link %}<a href="{{ link }}">{% endif %}
+            {% mediaImage image, title %}
+            {% if link %}</a>{% endif %}
+        </div>
+    {% endif %}
+
+    {% if description %}
+        <div class="post-content">
             <p>{{ description }}</p>
-        {% endif %}
-    </div>
-</div>
+        </div>
+    {% endif %}
+
+    {% if link %}
+        <div>
+            <a class="read-more button inline" href="{{ link }}">[Read more]</a>
+        </div>
+    {% endif %}
+</article>

@@ -13,6 +13,7 @@ image:
 redirects:
   - /front-end/text-decoration-skip/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Стандартное подчеркивание — ад перфекциониста. Оно нагло перекрывает висячие символы в тексте, его становится сложнее

@@ -13,6 +13,7 @@ image:
 redirects:
   - /front-end/front-talks/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Конференция «FrontTalks» в 2015 году проходила в Екатеринбурге. На ней выступало 10 человек. Двое из них —

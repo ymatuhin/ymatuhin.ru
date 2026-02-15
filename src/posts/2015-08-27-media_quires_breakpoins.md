@@ -14,6 +14,7 @@ image:
 redirects:
   - /front-end/media_quires_breakpoins/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Twitter Bootstrap &mdash; самый популярный CSS фреймворк. У него более 85 495 звезд и 35 055 форков

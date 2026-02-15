@@ -14,6 +14,7 @@ has_youtube: true
 redirects:
   - /front-end/logs-in-javascript/
 ---
+
 Логирование — незаменимый инструмент в отладке JS кода. асставьте логи в критические места и при возникновении ошибки вы
 сможете посмотреть что произошло в консоли. По логам вы увидите последовательность действий и поймете где произошла
 ошибка. Но обычно происходит по другому.
@@ -134,7 +135,7 @@ redirects:
 
 О логировании и `console.log` рассказал Антон Шувалов выступая на конференции DUMB 2016 в секции FrontTalks.
 
-{% include "media-youtube.liquid", url: "nPYmp586EE0", width: "560", height: "315", caption: "Антон Шувалов — «Отладка
+{% include "media-iframe.liquid", url: "https://www.youtube.com/embed/nPYmp586EE0", width: "560", height: "315", caption: "Антон Шувалов — «Отладка
 кода в браузере»" %}
 
 Ссылки на записи выступлений с FrontTalks 2016 на [хабре](https://habrahabr.ru/company/it_people/blog/302286/), а за

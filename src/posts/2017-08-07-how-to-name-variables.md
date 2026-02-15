@@ -12,6 +12,7 @@ image:
 redirects:
   - /front-end/how-to-name-variables/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Для меня основной критерий хорошего когда — его **читаемость**. Поэтому важно чтобы переменные, функции и методы легко

@@ -12,6 +12,7 @@ image:
 redirects:
   - /front-end/margin-align-right/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Вчера, на работе, я пытался выровнять блочный элемент по правому краю. Такая задача встречается не часто, но даже

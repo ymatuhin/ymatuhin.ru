@@ -14,6 +14,7 @@ image:
 redirects:
   - /front-end/jquery-width/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 Я обнаружил что `jQuery.width()` округляет значения. Так-же, как и `.height()`. Из-за этого у меня была проблема в `1px` при некоторых разрешениях.

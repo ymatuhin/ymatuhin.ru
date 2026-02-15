@@ -13,6 +13,7 @@ image:
 redirects:
   - /tools/fira-code-font/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 В языках программирования много составных операторов, таких как `:=`, `>=`, `<=`, `===`, `!==`. Это одна логическая

@@ -1,14 +1,23 @@
 <header class="post-header / wrap-inner">
     {% assign postTypes = "" | split: "" %}
-    {% for tag in tags %}
-      {% if tag == "blog" or tag == "frontend" or tag == "tools" or tag == "books" %}
-        {% assign postTypes = postTypes | push: tag %}
+    {% for postTag in tags %}
+      {% if postTag == "blog" or postTag == "frontend" or postTag == "tools" or postTag == "books" %}
+        {% assign postTypes = postTypes | push: postTag %}
       {% endif %}
     {% endfor %}
     <span class="post-header__info">
         {% include "pubdate.liquid", date: page.date %} &nbsp;/&nbsp;
         <span class="post-category">
-        {% include "categories.liquid" categories: postTypes %}
+          {% for postType in postTypes %}
+            {% assign postTypeTrimmed = postType | strip %}
+            {% assign postTypeUrl = "/" | append: postTypeTrimmed | append: "/" %}
+            <a href="{{ postTypeUrl }}">
+              {% if postTypeTrimmed == 'blog' %}Блог{% endif %}
+              {% if postTypeTrimmed == 'frontend' %}Фронтенд{% endif %}
+              {% if postTypeTrimmed == 'tools' %}Инструменты{% endif %}
+              {% if postTypeTrimmed == 'books' %}Книги{% endif %}
+            </a>{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
         </span>
     </span>
     <h1 class="post-header__title"

@@ -12,6 +12,7 @@ image:
 redirects:
   - /front-end/reed-on-week-end-2/
 ---
+
 {% mediaImage image.path, image.alt %}
 
 ## Статьи и видео
