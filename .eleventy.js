@@ -3,6 +3,7 @@ import {feedPlugin} from "@11ty/eleventy-plugin-rss";
 import {IdAttributePlugin} from "@11ty/eleventy";
 import markdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
+import {minify} from "html-minifier-terser";
 
 export default function (eleventyConfig) {
   eleventyConfig.addBundle("css");
@@ -61,6 +62,19 @@ export default function (eleventyConfig) {
       }
     });
     return Array.from(categories);
+  });
+
+  eleventyConfig.addTransform("minify-html-and-inline-css", async function (content) {
+    if (!this.outputPath || !this.outputPath.endsWith(".html")) {
+      return content;
+    }
+
+    return minify(content, {
+      collapseWhitespace: true,
+      removeComments: true,
+      minifyCSS: true,
+      continueOnParseError: true
+    });
   });
 
   return {
