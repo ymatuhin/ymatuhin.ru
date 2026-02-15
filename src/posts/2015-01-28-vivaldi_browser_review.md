@@ -3,13 +3,10 @@ layout: post
 title: Обзор нового интернет браузера Vivaldi
 description: Старая Опера вернулась в виде нового интернет браузера Vivaldi. Обзор нового браузера и отзывы к нему.
 tags:
-  - blog
   - vivaldi
-  - интернет
-  - браузер
+  - браузеры
   - обзор
-  - вивальди
-  - отзыв
+  - отзывы
 image:
   path: vivaldi/default_view.png
   alt: Интернет браузер Vivaldi

@@ -2,14 +2,10 @@
 layout: post
 title: Стилизуем инструменты разработчика (dev tools) в Google Chrome
 tags:
-  - frontend
-  - dev
-  - tools
+  - разработка
+  - фронтенд
+  - dev tools
   - инструменты
-  - разработчика
-  - google
-  - chrome
-  - темы
 image:
   path: dev_tools/dev_tools.png
   alt: Темная темя для Chrome Dev Tools

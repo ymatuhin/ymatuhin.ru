@@ -3,10 +3,9 @@ layout: post
 title: Трюки с SVG и поддержка старыми браузерами
 description: Как безопасно использовать SVG, поддержка браузерами, несколько fallback-ов для старых браузеров.
 tags:
-  - frontend
-  - SVG
-  - изображения
-  - css
+  - разработка
+  - фронтенд
+  - svg
 image:
   path: svg/svg_logo.png
   alt: Логотип SVG
@@ -40,8 +39,9 @@ redirects:
 Вместо привычно кода, напишем в нашем HTML следующий код:
 
 ```html
+
 <svg width="100" height="100">
-  <image xlink:href="test.svg" src="test.png" width="100" height="100"/>
+  <image xlink:href="test.svg" src="test.png" width="100" height="100" />
 </svg>
 ```
 
@@ -49,8 +49,9 @@ redirects:
 картинку `test.svg`.
 
 ```html
+
 <svg width="96" height="96">
-  <image xlink:href="test.svg" width="100" height="100"/>
+  <image xlink:href="test.svg" width="100" height="100" />
 </svg>
 ```
 
@@ -74,9 +75,8 @@ _элегантное_ решение:
 ```css
 .my-element {
   background-image: url(test.png);
-  background-image:
-    linear-gradient(transparent, transparent),
-    url(test.svg);
+  background-image: linear-gradient(transparent, transparent),
+  url(test.svg);
 }
 ```
 

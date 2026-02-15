@@ -6,7 +6,9 @@ image:
   path: need_to_frontend/i-have-a-plan.jpg
   alt: Кажется у меня есть план…
 tags:
-  - frontend
+  - разработка
+  - фронтенд
+  - собеседования
 redirects:
   - /front-end/plan_for_frontend_developer/
 ---

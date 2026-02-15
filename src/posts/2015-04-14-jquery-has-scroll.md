@@ -3,17 +3,12 @@ layout: post
 title: Минималистичный jQuery плагин, который проверяет элемент на наличие полосы прокрутки
 description: Как проверить наличие полосы прокрутки (скролла) у документа и элементов в jQuery и JavaScript? Воспользуйтесь моим небольшим плагином.
 tags:
-  - frontend
-  - полоса
-  - прокрутки
-  - скролл
-  - scroll
-  - jquery
+  - разработка
+  - фронтенд
   - javascript
-  - плагин
-  - наличие
-  - документ
-  - элемент
+  - jquery
+  - расширение
+  - скролл
 redirects:
   - /front-end/jquery-has-scroll/
 ---
@@ -22,14 +17,14 @@ redirects:
 случае у) или нет. Немного погуглив, нашел несколько интересных вариантов, которыми я хочу с вами поделиться.
 
 ```js
-(function($) {
-    $.fn.hasScrollBar = function() {
-        var hasScrollBar = {},
-            e = this.get(0);
-        hasScrollBar.vertical = e.scrollHeight > e.clientHeight;
-        hasScrollBar.horizontal = e.scrollWidth > e.clientWidth;
-        return hasScrollBar;
-    }
+(function ($) {
+  $.fn.hasScrollBar = function () {
+    var hasScrollBar = {},
+      e = this.get(0);
+    hasScrollBar.vertical = e.scrollHeight > e.clientHeight;
+    hasScrollBar.horizontal = e.scrollWidth > e.clientWidth;
+    return hasScrollBar;
+  }
 })(jQuery);
 
 // Пример
@@ -41,15 +36,16 @@ $('html').hasScrollBar().horizontal
 
 ```js
 function hasVerticalScroll(node) {
-  if ( node == undefined ) {
-    if ( window.innerHeight )
+  if (node == undefined) {
+    if (window.innerHeight)
       return document.body.offsetHeight > innerHeight;
     else
       return document.documentElement.scrollHeight >
-          document.documentElement.offsetHeight ||
-          document.body.scrollHeight > document.body.offsetHeight;
+        document.documentElement.offsetHeight ||
+        document.body.scrollHeight > document.body.offsetHeight;
+  } else {
+    return node.scrollHeight > node.offsetHeight;
   }
-  else { return node.scrollHeight > node.offsetHeight; }
 }
 
 // Пример (если не передать параметр node — то проверит у body)

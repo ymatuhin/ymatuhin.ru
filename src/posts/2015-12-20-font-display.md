@@ -3,7 +3,6 @@ layout: post
 title: Управляем поведением font-face в CSS
 description: Поведением текста, отображаемого во время загрузки font-face, можно управлять с помощью свойства font-display. Как работает и какие значения поддерживет свойсто font-display читайте в статье.
 tags:
-  - frontend
   - web fonts
   - font
   - font-display
@@ -15,7 +14,6 @@ has_youtube: true
 redirects:
   - /front-end/font-display/
 ---
-
 {% mediaImage image.path, image.alt %}
 
 Когда вы загружаете шрифт через `font-face`, браузер решает что отобразить пока шрифт загружается. Браузеры ждут

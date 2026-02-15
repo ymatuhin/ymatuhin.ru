@@ -3,7 +3,6 @@ layout: post
 title: На чем тестировать JavaScript фреймворки
 description: На чем испробовать новую технологию или фреймоврк если нет сайд/пет проекта? Пара интересных задачек в этой заметке.
 tags:
-  - frontend
   - frameworks
   - js
   - react
@@ -16,7 +15,6 @@ image:
 redirects:
   - /front-end/flux-challenge/
 ---
-
 {% mediaImage image.path, image.alt %}
 
 Вы увидели новый фреймворк, который конечно в миллион раз лучше текущего. Заманчиво, но использовать его в боевом

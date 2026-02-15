@@ -5,15 +5,19 @@ image:
   path: atom/atom_packages.jpg
   alt: Atom packages
 tags:
-  - tools
-  - atom github текстовый редактор кода плагины дополнения лучшие список sublime
+  - разработка
+  - фронтенд
+  - редакторы
+  - расширения
 description: |
   Плагины и дополнения для текстового редактора Atom: linter, stylus, beautify, autocomplete-plus, color-picker, easy-motion, emmet, file-icons, jekyll, angularjs, project-manager, merge-conflicts, minimap, open-in-browser, project-palette-finder, unregistered.
 redirects:
   - /tools/atom_packages_1/
 ---
 
-Вчера я писал про текстовый редактор *Atom* ([Все еще сидите на Sublime? Тогда мы, вместе с Atom, идем к вам!](/blog/sublime_vs_atom/)), а сегодня хочу продолжить о нем разговор и рассказать о лучших дополнениях к этому текстовому редактору.
+Вчера я писал про текстовый редактор
+*Atom* ([Все еще сидите на Sublime? Тогда мы, вместе с Atom, идем к вам!](/blog/sublime_vs_atom/)), а сегодня хочу
+продолжить о нем разговор и рассказать о лучших дополнениях к этому текстовому редактору.
 
 ## Список лучших плагинов для Atom
 
@@ -98,9 +102,11 @@ redirects:
 
       {% mediaImage "atom/atom_palette_finder.jpg", "Project palette finder — плагин для Atom" %}
     </li>
+
 </ol>
 
-Если вы очень скучаете по этому чудесному окошку в Sublime Text, которое выскакивает на каждое 20е сохранение, то для Atom есть дополнение для этого - [unregistered](https://github.com/thiagopnts/unregistered).
+Если вы очень скучаете по этому чудесному окошку в Sublime Text, которое выскакивает на каждое 20е сохранение, то для
+Atom есть дополнение для этого - [unregistered](https://github.com/thiagopnts/unregistered).
 
 {% mediaImage "atom/atom_unregistered.jpg", "Unregistered — плагин для Atom" %}
 

@@ -3,17 +3,10 @@ layout: post
 title: Разбираемся со сборкой front end на Gulp
 description: Обзор основных возможностей новой системы для сборки проектов — Gulp, а так-же с изучаем как работают его основные функциии.
 tags:
-  - frontend
+  - разработка
+  - фронтенд
   - gulp
-  - watch
-  - task
-  - src
-  - dist
   - сборка
-  - front
-  - end
-  - клиент
-  - pipe
 image:
   path: gulp/logo.png
   alt: Gulp — системы сборки фронтенда
@@ -71,11 +64,11 @@ npm install --save-dev gulp-util
 /* File: gulpfile.js */
 
 // собираем все наши плагины
-var gulp  = require('gulp'),
-    gutil = require('gulp-util');
+var gulp = require('gulp'),
+  gutil = require('gulp-util');
 
 // создаем задачку, которая будет выполняться по умолчанию
-gulp.task('default', function() {
+gulp.task('default', function () {
   return gutil.log('Gulp is running!')
 });
 ```
@@ -106,11 +99,11 @@ Api у gulp очень маленькое, и содержит всего 4 фу
 действия). Зависимостей может и не быть:
 
 ```js
-gulp.task('mytask', function() {
+gulp.task('mytask', function () {
   //сделать что-то
 });
 
-gulp.task('dependenttask', ['mytask'], function() {
+gulp.task('dependenttask', ['mytask'], function () {
   //сделать что-то после того, как 'mytask' будет выполнен
 });
 ```
@@ -122,7 +115,7 @@ gulp.task('dependenttask', ['mytask'], function() {
 `gulp.src` и `gulp.dest` используется для простой копии файлов:
 
 ```js
-gulp.task('copyHtml', function() {
+gulp.task('copyHtml', function () {
   // скопировать все html файлы из source/ в public/
   gulp.src('source/*.html').pipe(gulp.dest('public'));
 });

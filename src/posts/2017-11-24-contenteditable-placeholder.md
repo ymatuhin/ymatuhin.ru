@@ -3,7 +3,6 @@ layout: post
 title: Код. Плейсхолдер для [contenteditable]
 description: Placeholder полифил для contenteditable элемента
 tags:
-  - frontend
   - js
   - contenteditable
   - placeholder
@@ -13,7 +12,6 @@ image:
 redirects:
   - /front-end/contenteditable-placeholder/
 ---
-
 {% mediaImage image.path, image.alt %}
 
 Я уже сильно привык к атрибуту `placeholder`, и немного грустил зная что `<pre contenteditable></pre>`

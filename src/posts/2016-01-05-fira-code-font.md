@@ -3,7 +3,6 @@ layout: post
 title: 'Fira Code: шрифт с лигатурами для кода'
 description: Моноширинный шрифт Fira Code объединяет конструкции языков программирования из нескольких символов в один, визуально понятный и приятный.
 tags:
-  - tools
   - font
   - text editor
   - settings
@@ -13,7 +12,6 @@ image:
 redirects:
   - /tools/fira-code-font/
 ---
-
 {% mediaImage image.path, image.alt %}
 
 В языках программирования много составных операторов, таких как `:=`, `>=`, `<=`, `===`, `!==`. Это одна логическая

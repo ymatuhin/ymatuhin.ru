@@ -2,7 +2,6 @@
 layout: post
 title: Список статичных HTTP серверов для терминала
 tags:
-  - frontend
   - http
   - server
 image:
@@ -11,7 +10,6 @@ image:
 redirects:
   - /front-end/list_http_static_servers/
 ---
-
 {% mediaImage image.path, image.alt %}
 
 Каждая из нижеприведенных команд запускает статичный http сервер в текущей директории. Сервер будет доступен по

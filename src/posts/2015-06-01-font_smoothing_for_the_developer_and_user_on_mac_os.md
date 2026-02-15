@@ -2,10 +2,9 @@
 layout: post
 title: Сглаживание шрифтов для разработчика и пользователя на Mac OS
 tags:
-  - frontend
+  - разработка
   - css
-  - сглаживание шрифта
-  - mac os
+  - macos
   - расширение
 image:
   path: font-smooth/compare.png
@@ -27,8 +26,8 @@ redirects:
 
 ```css
 html {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 ```
 
@@ -44,8 +43,8 @@ html {
 
 ```css
 html {
-    -webkit-font-smoothing: antialiased !important;
-    -moz-osx-font-smoothing: grayscale !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
 }
 ```
 

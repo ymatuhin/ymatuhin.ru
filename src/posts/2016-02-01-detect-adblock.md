@@ -3,7 +3,6 @@ layout: post
 title: Проверка на блокировку рекламы, или «Пожалуйста, отключите AdBlock»
 description: Как определить, что у пользователя установлен блокировщик рекламы AdBlock, AdGuard и другие.
 tags:
-  - frontend
   - adblock
   - ads
   - реклама
@@ -12,7 +11,6 @@ image:
 redirects:
   - /front-end/detect-adblock/
 ---
-
 {% mediaImage image.path, image.alt %}
 
 > Cравнить блокировщики можно на [сайте с рекламой](https://checkadblock.ru){:class="bigger"}.

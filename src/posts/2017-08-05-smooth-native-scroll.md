@@ -3,7 +3,6 @@ layout: post
 title: Плавный, нативный скрол
 description: Выкиньте лишние библиотеки для прокрутки внутри страницы
 tags:
-  - frontend
   - js
   - scroll
 image:
@@ -12,7 +11,6 @@ image:
 redirects:
   - /front-end/smooth-native-scroll/
 ---
-
 {% mediaImage image.path, image.alt %}
 
 Плавная прокрутка до определенного места на странице — очень распространенная фича, особенно в лендингах. Еще один

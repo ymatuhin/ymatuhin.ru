@@ -2,7 +2,6 @@
 layout: post
 title: Ускоряем сборку блога на Jekyll
 tags:
-  - frontend
   - jekyll
   - блог
 image:
@@ -11,7 +10,6 @@ image:
 redirects:
   - /front-end/speed_up_jekyll_server/
 ---
-
 {% mediaImage image.path, image.alt %}
 
 [Jekyll](https://jekyllrb.com/) — генератор статических сайтов. Чаще всего используется для блогов как альтернатива

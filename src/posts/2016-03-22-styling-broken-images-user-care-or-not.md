@@ -3,7 +3,6 @@ layout: post
 title: За и против. Оформление незагруженных изображений.
 description: Незагруженные изображение — не та проблема, которую нужно срочно решать. С изображениями есть другая, более важная, проблема.
 tags:
-  - frontend
   - css
   - изображения
   - оформление
@@ -16,7 +15,6 @@ image:
 redirects:
   - /front-end/styling-broken-images-user-care-or-not/
 ---
-
 {% mediaImage image.path, image.alt %}
 
 Восьмого марта 2016 года, Ире Адеринокун опубликовала пост «[Styling Broken Images][1]{:rel='nofollow'}», в котором

@@ -3,19 +3,10 @@ layout: post
 title: Безопасное использование CDN для jQuery, Angular, Bootstrap и других библиотек
 description: Безопасно загружаем JavaScript библиотеки из публичных CDN с fallback-ом на локальную библиотеку. Jquery, Angular JS, Bootstrap и другие.
 tags:
-  - frontend
-  - CDN
-  - jQuery
-  - fallback
-  - google
-  - bootstrap
-  - бесплатные
-  - free
-  - yandex
-  - сервисы
-  - сайта
-  - angular
-  - Modernizr
+  - разработка
+  - фронтенд
+  - cdn
+  - jquery
 redirects:
   - /front-end/safe_use_of_cdn_and_jquery/
 ---
@@ -34,6 +25,7 @@ AngularJS.
 код:
 
 ```html
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 ```
 
@@ -41,6 +33,7 @@ AngularJS.
 с нашего сайта.
 
 ```html
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 ```
@@ -55,16 +48,17 @@ RequireJS](http://requirejs.org/).
 requirejs.config({
   enforceDefine: true,
   paths: {
-  jquery: [
-    'http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min',
-    // Если из CDN наша библиотека не загрузилась,
-    // то загружать из папки lib файл jquery.js
-    'lib/jquery'
+    jquery: [
+      'http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min',
+      // Если из CDN наша библиотека не загрузилась,
+      // то загружать из папки lib файл jquery.js
+      'lib/jquery'
     ]
   }
 });
 
-require(['jquery'], function ($) { /* Ваш код тут */ });
+require(['jquery'], function ($) { /* Ваш код тут */
+});
 ```
 
 В примерах использовалась библиотека jQuery, но так-же можно загружать и другие библиотеки.

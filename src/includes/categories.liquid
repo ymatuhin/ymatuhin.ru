@@ -15,5 +15,5 @@
             {{ category_trimmed }}
         {% endunless %}
     </a>
-    {% unless forloop.last %}, {% endunless %}
+    {% if forloop.last == false %}, {% endif %}
 {% endfor %}

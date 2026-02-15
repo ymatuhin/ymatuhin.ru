@@ -3,7 +3,6 @@ layout: post
 title: Как называть переменные
 description: Мой взгляд на соглашения наименования переменных, функций, методов и классов
 tags:
-  - frontend
   - js
 image:
   path: variables/variables.jpg
@@ -11,7 +10,6 @@ image:
 redirects:
   - /front-end/how-to-name-variables/
 ---
-
 {% mediaImage image.path, image.alt %}
 
 Для меня основной критерий хорошего когда — его **читаемость**. Поэтому важно чтобы переменные, функции и методы легко

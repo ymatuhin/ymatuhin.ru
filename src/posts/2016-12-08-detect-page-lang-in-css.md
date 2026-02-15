@@ -3,14 +3,12 @@ layout: post
 title: Определяем язык страницы в CSS
 description: Через псевдокласс О_о
 tags:
-  - frontend
-  - CSS
-  - Lang
-  - Tips
+  - css
+  - lang
+  - tips
 redirects:
   - /front-end/detect-page-lang-in-css/
 ---
-
 Для многоязычных сайтов, часто нужно переопределить стили блоков для определенной локали. аньше я добавлял класс с
 названием языка тегу `body` или определял язык через `[lang=en]`.
 

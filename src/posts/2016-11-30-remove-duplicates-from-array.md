@@ -3,17 +3,15 @@ layout: post
 title: Код. Удаляем дубликаты из массива
 description: Простые способы для ES5 и ES2015
 tags:
-  - frontend
-  - JS
-  - Tips
-  - Array
+  - js
+  - tips
+  - array
 image:
   path: tips/array_uniq.jpg
   alt: Убрать дубликаты из массива в JavaScript
 redirects:
   - /front-end/remove-duplicates-from-array/
 ---
-
 {% mediaImage image.path, image.alt %}
 
 ## ES5

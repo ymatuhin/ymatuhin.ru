@@ -3,7 +3,6 @@ layout: post
 title: Подтверждение диалогов через клавиатуру в Mac OS
 description: Как включить опцию изменения фокуса в диалогах Mac OS и подтверждать их с клавиатуры.
 tags:
-  - blog
   - mac
   - osx
 image:
@@ -12,7 +11,6 @@ image:
 redirects:
   - /blog/mac-os-confirm-from-keyboard/
 ---
-
 {% mediaImage image.path, image.alt %}
 
 При появлении диалога, по умолчанию у нас нет возможности переключить фокус на другую кнопку с помощью клавиатуры,

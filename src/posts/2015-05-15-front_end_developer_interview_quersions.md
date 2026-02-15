@@ -2,15 +2,9 @@
 layout: post
 title: Вопросы для собеседования кандидату на должность Front-end разработчика
 tags:
-  - frontend
-  - front
-  - end
-  - собеседование
-  - работа
-  - вопросы
-  - перевод
-  - должность
-  - кандидат
+  - разработка
+  - фронтенд
+  - собеседования
 image:
   path: front_end_interview/mem.jpg
   alt: На собеседовании фронтенд разработчика
@@ -120,7 +114,8 @@ html5bp — [Front-end Job Interview Questions](//h5bp.github.io/Front-end-Devel
 * В чем разница между последними двумя строчками:
 
 ```js
-function Person(){}
+function Person() {
+}
 
 var person = Person()
 var person = new Person()
@@ -152,7 +147,7 @@ var person = new Person()
 * Сделайте так, чтобы этот код работал:
 
 ```js
-[1,2,3,4,5].duplicator(); // [1,2,3,4,5,1,2,3,4,5]
+[1, 2, 3, 4, 5].duplicator(); // [1,2,3,4,5,1,2,3,4,5]
 ```
 
 * Опишите принцип мемоизации (избежание повторных вычислений) в JavaScript
@@ -177,7 +172,7 @@ var person = new Person()
 **Ответ: «goh angasal a m'i»**
 
 ```js
-( window.foo || ( window.foo = "bar" ) );
+(window.foo || (window.foo = "bar"));
 ```
 
 Вопрос: Чему равно window.foo?
@@ -186,9 +181,9 @@ var person = new Person()
 
 ```js
 var foo = "Hello";
-(function() {
-    var bar = " World";
-    alert(foo + bar);
+(function () {
+  var bar = " World";
+  alert(foo + bar);
 })();
 alert(foo + bar);
 ```

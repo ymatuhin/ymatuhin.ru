@@ -3,7 +3,6 @@ layout: post
 title: Фоллбэчим Emoji
 description: Проверяем поддержку эмодзи у пользователя и какая у него операционная система. После этого подключаем любые эмодзи для корректного отображения смайликов.
 tags:
-  - frontend
   - emoji
   - twitter
   - fallback
@@ -12,7 +11,6 @@ image:
 redirects:
   - /front-end/emoji-fallback/
 ---
-
 {% mediaImage image.path, image.alt %}
 
 Emoji набирают популярность. В блоге я тоже использовал их несколько раз, но получил отзыв о том, что они не везде

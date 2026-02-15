@@ -2,11 +2,9 @@
 layout: post
 title: Проблема верстки под современные браузеры или борьба с расширениями
 tags:
-  - frontend
-  - верстка
+  - браузеры
   - расширения
-  - баг
-  - костыль
+  - баги
 redirects:
   - /front-end/problems_of_the_extensions/
 ---

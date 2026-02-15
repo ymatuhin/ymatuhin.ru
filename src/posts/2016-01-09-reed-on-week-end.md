@@ -3,14 +3,12 @@ layout: post
 title: Что почитать фронтендеру на выходных — 1
 description: Список статей, библиотек, фреймворков и сервисов для ковыряния на выходных или в свободное время для фронтенд разработчика.
 tags:
-  - frontend
   - почитать
   - список
   - дайджест
 image:
   path: week-ends/1984.jpg
   alt: Джордж Оруэлл — 1984
-has_iframe: true
 redirects:
   - /front-end/reed-on-week-end/
 ---

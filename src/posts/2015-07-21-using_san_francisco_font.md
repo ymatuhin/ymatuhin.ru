@@ -3,17 +3,9 @@ layout: post
 title: Используем системный шрифт San Francisco на Mac OS
 description: Сниппет для использования нового системного шрифта San Francisco из El Capitan и IOS 9.
 tags:
-  - frontend
-  - привычка
-  - разработчика
-  - разработчик
-  - front
-  - end
-  - проверяй
-  - код
-  - перед
-  - комитом
-  - программиста
+  - разработка
+  - фронтенд
+  - css
 image:
   path: san_francisco/san_francisco.jpg
   alt: San Francisco

@@ -3,10 +3,10 @@ layout: post
 title: Быстрый дебаг CSS слоев с Pesticide
 description: Дебажим CSS слои с помощью библиотеки Pesticide и расширений для Chrome и Firefox.
 tags:
-  - frontend
+  - разработка
+  - фронтенд
+  - инструменты
   - css
-  - debug
-  - дебаг
 image:
   path: pesticide/logo.png
   alt: Pesticide — библиотека для дебага CSS

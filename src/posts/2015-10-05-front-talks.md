@@ -3,7 +3,6 @@ layout: post
 title: Видео и презентации с конференции «FrontTalks» 2015
 description: Краткое содержание докладов с конференции «FrontTalks» 2015 года, ссылки на видео, презентации и материалы из докладов.
 tags:
-  - frontend
   - видео
   - конференция
   - fronttalks
@@ -13,7 +12,6 @@ image:
 redirects:
   - /front-end/front-talks/
 ---
-
 {% mediaImage image.path, image.alt %}
 
 Конференция «FrontTalks» в 2015 году проходила в Екатеринбурге. На ней выступало 10 человек. Двое из них —

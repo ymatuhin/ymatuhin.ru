@@ -3,16 +3,8 @@ layout: post
 title: Английский как по нотам (krutopridumal)
 description: Великолепный youtube видеокурс для изучающих английский язык — «Английский как по нотам» (krutopridumal). Английский учится на примере популярных песен и отрывков из фильмов.
 tags:
-  - blog
-  - английский как по нотам
-  - youtube
-  - krutopridumal
-  - смотреть
-  - онлайн
-  - видео
-  - видеокурс
-  - ютуб
-  - Яндекс
+  - английский
+  - отзывы
 has_youtube: true
 redirects:
   - /blog/english_as_the_notes/

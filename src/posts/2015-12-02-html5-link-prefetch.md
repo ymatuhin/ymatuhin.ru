@@ -3,7 +3,6 @@ layout: post
 title: 'Ускоряем загрузку ресурсов для сайта: preconnect, prefetch, prerender, preloading…'
 description: HTML5 Link Prefetch указывает браузеру какие ресурсы вам понадобятся в будущем на сайте и максимально подготовит их дальнейшую загрузку.
 tags:
-  - frontend
   - cdn
   - preconnect
   - prefetch
@@ -16,7 +15,6 @@ image:
 redirects:
   - /front-end/html5-link-prefetch/
 ---
-
 {% mediaImage image.path, image.alt %}
 
 Сегодня мы рассмотрим «HTML5 Link Prefetch», а именно dns-prefetch, prefetch, preconnect, subresource, prerender и

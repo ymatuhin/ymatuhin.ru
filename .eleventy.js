@@ -12,7 +12,11 @@ import {
   buildTagPagesCollection,
   buildTagsCollection,
 } from './config/collections.js';
-import { addExternalLinkSecurityAttrs, applyTypography, minifyHtmlAndInlineCss, } from './config/transforms.js';
+import {
+  addExternalLinkSecurityAttrs,
+  applyTypography,
+  minifyHtmlAndInlineCss,
+} from './config/transforms.js';
 import siteData from './config/site.js';
 
 export default function (eleventyConfig) {

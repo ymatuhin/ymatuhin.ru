@@ -3,8 +3,7 @@ layout: post
 title: 'Плагины для Atom #2'
 description: 'Плагины и дополнения для текстового редактора Atom: advanced-open-file, ternjs, auto-update, autocomplete-paths, git-projects, highlight-selected, jumpy, minimap, pigments, regex-railroad-diagram, space-tab, symbols-tree-view, synced-sidebar, mechanical-keyboard, zen.'
 tags:
-  - tools
-  - Atom
+  - atom
   - плагины
   - текстовый редактор
 image:
@@ -12,7 +11,6 @@ image:
 redirects:
   - /tools/atom_packages_2/
 ---
-
 {% mediaImage image.path, image.alt %}
 
 Продолжение стати «[Лучшие плагины для текстового редактора Atom](/tools/atom_packages_1/)». Я расскажу о новых

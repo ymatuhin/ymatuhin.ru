@@ -3,19 +3,8 @@ layout: post
 title: Punto Switcher для разработчиков
 description: О программе Punto Switcher и о варианте настройки этой программы для разработчиков и программистов.
 tags:
-  - tools
-  - punto
-  - switcher
-  - пунто
-  - свитчер
-  - свичер
-  - настройка
-  - пользоваться
-  - автозамена
-  - раскладка
-  - клавиатуры
-  - каждый
-  - дом
+  - инструменты
+  - разработка
 redirects:
   - /tools/punto_switcher_to_developers/
 ---

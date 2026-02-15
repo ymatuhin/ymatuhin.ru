@@ -3,16 +3,11 @@ layout: post
 title: Оптимизация верстки под retina дисплеи
 description: Подготавливаем верску сайта под ретина дисплеи, оптимизируем верстку и изображения.
 tags:
-  - frontend
+  - разработка
+  - фронтенд
   - retina
-  - верстка
-  - изображения
-  - дисплеи
-  - ретина
-  - картинка
-  - графика
   - оптимизация
-  - сайт
+  - верстка
 redirects:
   - /front-end/prepare_graphics_for_retina_displays/
 ---
@@ -69,7 +64,9 @@ Retina-дисплеев». Скачать его можно на [страниц
 
 ```scss
 #logo {
-  .at2x('/images/my_image.png', 200px, 100px);
+  .at2x
+
+('/images/my_image.png', 200 px, 100 px);
 }
 ```
 
@@ -77,14 +74,12 @@ Retina-дисплеев». Скачать его можно на [страниц
 
 ```css
 #logo {
-  background-image:
-  path: url('/images/my_image.png');
+  background-image: path: url('/images/my_image.png');
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   #logo {
-    background-image:
-  path: url('/images/my_image@2x.png');
+    background-image: path: url('/images/my_image@2x.png');
     background-size: 200px 100px;
   }
 }

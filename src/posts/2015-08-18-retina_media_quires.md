@@ -3,12 +3,10 @@ layout: post
 title: Правильный сниппет медиа выражений для retina
 description: Короткий сниппет media queries для определения retina дисплеев и старые сниппеты, от которых нужно давно избавиться.
 tags:
-  - frontend
+  - разработка
+  - фронтенд
   - css
   - retina
-  - лучшие практики
-  - media queries
-  - медиа выражения
 redirects:
   - /front-end/retina_media_quires/
 ---
@@ -21,7 +19,7 @@ redirects:
 ```css
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
-    /* CSS правила для retina */
+  /* CSS правила для retina */
 }
 ```
 
@@ -32,10 +30,9 @@ redirects:
 
 ```css
 /* 1.25 dpr */
-@media
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 120dpi){
-    /* CSS правила для retina */
+@media (-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
+  /* CSS правила для retina */
 }
 ```
 
@@ -56,10 +53,7 @@ caniuse](http://caniuse.com/#feat=css-media-resolution) и видим следу
 <h3>Старые правила (не используйте)</h3>
 
 ```css
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (   min--moz-device-pixel-ratio: 2), only screen and (     -o-min-device-pixel-ratio: 2/1) {
   /* CSS правила для retina */
 }
 ```
@@ -67,13 +61,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 Или даже
 
 ```css
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (   min--moz-device-pixel-ratio: 2), only screen and (     -o-min-device-pixel-ratio: 2/1), only screen and (        min-device-pixel-ratio: 2), only screen and (                min-resolution: 192dpi), only screen and (                min-resolution: 2dppx) {
   /* CSS правила для retina */
 }
 ```

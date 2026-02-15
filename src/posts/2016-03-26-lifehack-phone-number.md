@@ -3,8 +3,6 @@ layout: post
 title: Лайфхак. Номер телефона на сайте
 description: Надоели звонки от клиентов в 2 часа ночи? Покажите номер телефона на сайте только в рабочее время. Подробности в статье.
 tags:
-  - frontend
-  - blog
   - лайфхак
   - js
   - номер
@@ -16,7 +14,6 @@ redirects:
   - /blog/lifehack-phone-number/
   - /front-end/lifehack-phone-number/
 ---
-
 {% mediaImage image.path, image.alt %}
 
 Если у вас небольшой бизнес, магазин или рабочий номер телефона, который отображается на сайте, и нет средств на

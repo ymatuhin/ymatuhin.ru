@@ -3,16 +3,9 @@ layout: post
 title: Время обновить clearfix
 description: Исправляем поведение плавающих классов и контейнера с помощью css класса clearfix и его новой, короткой версией.
 tags:
-  - frontend
-  - clearfix
+  - разработка
+  - фронтенд
   - css
-  - after
-  - div
-  - плавающие
-  - элементы
-  - float
-  - обновить
-  - класс
 image:
   path: clearfix/clearfix.png
   alt: Как работает Clearfix CSS
@@ -32,15 +25,17 @@ Clearfix — вспомогательный класс в css, с помощью
 
 ```css
 .clearfix {
-    zoom: 1;
+  zoom: 1;
 }
+
 .clearfix:before,
 .clearfix:after {
-    content: "";
-    display: table;
+  content: "";
+  display: table;
 }
+
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 ```
 

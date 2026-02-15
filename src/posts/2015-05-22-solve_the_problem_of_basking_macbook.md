@@ -3,17 +3,8 @@ layout: post
 title: Решаем проблему греющихся MacBook Pro/Air
 description: Почему макбуки так сильно греются и можно ли что-то с этим сделать? Конечно можно, а как это сделать, вы прочитаете в этой статье.
 tags:
-  - blog
-  - MacBook
-  - утилиты
-  - греется
-  - pro
-  - air
-  - сильно
-  - retina
-  - '13'
-  - '15'
-  - почему
+  - macbook
+  - macos
 redirects:
   - /blog/solve_the_problem_of_basking_macbook/
 ---
