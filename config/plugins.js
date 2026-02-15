@@ -17,5 +17,5 @@ export const feedConfig = {
 };
 
 export function idAttributeFilter({ page }) {
-  return !page.inputPath.endsWith('javascript_styleguide.liquid');
+  return !page.inputPath.endsWith('javascript_styleguide.md');
 }
