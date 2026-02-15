@@ -3,7 +3,7 @@ layout: default
 title: 'Теги'
 permalink: /tags/
 redirects:
-  - /tag/
+- /tag/
 ---
 
 <article class="post typo white-content wrap-inner">
@@ -11,9 +11,60 @@ redirects:
     <h1 class="post-header__title">Все теги</h1>
   </header>
 
-  <ul>
+  <nav aria-label="Все теги и количество публикаций">
+    {% assign popularCount = 0 %}
+    {% assign singleCount = 0 %}
     {% for tagPage in collections.tagPages %}
-      <li><a href="/tag/{{ tagPage.slug }}/">{{ tagPage.name }}</a></li>
+      {% if tagPage.count > 1 %}
+        {% assign popularCount = popularCount | plus: 1 %}
+      {% else %}
+        {% assign singleCount = singleCount | plus: 1 %}
+      {% endif %}
     {% endfor %}
-  </ul>
+
+    {% assign printedPopular = 0 %}
+    {% for tagPage in collections.tagPages %}
+      {% if tagPage.count > 1 %}
+        {% if printedPopular > 0 %}, {% endif %}
+        <a href="/tag/{{ tagPage.slug }}/">{{ tagPage.name }} ({{ tagPage.count }})</a>
+        {% assign printedPopular = printedPopular | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+
+    {% if singleCount > 0 %}
+      <span id="all-tags-extra" hidden>
+        {% if popularCount > 0 %}, {% endif %}
+        {% assign printedSingle = 0 %}
+        {% for tagPage in collections.tagPages %}
+          {% if tagPage.count == 1 %}
+            {% if printedSingle > 0 %}, {% endif %}
+            <a href="/tag/{{ tagPage.slug }}/">{{ tagPage.name }} ({{ tagPage.count }})</a>
+            {% assign printedSingle = printedSingle | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+      </span>
+      <button id="all-tags-toggle" type="button">Показать редкие теги</button>
+    {% endif %}
+  </nav>
 </article>
+
+{% if singleCount > 0 %}
+  <script>
+    (() => {
+      const toggleButton = document.getElementById('all-tags-toggle');
+      const extraTags = document.getElementById('all-tags-extra');
+      if (!toggleButton || !extraTags) return;
+
+      toggleButton.addEventListener('click', () => {
+        const isHidden = extraTags.hasAttribute('hidden');
+        if (isHidden) {
+          extraTags.removeAttribute('hidden');
+          toggleButton.textContent = 'Скрыть редкие теги';
+          return;
+        }
+        extraTags.setAttribute('hidden', '');
+        toggleButton.textContent = 'Показать редкие теги';
+      });
+    })();
+  </script>
+{% endif %}

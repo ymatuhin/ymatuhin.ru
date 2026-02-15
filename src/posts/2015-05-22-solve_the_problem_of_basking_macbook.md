@@ -6,14 +6,13 @@ tags:
   - blog
   - MacBook
   - утилиты
-  - macbook
   - греется
   - pro
   - air
   - сильно
   - retina
-  - 13"
-  - 15"
+  - '13'
+  - '15'
   - почему
 redirects:
   - /blog/solve_the_problem_of_basking_macbook/

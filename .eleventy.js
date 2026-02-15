@@ -7,12 +7,12 @@ import { feedConfig, idAttributeFilter } from './config/plugins.js';
 import { mediaImageShortcode } from './config/shortcodes.js';
 import {
   buildFrontmatterRedirectsCollection,
+  buildPostsCollection,
   buildPostTypesCollection,
   buildTagPagesCollection,
   buildTagsCollection,
-  buildPostsCollection
 } from './config/collections.js';
-import { addExternalLinkSecurityAttrs, applyTypography, minifyHtmlAndInlineCss } from './config/transforms.js';
+import { addExternalLinkSecurityAttrs, applyTypography, minifyHtmlAndInlineCss, } from './config/transforms.js';
 import siteData from './config/site.js';
 
 export default function (eleventyConfig) {
@@ -33,15 +33,16 @@ export default function (eleventyConfig) {
   eleventyConfig.setLibrary('md', markdownIt(mdOptions).use(markdownItAttrs));
 
   // Plugins
-  eleventyConfig.addPlugin(IdAttributePlugin, {
-    filter: idAttributeFilter,
-  });
+  eleventyConfig.addPlugin(IdAttributePlugin, { filter: idAttributeFilter });
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(feedPlugin, feedConfig);
 
   // Filters
   eleventyConfig.addFilter('tagSlug', (value) => {
-    const normalized = String(value || '').trim().toLowerCase().replace(/\s+/g, '-');
+    const normalized = String(value || '')
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, '-');
     return encodeURIComponent(normalized);
   });
 

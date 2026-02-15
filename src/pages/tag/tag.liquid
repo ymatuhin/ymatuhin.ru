@@ -16,22 +16,22 @@ permalink: "/tag/{{ currentTagPage.slug }}/index.html"
 <div class="cards">
   {% for post in collections.posts %}
     {% assign showPost = false %}
-    {% assign currentTagName = currentTagPage.name | downcase %}
+    {% assign currentTagKey = currentTagPage.key %}
     {% for postTag in post.data.tags %}
-      {% assign postTagNormalized = postTag | downcase %}
-      {% if postTagNormalized == currentTagName %}
+      {% assign postTagNormalized = postTag | downcase | replace: " ", "-" | replace: "/", "-" %}
+      {% if postTagNormalized == currentTagKey %}
         {% assign showPost = true %}
       {% endif %}
     {% endfor %}
 
     {% if showPost %}
-    {% include "card.liquid"
-      tag: "h2",
-      categories: post.data.tags,
-      image: post.data.image.path,
-      link: post.url,
-      title: post.data.title,
-      description: post.data.description %}
+      {% include "card.liquid"
+        tag: "h2",
+        categories: post.data.tags,
+        image: post.data.image.path,
+        link: post.url,
+        title: post.data.title,
+        description: post.data.description %}
     {% endif %}
   {% endfor %}
 </div>

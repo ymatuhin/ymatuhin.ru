@@ -4,7 +4,6 @@ title: Отзыв и мини обзор iOS 9 и OS X El Capitan (public beta)
 description: Как установить iOS 9 и El Capitan. Основные нововведения и личный опыт использования новых ОС.
 tags:
   - blog
-  - как
   - установить
   - обзор
   - когда
@@ -18,11 +17,8 @@ tags:
   - capitan
   - установка
   - os
-  - x
   - стоит
-  - ли
   - beta
-  - что
   - нового
   - split
   - view
