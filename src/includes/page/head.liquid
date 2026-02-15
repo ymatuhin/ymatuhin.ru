@@ -4,16 +4,15 @@
   <title>{{ title | default: site.title }}</title>
   <meta name="description" content="{{ description | default: site.description }}">
 
-  {% comment %} Ubuntu Sans Mono {% endcomment %}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/ubuntu-sans-mono-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/ubuntu-sans-mono-normal-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 
-  {% comment %} Inline CSS {% endcomment %}
   <style>
     @layer base, content, layout, components, utilities;
 
+    {% include "styles/fonts.css" %}
     {% include "styles/base.css" %}
+
     {% include "styles/content.liquid", contentHtml: content %}
     {% include "styles/prism.liquid", contentHtml: content %}
 
@@ -31,6 +30,7 @@
   <meta name="theme-color" content="#0c00ff">
   <link rel="manifest" href="/manifest.json">
 
+  {% comment %} Rss + alternate language {% endcomment %}
   <link rel="alternate" href="{{ site.feed_url }}" type="application/atom+xml" title="{{ site.title }}">
 
   {% getBundle "html", "head" %}
