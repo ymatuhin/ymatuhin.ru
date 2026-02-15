@@ -6,16 +6,6 @@ export async function mediaImageShortcode(url, alt, loading = 'lazy', pixelated 
   let imageLoading = 'lazy';
   let isPixelated = Boolean(pixelated);
 
-  // Backward compatibility: old call order was (url, alt, pixelated, loading)
-  if (typeof loading === 'boolean') {
-    isPixelated = loading;
-  } else if (typeof loading === 'string') {
-    const normalizedLoading = loading.toLowerCase();
-    if (normalizedLoading === 'eager' || normalizedLoading === 'lazy') {
-      imageLoading = normalizedLoading;
-    }
-  }
-
   if (!imageUrl) return '';
 
   const source = `./public/assets/img/${imageUrl}`;
@@ -23,7 +13,7 @@ export async function mediaImageShortcode(url, alt, loading = 'lazy', pixelated 
   const formats = extension === 'svg' || extension === 'gif' ? ['auto'] : ['avif', 'webp', 'auto'];
 
   const metadata = await Image(source, {
-    widths: ['auto'],
+    widths: ['366', '830', '1660', 'auto'],
     formats,
     outputDir: './.cache/eleventy-img/',
     urlPath: '/assets/img/optimized/',
@@ -31,6 +21,7 @@ export async function mediaImageShortcode(url, alt, loading = 'lazy', pixelated 
 
   const imageAttributes = {
     alt: imageAlt,
+    sizes: imageLoading === 'eager' ? '(min-width: 926px) 830px, 366px' : 'auto',
     style: isPixelated ? 'image-rendering: pixelated' : undefined,
     loading: imageLoading,
     decoding: 'async',
