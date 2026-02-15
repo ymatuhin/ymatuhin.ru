@@ -1,17 +1,16 @@
 ---
-layout: 'post'
-title: 'Быстрый дебаг CSS слоев с Pesticide'
-description: 'Дебажим CSS слои с помощью библиотеки Pesticide и расширений для Chrome и Firefox.'
-categories: 'front-end'
+layout: post
+title: Быстрый дебаг CSS слоев с Pesticide
+description: Дебажим CSS слои с помощью библиотеки Pesticide и расширений для Chrome и Firefox.
 tags:
-  - 'css'
-  - 'debug'
-  - 'дебаг'
+  - frontend
+  - css
+  - debug
+  - дебаг
 image:
-  path: 'pesticide/logo.png'
-  alt: 'Pesticide — библиотека для дебага CSS'
+  path: pesticide/logo.png
+  alt: Pesticide — библиотека для дебага CSS
 ---
-
 {% mediaImage image.path, image.alt %}
 
 Как часто у вас бывали проблемы со схлопыванием плавающих элементов? Или элемент уезжал непонятно куда? Эти и другое

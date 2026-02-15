@@ -1,21 +1,21 @@
 ---
-layout: 'post'
-title: 'Обновляемся до Jekyll v3.x'
-description: 'Как обовиться до новой версии Jekyll избежав багов при переходе.'
-categories: 'front-end'
+layout: post
+title: Обновляемся до Jekyll v3.x
+description: Как обовиться до новой версии Jekyll избежав багов при переходе.
 tags:
-  - 'jekyll'
-  - 'генератор статических сайтов'
-  - 'github'
-  - 'обновление'
-  - 'миграция'
-  - 'markdown'
-  - 'kramdown'
-  - 'rouge'
-  - 'pigments'
+  - frontend
+  - jekyll
+  - генератор статических сайтов
+  - github
+  - обновление
+  - миграция
+  - markdown
+  - kramdown
+  - rouge
+  - pigments
 image:
-  path: 'jekyll/jekyll-logo.png'
-  alt: 'Логотип Jekyll'
+  path: jekyll/jekyll-logo.png
+  alt: Логотип Jekyll
 ---
 
 елиз третьей версии генератора статических сайтов Jekyll прошел 27 октября 2015 года. А 1 февраля 2016 года GitHub

@@ -5,7 +5,7 @@ import { feedPlugin } from '@11ty/eleventy-plugin-rss';
 import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import { feedConfig, idAttributeFilter } from './config/plugins.js';
 import { mediaImageShortcode } from './config/shortcodes.js';
-import { buildCategoriesCollection, buildPostsCollection } from './config/collections.js';
+import { buildTagsCollection, buildPostsCollection } from './config/collections.js';
 import { addExternalLinkSecurityAttrs, applyTypography, minifyHtmlAndInlineCss } from './config/transforms.js';
 import siteData from './config/site.js';
 
@@ -42,7 +42,7 @@ export default function (eleventyConfig) {
 
   // Collections
   eleventyConfig.addCollection('posts', buildPostsCollection);
-  eleventyConfig.addCollection('categories', buildCategoriesCollection);
+  eleventyConfig.addCollection('tags', buildTagsCollection);
 
   // Transforms
   eleventyConfig.addTransform('apply-typography', applyTypography);

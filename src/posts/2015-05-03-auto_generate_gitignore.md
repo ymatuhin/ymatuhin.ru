@@ -1,22 +1,21 @@
 ---
-layout: 'post'
-title: 'Создаем и настраиваем файл .gitignore в git'
-description: 'Обзор сервиса для автоматического создания файла gitignore — Gitignore.io. Автоматическая настройка и примеры использования.'
-categories: 'tools'
+layout: post
+title: Создаем и настраиваем файл .gitignore в git
+description: Обзор сервиса для автоматического создания файла gitignore — Gitignore.io. Автоматическая настройка и примеры использования.
 tags:
-  - 'git'
-  - 'gitignore'
-  - 'файл'
-  - 'примеры'
-  - 'настройка'
-  - 'create'
-  - 'создать'
+  - tools
+  - git
+  - gitignore
+  - файл
+  - примеры
+  - настройка
+  - create
+  - создать
 image:
-  path: 'git/gitignore.png'
-  alt: 'Сервис для автоматической генерации файла .gitignore для git — gitignore.io'
-image_link: 'https://www.gitignore.io/'
+  path: git/gitignore.png
+  alt: Сервис для автоматической генерации файла .gitignore для git — gitignore.io
+image_link: https://www.gitignore.io/
 ---
-
 {% mediaImage image.path, image.alt %}
 
 Каждый раз создавать новый файл gitignore немного непрофессионально. Особенно когда ты что-то забываешь и ненужные файлы вываливаются в общий репозиторий. Но уже все придумано за нас, нам остается только вписать наши технологии и редакторы в нужное поле и скачать получившийся файл. Хватит самому настривать и создавать файлы gitignore!

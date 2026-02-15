@@ -1,18 +1,17 @@
 ---
-layout: 'post'
-title: 'Старт курса по архитектуре JavaScript приложений в SmartJS академии'
-description: 'Краткое содержание вводной лекции курса по архитектуре современных JavaScript приложений в SmartJS академии'
-categories: 'front-end'
+layout: post
+title: Старт курса по архитектуре JavaScript приложений в SmartJS академии
+description: Краткое содержание вводной лекции курса по архитектуре современных JavaScript приложений в SmartJS академии
 tags:
-  - 'css'
-  - 'smartjs'
-  - 'архитектура'
+  - frontend
+  - css
+  - smartjs
+  - архитектура
 image:
-  path: 'smartjs/logo.jpg'
-  alt: 'Логотип SmartJS академии'
-updated: '24-05-2016'
+  path: smartjs/logo.jpg
+  alt: Логотип SmartJS академии
+updated: 24-05-2016
 ---
-
 {% mediaImage image.path, image.alt %}
 
 Вчера, 22 октября 2015 года, начался второй курс по архитектуре современных JavaScript приложений

@@ -8,7 +8,6 @@ layout: null
     Collect pages and posts. You can extend with other collections if needed.
   {%- endcomment -%}
 
-  {%- assign all_pages = collections.posts | concat: collections.categories -%}
   {%- assign all_pages = collections.posts -%}
 
   {%- for page in all_pages -%}

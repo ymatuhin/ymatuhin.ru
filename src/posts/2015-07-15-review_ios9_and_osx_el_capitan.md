@@ -1,41 +1,36 @@
 ---
-layout: 'post'
-title: 'Отзыв и мини обзор iOS 9 и OS X El Capitan (public beta)'
-description: 'Как установить iOS 9 и El Capitan. Основные нововведения и личный опыт использования новых ОС.'
-categories: 'blog'
+layout: post
+title: Отзыв и мини обзор iOS 9 и OS X El Capitan (public beta)
+description: Как установить iOS 9 и El Capitan. Основные нововведения и личный опыт использования новых ОС.
 tags:
-  - 'как'
-  - 'установить'
-  - 'обзор'
-  - 'когда'
-  - 'выйдет'
-  - 'отзывы'
-  - 'ios'
+  - blog
+  - как
+  - установить
+  - обзор
+  - когда
+  - выйдет
+  - отзывы
+  - ios
   - '9'
-  - 'дата'
-  - 'выхода'
-  - 'el'
-  - 'capitan'
-  - 'установка'
-  - 'os'
-  - 'x'
-  - 'стоит'
-  - 'ли'
-  - 'beta'
-  - 'что'
-  - 'нового'
-  - 'os'
-  - 'x'
-  - 'el'
-  - 'capitan'
-  - 'split'
-  - 'view'
+  - дата
+  - выхода
+  - el
+  - capitan
+  - установка
+  - os
+  - x
+  - стоит
+  - ли
+  - beta
+  - что
+  - нового
+  - split
+  - view
 image:
-  path: 'ios9_osx_el_capitan/el_capitan_and_ios_9.png'
-  alt: 'Отзыв на публичные беты iOS 9 и El Capitan'
+  path: ios9_osx_el_capitan/el_capitan_and_ios_9.png
+  alt: Отзыв на публичные беты iOS 9 и El Capitan
 has_youtube: true
 ---
-
 {% mediaImage image.path, image.alt %}
 
 ## Что нового в iOS 9 и El Capitan?

@@ -1,13 +1,13 @@
 ---
-layout: 'post'
-title: 'Как называть переменные'
-description: 'Мой взгляд на соглашения наименования переменных, функций, методов и классов'
-categories: 'front-end'
+layout: post
+title: Как называть переменные
+description: Мой взгляд на соглашения наименования переменных, функций, методов и классов
 tags:
-  - 'js'
+  - frontend
+  - js
 image:
-  path: 'variables/variables.jpg'
-  alt: 'Как называть переменные'
+  path: variables/variables.jpg
+  alt: Как называть переменные
 ---
 
 {% mediaImage image.path, image.alt %}

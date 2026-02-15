@@ -1,16 +1,15 @@
 ---
-layout: 'post'
-title: 'Масштабируемый пиксель арт'
-description: 'Управляем сглаживаем для pixel art иллюстраций в браузере через CSS свойство image-rendering.'
-categories: 'front-end'
+layout: post
+title: Масштабируемый пиксель арт
+description: Управляем сглаживаем для pixel art иллюстраций в браузере через CSS свойство image-rendering.
 tags:
-  - 'pixel art'
+  - frontend
+  - pixel art
 image:
-  path: 'pixel-art/pixel-art.gif'
-  alt: 'Пиратский сюжет, автор bugpixel'
+  path: pixel-art/pixel-art.gif
+  alt: Пиратский сюжет, автор bugpixel
   pixelated: true
 ---
-
 {% mediaImage image.path, image.alt, image.pixelated %}
 
 Мне нравится пиксель арт. Только взгляните на этот предмет искусства выше. Восьмибитная ностальгия, красота и простота.

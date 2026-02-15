@@ -26,7 +26,7 @@
 
         {% include card.liquid
             tag="h2"
-            categories=post.categories
+            categories=post.tags
             image=post.image.path
             link=post.url
             title=post.title
@@ -46,7 +46,7 @@
       {% unless postsTitles contains post.title %}
         {% include card.liquid
                 tag="h2"
-                categories=post.categories
+                categories=post.tags
                 image=post.image.path
                 link=post.url
                 title=post.title

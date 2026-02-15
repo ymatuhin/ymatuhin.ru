@@ -1,21 +1,20 @@
 ---
-layout: 'post'
+layout: post
 title: 'Фронтенд дайджест #2 — БЭМ, CSS матрицы, SVG логотипы, Vivaldi, Bootstrap, Canvas'
-description: 'Дайджест ссылок для разработчиков интерфейсов и frontend разработчиков. 3D прогресс бар, БЭМ, CSS матрицы, SVG логотипы, Vivaldi, Bootstrap, Canvas, шпаргалка, Electron...'
-categories: 'front-end'
+description: Дайджест ссылок для разработчиков интерфейсов и frontend разработчиков. 3D прогресс бар, БЭМ, CSS матрицы, SVG логотипы, Vivaldi, Bootstrap, Canvas, шпаргалка, Electron...
 tags:
-  - 'дайджест'
-  - 'CSS'
-  - 'БЭМ'
-  - 'SVG'
-  - 'Emoji'
-  - 'Vivaldi'
-  - 'Bootsrap'
-  - 'вектора'
-  - 'canvas'
+  - frontend
+  - дайджест
+  - CSS
+  - БЭМ
+  - SVG
+  - Emoji
+  - Vivaldi
+  - Bootsrap
+  - вектора
+  - canvas
 has_iframe: true
 ---
-
 Когда я нахожу интересные ссылки, то хочу ими поделиться. Поэтому я собираю эти ссылки в Wunderlist, а когда набирается
 15, публикую в дайджесте. Поехали...
 

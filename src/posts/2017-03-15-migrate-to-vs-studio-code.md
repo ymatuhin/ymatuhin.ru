@@ -1,17 +1,15 @@
 ---
-layout: 'post'
-title: 'Миграция на Visual Studio Code'
-description: 'Как безболезненно мигрировать с Atom/Sublime Text на Visual Studio Code'
-categories: 'tools'
+layout: post
+title: Миграция на Visual Studio Code
+description: Как безболезненно мигрировать с Atom/Sublime Text на Visual Studio Code
 tags:
-  - 'vscode'
-  - 'tools'
-  - 'editor'
+  - tools
+  - vscode
+  - editor
 image:
-  path: 'vscode/icon-dribbble.png'
-  alt: 'Альтернативная версия иконки для VS Code, автор <a href=''https://dribbble.com/shots/2436746-Visual-Studio-Code-replacement-icon''>James Gilyead</a>'
+  path: vscode/icon-dribbble.png
+  alt: Альтернативная версия иконки для VS Code, автор <a href='https://dribbble.com/shots/2436746-Visual-Studio-Code-replacement-icon'>James Gilyead</a>
 ---
-
 {% mediaImage image.path, image.alt %}
 
 Уже 2 недели я использую [Visual Studio Code](https://code.visualstudio.com/) для работы. Он пришел на замену, моему

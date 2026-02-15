@@ -1,21 +1,20 @@
 ---
-layout: 'post'
-title: 'Вебинары от Geekbrains (ранее Школа Программирования)'
-description: 'Вебинары по программированию, карьере, личностному росту и не только от Geekbrains (Школа Программирования).'
-categories: 'front-end'
+layout: post
+title: Вебинары от Geekbrains (ранее Школа Программирования)
+description: Вебинары по программированию, карьере, личностному росту и не только от Geekbrains (Школа Программирования).
 tags:
-  - 'geekbrains'
-  - 'школа'
-  - 'программирования'
-  - 'вебинары'
-  - 'крутые'
-  - 'программирование'
+  - frontend
+  - geekbrains
+  - школа
+  - программирования
+  - вебинары
+  - крутые
+  - программирование
 image:
-  path: 'geekbrains/logo.png'
-  alt: 'Geekbrains'
+  path: geekbrains/logo.png
+  alt: Geekbrains
 has_youtube: true
 ---
-
 {% mediaImage image.path, image.alt %}
 
 Хочу поделиться вебинарами от Geekbrains (Школа Программирования). Я недавно нашел эти вебинары, поэтому успел

@@ -1,17 +1,16 @@
 ---
-layout: 'post'
-title: 'Код. Плейсхолдер для [contenteditable]'
-description: 'Placeholder полифил для contenteditable элемента'
-categories: 'front-end'
+layout: post
+title: Код. Плейсхолдер для [contenteditable]
+description: Placeholder полифил для contenteditable элемента
 tags:
-  - 'js'
-  - 'contenteditable'
-  - 'placeholder'
+  - frontend
+  - js
+  - contenteditable
+  - placeholder
 image:
-  path: 'contenteditable.jpg'
+  path: contenteditable.jpg
   alt: '[contenteditable]'
 ---
-
 {% mediaImage image.path, image.alt %}
 
 Я уже сильно привык к атрибуту `placeholder`, и немного грустил зная что `<pre contenteditable></pre>`

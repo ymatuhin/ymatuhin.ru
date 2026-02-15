@@ -1,22 +1,21 @@
 ---
-layout: 'post'
-title: 'Отзыв о расширении для экономии трафика Data Saver от Google'
-description: 'Действительно ли хорошо сжимает трафик новое расширение от Google — Data Saver или нет? Читайте в моем отзыве о Chrome Data Saver.'
-categories: 'blog'
+layout: post
+title: Отзыв о расширении для экономии трафика Data Saver от Google
+description: Действительно ли хорошо сжимает трафик новое расширение от Google — Data Saver или нет? Читайте в моем отзыве о Chrome Data Saver.
 tags:
-  - 'google'
-  - 'chrome'
-  - 'review'
-  - 'отзыв'
-  - 'расширение'
-  - 'extension'
-  - 'data'
-  - 'saver'
-  - 'экономия'
-  - 'трафика'
-  - 'beta'
+  - blog
+  - google
+  - chrome
+  - review
+  - отзыв
+  - расширение
+  - extension
+  - data
+  - saver
+  - экономия
+  - трафика
+  - beta
 ---
-
 Совсем недавно, Google выпустила расширение экономящее трафик под
 названием [Data
 Saver (beta)](https://chrome.google.com/webstore/detail/data-saver-beta/pfmgfdlgomnbgkofeojodiodmgpgmkac). Такой аналог режима турбо от Оперы, но только для браузеров на движке хромиума.

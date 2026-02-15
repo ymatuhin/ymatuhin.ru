@@ -1,15 +1,14 @@
 ---
-layout: 'post'
-title: 'Ускоряем сборку блога на Jekyll'
-categories: 'front-end'
+layout: post
+title: Ускоряем сборку блога на Jekyll
 tags:
-  - 'jekyll'
-  - 'блог'
+  - frontend
+  - jekyll
+  - блог
 image:
-  path: 'jekyll/jekyll-logo.png'
-  alt: 'Логотип Jekyll'
+  path: jekyll/jekyll-logo.png
+  alt: Логотип Jekyll
 ---
-
 {% mediaImage image.path, image.alt %}
 
 [Jekyll](https://jekyllrb.com/) — генератор статических сайтов. Чаще всего используется для блогов как альтернатива

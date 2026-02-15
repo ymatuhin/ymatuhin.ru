@@ -1,13 +1,13 @@
 ---
-layout: 'post'
-title: 'План развития для фронтенд разработчика'
-description: 'После анализа требований к кандидату на должность ведущего разработчика интерфейсов я составил фронтенд штуки, которые я буду изучать.'
-categories: 'front-end'
+layout: post
+title: План развития для фронтенд разработчика
+description: После анализа требований к кандидату на должность ведущего разработчика интерфейсов я составил фронтенд штуки, которые я буду изучать.
 image:
-  path: 'need_to_frontend/i-have-a-plan.jpg'
-  alt: 'Кажется у меня есть план…'
+  path: need_to_frontend/i-have-a-plan.jpg
+  alt: Кажется у меня есть план…
+tags:
+  - frontend
 ---
-
 {% mediaImage image.path, image.alt %}
 
 После анализа [требований][6]{:rel='nofollow'} к front end разработчикам в топовых компаниях, расставим приоритеты,
@@ -54,19 +54,19 @@ image:
 
 [2]: /blog/
 
-[3]: /front-end/plan_for_frontend_developer
+[3]: /frontend/plan_for_frontend_developer
 
 [4]: http://plus.google.com/104557932122476785260/
 
 [5]: https://ymatuhin.ru/img/need_to_frontend/i-have-a-plan.jpg
 
-[6]: /front-end/what_front_end_developer_need_to_know_in_2015-2016/
+[6]: /frontend/what_front_end_developer_need_to_know_in_2015-2016/
 
 [7]: https://twitter.com/ymatuhin/status/627069468506779648
 
 [8]: http://effortlessenglish.com
 
-[9]: /front-end/restful_api_for_frontender/
+[9]: /frontend/restful_api_for_frontender/
 
 [10]: http://restapitutorial.ru
 

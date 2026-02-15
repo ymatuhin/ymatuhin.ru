@@ -1,17 +1,16 @@
 ---
-layout: 'post'
+layout: post
 title: 'Fira Code: шрифт с лигатурами для кода'
-description: 'Моноширинный шрифт Fira Code объединяет конструкции языков программирования из нескольких символов в один, визуально понятный и приятный.'
-categories: 'tools'
+description: Моноширинный шрифт Fira Code объединяет конструкции языков программирования из нескольких символов в один, визуально понятный и приятный.
 tags:
-  - 'font'
-  - 'text editor'
-  - 'settings'
+  - tools
+  - font
+  - text editor
+  - settings
 image:
-  path: 'fira-code/fira-code.png'
+  path: fira-code/fira-code.png
   alt: 'Fira Code: шрифт с лигатурами для кода'
 ---
-
 {% mediaImage image.path, image.alt %}
 
 В языках программирования много составных операторов, таких как `:=`, `>=`, `<=`, `===`, `!==`. Это одна логическая

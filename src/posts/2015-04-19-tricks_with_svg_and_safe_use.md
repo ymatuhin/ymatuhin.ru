@@ -1,15 +1,15 @@
 ---
-layout: 'post'
-title: 'Трюки с SVG и поддержка старыми браузерами'
-description: 'Как безопасно использовать SVG, поддержка браузерами, несколько fallback-ов для старых браузеров.'
-categories: 'front-end'
+layout: post
+title: Трюки с SVG и поддержка старыми браузерами
+description: Как безопасно использовать SVG, поддержка браузерами, несколько fallback-ов для старых браузеров.
 tags:
-  - 'SVG'
-  - 'изображения'
-  - 'css'
+  - frontend
+  - SVG
+  - изображения
+  - css
 image:
-  path: 'svg/svg_logo.png'
-  alt: 'Логотип SVG'
+  path: svg/svg_logo.png
+  alt: Логотип SVG
 ---
 
 {% mediaImage image.path, image.alt %}

@@ -9,8 +9,8 @@ permalink: index.html
 <br>
 
 {% assign homePosts = "" | split: "" %}
-{% for category in collections.categories %}
-{% assign categoryPosts = collections.posts | where: "data.categories", category %}
+{% for tag in collections.tags %}
+{% assign categoryPosts = collections.posts | where_exp: "post", "post.data.tags contains tag" %}
 {% if categoryPosts.size > 2 %}
 {% assign recentPosts = categoryPosts | slice: 0, 2 %}
 {% for post in recentPosts %}
@@ -24,9 +24,15 @@ permalink: index.html
 
 <div class="cards">
   {% for post in sortedPosts %}
+  {% assign postTypes = "" | split: "" %}
+  {% for postTag in post.data.tags %}
+    {% if postTag == "blog" or postTag == "frontend" or postTag == "tools" or postTag == "books" %}
+      {% assign postTypes = postTypes | push: postTag %}
+    {% endif %}
+  {% endfor %}
   {% include "card.liquid"
     tag: "h2",
-    categories: post.data.categories,
+    categories: postTypes,
     image: post.data.image.path,
     link: post.url,
     title: post.data.title,

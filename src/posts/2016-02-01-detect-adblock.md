@@ -1,14 +1,14 @@
 ---
-layout: 'post'
-title: 'Проверка на блокировку рекламы, или «Пожалуйста, отключите AdBlock»'
-description: 'Как определить, что у пользователя установлен блокировщик рекламы AdBlock, AdGuard и другие.'
-categories: 'front-end'
+layout: post
+title: Проверка на блокировку рекламы, или «Пожалуйста, отключите AdBlock»
+description: Как определить, что у пользователя установлен блокировщик рекламы AdBlock, AdGuard и другие.
 tags:
-  - 'adblock'
-  - 'ads'
-  - 'реклама'
+  - frontend
+  - adblock
+  - ads
+  - реклама
 image:
-  path: 'adblock/logo_adblock.png'
+  path: adblock/logo_adblock.png
 ---
 
 {% mediaImage image.path, image.alt %}

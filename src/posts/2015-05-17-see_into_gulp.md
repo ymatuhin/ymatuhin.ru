@@ -1,23 +1,23 @@
 ---
-layout: 'post'
-title: 'Разбираемся со сборкой front end на Gulp'
-description: 'Обзор основных возможностей новой системы для сборки проектов — Gulp, а так-же с изучаем как работают его основные функциии.'
-categories: 'front-end'
+layout: post
+title: Разбираемся со сборкой front end на Gulp
+description: Обзор основных возможностей новой системы для сборки проектов — Gulp, а так-же с изучаем как работают его основные функциии.
 tags:
-  - 'gulp'
-  - 'watch'
-  - 'task'
-  - 'src'
-  - 'dist'
-  - 'сборка'
-  - 'front'
-  - 'end'
-  - 'клиент'
-  - 'pipe'
+  - frontend
+  - gulp
+  - watch
+  - task
+  - src
+  - dist
+  - сборка
+  - front
+  - end
+  - клиент
+  - pipe
 image:
-  path: 'gulp/logo.png'
-  alt: 'Gulp — системы сборки фронтенда'
-image_link: 'http://gulpjs.com'
+  path: gulp/logo.png
+  alt: Gulp — системы сборки фронтенда
+image_link: http://gulpjs.com
 ---
 
 {% mediaImage image.path, image.alt %}

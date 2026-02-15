@@ -1,15 +1,14 @@
 ---
-layout: 'post'
-title: 'Список статичных HTTP серверов для терминала'
-categories: 'front-end'
+layout: post
+title: Список статичных HTTP серверов для терминала
 tags:
-  - 'http'
-  - 'server'
+  - frontend
+  - http
+  - server
 image:
-  path: 'server/http-server.png'
-  alt: 'Http-server статики в терминале'
+  path: server/http-server.png
+  alt: Http-server статики в терминале
 ---
-
 {% mediaImage image.path, image.alt %}
 
 Каждая из нижеприведенных команд запускает статичный http сервер в текущей директории. Сервер будет доступен по

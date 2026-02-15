@@ -1,17 +1,16 @@
 ---
-layout: 'post'
-title: 'Адекватное подчеркивание ссылок'
+layout: post
+title: Адекватное подчеркивание ссылок
 description: 'Как исправить поведение text-decoration: underline'
-categories: 'front-end'
 tags:
-  - 'css'
-  - 'link'
-  - 'underline'
+  - frontend
+  - css
+  - link
+  - underline
 image:
-  path: 'text-decoration/preview.png'
-  alt: 'Пример css свойства text-decoration-skip'
+  path: text-decoration/preview.png
+  alt: Пример css свойства text-decoration-skip
 ---
-
 {% mediaImage image.path, image.alt %}
 
 Стандартное подчеркивание — ад перфекциониста. Оно нагло перекрывает висячие символы в тексте, его становится сложнее

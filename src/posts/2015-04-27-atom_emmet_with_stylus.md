@@ -1,24 +1,23 @@
 ---
-layout: 'post'
-title: 'Фиксим Emmet под Atom для работы со Stylus файлами'
-description: 'Фиксим работоспособность плагина Emmet под Atom для препроцессора Stylus.'
-categories: 'tools'
+layout: post
+title: Фиксим Emmet под Atom для работы со Stylus файлами
+description: Фиксим работоспособность плагина Emmet под Atom для препроцессора Stylus.
 tags:
-  - 'atom'
-  - 'github'
-  - 'текстовый'
-  - 'редактор'
-  - 'кода'
-  - 'плагины'
-  - 'дополнения'
-  - 'emmet'
-  - 'stylus'
-  - 'фикс'
+  - tools
+  - atom
+  - github
+  - текстовый
+  - редактор
+  - кода
+  - плагины
+  - дополнения
+  - emmet
+  - stylus
+  - фикс
 image:
-  path: 'atom/atom_stylus_emmet.jpg'
-  alt: 'Atom + Emmet + Stylus'
+  path: atom/atom_stylus_emmet.jpg
+  alt: Atom + Emmet + Stylus
 ---
-
 {% mediaImage image.path, image.alt %}
 
 асширение **Emmet** отлично работает с html, css, sass, scss, less. Но есть одна проблема — *Stylus*. Видимо из-за того,

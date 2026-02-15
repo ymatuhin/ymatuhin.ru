@@ -1,15 +1,15 @@
 ---
-layout: 'post'
-title: 'Видео и презентации с конференции «FrontTalks» 2015'
-description: 'Краткое содержание докладов с конференции «FrontTalks» 2015 года, ссылки на видео, презентации и материалы из докладов.'
-categories: 'front-end'
+layout: post
+title: Видео и презентации с конференции «FrontTalks» 2015
+description: Краткое содержание докладов с конференции «FrontTalks» 2015 года, ссылки на видео, презентации и материалы из докладов.
 tags:
-  - 'видео'
-  - 'конференция'
-  - 'fronttalks'
+  - frontend
+  - видео
+  - конференция
+  - fronttalks
 image:
-  path: 'fronttalks/fronttalks_2015.jpg'
-  alt: 'FrontTalks 2015'
+  path: fronttalks/fronttalks_2015.jpg
+  alt: FrontTalks 2015
 ---
 
 {% mediaImage image.path, image.alt %}
@@ -79,7 +79,7 @@ image:
 P.S. Немного [фотографий][photos] с FrontTalks.
 
 P.S.S. Похожая статья о FrontTalks 2014 есть на [хабре](https://habrahabr.ru/post/239353/), там выступал Вадим Макишвили
-с [докладом-интригой](https://ymatuhin.ru/front-end/vadim_makishvili_36/).
+с [докладом-интригой](/frontend/vadim_makishvili_36/).
 
 [1]: https://www.youtube.com/watch?v=mXRkFMg4PR0&t=7m44s
 

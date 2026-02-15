@@ -1,14 +1,14 @@
 ---
-layout: 'post'
-title: 'Логирование в JavaScript'
-description: 'Логирование — незаменимый инструмент в отладке JS кода.  асставьте логи в критические места и при возникновении ошибки вы сможете посмотреть что произошло в консоли.'
-categories: 'front-end'
+layout: post
+title: Логирование в JavaScript
+description: Логирование — незаменимый инструмент в отладке JS кода.  асставьте логи в критические места и при возникновении ошибки вы сможете посмотреть что произошло в консоли.
 tags:
-  - 'JS'
-  - 'Debug'
+  - frontend
+  - JS
+  - Debug
 image:
-  path: 'logs/bear.jpg'
-  alt: 'Вася следит за логами'
+  path: logs/bear.jpg
+  alt: Вася следит за логами
 has_youtube: true
 ---
 
@@ -136,4 +136,4 @@ has_youtube: true
 кода в браузере»" %}
 
 Ссылки на записи выступлений с FrontTalks 2016 на [хабре](https://habrahabr.ru/company/it_people/blog/302286/), а за
-прошлый год у меня в статье «[Видео и презентации с конференции “FrontTalks” 2015](/front-end/front-talks/)».
+прошлый год у меня в статье «[Видео и презентации с конференции “FrontTalks” 2015](/frontend/front-talks/)».

@@ -1,12 +1,12 @@
 ---
-layout: 'post'
-title: 'Определяем язык страницы в CSS'
-description: 'Через псевдокласс О_о'
-categories: 'front-end'
+layout: post
+title: Определяем язык страницы в CSS
+description: Через псевдокласс О_о
 tags:
-  - 'CSS'
-  - 'Lang'
-  - 'Tips'
+  - frontend
+  - CSS
+  - Lang
+  - Tips
 ---
 
 Для многоязычных сайтов, часто нужно переопределить стили блоков для определенной локали. аньше я добавлял класс с

@@ -1,8 +1,14 @@
 <header class="post-header / wrap-inner">
+    {% assign postTypes = "" | split: "" %}
+    {% for tag in tags %}
+      {% if tag == "blog" or tag == "frontend" or tag == "tools" or tag == "books" %}
+        {% assign postTypes = postTypes | push: tag %}
+      {% endif %}
+    {% endfor %}
     <span class="post-header__info">
         {% include "pubdate.liquid", date: page.date %} &nbsp;/&nbsp;
         <span class="post-category">
-        {% include "categories.liquid" categories: categories %}
+        {% include "categories.liquid" categories: postTypes %}
         </span>
     </span>
     <h1 class="post-header__title"

@@ -1,19 +1,18 @@
 ---
-layout: 'post'
-title: 'RESTful API для фронтенд разработчика'
-description: 'Что такое REST и RESTful API, в чем разница и зачем это нужно разработчику интерфейсов.'
-categories: 'front-end'
+layout: post
+title: RESTful API для фронтенд разработчика
+description: Что такое REST и RESTful API, в чем разница и зачем это нужно разработчику интерфейсов.
 tags:
-  - 'rest'
-  - 'api'
-  - 'http'
+  - frontend
+  - rest
+  - api
+  - http
 image:
-  path: 'rest_api/restful.png'
+  path: rest_api/restful.png
 ---
-
 {% mediaImage image.path, image.alt %}
 
-В [двух из трех](/front-end/plan_for_frontend_developer/) вакансиях для фронтеда требуют знания **REST /
+В [двух из трех](/frontend/plan_for_frontend_developer/) вакансиях для фронтеда требуют знания **REST /
 RESTful API**. азберемся что это и в чем разница.
 
 ## Что такое REST

@@ -1,20 +1,19 @@
 ---
-layout: 'post'
-title: 'Лайфхак. Блокировка входящих без дисконектов на iPhone'
+layout: post
+title: Лайфхак. Блокировка входящих без дисконектов на iPhone
 description: null
-categories: 'blog'
 tags:
-  - 'лайфхак'
-  - 'блокировка'
-  - 'входящие'
-  - 'звонки'
-  - 'iphone'
-  - 'yota'
-  - 'включить'
+  - blog
+  - лайфхак
+  - блокировка
+  - входящие
+  - звонки
+  - iphone
+  - yota
+  - включить
 image:
-  path: 'phones/phone.jpeg'
+  path: phones/phone.jpeg
 ---
-
 {% mediaImage image.path, image.alt %}
 
 У меня мобильный оператор YOTA с безлимитным 4G интернетом, который я раздаю себе на Mac. Я писал об этом в

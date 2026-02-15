@@ -1,17 +1,16 @@
 ---
-layout: 'post'
-title: 'jQuery.width() без округления'
-description: 'Как взять ширину элемента без округления значений до целых чисел без jQuery.'
-categories: 'front-end'
+layout: post
+title: jQuery.width() без округления
+description: Как взять ширину элемента без округления значений до целых чисел без jQuery.
 tags:
-  - 'Tips'
-  - 'JS'
-  - 'jQuery'
+  - frontend
+  - Tips
+  - JS
+  - jQuery
 image:
-  path: 'jquery/jquery.jpg'
-  alt: 'jQuery.width'
+  path: jquery/jquery.jpg
+  alt: jQuery.width
 ---
-
 {% mediaImage image.path, image.alt %}
 
 Я обнаружил что `jQuery.width()` округляет значения. Так-же, как и `.height()`. Из-за этого у меня была проблема в `1px` при некоторых разрешениях.

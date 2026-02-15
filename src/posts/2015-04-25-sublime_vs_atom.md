@@ -1,23 +1,22 @@
 ---
-layout: 'post'
-title: 'Все еще сидите на Sublime? Тогда мы, вместе с Atom, идем к вам!'
-description: 'Обзор нового текстового редактора Atom от команды Github в сравнении c Sublime Text 3. Atom vs Sublime.'
-categories: 'tools'
+layout: post
+title: Все еще сидите на Sublime? Тогда мы, вместе с Atom, идем к вам!
+description: Обзор нового текстового редактора Atom от команды Github в сравнении c Sublime Text 3. Atom vs Sublime.
 tags:
-  - 'atom'
-  - 'github'
-  - 'текстовый'
-  - 'редактор'
-  - 'кода'
-  - 'sublime'
-  - 'vs'
-  - 'обзор'
-  - 'редактора'
+  - tools
+  - atom
+  - github
+  - текстовый
+  - редактор
+  - кода
+  - sublime
+  - vs
+  - обзор
+  - редактора
 image:
-  path: 'atom/atom_vs_sublime.jpg'
-  alt: 'Atom'
+  path: atom/atom_vs_sublime.jpg
+  alt: Atom
 ---
-
 {% mediaImage image.path, image.alt %}
 
 В пятницу я пробовал в работе разные текстовые редакторы. Большинство из них очень плохи. Тот-же _Brackets_ от Adobe —
