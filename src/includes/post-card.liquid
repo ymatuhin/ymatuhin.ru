@@ -1,24 +1,10 @@
 {% assign titleTag = tag | default: "h2" %}
 
 <article class="post-card">
-  {% if imagePath %}
-    <div class="post-card__cover">
-        {% if link %}<a href="{{ link }}">{% endif %}
-            {% assign cardImageAlt = imageAlt | default: title %}
-            {% mediaImage imagePath, cardImageAlt %}
-            {% if link %}</a>{% endif %}
-    </div>
-  {% endif %}
-
   <{{ titleTag }} class="post-card__title">
 {% if link %}<a href="{{ link }}">{% endif %}{{ title }}{% if link %}</a>{% endif %}
 </{{ titleTag }}>
 
-{% if description %}
-  <div class="post-card__content">
-      <p>{{ description }}</p>
-    </div>
-{% endif %}
 
 {% if date or tags %}
   <div class="post-card__meta">
@@ -44,6 +30,21 @@
         {% endfor %}
         </span>
     {% endif %}
+    </div>
+{% endif %}
+
+{% if imagePath %}
+  <div class="post-card__cover">
+        {% if link %}<a href="{{ link }}">{% endif %}
+            {% assign cardImageAlt = imageAlt | default: title %}
+            {% mediaImage imagePath, cardImageAlt %}
+            {% if link %}</a>{% endif %}
+    </div>
+{% endif %}
+
+{% if description %}
+  <div class="post-card__content">
+      <p>{{ description }}</p>
     </div>
 {% endif %}
 </article>

@@ -5,9 +5,6 @@ permalink: index.html
 
 {% include "page/intro.liquid" %}
 
-<br>
-<br>
-
 <div class="cards">
   {% for post in collections.posts limit: 10 %}
   {% include "post-card.liquid"
@@ -23,7 +20,11 @@ permalink: index.html
 </div>
 
 {% if collections.posts.size > 10 %}
-  <p>
-    <a class="button" href="/posts/2/">Older posts</a>
-  </p>
+  <nav class="posts-pagination" aria-label="Posts pagination">
+    <a class="posts-pagination__older / button" href="/posts/2/">Остальные записи</a>
+  </nav>
 {% endif %}
+
+{% css %}
+{% include "styles/posts-pagination.css" %}
+{% endcss %}

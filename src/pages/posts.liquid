@@ -7,11 +7,7 @@ pagination:
 permalink: "/posts/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | plus: 1 }}/{% endif %}index.html"
 ---
 
-<article class="post typo white-content wrap-inner">
-  <header class="post-header">
-    <h1 class="post-header__title">Posts</h1>
-  </header>
-</article>
+<h1>Все заметки</h1>
 
 <div class="cards">
   {% for post in postsPage %}
@@ -27,12 +23,15 @@ permalink: "/posts/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | 
   {% endfor %}
 </div>
 
-<p>
-  {% if pagination.href.previous %}
-    <a class="button" href="{{ pagination.href.previous }}">Newer posts</a>
-  {% endif %}
-  {% if pagination.href.previous and pagination.href.next %}&nbsp;·&nbsp;{% endif %}
+<nav class="posts-pagination" aria-label="Posts pagination">
   {% if pagination.href.next %}
-    <a class="button" href="{{ pagination.href.next }}">Older posts</a>
+    <a class="posts-pagination__older / button" href="{{ pagination.href.next }}"> « По старее</a>
   {% endif %}
-</p>
+  {% if pagination.href.previous %}
+    <a class="posts-pagination__newer / button" href="{{ pagination.href.previous }}">По новее »</a>
+  {% endif %}
+</nav>
+
+{% css %}
+{% include "styles/posts-pagination.css" %}
+{% endcss %}

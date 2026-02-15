@@ -6,6 +6,7 @@
   }
 
   fieldset.intro {
+    margin-bottom: 3rem;
     border-color: var(--accent-color);
   }
 

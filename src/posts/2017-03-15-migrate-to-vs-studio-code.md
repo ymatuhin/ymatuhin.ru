@@ -9,7 +9,7 @@ tags:
   - vscode
 image:
   path: vscode/icon-dribbble.png
-  alt: Альтернативная версия иконки для VS Code, автор <a href='https://dribbble.com/shots/2436746-Visual-Studio-Code-replacement-icon'>James Gilyead</a>
+  alt: Альтернативная версия иконки для VS Code, автор James Gilyead
 redirects:
   - /tools/migrate-to-vs-studio-code/
 ---

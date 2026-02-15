@@ -2,7 +2,7 @@
   .footer {
     margin-top: 3rem;
     flex-grow: 0;
-    opacity: .5;
+    color: var(--secondary-text-color);
   }
 
   .footer a {

@@ -1,14 +1,20 @@
 @layer components {
+  .cards {
+    margin-top: 3rem;
+  }
+
   .post-card + .post-card {
     margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border-color);
   }
 
   .post-card__title {
     position: relative;
     color: var(--accent-color);
     padding-bottom: 3px;
-    margin-top: 1rem;
     border-bottom: 3px dotted var(--accent-color);
+    margin-top: 0;
   }
 
   .post-card__title a {
@@ -22,5 +28,13 @@
     display: block;
     width: 100%;
     border-bottom: 3px dotted var(--accent-color);
+  }
+
+  .post-card__meta {
+    color: var(--secondary-text-color);
+  }
+
+  .post-card__meta a {
+    color: inherit;
   }
 }
