@@ -1,7 +1,9 @@
 ---
 layout: post
 title: RESTful API для фронтенд разработчика
-description: Что такое REST и RESTful API, в чем разница и зачем это нужно разработчику интерфейсов.
+description: >-
+  В двух из трех вакансиях для фронтеда требуют знания **REST / RESTful API**. Разберемся что это
+  и в чем разница.
 tags:
   - development
   - frontend

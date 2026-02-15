@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Ускоряем сборку блога на Jekyll
+description: >-
+  Jekyll — генератор статических сайтов. Чаще всего используется для блогов как альтернатива
+  WordPress.
 tags:
   - development
   - tools

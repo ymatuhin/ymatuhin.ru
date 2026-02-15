@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Обновляемся до Jekyll v3.x
-description: Как обовиться до новой версии Jekyll избежав багов при переходе.
+description: >-
+  Релиз третьей версии генератора статических сайтов Jekyll прошел 27 октября 2015 года. А 1
+  февраля 2016 года GitHub Pages официально поддерживают Jekyll 3.
 tags:
   - development
   - tools

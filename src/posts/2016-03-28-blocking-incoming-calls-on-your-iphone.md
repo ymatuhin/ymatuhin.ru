@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Лайфхак. Блокировка входящих без дисконектов на iPhone
-description: null
+description: >-
+  У меня мобильный оператор YOTA с безлимитным 4G интернетом, который я раздаю себе на Mac. Я
+  писал об этом в статье «Как снять ограничения Yota на раздачу интернета».
 tags:
   - non-development
   - lifehacks

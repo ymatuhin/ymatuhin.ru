@@ -1,7 +1,10 @@
 ---
 layout: post
 title: Исключаем папки из обычного и Fuzzy поиска в Atom
-description: Как исключить некоторые папки (к примеру node_modules, bower_components) из поиска в текстовом редакторе Atom.
+description: >-
+  Порой, чтобы открыть нужный файл, нужно знать все его название. А все из-за того, что у нас
+  очень много файлов в папках nodemodules и bowercomponents и они мешают открытию написанных нами
+  файлов.
 tags:
   - development
   - tools

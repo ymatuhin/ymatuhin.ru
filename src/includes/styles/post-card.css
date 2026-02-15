@@ -9,25 +9,26 @@
     border-top: 1px solid var(--border-color);
   }
 
-  .post-card__title {
-    position: relative;
-    color: var(--accent-color);
-    padding-bottom: 3px;
+  .post-card__title,
+  .post-card__cover figure {
+    margin: 0;
+  }
+
+  .post-card__divider {
+    margin: 0.5rem 0;
+    border-top: 3px dotted var(--accent-color);
+    height: 9px;
+    background: initial;
     border-bottom: 3px dotted var(--accent-color);
-    margin-top: 0;
   }
 
   .post-card__title a {
     text-decoration: none;
   }
 
-  .post-card__title::after {
-    content: "";
-    position: absolute;
-    bottom: -9px;
-    display: block;
-    width: 100%;
-    border-bottom: 3px dotted var(--accent-color);
+  .post-card__cover,
+  .post-card__content {
+    margin-top: 1rem;
   }
 
   .post-card__meta {

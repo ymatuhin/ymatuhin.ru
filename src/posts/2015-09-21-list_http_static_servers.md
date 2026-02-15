@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Список статичных HTTP серверов для терминала
+description: >-
+  На основании списка web-servers
+  Вильяма Боверса (William Bowers).
 tags:
   - development
   - tools

@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Контрольные точки медиа выражений Bootstrap
-description: Какие контрольные точки для media queries используются в css фреймворке Bootstrap для мобильных устройств? Почему медиа выражения с EM лучше чем с PX?
+description: >-
+  Twitter Bootstrap — самый популярный CSS фреймворк. У него более 85 495 звезд и 35 055 форков на
+  GitHub.
 tags:
   - development
   - frontend

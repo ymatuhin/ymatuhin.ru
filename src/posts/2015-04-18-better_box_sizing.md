@@ -1,7 +1,10 @@
 ---
 layout: post
 title: Международный день box-sizing и лучшие практики
-description: Лучшие практики использования CSS свойства box-sizing и праздник посвященный этому свойству.
+description: >-
+  Недавно я использовал в проекте css свойство box-sizing: border-box. В процессе этого я узнал
+  про «Международный день box-sizing» (International box-sizing Awareness Day). И хочу рассказать
+  вам что это за праздник, лучшие практики и поддержку свойства box-sizing.
 tags:
   - development
   - frontend

@@ -1,7 +1,9 @@
 ---
 layout: post
 title: 'Ускоряем загрузку ресурсов для сайта: preconnect, prefetch, prerender, preloading…'
-description: HTML5 Link Prefetch указывает браузеру какие ресурсы вам понадобятся в будущем на сайте и максимально подготовит их дальнейшую загрузку.
+description: >-
+  Сегодня мы рассмотрим «HTML5 Link Prefetch», а именно dns-prefetch, prefetch, preconnect,
+  subresource, prerender и еще неработающий preload.
 tags:
   - development
   - frontend
@@ -94,7 +96,7 @@ prepresolve. [Поддержка браузерами](http://caniuse.com/#searc
 
 ## Preloading
 
-Эта штука еще не работает, но её внесли в [спецификацию](https://w3c.github.io/preload/){:rel='nofollow'}. аботает
+Эта штука еще не работает, но её внесли в [спецификацию](https://w3c.github.io/preload/){:rel='nofollow'}. Работает
 так-же как и prefetch, но браузер всегда загрузит ресурс. Аналог прелоадеров для картинок, только нативный. Пока он
 не поддерживается, используйте prefetch. Пример:
 

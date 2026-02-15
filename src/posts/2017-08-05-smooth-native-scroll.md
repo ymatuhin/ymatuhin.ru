@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Плавный, нативный скрол
-description: Выкиньте лишние библиотеки для прокрутки внутри страницы
+description: >-
+  О нативной плавной прокрутке внутри страницы без дополнительных JavaScript-библиотек.
+  Показываю современный подход на CSS и браузерном API, который легче поддерживать.
 tags:
   - development
   - frontend
@@ -27,9 +29,9 @@ redirects:
 
 ```js
 window.scroll({
-    top: 2500,
-    left: 0,
-    behavior: 'smooth'
+  top: 2500,
+  left: 0,
+  behavior: 'smooth'
 });
 ```
 
@@ -39,7 +41,7 @@ window.scroll({
 добавить [полифил](http://iamdustan.com/smoothscroll/) и заработает везде. Поэтому я советую использовать именно этот
 метод для прокрутки на странице и отказаться от сторонних библиотек. А через пару лет можно будет и полифил выкинуть.
 
-аботает для методов `scroll`, `scrollTo`, `scrollBy`, `scrollIntoView`.
+Работает для методов `scroll`, `scrollTo`, `scrollBy`, `scrollIntoView`.
 
 ### Ссылки
 

@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Старт курса по архитектуре JavaScript приложений в SmartJS академии
-description: Краткое содержание вводной лекции курса по архитектуре современных JavaScript приложений в SmartJS академии
+description: >-
+  Вчера, 22 октября 2015 года, начался второй курс по архитектуре современных JavaScript
+  приложений в SmartJS академии.
 tags:
   - development
   - javascript

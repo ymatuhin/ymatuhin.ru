@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Добавляем красоты в наш Google Chrome с расширением Flickr Tab
-description: Новое расширение для Google Chrome — Flickr Tab, которое делает работу с каждой новой вкладкой удивительной.
+description: >-
+  Вот такой милый пес появился у меня при открытии новой вкладки в Google Chrome. И про это я хочу
+  сегодня рассказать вам.
 tags:
   - non-development
   - tools

@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Сглаживание шрифтов для разработчика и пользователя на Mac OS
+description: >-
+  Я давно интересовался сглаживанием шрифта для веб страниц на CSS. Но «волшебные» свойства, такие
+  как -webkit-font-smoothing, не работали на моем Win 7.
 tags:
   - development
   - frontend

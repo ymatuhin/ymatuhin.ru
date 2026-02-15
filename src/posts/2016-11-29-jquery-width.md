@@ -1,7 +1,9 @@
 ---
 layout: post
 title: jQuery.width() без округления
-description: Как взять ширину элемента без округления значений до целых чисел без jQuery.
+description: >-
+  Я обнаружил что jQuery.width() округляет значения. Из-за этого у меня была проблема в 1px при
+  некоторых разрешениях.
 tags:
   - development
   - frontend

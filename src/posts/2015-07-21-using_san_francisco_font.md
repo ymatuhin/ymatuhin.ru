@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Используем системный шрифт San Francisco на Mac OS
-description: Сниппет для использования нового системного шрифта San Francisco из El Capitan и IOS 9.
+description: >-
+  Вместе с выпуском Apple Watch, компания представила новый шрифт San Francisco, который теперь
+  будет использоваться во всей экосистеме Apple.
 tags:
   - development
   - frontend

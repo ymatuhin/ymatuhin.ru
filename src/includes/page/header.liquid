@@ -12,15 +12,14 @@
 
   <div class="nav-container">
     <nav class="global-navigation" aria-label="Основные категории">
-      Теги:
-      {% if page.url == developmentTagUrl %}<b class="global-navigation__item">разработка</b>,
-      {% else %}<a class="global-navigation__item" href="{{ developmentTagUrl }}">разработка</a>,{% endif %}
+      {% if page.url == developmentTagUrl %}<b class="global-navigation__item">разработка</b>
+      {% else %}<a class="global-navigation__item" href="{{ developmentTagUrl }}">разработка</a>{% endif %}
 
-      {% if page.url == nonDevelopmentTagUrl %}<b class="global-navigation__item">не разработка</b>,
-      {% else %}<a class="global-navigation__item" href="{{ nonDevelopmentTagUrl }}">не разработка</a>,{% endif %}
+      {% if page.url == nonDevelopmentTagUrl %}<b class="global-navigation__item">не разработка</b>
+      {% else %}<a class="global-navigation__item" href="{{ nonDevelopmentTagUrl }}">не разработка</a>{% endif %}
 
-      {% if page.url == '/tags/' %}<b class="global-navigation__item">все</b>
-      {% else %}<a class="global-navigation__item" href="/tags/">все</a>{% endif %}
+      {% if page.url == '/tags/' %}<b class="global-navigation__item">все теги</b>
+      {% else %}<a class="global-navigation__item" href="/tags/">все теги</a>{% endif %}
     </nav>
     <nav aria-label="Социальные ссылки: GitHub, Telegram, почта и RSS">
       <a href="https://github.com/ymatuhin">гитхаб</a>

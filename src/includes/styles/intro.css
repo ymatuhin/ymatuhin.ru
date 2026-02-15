@@ -1,17 +1,28 @@
 @layer components {
-  fieldset {
+  details.intro {
     display: inline-block;
-    border: 2px solid var(--text-color);
-    padding: 1rem 1.5rem 1.5rem;
+    border: 2px solid var(--accent-color);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
   }
 
-  fieldset.intro {
-    margin-bottom: 3rem;
-    border-color: var(--accent-color);
+  details.intro[open] {
+    padding-bottom: 1.5rem;
   }
 
-  fieldset legend {
-    padding: 0 0.75rem;
-    margin-left: -0.75rem;
+  details.intro > summary {
+    cursor: pointer;
+  }
+
+  details.intro > summary::marker {
+    margin-right: .5rem;
+  }
+
+  details.intro[open] > summary {
+    margin-bottom: 1rem;
+  }
+
+  details.intro > *:last-child {
+    margin-bottom: 0;
   }
 }

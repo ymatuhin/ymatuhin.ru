@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Вопросы для собеседования кандидату на должность Front-end разработчика
+description: >-
+  *Это перевод популярного репозитория от html5bp — Front-end Job Interview Questions (en),
+  который существует с 2009 года.
 tags:
   - development
   - frontend

@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Код. Плейсхолдер для [contenteditable]
-description: Placeholder полифил для contenteditable элемента
+description: >-
+  Я уже сильно привык к атрибуту placeholder, и немного грустил зная что не работает с
+  placeholder. Но чутка погуглив я нашел инетресное решение, которым хочу поделиться с вами.
 tags:
   - development
   - frontend

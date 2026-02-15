@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Правильный сниппет медиа выражений для retina
-description: Короткий сниппет media queries для определения retina дисплеев и старые сниппеты, от которых нужно давно избавиться.
+description: >-
+  Я видел разные способы определения мониторов retina. Разберемся, какие из media queries
+  изпользовать.
 tags:
   - development
   - frontend

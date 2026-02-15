@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Стилизуем инструменты разработчика (dev tools) в Google Chrome
+description: >-
+  Совсем недавно я узнал, что Chrome поддерживает темы для dev tools. Мне сразу-же захотелось
+  попробовать это.
 tags:
   - development
   - frontend

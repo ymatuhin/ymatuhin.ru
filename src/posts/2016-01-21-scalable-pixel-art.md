@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Масштабируемый пиксель арт
-description: Управляем сглаживаем для pixel art иллюстраций в браузере через CSS свойство image-rendering.
+description: >-
+  Только взгляните на этот предмет искусства
+  выше. Восьмибитная ностальгия, красота и простота.
 tags:
   - development
   - frontend

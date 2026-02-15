@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Проверка на блокировку рекламы, или «Пожалуйста, отключите AdBlock»
-description: Как определить, что у пользователя установлен блокировщик рекламы AdBlock, AdGuard и другие.
+description: >-
+  Cравнить блокировщики можно на сайте с рекламой. На рекламе зарабатывают популярные интернет
+  ресурсы, такие как Хабрахабр, Лайфхакер и множество других.
 tags:
   - development
   - frontend
@@ -40,10 +42,11 @@ redirects:
 
 ```js
 function adBlockNotDetected() {
-    alert('AdBlock не активен');
+  alert('AdBlock не активен');
 }
+
 function adBlockDetected() {
-    alert('AdBlock активен');
+  alert('AdBlock активен');
 }
 ```
 
@@ -62,8 +65,11 @@ window.noAdBlock = true;
 А в HTML:
 
 ```html
+
 <script src="ads.js"></script>
-<script>if (!noAdBlock) { alert('AdBlock включен!') }</script>
+<script>if (!noAdBlock) {
+  alert('AdBlock включен!')
+}</script>
 ```
 
 Этот способ не такой надежный как первый, но зато файл пустой. Но пользователю все равно нужно загружать пусть и пустой
@@ -74,7 +80,8 @@ window.noAdBlock = true;
 Третий способ основан на отлавливании события ошибки при загрузке рекламного скрипта:
 
 ```html
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"  onerror="alert('AdBlock включен!')"></script>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" onerror="alert('AdBlock включен!')"></script>
 ```
 
 *Из плюсов* — ничего не нужно грузить и все работает.

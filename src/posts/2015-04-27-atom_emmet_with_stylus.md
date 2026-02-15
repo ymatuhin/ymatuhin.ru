@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Фиксим Emmet под Atom для работы со Stylus файлами
-description: Фиксим работоспособность плагина Emmet под Atom для препроцессора Stylus.
+description: >-
+  Расширение Emmet отлично работает с html, css, sass, scss, less. Видимо из-за того, что этот
+  препроцессор не так распространен то в Emmet официально нет его поддержки.
 tags:
   - development
   - tools

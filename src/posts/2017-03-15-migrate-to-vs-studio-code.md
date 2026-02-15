@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Миграция на Visual Studio Code
-description: Как безболезненно мигрировать с Atom/Sublime Text на Visual Studio Code
+description: >-
+  Уже 2 недели я использую Visual Studio Code для работы. Он пришел на замену, моему любимому,
+  атому.
 tags:
   - development
   - tools

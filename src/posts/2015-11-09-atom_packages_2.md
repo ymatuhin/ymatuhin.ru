@@ -1,7 +1,9 @@
 ---
 layout: post
 title: 'Плагины для Atom #2'
-description: 'Плагины и дополнения для текстового редактора Atom: advanced-open-file, ternjs, auto-update, autocomplete-paths, git-projects, highlight-selected, jumpy, minimap, pigments, regex-railroad-diagram, space-tab, symbols-tree-view, synced-sidebar, mechanical-keyboard, zen.'
+description: >-
+  Продолжение стати «Лучшие плагины для текстового редактора Atom». Я расскажу о новых плагинах,
+  которые часто мне помогают.
 tags:
   - development
   - tools
