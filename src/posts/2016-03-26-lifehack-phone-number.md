@@ -10,6 +10,7 @@ tags:
 image:
   path: phones/phones.jpeg
 redirects:
+  - /front-end/blog/lifehack-phone-number/
   - /blog/lifehack-phone-number/
   - /front-end/lifehack-phone-number/
 ---
