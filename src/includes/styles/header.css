@@ -11,14 +11,15 @@
 
   .header__logo {
     display: flex;
-    flex: 1
+    flex-grow: 1;
+    flex-shrink: 0;
   }
 
   .header__logo::after {
     content: "";
     background: repeating-linear-gradient(90deg, var(--accent-color), var(--accent-color) 2px, transparent 0, transparent 10px);
     display: block;
-    width: 100%;
+    flex-grow: 1;
     margin-left: -2px;
   }
 
@@ -44,6 +45,11 @@
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .nav-container nav:last-child {
+    text-align: right;
   }
 
   .header select {
