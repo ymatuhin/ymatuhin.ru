@@ -2,8 +2,9 @@ blockquote {
   position: relative;
   border-top: 1px solid var(--accent-color);
   border-bottom: 1px solid var(--accent-color);
-  margin: 0;
-  padding: 25px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem 2rem;
 }
 
 blockquote::before {

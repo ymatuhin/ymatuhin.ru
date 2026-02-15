@@ -7,7 +7,7 @@ description: >-
 tags:
   - development
   - frontend
-  - javascript
+  - css
 image:
   path: contenteditable.jpg
   alt: '[contenteditable]'

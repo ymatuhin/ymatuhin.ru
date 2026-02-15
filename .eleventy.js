@@ -11,11 +11,8 @@ import {
   buildTagPagesCollection,
   buildTagsCollection,
 } from './config/collections.js';
-import {
-  addExternalLinkSecurityAttrs,
-  applyTypography,
-  minifyHtmlAndInlineCss,
-} from './config/transforms.js';
+import { addExternalLinkSecurityAttrs, applyTypography, minifyHtmlAndInlineCss, } from './config/transforms.js';
+import { buildRelatedPosts } from './config/relatedPosts.js';
 import { toTagLabel, toTagSlug } from './config/tag-utils.js';
 import siteData from './config/site.js';
 
@@ -28,9 +25,6 @@ export default function (eleventyConfig) {
   // Bundles
   eleventyConfig.addBundle('css');
   eleventyConfig.addBundle('html');
-
-  // Global data
-  eleventyConfig.addGlobalData('site', siteData);
 
   // Markdown
   const mdOptions = { html: true, breaks: false, linkify: false };
@@ -57,6 +51,12 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection('postTypes', buildPostTypesCollection);
   eleventyConfig.addCollection('tagPages', buildTagPagesCollection);
   eleventyConfig.addCollection('redirects', buildFrontmatterRedirectsCollection);
+
+  // Global data
+  eleventyConfig.addGlobalData('site', siteData);
+  eleventyConfig.addGlobalData('eleventyComputed', {
+    relatedPosts: buildRelatedPosts,
+  });
 
   // Transforms
   eleventyConfig.addTransform('apply-typography', applyTypography);
