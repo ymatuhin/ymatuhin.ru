@@ -1,6 +1,7 @@
 img {
   display: block;
   max-width: 100%;
+  height: auto;
   border: 8px solid var(--accent-color);
   padding: 8px;
 }

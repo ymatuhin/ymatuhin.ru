@@ -10,7 +10,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addBundle("css");
   eleventyConfig.addBundle("html");
 
-  const mdOptions = {html: true, breaks: true, linkify: false};
+  const mdOptions = {html: true, breaks: false, linkify: false};
   eleventyConfig.setLibrary("md", markdownIt(mdOptions).use(markdownItAttrs));
 
   // Plugins
@@ -55,7 +55,7 @@ export default function (eleventyConfig) {
     const metadata = await Image(source, {
       widths: ["auto"],
       formats,
-      outputDir: "./_site/assets/img/optimized/",
+      outputDir: "./.cache/eleventy-img/",
       urlPath: "/assets/img/optimized/"
     });
 
@@ -71,6 +71,7 @@ export default function (eleventyConfig) {
 
   // Passthrough copy
   eleventyConfig.addPassthroughCopy({"public": "/"});
+  eleventyConfig.addPassthroughCopy({"./.cache/eleventy-img": "/assets/img/optimized/"});
 
   // Collections
   eleventyConfig.addCollection("posts", function (collectionApi) {
