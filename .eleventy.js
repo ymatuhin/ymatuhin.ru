@@ -26,6 +26,9 @@ export default function (eleventyConfig) {
     if (data.draft && process.env.ELEVENTY_RUN_MODE === 'build') return false;
   });
 
+  // Global data
+  eleventyConfig.addGlobalData('site', siteData);
+
   // Bundles
   eleventyConfig.addBundle('css');
   eleventyConfig.addBundle('html');
@@ -56,9 +59,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection('postTypes', buildPostTypesCollection);
   eleventyConfig.addCollection('tagPages', buildTagPagesCollection);
   eleventyConfig.addCollection('redirects', buildFrontmatterRedirectsCollection);
-
-  // Global data
-  eleventyConfig.addGlobalData('site', siteData);
 
   // Transforms
   eleventyConfig.addTransform('apply-typography', applyTypography);

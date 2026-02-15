@@ -15,11 +15,11 @@ layout: default
   </heading-anchors>
 </article>
 
-<hr>
+<hr class="post__divider-after / divider">
 {% assign relatedPosts = collections.posts | relatedPosts: page, tags %}
 {% if relatedPosts.size > 0 %}
   <aside class="similar-articles" aria-label="Similar articles">
-    <h2>Similar articles</h2>
+    <h3>Похожие (ну почти) записи</h3>
     <ul>
       {% for post in relatedPosts %}
         <li>
@@ -31,7 +31,8 @@ layout: default
 {% endif %}
 
 {% css %}
-.post__content > :last-child { margin-bottom: 0; }
+.post__content > :last-child { margin-bottom: 0 }
+.post__divider-after { color: var(--secondary-text-color); margin: 3rem 0; }
 {% endcss %}
 
 {% html "head" %}

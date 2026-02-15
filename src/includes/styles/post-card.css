@@ -26,16 +26,8 @@
   }
 
   .post-card__divider {
+    color: inherit;
     margin: 0.5rem 0;
-    height: 9px;
-    background: initial;
-    border-top: 3px dotted var(--accent-color);
-    border-bottom: 3px dotted var(--accent-color);
-  }
-
-  .post-card_in-post .post-card__divider {
-    border-top: 3px dotted var(--text-color);
-    border-bottom: 3px dotted var(--text-color);
   }
 
   .post-card__title {
