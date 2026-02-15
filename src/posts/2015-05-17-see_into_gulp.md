@@ -1,6 +1,6 @@
 ---
 layout: 'post'
-title: ' азбираемся со сборкой front end на Gulp'
+title: 'Разбираемся со сборкой front end на Gulp'
 description: 'Обзор основных возможностей новой системы для сборки проектов — Gulp, а так-же с изучаем как работают его основные функциии.'
 categories: 'front-end'
 tags:

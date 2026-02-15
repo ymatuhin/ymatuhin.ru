@@ -5,7 +5,7 @@ description: 'Какие контрольные точки для media queries 
 categories: 'front-end'
 tags:
   - 'bootstrap'
-  - 'media quires'
+  - 'media queries'
   - 'медиа выражения'
 image:
   path: 'media_queries/bootstrap.png'

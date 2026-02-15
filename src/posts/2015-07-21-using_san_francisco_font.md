@@ -1,7 +1,7 @@
 ---
 layout: 'post'
-title: 'Используем системный шрифт San Franciso на Mac OS'
-description: 'Сниппет для использования нового системного шрифта San Franciso из El Capitan и IOS 9.'
+title: 'Используем системный шрифт San Francisco на Mac OS'
+description: 'Сниппет для использования нового системного шрифта San Francisco из El Capitan и IOS 9.'
 categories: 'front-end'
 tags:
   - 'привычка'

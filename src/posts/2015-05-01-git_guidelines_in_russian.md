@@ -1,6 +1,6 @@
 ---
 layout: 'post'
-title: ' уководства по GIT на русском языке'
+title: 'Руководства по GIT на русском языке'
 description: 'Список лучших руководств, книг, ресурсов, учебников для обучения основам GIT на русском языке.'
 categories: 'front-end'
 tags:
@@ -19,7 +19,7 @@ tags:
   - 'ресурсы'
 image:
   path: 'git/git_guide.png'
-  alt: ' уководства по GIT на русском языке'
+  alt: 'Руководства по GIT на русском языке'
 ---
 
 {% mediaImage image.path, image.alt %}
