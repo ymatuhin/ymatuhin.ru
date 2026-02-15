@@ -1,4 +1,4 @@
-img {
+img, iframe {
   background-color: var(--lighter-background-color);
   display: block;
   max-width: 100%;
@@ -8,6 +8,7 @@ img {
 }
 
 figure img,
+figure iframe,
 figure video {
   margin-bottom: 0;
 }

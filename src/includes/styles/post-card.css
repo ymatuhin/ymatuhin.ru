@@ -4,9 +4,16 @@
   }
 
   .post-card + .post-card {
-    margin-top: 3rem;
-    padding-top: 3rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
     border-top: 1px solid var(--border-color);
+  }
+
+  @media (min-width: 480px) {
+    .post-card + .post-card {
+      margin-top: 3rem;
+      padding-top: 3rem;
+    }
   }
 
   .post-card__title,

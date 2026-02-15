@@ -4,6 +4,8 @@ ol,
 img,
 figure,
 video,
+iframe,
+pre,
 table {
   margin-bottom: 1rem;
 }

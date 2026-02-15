@@ -24,8 +24,11 @@
     <nav aria-label="Социальные ссылки: GitHub, Telegram, почта и RSS">
       <a href="https://github.com/ymatuhin">гитхаб</a>
       <a href="https://t.me/ymatuhin">телега</a>
-      <a href="#">почта</a>
-      <a href="#">рсс</a>
+      <a href="mailto:{{ site.email }}">почта</a>
+      <a href="{{ site.feed_url }}">рсс</a>
+      {% if currentTagPage and currentTagPage.slug %}
+        <a href="/tag/{{ currentTagPage.slug }}/feed.xml">рсс тега</a>
+      {% endif %}
     </nav>
   </div>
 </header>

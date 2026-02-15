@@ -14,24 +14,12 @@ importers:
       '@11ty/eleventy-img':
         specifier: ^6.0.0
         version: 6.0.4
-      '@11ty/eleventy-plugin-rss':
-        specifier: ^2.0.4
-        version: 2.0.4
       '@11ty/eleventy-plugin-syntaxhighlight':
         specifier: ^5.0.2
         version: 5.0.2
-      canvas-confetti:
-        specifier: ^1.9.4
-        version: 1.9.4
-      eleventy-plugin-seo:
-        specifier: ^0.5.2
-        version: 0.5.2
       html-minifier-terser:
         specifier: ^7.2.0
         version: 7.2.0
-      luxon:
-        specifier: ^3.7.2
-        version: 3.7.2
       markdown-it:
         specifier: ^14.1.1
         version: 14.1.1
@@ -47,6 +35,9 @@ importers:
       sass:
         specifier: ^1.97.3
         version: 1.97.3
+      typograf:
+        specifier: ^7.6.0
+        version: 7.6.0
 
 packages:
 
@@ -72,9 +63,6 @@ packages:
   '@11ty/eleventy-plugin-bundle@3.0.7':
     resolution: {integrity: sha512-QK1tRFBhQdZASnYU8GMzpTdsMMFLVAkuU0gVVILqNyp09xJJZb81kAS3AFrNrwBCsgLxTdWHJ8N64+OTTsoKkA==}
     engines: {node: '>=18'}
-
-  '@11ty/eleventy-plugin-rss@2.0.4':
-    resolution: {integrity: sha512-LF60sGVlxGTryQe3hTifuzrwF8R7XbrNsM2xfcDcNMSliLN4kmB+7zvoLRySRx0AQDjqhPTAeeeT0ra6/9zHUQ==}
 
   '@11ty/eleventy-plugin-syntaxhighlight@5.0.2':
     resolution: {integrity: sha512-T6xVVRDJuHlrFMHbUiZkHjj5o1IlLzZW+1IL9eUsyXFU7rY2ztcYhZew/64vmceFFpQwzuSfxQOXxTJYmKkQ+A==}
@@ -404,9 +392,6 @@ packages:
   camel-case@4.1.2:
     resolution: {integrity: sha512-gxGWBrTT1JuMx6R+o5PTXMmUnhnVzLQ9SNutD4YqKtI6ap897t3tKECYla6gCWEkplXnlNybEkZg9GEGxKFCgw==}
 
-  canvas-confetti@1.9.4:
-    resolution: {integrity: sha512-yxQbJkAVrFXWNbTUjPqjF7G+g6pDotOUHGbkZq2NELZUMDpiJ85rIEazVb8GTaAptNW2miJAXbs1BtioA251Pw==}
-
   chokidar@3.6.0:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
     engines: {node: '>= 8.10.0'}
@@ -506,9 +491,6 @@ packages:
 
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
-
-  eleventy-plugin-seo@0.5.2:
-    resolution: {integrity: sha512-saAWnrQrMc/dP6nimCbvAlumohfBrDI7IrpkN/OJoxvLxcOsyWrA+XMR+3lWLVAkuwC1SyA5cbunr1u8jkFK/A==}
 
   encodeurl@2.0.0:
     resolution: {integrity: sha512-Q0n9HRi4m6JuGIV1eFlmvJB7ZEVxu93IrMyiMsGC0lrMJMWzRgx6WGquyfQgZVb31vhGgXnfmPNNXmxnOkRBrg==}
@@ -611,9 +593,6 @@ packages:
     resolution: {integrity: sha512-5v6yZd4JK3eMI3FqqCouswVqwugaA9r4dNZB1wwcmrD02QkV5H0y7XBQW8QwQqEaZY1pM9aqORSORhJRdNK44Q==}
     engines: {node: '>=6.0'}
 
-  html-entities@1.4.0:
-    resolution: {integrity: sha512-8nxjcBcd8wovbeKx7h3wTji4e6+rhaVuPNpMqwWgnHh+N9ToqsCs6XztWRBPQ+UtzsoMAdKZtUENoVzU/EMtZA==}
-
   html-minifier-terser@7.2.0:
     resolution: {integrity: sha512-tXgn3QfqPIpGl9o+K5tpcj3/MN4SfLtsx2GWwBC3SSd0tXQGyF3gsSqad8loJgKZGM3ZxbYDd5yhiBIdWpmvLA==}
     engines: {node: ^14.13.1 || >=16.0.0}
@@ -710,9 +689,6 @@ packages:
 
   list-to-array@1.1.0:
     resolution: {integrity: sha512-+dAZZ2mM+/m+vY9ezfoueVvrgnHIGi5FvgSymbIgJOFwiznWyA59mav95L+Mc6xPtL3s9gm5eNTlNtxJLbNM1g==}
-
-  lodash@4.17.23:
-    resolution: {integrity: sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==}
 
   lower-case@2.0.2:
     resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
@@ -1012,6 +988,10 @@ packages:
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
+  typograf@7.6.0:
+    resolution: {integrity: sha512-sqYx4X1L7EDNRuJpqg/V+GCWMOpzVD5Om9IW0udi294sQYPwGGeRpPwsLC3gPt2BTsLtLiWJKpkwiyuO5PK2lQ==}
+    engines: {node: '>= 4'}
+
   uc.micro@2.1.0:
     resolution: {integrity: sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A==}
 
@@ -1099,15 +1079,6 @@ snapshots:
       posthtml-match-helper: 2.0.3(posthtml@0.16.7)
     transitivePeerDependencies:
       - posthtml
-      - supports-color
-
-  '@11ty/eleventy-plugin-rss@2.0.4':
-    dependencies:
-      '@11ty/eleventy-utils': 2.0.7
-      '@11ty/posthtml-urls': 1.0.2
-      debug: 4.4.3
-      posthtml: 0.16.7
-    transitivePeerDependencies:
       - supports-color
 
   '@11ty/eleventy-plugin-syntaxhighlight@5.0.2':
@@ -1423,8 +1394,6 @@ snapshots:
       pascal-case: 3.1.2
       tslib: 2.8.1
 
-  canvas-confetti@1.9.4: {}
-
   chokidar@3.6.0:
     dependencies:
       anymatch: 3.1.3
@@ -1514,11 +1483,6 @@ snapshots:
 
   ee-first@1.1.1: {}
 
-  eleventy-plugin-seo@0.5.2:
-    dependencies:
-      html-entities: 1.4.0
-      lodash: 4.17.23
-
   encodeurl@2.0.0: {}
 
   entities@2.2.0: {}
@@ -1604,8 +1568,6 @@ snapshots:
       kind-of: 6.0.3
       section-matter: 1.0.0
       strip-bom-string: 1.0.0
-
-  html-entities@1.4.0: {}
 
   html-minifier-terser@7.2.0:
     dependencies:
@@ -1695,8 +1657,6 @@ snapshots:
       commander: 10.0.1
 
   list-to-array@1.1.0: {}
-
-  lodash@4.17.23: {}
 
   lower-case@2.0.2:
     dependencies:
@@ -1994,6 +1954,8 @@ snapshots:
   toidentifier@1.0.1: {}
 
   tslib@2.8.1: {}
+
+  typograf@7.6.0: {}
 
   uc.micro@2.1.0: {}
 

@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ lang | default: site.lang | default: 'ru' }}">
+  {% unless currentTagPage and currentTagPage.slug %}
+    {% html "head" %}
+      <link rel="alternate" href="{{ site.feed_url }}" type="application/rss+xml" title="{{ site.title }}">
+    {% endhtml %}
+  {% endunless %}
   {% include "page/head.liquid" %}
 
   <div class="layout">

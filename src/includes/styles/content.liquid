@@ -11,6 +11,7 @@
 {% assign hasFigure = contentToCheck contains "<figure" %}
 {% assign hasVideo = contentToCheck contains "<video" %}
 {% assign hasTable = contentToCheck contains "<table" %}
+{% assign hasIframe = contentToCheck contains "<iframe" %}
 {% assign hasCode = contentToCheck contains "<code" %}
 {% assign hasPre = contentToCheck contains "<pre" %}
 {% assign hasKbd = contentToCheck contains "<kbd" %}
@@ -31,7 +32,7 @@
   {% include "styles/content/headings.css" %}
 {% endif %}
 
-{% if hasP or hasList or hasImg or hasFigure or hasVideo or hasTable %}
+{% if hasP or hasList or hasImg or hasFigure or hasVideo or hasTable or hasIframe or hasPre %}
   {% include "styles/content/spacing.css" %}
 {% endif %}
 
@@ -39,7 +40,7 @@
   {% include "styles/content/lists.css" %}
 {% endif %}
 
-{% if hasImg or hasFigure or hasVideo %}
+{% if hasImg or hasFigure or hasVideo or hasIframe %}
   {% include "styles/content/media.css" %}
 {% endif %}
 

@@ -1,9 +1,8 @@
 import markdownIt from 'markdown-it';
 import markdownItAttrs from 'markdown-it-attrs';
 import { IdAttributePlugin } from '@11ty/eleventy';
-import { feedPlugin } from '@11ty/eleventy-plugin-rss';
 import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
-import { feedConfig, idAttributeFilter } from './config/plugins.js';
+import { idAttributeFilter } from './config/plugins.js';
 import { mediaImageShortcode } from './config/shortcodes.js';
 import {
   buildFrontmatterRedirectsCollection,
@@ -40,7 +39,6 @@ export default function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(IdAttributePlugin, { filter: idAttributeFilter });
   eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPlugin(feedPlugin, feedConfig);
 
   // Filters
   eleventyConfig.addFilter('tagSlug', toTagSlug);
@@ -66,7 +64,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addTransform('minify-html-and-inline-css', minifyHtmlAndInlineCss);
 
   return {
-    // njk is required for feed plugin
     templateFormats: ['md', 'html', 'liquid', 'njk'],
     dir: {
       input: 'src',
