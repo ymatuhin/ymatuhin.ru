@@ -3,10 +3,10 @@ layout: post
 title: Ищем самый быстрый DNS сервер
 description: Программа для поиска самого быстрого DNS сервера для  оссии, Украины и всего мира от Google.
 tags:
-  - не разработка
-  - инструменты
+  - non-development
+  - tools
   - dns
-  - производительность
+  - performance
 redirects:
   - /tools/find_the_best_dns/
 ---

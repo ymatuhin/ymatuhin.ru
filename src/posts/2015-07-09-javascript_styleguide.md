@@ -3,10 +3,10 @@ layout: post
 title: Гайд по стилю кода на JavaScript от AirBnB
 description: Общие рекомендации по стилю написания кода от Airbnb. Влючая сравнения производительности и лучшие практики.
 tags:
-  - разработка
-  - фронтенд
+  - development
+  - frontend
   - javascript
-  - стиль-кода
+  - code-style
 image: null
 path: styleguide/styleguide.jpg
 alt: Гайд по стилю кода на JavaScript от AirBnB

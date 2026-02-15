@@ -3,8 +3,8 @@ layout: post
 title: Создаем и настраиваем файл .gitignore в git
 description: Обзор сервиса для автоматического создания файла gitignore — Gitignore.io. Автоматическая настройка и примеры использования.
 tags:
-  - разработка
-  - инструменты
+  - development
+  - tools
   - git
 image:
   path: git/gitignore.png

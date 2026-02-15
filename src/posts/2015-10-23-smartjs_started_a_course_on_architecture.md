@@ -3,10 +3,10 @@ layout: post
 title: Старт курса по архитектуре JavaScript приложений в SmartJS академии
 description: Краткое содержание вводной лекции курса по архитектуре современных JavaScript приложений в SmartJS академии
 tags:
-  - разработка
+  - development
   - javascript
-  - архитектура
-  - обучение
+  - architecture
+  - education
 image:
   path: smartjs/logo.jpg
   alt: Логотип SmartJS академии

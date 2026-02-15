@@ -2,9 +2,9 @@
 layout: post
 title: Вопросы для собеседования кандидату на должность Front-end разработчика
 tags:
-  - разработка
-  - фронтенд
-  - собеседования
+  - development
+  - frontend
+  - interviews
 image:
   path: front_end_interview/mem.jpg
   alt: На собеседовании фронтенд разработчика

@@ -3,10 +3,10 @@ layout: post
 title: Анимируем высоту c auto в CSS через transition
 description: Как сделать анимацию высоты в CSS со значением auto через transition? Легко и без единой строчки javascript. Подробнее читайте в этой статье.
 tags:
-  - разработка
-  - фронтенд
+  - development
+  - frontend
   - css
-  - анимация
+  - animation
 image:
   path: animate_height/transition_sign.jpg
   alt: CSS анимация высоты через transition

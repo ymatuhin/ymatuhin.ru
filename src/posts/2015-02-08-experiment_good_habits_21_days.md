@@ -3,10 +3,10 @@ layout: post
 title: Эксперимент по формированию полезных привычек за 21 день
 description: Говорят, что человек — это его привычки. Я решил провести эксперимент, в котором буду пытаться сформировать полезные привычки за 21 день.
 tags:
-  - не разработка
-  - саморазвитие
-  - привычки
-  - эксперименты
+  - non-development
+  - self-improvement
+  - habits
+  - experiments
 redirects:
   - /blog/experiment_good_habits_21_days/
 ---

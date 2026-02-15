@@ -5,10 +5,10 @@ image:
   path: atom/atom_packages.jpg
   alt: Atom packages
 tags:
-  - разработка
-  - инструменты
-  - редакторы
-  - плагины
+  - development
+  - tools
+  - editors
+  - plugins
   - atom
 description: |
   Плагины и дополнения для текстового редактора Atom: linter, stylus, beautify, autocomplete-plus, color-picker, easy-motion, emmet, file-icons, jekyll, angularjs, project-manager, merge-conflicts, minimap, open-in-browser, project-palette-finder, unregistered.

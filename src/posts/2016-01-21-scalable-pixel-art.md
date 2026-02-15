@@ -3,10 +3,10 @@ layout: post
 title: Масштабируемый пиксель арт
 description: Управляем сглаживаем для pixel art иллюстраций в браузере через CSS свойство image-rendering.
 tags:
-  - разработка
-  - фронтенд
+  - development
+  - frontend
   - css
-  - графика
+  - graphics
 image:
   path: pixel-art/pixel-art.gif
   alt: Пиратский сюжет, автор bugpixel

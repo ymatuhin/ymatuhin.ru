@@ -3,8 +3,8 @@ layout: post
 title: CSS. Выравнивание блочного элемента по правому краю.
 description: Способ горизонтального выравнивания по центру и правому краю для блочных элементов через CSS
 tags:
-  - разработка
-  - фронтенд
+  - development
+  - frontend
   - css
 image:
   path: margin/margin_right_alignment.gif

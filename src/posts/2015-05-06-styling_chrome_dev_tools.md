@@ -2,9 +2,9 @@
 layout: post
 title: Стилизуем инструменты разработчика (dev tools) в Google Chrome
 tags:
-  - разработка
-  - фронтенд
-  - инструменты
+  - development
+  - frontend
+  - tools
   - devtools
   - css
 image:

@@ -3,9 +3,9 @@ layout: post
 title: Как называть переменные
 description: Мой взгляд на соглашения наименования переменных, функций, методов и классов
 tags:
-  - разработка
+  - development
   - javascript
-  - стиль-кода
+  - code-style
 image:
   path: variables/variables.jpg
   alt: Как называть переменные

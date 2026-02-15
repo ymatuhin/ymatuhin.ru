@@ -3,10 +3,10 @@ layout: post
 title: Все еще сидите на Sublime? Тогда мы, вместе с Atom, идем к вам!
 description: Обзор нового текстового редактора Atom от команды Github в сравнении c Sublime Text 3. Atom vs Sublime.
 tags:
-  - разработка
-  - инструменты
-  - редакторы
-  - отзывы
+  - development
+  - tools
+  - editors
+  - reviews
 image:
   path: atom/atom_vs_sublime.jpg
   alt: Atom

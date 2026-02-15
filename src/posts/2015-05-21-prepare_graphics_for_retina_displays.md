@@ -3,10 +3,10 @@ layout: post
 title: Оптимизация верстки под retina дисплеи
 description: Подготавливаем верску сайта под ретина дисплеи, оптимизируем верстку и изображения.
 tags:
-  - разработка
-  - фронтенд
+  - development
+  - frontend
   - css
-  - оптимизация
+  - optimization
   - retina
 redirects:
   - /front-end/prepare_graphics_for_retina_displays/

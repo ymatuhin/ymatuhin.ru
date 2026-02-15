@@ -6,10 +6,10 @@ image:
   path: need_to_frontend/i-have-a-plan.jpg
   alt: Кажется у меня есть план…
 tags:
-  - разработка
-  - фронтенд
-  - собеседования
-  - саморазвитие
+  - development
+  - frontend
+  - interviews
+  - self-improvement
 redirects:
   - /front-end/plan_for_frontend_developer/
 ---

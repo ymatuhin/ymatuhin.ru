@@ -3,10 +3,10 @@ layout: post
 title: Проверка на блокировку рекламы, или «Пожалуйста, отключите AdBlock»
 description: Как определить, что у пользователя установлен блокировщик рекламы AdBlock, AdGuard и другие.
 tags:
-  - разработка
-  - фронтенд
+  - development
+  - frontend
   - javascript
-  - реклама
+  - ads
   - adblock
 image:
   path: adblock/logo_adblock.png

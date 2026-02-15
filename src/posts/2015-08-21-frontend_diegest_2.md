@@ -3,9 +3,9 @@ layout: post
 title: 'Фронтенд дайджест #2 — БЭМ, CSS матрицы, SVG логотипы, Vivaldi, Bootstrap, Canvas'
 description: Дайджест ссылок для разработчиков интерфейсов и frontend разработчиков. 3D прогресс бар, БЭМ, CSS матрицы, SVG логотипы, Vivaldi, Bootstrap, Canvas, шпаргалка, Electron...
 tags:
-  - разработка
-  - фронтенд
-  - дайджест
+  - development
+  - frontend
+  - digest
 redirects:
   - /front-end/frontend_diegest_2/
 ---

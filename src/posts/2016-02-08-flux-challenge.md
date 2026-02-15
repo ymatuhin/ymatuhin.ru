@@ -3,11 +3,11 @@ layout: post
 title: На чем тестировать JavaScript фреймворки
 description: На чем испробовать новую технологию или фреймоврк если нет сайд/пет проекта? Пара интересных задачек в этой заметке.
 tags:
-  - разработка
-  - фронтенд
+  - development
+  - frontend
   - javascript
-  - фреймворки
-  - тестирование
+  - frameworks
+  - testing
 image:
   path: test-framework/frameworks.jpg
   alt: 'Разнообразие JavaScript фреймворков'

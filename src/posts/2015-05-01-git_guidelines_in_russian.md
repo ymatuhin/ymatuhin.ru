@@ -3,8 +3,8 @@ layout: post
 title: Руководства по GIT на русском языке
 description: Список лучших руководств, книг, ресурсов, учебников для обучения основам GIT на русском языке.
 tags:
-  - разработка
-  - инструменты
+  - development
+  - tools
   - git
 image:
   path: git/git_guide.png

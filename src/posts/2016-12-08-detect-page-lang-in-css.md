@@ -3,10 +3,10 @@ layout: post
 title: Определяем язык страницы в CSS
 description: Через псевдокласс О_о
 tags:
-  - разработка
-  - фронтенд
+  - development
+  - frontend
   - css
-  - советы
+  - tips
 redirects:
   - /front-end/detect-page-lang-in-css/
 ---

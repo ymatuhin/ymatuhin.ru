@@ -1,4 +1,9 @@
 <header class="header">
+  {% assign developmentTagSlug = "разработка" | tagSlug %}
+  {% assign nonDevelopmentTagSlug = "не разработка" | tagSlug %}
+  {% assign developmentTagUrl = "/tag/" | append: developmentTagSlug | append: "/" %}
+  {% assign nonDevelopmentTagUrl = "/tag/" | append: nonDevelopmentTagSlug | append: "/" %}
+
   <div class="header__inner">
     <a class="header__logo" href="/" aria-label="Юра Матюхин — главная страница">
       {% include "svg/logo.svg" %}
@@ -8,11 +13,11 @@
   <div class="nav-container">
     <nav class="global-navigation" aria-label="Основные категории">
       Теги:
-      {% if page.url == '/tag/разработка/' %}<b class="global-navigation__item">разработка</b>,
-      {% else %}<a class="global-navigation__item" href="/tag/разработка/">разработка</a>,{% endif %}
+      {% if page.url == developmentTagUrl %}<b class="global-navigation__item">разработка</b>,
+      {% else %}<a class="global-navigation__item" href="{{ developmentTagUrl }}">разработка</a>,{% endif %}
 
-      {% if page.url == '/tag/не-разработка/' %}<b class="global-navigation__item">не разработка</b>,
-      {% else %}<a class="global-navigation__item" href="/tag/не-разработка/">не разработка</a>,{% endif %}
+      {% if page.url == nonDevelopmentTagUrl %}<b class="global-navigation__item">не разработка</b>,
+      {% else %}<a class="global-navigation__item" href="{{ nonDevelopmentTagUrl }}">не разработка</a>,{% endif %}
 
       {% if page.url == '/tags/' %}<b class="global-navigation__item">все</b>
       {% else %}<a class="global-navigation__item" href="/tags/">все</a>{% endif %}

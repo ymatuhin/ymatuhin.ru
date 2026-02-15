@@ -3,10 +3,10 @@ layout: post
 title: Партизанский рефакторинг. Как улучшить проект, чтобы заказчик этого не понял.
 description: Как незаметно проводить рефакторинг одновременно улучшая архитектуру приложения.
 tags:
-  - разработка
+  - development
   - javascript
-  - архитектура
-  - рефакторинг
+  - architecture
+  - refactoring
 image:
   path: refactoring/cat.jpg
   alt: ''

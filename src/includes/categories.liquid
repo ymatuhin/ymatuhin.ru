@@ -6,13 +6,21 @@
 
 {% for category in cats %}
     {% assign category_trimmed = category | strip %}
-    <a href="/{{ category_trimmed }}/">
+    {% assign is_post_type = category_trimmed == 'blog' or category_trimmed == 'frontend' or category_trimmed == 'tools' or category_trimmed == 'books' %}
+    {% if is_post_type %}
+      {% assign category_url = "/" | append: category_trimmed | append: "/" %}
+    {% else %}
+      {% assign category_slug = category_trimmed | tagSlug %}
+      {% assign category_url = "/tag/" | append: category_slug | append: "/" %}
+      {% assign category_label = category_trimmed | tagLabel %}
+    {% endif %}
+    <a href="{{ category_url }}">
         {% if category_trimmed == 'blog' %}Блог{% endif %}
         {% if category_trimmed == 'frontend' %}Фронтенд{% endif %}
         {% if category_trimmed == 'tools' %}Инструменты{% endif %}
         {% if category_trimmed == 'books' %}Книги{% endif %}
         {% unless category_trimmed == 'blog' or category_trimmed == 'frontend' or category_trimmed == 'tools' or category_trimmed == 'books' %}
-            {{ category_trimmed }}
+            {{ category_label }}
         {% endunless %}
     </a>
     {% if forloop.last == false %}, {% endif %}

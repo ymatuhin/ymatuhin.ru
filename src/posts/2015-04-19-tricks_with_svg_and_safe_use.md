@@ -3,8 +3,8 @@ layout: post
 title: Трюки с SVG и поддержка старыми браузерами
 description: Как безопасно использовать SVG, поддержка браузерами, несколько fallback-ов для старых браузеров.
 tags:
-  - разработка
-  - фронтенд
+  - development
+  - frontend
   - svg
 image:
   path: svg/svg_logo.png

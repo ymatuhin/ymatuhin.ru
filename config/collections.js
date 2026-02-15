@@ -1,3 +1,5 @@
+import { toLegacyTagSlug, toTagLabel, toTagSlug, toUniqueTagSlug } from './tag-utils.js';
+
 const postsGlob = 'src/posts/*.{md,html}';
 const postTypeTags = new Set(['blog', 'frontend', 'tools', 'books']);
 const staticLegacyRedirects = [
@@ -10,15 +12,9 @@ const staticLegacyRedirects = [
   { from: '/page8/', to: '/posts/8/' },
   { from: '/page9/', to: '/posts/9/' },
 ];
-const normalizeTag = (value) => String(value || '').trim().toLowerCase().replace(/\s+/g, '-').replace(/\//g, '-');
 const extractPostTags = (item) => {
   if (!item?.data?.tags) return [];
   return Array.isArray(item.data.tags) ? item.data.tags : [item.data.tags];
-};
-const toTagSlugBase = (value) => {
-  const normalized = normalizeTag(value).replace(/-+/g, '-').replace(/^-|-$/g, '');
-  const limited = normalized.slice(0, 24);
-  return limited;
 };
 
 export function buildPostsCollection(collectionApi) {
@@ -31,7 +27,8 @@ export function buildTagsCollection(collectionApi) {
 
   for (const item of posts) {
     for (const tag of extractPostTags(item)) {
-      if (tag) tags.add(tag);
+      const canonicalTag = toTagSlug(tag);
+      if (canonicalTag) tags.add(canonicalTag);
     }
   }
 
@@ -49,17 +46,19 @@ export function buildTagPagesCollection(collectionApi) {
   const usedSlugs = new Set();
 
   for (const tag of buildTagsCollection(collectionApi)) {
-    const key = normalizeTag(tag);
+    const key = toTagSlug(tag);
     if (!key || usedKeys.has(key)) continue;
     usedKeys.add(key);
-    const slug = toTagSlugBase(tag);
+    const slug = toUniqueTagSlug(key, usedSlugs);
     if (!slug) continue;
+    const name = toTagLabel(key);
+    const legacySlug = toLegacyTagSlug(name);
     usedSlugs.add(slug);
     const count = posts.filter((post) => {
       const postTags = extractPostTags(post).filter(Boolean);
-      return postTags.some((postTag) => normalizeTag(postTag) === key);
+      return postTags.some((postTag) => toTagSlug(postTag) === key);
     }).length;
-    pages.push({ name: tag, slug, count, key });
+    pages.push({ name, slug, legacySlug, count, key });
   }
 
   return pages.sort((a, b) => {
@@ -84,6 +83,11 @@ export function buildFrontmatterRedirectsCollection(collectionApi) {
 
   for (const redirect of staticLegacyRedirects) {
     addRedirect(redirect.from, redirect.to);
+  }
+
+  for (const tagPage of buildTagPagesCollection(collectionApi)) {
+    if (!tagPage.legacySlug || tagPage.legacySlug === tagPage.slug) continue;
+    addRedirect(`/tag/${tagPage.legacySlug}/`, `/tag/${tagPage.slug}/`);
   }
 
   for (const item of items) {

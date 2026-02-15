@@ -3,10 +3,10 @@ layout: post
 title: Как снять ограничения Yota на раздачу интернета
 description: Как обойти ограничение скорости на раздачу интернета в Yota. Снятие ограничений и запретов.
 tags:
-  - не разработка
-  - лайфхаки
+  - non-development
+  - lifehacks
   - yota
-  - интернет
+  - internet
 image:
   path: yota/yota.png
   alt: Yota — снимаем ограничение скорости

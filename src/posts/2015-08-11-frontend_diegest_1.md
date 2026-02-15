@@ -3,9 +3,9 @@ layout: post
 title: 'Фронтенд дайджест #1 — Awesome lists, bower, regexp, RSS, Git'
 description: Дайджест интересных материалов для front end разработчиков. Awesome lists, bower, regexp, RSS, Git…
 tags:
-  - разработка
-  - фронтенд
-  - дайджест
+  - development
+  - frontend
+  - digest
 redirects:
   - /front-end/frontend_diegest_1/
 ---

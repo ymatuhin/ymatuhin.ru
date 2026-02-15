@@ -3,10 +3,10 @@ layout: post
 title: Первый день эксперимента по формированию хороших привычек
 description: Мой отчет о первом дне формирования полезных привычек в мою жизнь за 21 день. Пока что все идет хорошо :)
 tags:
-  - не разработка
-  - саморазвитие
-  - привычки
-  - эксперименты
+  - non-development
+  - self-improvement
+  - habits
+  - experiments
 redirects:
   - /blog/good_habits_day_1/
 ---

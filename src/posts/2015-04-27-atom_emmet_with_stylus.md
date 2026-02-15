@@ -3,9 +3,9 @@ layout: post
 title: Фиксим Emmet под Atom для работы со Stylus файлами
 description: Фиксим работоспособность плагина Emmet под Atom для препроцессора Stylus.
 tags:
-  - разработка
-  - инструменты
-  - редакторы
+  - development
+  - tools
+  - editors
   - atom
   - stylus
 image:

@@ -3,8 +3,8 @@ layout: post
 title: Международный день box-sizing и лучшие практики
 description: Лучшие практики использования CSS свойства box-sizing и праздник посвященный этому свойству.
 tags:
-  - разработка
-  - фронтенд
+  - development
+  - frontend
   - css
 redirects:
   - /front-end/better_box_sizing/

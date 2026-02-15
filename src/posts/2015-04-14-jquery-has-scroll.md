@@ -3,12 +3,12 @@ layout: post
 title: Минималистичный jQuery плагин, который проверяет элемент на наличие полосы прокрутки
 description: Как проверить наличие полосы прокрутки (скролла) у документа и элементов в jQuery и JavaScript? Воспользуйтесь моим небольшим плагином.
 tags:
-  - разработка
-  - фронтенд
-  - инструменты
+  - development
+  - frontend
+  - tools
   - javascript
   - jquery
-  - плагины
+  - plugins
 redirects:
   - /front-end/jquery-has-scroll/
 ---

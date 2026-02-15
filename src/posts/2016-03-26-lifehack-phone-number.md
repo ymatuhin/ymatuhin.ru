@@ -3,10 +3,10 @@ layout: post
 title: Лайфхак. Номер телефона на сайте
 description: Надоели звонки от клиентов в 2 часа ночи? Покажите номер телефона на сайте только в рабочее время. Подробности в статье.
 tags:
-  - разработка
-  - фронтенд
+  - development
+  - frontend
   - javascript
-  - лайфхаки
+  - lifehacks
 image:
   path: phones/phones.jpeg
 redirects:

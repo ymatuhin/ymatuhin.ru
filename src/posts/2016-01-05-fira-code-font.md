@@ -3,10 +3,10 @@ layout: post
 title: 'Fira Code: шрифт с лигатурами для кода'
 description: Моноширинный шрифт Fira Code объединяет конструкции языков программирования из нескольких символов в один, визуально понятный и приятный.
 tags:
-  - разработка
-  - инструменты
-  - шрифты
-  - редакторы
+  - development
+  - tools
+  - fonts
+  - editors
 image:
   path: fira-code/fira-code.png
   alt: 'Fira Code: шрифт с лигатурами для кода'

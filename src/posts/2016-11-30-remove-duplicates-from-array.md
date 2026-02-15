@@ -3,11 +3,11 @@ layout: post
 title: Код. Удаляем дубликаты из массива
 description: Простые способы для ES5 и ES2015
 tags:
-  - разработка
-  - фронтенд
+  - development
+  - frontend
   - javascript
-  - массивы
-  - советы
+  - arrays
+  - tips
 image:
   path: tips/array_uniq.jpg
   alt: Убрать дубликаты из массива в JavaScript

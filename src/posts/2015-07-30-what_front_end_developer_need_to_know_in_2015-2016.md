@@ -6,10 +6,10 @@ image:
   path: need_to_frontend/what-need-to-know-as-frontend.png
   alt: Какими знаниями должен обладать фронтенд разработчик в 2015/2016
 tags:
-  - разработка
-  - фронтенд
-  - собеседования
-  - саморазвитие
+  - development
+  - frontend
+  - interviews
+  - self-improvement
 redirects:
   - /front-end/what_front_end_developer_need_to_know_in_2015-2016/
 ---

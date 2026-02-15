@@ -3,8 +3,8 @@ layout: post
 title: Время обновить clearfix
 description: Исправляем поведение плавающих классов и контейнера с помощью css класса clearfix и его новой, короткой версией.
 tags:
-  - разработка
-  - фронтенд
+  - development
+  - frontend
   - css
 image:
   path: clearfix/clearfix.png

@@ -18,7 +18,7 @@ permalink: "/tag/{{ currentTagPage.slug }}/index.html"
     {% assign showPost = false %}
     {% assign currentTagKey = currentTagPage.key %}
     {% for postTag in post.data.tags %}
-      {% assign postTagNormalized = postTag | downcase | replace: " ", "-" | replace: "/", "-" %}
+      {% assign postTagNormalized = postTag | tagSlug %}
       {% if postTagNormalized == currentTagKey %}
         {% assign showPost = true %}
       {% endif %}

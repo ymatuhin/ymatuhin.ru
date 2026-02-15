@@ -3,10 +3,10 @@ layout: post
 title: Логирование в JavaScript
 description: Логирование — незаменимый инструмент в отладке JS кода.  асставьте логи в критические места и при возникновении ошибки вы сможете посмотреть что произошло в консоли.
 tags:
-  - разработка
-  - фронтенд
+  - development
+  - frontend
   - javascript
-  - отладка
+  - debugging
 image:
   path: logs/bear.jpg
   alt: Вася следит за логами

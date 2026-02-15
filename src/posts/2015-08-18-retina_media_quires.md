@@ -3,8 +3,8 @@ layout: post
 title: Правильный сниппет медиа выражений для retina
 description: Короткий сниппет media queries для определения retina дисплеев и старые сниппеты, от которых нужно давно избавиться.
 tags:
-  - разработка
-  - фронтенд
+  - development
+  - frontend
   - css
   - retina
 redirects:

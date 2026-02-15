@@ -17,6 +17,7 @@ import {
   applyTypography,
   minifyHtmlAndInlineCss,
 } from './config/transforms.js';
+import { toTagLabel, toTagSlug } from './config/tag-utils.js';
 import siteData from './config/site.js';
 
 export default function (eleventyConfig) {
@@ -42,13 +43,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(feedPlugin, feedConfig);
 
   // Filters
-  eleventyConfig.addFilter('tagSlug', (value) => {
-    const normalized = String(value || '')
-      .trim()
-      .toLowerCase()
-      .replace(/\s+/g, '-');
-    return encodeURIComponent(normalized);
-  });
+  eleventyConfig.addFilter('tagSlug', toTagSlug);
+  eleventyConfig.addFilter('tagLabel', toTagLabel);
 
   // Shortcodes
   eleventyConfig.addAsyncShortcode('mediaImage', mediaImageShortcode);

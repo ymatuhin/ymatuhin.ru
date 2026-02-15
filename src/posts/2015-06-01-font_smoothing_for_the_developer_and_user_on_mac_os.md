@@ -2,11 +2,11 @@
 layout: post
 title: Сглаживание шрифтов для разработчика и пользователя на Mac OS
 tags:
-  - разработка
-  - фронтенд
+  - development
+  - frontend
   - css
   - macos
-  - шрифты
+  - fonts
 image:
   path: font-smooth/compare.png
   alt: Сглаживание шрифтов CSS

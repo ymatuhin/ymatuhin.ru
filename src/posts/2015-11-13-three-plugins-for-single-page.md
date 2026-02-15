@@ -3,12 +3,12 @@ layout: post
 title: Три плагина, которые сделают Single Page Application лучше
 description: Три плагина улучшат приложение для пользователей с нестабильным или медленным интернетом и тех, кто пользуется телефоном для просмотра. Pace.js, Offline.js, FastClick.js.
 tags:
-  - разработка
-  - фронтенд
-  - инструменты
+  - development
+  - frontend
+  - tools
   - javascript
   - spa
-  - плагины
+  - plugins
 image:
   path: spa_plugins/spa_plugins.jpg
 redirects:

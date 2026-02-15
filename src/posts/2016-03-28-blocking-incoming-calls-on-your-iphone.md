@@ -3,8 +3,8 @@ layout: post
 title: Лайфхак. Блокировка входящих без дисконектов на iPhone
 description: null
 tags:
-  - не разработка
-  - лайфхаки
+  - non-development
+  - lifehacks
   - ios
   - yota
 image:

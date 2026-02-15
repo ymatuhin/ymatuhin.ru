@@ -3,8 +3,8 @@ layout: post
 title: Подтверждение диалогов через клавиатуру в Mac OS
 description: Как включить опцию изменения фокуса в диалогах Mac OS и подтверждать их с клавиатуры.
 tags:
-  - не разработка
-  - лайфхаки
+  - non-development
+  - lifehacks
   - macos
 image:
   path: mac/dialog.png

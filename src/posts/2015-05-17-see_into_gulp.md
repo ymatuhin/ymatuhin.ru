@@ -3,10 +3,10 @@ layout: post
 title: Разбираемся со сборкой front end на Gulp
 description: Обзор основных возможностей новой системы для сборки проектов — Gulp, а так-же с изучаем как работают его основные функциии.
 tags:
-  - разработка
-  - фронтенд
-  - инструменты
-  - сборка
+  - development
+  - frontend
+  - tools
+  - build
 image:
   path: gulp/logo.png
   alt: Gulp — системы сборки фронтенда

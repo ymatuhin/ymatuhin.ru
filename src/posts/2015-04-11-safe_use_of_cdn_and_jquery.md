@@ -3,8 +3,8 @@ layout: post
 title: Безопасное использование CDN для jQuery, Angular, Bootstrap и других библиотек
 description: Безопасно загружаем JavaScript библиотеки из публичных CDN с fallback-ом на локальную библиотеку. Jquery, Angular JS, Bootstrap и другие.
 tags:
-  - разработка
-  - фронтенд
+  - development
+  - frontend
   - javascript
   - cdn
 redirects:

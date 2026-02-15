@@ -3,9 +3,9 @@ layout: post
 title: Вебинары от Geekbrains (ранее Школа Программирования)
 description: Вебинары по программированию, карьере, личностному росту и не только от Geekbrains (Школа Программирования).
 tags:
-  - разработка
-  - отзывы
-  - обучение
+  - development
+  - reviews
+  - education
 image:
   path: geekbrains/logo.png
   alt: Geekbrains

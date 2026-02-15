@@ -2,10 +2,10 @@
 layout: post
 title: Список статичных HTTP серверов для терминала
 tags:
-  - разработка
-  - инструменты
+  - development
+  - tools
   - http
-  - серверы
+  - servers
 image:
   path: server/http-server.png
   alt: Http-server статики в терминале
