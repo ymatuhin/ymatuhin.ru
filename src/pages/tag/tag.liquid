@@ -11,12 +11,7 @@ permalink: "/tag/{{ currentTagPage.slug }}/index.html"
   <link rel="alternate" href="/tag/{{ currentTagPage.slug }}/feed.xml" type="application/rss+xml" title="{{ site.title }} — {{ currentTagPage.name }}">
 {% endhtml %}
 
-<article class="post typo white-content wrap-inner">
-  <header class="post-header">
-    <h1 class="post-header__title">Тег: {{ currentTagPage.name }}</h1>
-    <p><a href="/tag/{{ currentTagPage.slug }}/feed.xml">RSS этого тега</a></p>
-  </header>
-</article>
+<h1>Тег: {{ currentTagPage.name }}</h1>
 
 <div class="cards">
   {% for post in collections.posts %}
