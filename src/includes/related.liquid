@@ -24,11 +24,11 @@
     {% if sameTagCount >= minCommonTags %}
         {% assign postsTitles = postsTitles | append: post.title %}
 
-        {% include card.liquid
+        {% include post-card.liquid
             tag="h2"
-            categories=post.tags
+            tags=post.tags
             date=post.date
-            image=post.image.path
+            imagePath=post.image.path
             link=post.url
             title=post.title
             description=post.description %}
@@ -45,11 +45,11 @@
 
     {% for post in site.related_posts | limit: limitCounter %}
       {% unless postsTitles contains post.title %}
-        {% include card.liquid
+        {% include post-card.liquid
                 tag="h2"
-                categories=post.tags
+                tags=post.tags
                 date=post.date
-                image=post.image.path
+                imagePath=post.image.path
                 link=post.url
                 title=post.title
                 description=post.description %}

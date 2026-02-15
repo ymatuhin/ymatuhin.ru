@@ -1,0 +1,53 @@
+{% assign titleTag = tag | default: "h2" %}
+
+<article class="post-card">
+  {% if imagePath %}
+    <div class="post-card__cover">
+        {% if link %}<a href="{{ link }}">{% endif %}
+            {% assign cardImageAlt = imageAlt | default: title %}
+            {% mediaImage imagePath, cardImageAlt %}
+            {% if link %}</a>{% endif %}
+    </div>
+  {% endif %}
+
+  <{{ titleTag }} class="post-card__title">
+{% if link %}<a href="{{ link }}">{% endif %}{{ title }}{% if link %}</a>{% endif %}
+</{{ titleTag }}>
+
+{% if description %}
+  <div class="post-card__content">
+      <p>{{ description }}</p>
+    </div>
+{% endif %}
+
+{% if date or tags %}
+  <div class="post-card__meta">
+      {% if date %}
+        <span class="post-card__date">{% include "pubdate.liquid", date: date %}</span>
+      {% endif %}
+
+    {% if date and tags %}:::{% endif %}
+
+    {% if tags %}
+      <span class="post-card__tags">
+          {% if tags.first %}
+            {% assign tagsList = tags %}
+          {% else %}
+            {% assign tagsList = tags | split: "," %}
+          {% endif %}
+        {% for itemTag in tagsList %}
+          {% assign tagTrimmed = itemTag | strip %}
+          {% assign tagSlug = tagTrimmed | tagSlug %}
+          {% assign tagUrl = "/tag/" | append: tagSlug | append: "/" %}
+          {% assign tagLabel = tagTrimmed | tagLabel %}
+          <a href="{{ tagUrl }}">{{ tagLabel }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+        </span>
+    {% endif %}
+    </div>
+{% endif %}
+</article>
+
+{% css %}
+{% include "styles/post-card.css" %}
+{% endcss %}

@@ -15,7 +15,7 @@ permalink: "/posts/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | 
 
 <div class="cards">
   {% for post in postsPage %}
-    {% include "card.liquid"
+    {% include "post-card.liquid"
       tag: "h2",
       tags: post.data.tags,
       date: post.date,

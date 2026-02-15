@@ -25,7 +25,6 @@
 {% assign hasTh = contentToCheck contains "<th" %}
 {% assign hasButtonClass = contentToCheck contains 'class="button"' or contentToCheck contains "class='button'" %}
 {% assign hasButton = contentToCheck contains "<button" or hasButtonClass %}
-{% assign contentToCheck = contentHtml | default: content | default: "" %}
 {% assign hasCodeBlock = contentToCheck contains "<pre" or contentToCheck contains "language-" %}
 
 {% if hasAnyHeading %}

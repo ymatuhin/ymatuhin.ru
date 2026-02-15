@@ -10,7 +10,7 @@ permalink: index.html
 
 <div class="cards">
   {% for post in collections.posts limit: 10 %}
-  {% include "card.liquid"
+  {% include "post-card.liquid"
     tag: "h2",
     tags: post.data.tags,
     date: post.date,
