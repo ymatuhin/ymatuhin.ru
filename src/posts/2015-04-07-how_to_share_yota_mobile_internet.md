@@ -58,4 +58,4 @@ image:
 Ваши вопросы, рекомендации и советы пишите в комментариях.
 
 **UPD**. Yota обновляет свои фильтры, и теперь раздавать интеренет с телефона сложнее. Подробнее об этом читайте
-на <a href="http://4pda.ru/forum/index.php?showtopic=596728" rel="nofollow">форуме 4pda</a>.
+на [форуме 4pda](http://4pda.ru/forum/index.php?showtopic=596728).

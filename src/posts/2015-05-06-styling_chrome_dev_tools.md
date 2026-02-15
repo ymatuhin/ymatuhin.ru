@@ -34,9 +34,9 @@ experiments_ нажмите _Enable_. Теперь перезапустите б
 
 ## Поиск и установка тем
 
-Найти темы можно в магазине <a href="https://chrome.google.com/webstore/category/extensions">Google Chrome</a>. Искать
+Найти темы можно в магазине [Google Chrome](https://chrome.google.com/webstore/category/extensions). Искать
 по запросу dev themes. Но это не очень удобно, почти все темы собраны на
-сайте <a href="http://devthemez.com/themes/chrome-developer-tools">devthemez.com</a>. И там-же есть темы для dev tools.
+сайте [devthemez.com](http://devthemez.com/themes/chrome-developer-tools). И там-же есть темы для dev tools.
 
 Теперь переходим в магазин, выбираем нужную нам тему и устанавливаем её. Теперь при открытии инструментов разработчика
 вы увидите вашу тему.

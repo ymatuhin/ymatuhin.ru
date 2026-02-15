@@ -18,8 +18,8 @@ tags:
 ---
 
 Совсем недавно, Google выпустила расширение экономящее трафик под
-названием <a href="https://chrome.google.com/webstore/detail/data-saver-beta/pfmgfdlgomnbgkofeojodiodmgpgmkac">Data
-Saver (beta)</a>. Такой аналог режима турбо от Оперы, но только для браузеров на движке хромиума.
+названием [Data
+Saver (beta)](https://chrome.google.com/webstore/detail/data-saver-beta/pfmgfdlgomnbgkofeojodiodmgpgmkac). Такой аналог режима турбо от Оперы, но только для браузеров на движке хромиума.
 
 Я решил его протестировать, поскольку я расшариваю мобильный интернет с телефона на Mac и было бы неплохо уменьшить
 трафик (хоть у меня и безлимитный интернет). Тем более, что из-за этого (в теории) сайты должны загружаться быстрее.

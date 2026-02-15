@@ -62,4 +62,4 @@ Clearfix — вспомогательный класс в css, с помощью
 А вы используете clearfix css в своих проектах? 😉
 
 **UPD #1:** Хорошая статья про виды clearfix и их работе можно прочитать
-в <a href="http://css-live.ru/tricks/novaya-alternativa-clearfix-u-i-overflowhidden.html">этой статье</a>.
+в [этой статье](http://css-live.ru/tricks/novaya-alternativa-clearfix-u-i-overflowhidden.html).

@@ -30,17 +30,17 @@ image:
 
 Я выбрал три хороших руководств для изучающих Git на русском языке, которыми хочу поделиться с вами:
 
-1. <a href="http://rogerdudler.github.io/git-guide/index.ru.html">Git the simple guide</a> — простое руководство по
+1. [Git the simple guide](http://rogerdudler.github.io/git-guide/index.ru.html) — простое руководство по
    работе с git. <br> Но для кого-то этого материала может не хватить, поскольку там описано все очень кратко и только
    основные моменты.
-1. <a href="https://git-scm.com/book/ru/v1">Pro Git</a> — исчерпывающая книга по Git, которую можно купить на Амазоне
+1. [Pro Git](https://git-scm.com/book/ru/v1) — исчерпывающая книга по Git, которую можно купить на Амазоне
    или читать онлайн / скачать бесплатно.
-1. <a href="https://githowto.com/ru">Git How To</a> — это интерактивный тур, который познакомит вас с основами Git. Тур
+1. [Git How To](https://githowto.com/ru) — это интерактивный тур, который познакомит вас с основами Git. Тур
    создан с пониманием того, что лучшим способом научиться чему-нибудь — сделать это своими руками.
 
 Очень понравился ресурс _Git the simple guide_ и _Git How To_. У меня уже был опыт работы с Git, но только через GUI.
 Поэтому первый ресурс мне очень подошел.
 
 Кстати если вас не привлекает работа через терминал, то в
-конце <a href="http://rogerdudler.github.io/git-guide/index.ru.html">_Git the simple guide_</a> есть полезные ссылки с
+конце [_Git the simple guide_](http://rogerdudler.github.io/git-guide/index.ru.html) есть полезные ссылки с
 программами для работы c Git через графические интерфейсы (GUI) и несколько руководств.

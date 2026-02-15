@@ -21,7 +21,7 @@ image:
 > видеороликов. Один из самых популярных сайтов среди блогеров для размещения фотографий.
 
 У него недавно появилось новое расширение — **Flickr Tab
-** (<a href="https://chrome.google.com/webstore/detail/flickr-tab/bhnpmdabjgpimmnbmhefncbghknfegog">посмотреть</a> в
+** ([посмотреть](https://chrome.google.com/webstore/detail/flickr-tab/bhnpmdabjgpimmnbmhefncbghknfegog) в
 магазине расширений Google Chrome). Оно добавляет в наши пустые и белые вкладки красивые фотографии, неизвестных нам
 фотографов, которые поделились своими фотографиями на фотохостинге Flickr.
 

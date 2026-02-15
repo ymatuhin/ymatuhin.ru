@@ -27,7 +27,7 @@ image:
 хабре [тут](https://habrahabr.ru/post/248941/){:rel='nofollow'} и [тут](https://habrahabr.ru/post/248961/){:
 rel='nofollow'}. А я опишу новые (или старые) фишки, которые есть в этом браузере.
 
-Вот так выглядит браузер при потере фокуса (mac os):
+Вот так выглядит браузер при потере фокуса macOS:
 
 {% mediaImage "vivaldi/default_view_inactive.png", "Vivaldi – вид по умолчанию без фокуса" %}
 

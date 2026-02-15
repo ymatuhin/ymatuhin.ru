@@ -13,7 +13,7 @@ image:
 
 {% mediaImage image.path, image.alt %}
 
-В <a href="/front-end/plan_for_frontend_developer/">двух из трех</a> вакансиях для фронтеда требуют знания **REST /
+В [двух из трех](/front-end/plan_for_frontend_developer/) вакансиях для фронтеда требуют знания **REST /
 RESTful API**. азберемся что это и в чем разница.
 
 ## Что такое REST
@@ -37,7 +37,7 @@ API_, а на клиенте вы делаете запросы к этому <i
 1. Удаление данных
 
 Получение данных не меняет состояния сервера. Каждый тип операции пользуется
-своим <a rel="nofollow" href="https://ru.wikipedia.org/wiki/HTTP#.D0.9C.D0.B5.D1.82.D0.BE.D0.B4.D1.8B">HTTP методом</a>:
+своим [HTTP методом](https://ru.wikipedia.org/wiki/HTTP#.D0.9C.D0.B5.D1.82.D0.BE.D0.B4.D1.8B):
 
 1. **GET** — Получение
 1. **POST** — Добавление

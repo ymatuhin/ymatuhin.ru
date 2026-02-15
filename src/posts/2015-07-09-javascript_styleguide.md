@@ -13,47 +13,47 @@ alt: Гайд по стилю кода на JavaScript от AirBnB
 {% mediaImage image.path, image.alt %}
 
 <blockquote>
-  <p>Перевод AirBnB Style Guide — <a rel="nofollow" href="https://github.com/airbnb/javascript">Airbnb JavaScript Style
-      Guide</a> (en) на русский язык от команды Uprock. За что им огромное спасибо! Подробнее о переводе на <a
+  <p>Перевод AirBnB Style Guide — [Airbnb JavaScript Style
+      Guide](https://github.com/airbnb/javascript) (en) на русский язык от команды Uprock. За что им огромное спасибо! Подробнее о переводе на <a
       rel="nofollow" href="https://habrahabr.ru/company/uprock/blog/204848/">хабре</a>.</p>
 </blockquote>
 
 <p>Стиль вашего кода, может сказать о вас достаточно много. Это один из показателей опытного разработчика. Помимо
   исключительно визуальной составляющей, в переводе содержатся бенчмарки и рекомендации по производительности. А в
   некоторых случаях, использование такого кодстайла, может избавить вас он проблем связанных с тонкостями языка. Статья
-  является отличным дополнением к <a href="/front-end/front_end_developer_interview_quersions/">вопросам для
-    собеседования кандидату на должность Front-end разработчика</a> и к вашему скилу как разработчика 😉</p>
+  является отличным дополнением к [вопросам для
+    собеседования кандидату на должность Front-end разработчика](/front-end/front_end_developer_interview_quersions/) и к вашему скилу как разработчика 😉</p>
 
 <h2><a id="Оглавление" class="anchor" href="#Оглавление" aria-hidden="true"><span
       class="octicon octicon-link"></span></a>Оглавление</h2>
 
 <ol>
-  <li><a href="#types">Типы</a></li>
-  <li><a href="#objects">Объекты</a></li>
-  <li><a href="#arrays">Массивы</a></li>
-  <li><a href="#strings">Строки</a></li>
-  <li><a href="#functions">Функции</a></li>
-  <li><a href="#properties">Свойства</a></li>
-  <li><a href="#variables">Переменные</a></li>
-  <li><a href="#hoisting">Области видимости</a></li>
-  <li><a href="#conditionals">Условные выражения и равенства</a></li>
-  <li><a href="#blocks">Блоки кода</a></li>
-  <li><a href="#comments">Комментарии</a></li>
-  <li><a href="#whitespace">Пробелы</a></li>
-  <li><a href="#commas">Запятые</a></li>
-  <li><a href="#semicolons">Точки с запятой</a></li>
-  <li><a href="#type-coercion">Приведение типов</a></li>
-  <li><a href="#naming-conventions">Соглашение об именовании</a></li>
-  <li><a href="#accessors">Геттеры и сеттеры</a></li>
-  <li><a href="#constructors">Конструкторы</a></li>
-  <li><a href="#events">События</a></li>
-  <li><a href="#modules">Модули</a></li>
-  <li><a href="#jquery">jQuery</a></li>
-  <li><a href="#es5">Совместимость с ES5</a></li>
-  <li><a href="#testing">Тестирование</a></li>
-  <li><a href="#performance">Быстродействие</a></li>
-  <li><a href="#resources"> есурсы</a></li>
-  <li><a href="#in-the-wild">В реальном мире</a></li>
+  <li>[Типы](#types)</li>
+  <li>[Объекты](#objects)</li>
+  <li>[Массивы](#arrays)</li>
+  <li>[Строки](#strings)</li>
+  <li>[Функции](#functions)</li>
+  <li>[Свойства](#properties)</li>
+  <li>[Переменные](#variables)</li>
+  <li>[Области видимости](#hoisting)</li>
+  <li>[Условные выражения и равенства](#conditionals)</li>
+  <li>[Блоки кода](#blocks)</li>
+  <li>[Комментарии](#comments)</li>
+  <li>[Пробелы](#whitespace)</li>
+  <li>[Запятые](#commas)</li>
+  <li>[Точки с запятой](#semicolons)</li>
+  <li>[Приведение типов](#type-coercion)</li>
+  <li>[Соглашение об именовании](#naming-conventions)</li>
+  <li>[Геттеры и сеттеры](#accessors)</li>
+  <li>[Конструкторы](#constructors)</li>
+  <li>[События](#events)</li>
+  <li>[Модули](#modules)</li>
+  <li>[jQuery](#jquery)</li>
+  <li>[Совместимость с ES5](#es5)</li>
+  <li>[Тестирование](#testing)</li>
+  <li>[Быстродействие](#performance)</li>
+  <li>[ есурсы](#resources)</li>
+  <li>[В реальном мире](#in-the-wild)</li>
 </ol>
 
 <h2><a id="Типы" class="anchor" href="#Типы" aria-hidden="true"><span class="octicon octicon-link"></span></a><a
@@ -100,7 +100,7 @@ bar[<span class="c1">0</span>] <span class="k">=</span> <span class="c1">9</span
           class="c1">0</span>]); <span class="c">// =&gt; 9, 9.</span></pre>
     </div>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="Объекты" class="anchor" href="#Объекты" aria-hidden="true"><span class="octicon octicon-link"></span></a><a
@@ -117,9 +117,8 @@ bar[<span class="c1">0</span>] <span class="k">=</span> <span class="c1">9</span
 <span class="k">var</span> item <span class="k">=</span> {};</pre>
     </div>
   </li>
-  <li><p>Не используйте <a rel="nofollow" href="http://es5.github.io/#x7.6.1">зарезервированные слова</a> в качестве
-      ключей объектов. Они не будут работать в IE8. <a rel="nofollow"
-                                                       href="https://github.com/airbnb/javascript/issues/61">Подробнее</a>
+  <li><p>Не используйте [зарезервированные слова](http://es5.github.io/#x7.6.1) в качестве
+      ключей объектов. Они не будут работать в IE8. [Подробнее](https://github.com/airbnb/javascript/issues/61)
     </p>
 
     <div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
@@ -155,7 +154,7 @@ bar[<span class="c1">0</span>] <span class="k">=</span> <span class="c1">9</span
 };</pre>
     </div>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="Массивы" class="anchor" href="#Массивы" aria-hidden="true"><span class="octicon octicon-link"></span></a><a
@@ -186,8 +185,7 @@ someStack.<span class="c1">push</span>(<span class="s"><span class="pds">'</span
             class="pds">'</span></span>);</pre>
     </div>
   </li>
-  <li><p>Если вам необходимо скопировать массив, используйте Array::slice. <a rel="nofollow"
-                                                                              href="https://jsperf.com/converting-arguments-to-an-array/7">jsPerf</a>
+  <li><p>Если вам необходимо скопировать массив, используйте Array::slice. [jsPerf](https://jsperf.com/converting-arguments-to-an-array/7)
     </p>
 
     <div class="highlight highlighter-rouge"><pre><span class="k">var</span> len <span class="k">=</span> items.<span
@@ -215,7 +213,7 @@ itemsCopy <span class="k">=</span> items.<span class="c1">slice</span>();</pre>
 }</pre>
     </div>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="Строки" class="anchor" href="#Строки" aria-hidden="true"><span class="octicon octicon-link"></span></a><a
@@ -243,8 +241,7 @@ itemsCopy <span class="k">=</span> items.<span class="c1">slice</span>();</pre>
   </li>
   <li><p>Строки длиннее 80 символов нужно разделять, выполняя перенос через конкатенацию строк.</p></li>
   <li><p>Осторожно: строки с большим количеством конкатенаций могут отрицательно влиять на быстродействие. <a
-        rel="nofollow" href="https://jsperf.com/ya-string-concat">jsPerf</a> и <a rel="nofollow"
-                                                                                  href="https://github.com/airbnb/javascript/issues/40">Обсуждение</a>
+        rel="nofollow" href="https://jsperf.com/ya-string-concat">jsPerf</a> и [Обсуждение](https://github.com/airbnb/javascript/issues/40)
     </p>
 
     <div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
@@ -265,7 +262,7 @@ itemsCopy <span class="k">=</span> items.<span class="c1">slice</span>();</pre>
     </div>
   </li>
   <li><p>Когда строка создается программным путем, используйте Array::join вместо объединения строк. В основном для IE:
-      <a rel="nofollow" href="https://jsperf.com/string-vs-array-concat/2">jsPerf</a>.</p>
+      [jsPerf](https://jsperf.com/string-vs-array-concat/2).</p>
 
     <div class="highlight highlighter-rouge"><pre><span class="k">var</span> items,
     messages,
@@ -318,7 +315,7 @@ length <span class="k">=</span> messages.<span class="c1">length</span>;
 }</pre>
     </div>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="Функции" class="anchor" href="#Функции" aria-hidden="true"><span class="octicon octicon-link"></span></a><a
@@ -350,9 +347,8 @@ length <span class="k">=</span> messages.<span class="c1">length</span>;
     объявление функций работает, но в различных браузерах работает по-разному.
   </li>
   <li><p><strong>Примечание</strong> ECMA-262 устанавливает понятие <code>блока</code> как списка операторов. Объявление
-      функции (не путайте с присвоением функции переменной) не является оператором. <a rel="nofollow"
-                                                                                       href="http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf#page=97">Комментарий
-        по этому вопросу в ECMA-262</a>.</p>
+      функции (не путайте с присвоением функции переменной) не является оператором. [Комментарий
+        по этому вопросу в ECMA-262](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf#page=97).</p>
 
     <div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
 <span class="k">if</span> (currentUser) {
@@ -388,7 +384,7 @@ length <span class="k">=</span> messages.<span class="c1">length</span>;
 }</pre>
     </div>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="Свойства" class="anchor" href="#Свойства" aria-hidden="true"><span class="octicon octicon-link"></span></a><a
@@ -425,7 +421,7 @@ length <span class="k">=</span> messages.<span class="c1">length</span>;
             class="pds">'</span></span>);</pre>
     </div>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="Переменные" class="anchor" href="#Переменные" aria-hidden="true"><span
@@ -543,7 +539,7 @@ superPower <span class="k">=</span> <span class="k">new</span> <span class="en">
 }</pre>
     </div>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="Области-видимости" class="anchor" href="#Области-видимости" aria-hidden="true"><span
@@ -638,11 +634,10 @@ superPower <span class="k">=</span> <span class="k">new</span> <span class="en">
 }</pre>
     </div>
   </li>
-  <li><p>Более подробно можно прочитать в статье <a rel="nofollow"
-                                                    href="http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting">JavaScript
-        Scoping &amp; Hoisting</a> от <a rel="nofollow" href="http://www.adequatelygood.com/">Ben Cherry</a></p>
+  <li><p>Более подробно можно прочитать в статье [JavaScript
+        Scoping &amp; Hoisting](http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting) от [Ben Cherry](http://www.adequatelygood.com/)</p>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="Условные-выражения-и-равенства" class="anchor" href="#Условные-выражения-и-равенства"
@@ -698,11 +693,10 @@ superPower <span class="k">=</span> <span class="k">new</span> <span class="en">
 }</pre>
     </div>
   </li>
-  <li><p>Более подробно можно прочитать в статье <a rel="nofollow"
-                                                    href="https://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/">Truth
-        Equality and JavaScript</a> от Angus Croll</p>
+  <li><p>Более подробно можно прочитать в статье [Truth
+        Equality and JavaScript](https://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/) от Angus Croll</p>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="Блоки-кода" class="anchor" href="#Блоки-кода" aria-hidden="true"><span
@@ -732,7 +726,7 @@ superPower <span class="k">=</span> <span class="k">new</span> <span class="en">
 }</pre>
     </div>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="Комментарии" class="anchor" href="#Комментарии" aria-hidden="true"><span class="octicon octicon-link"></span></a><a
@@ -832,7 +826,7 @@ superPower <span class="k">=</span> <span class="k">new</span> <span class="en">
 }</pre>
     </div>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="Пробелы" class="anchor" href="#Пробелы" aria-hidden="true"><span class="octicon octicon-link"></span></a><a
@@ -946,7 +940,7 @@ $(<span class="s"><span class="pds">'</span>#items<span class="pds">'</span></sp
     .<span class="c1">call</span>(tron.led);</pre>
     </div>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="Запятые" class="anchor" href="#Запятые" aria-hidden="true"><span class="octicon octicon-link"></span></a><a
@@ -986,8 +980,7 @@ $(<span class="s"><span class="pds">'</span>#items<span class="pds">'</span></sp
   </li>
   <li><p>Дополнительная запятая в конце объектов: <strong>Нет</strong>. Она способна вызвать проблемы с IE6/7 и IE9 в
       режиме совместимости. В некоторых реализациях ES3 запятая в конце массива увеличивает его длину на 1, что может
-      вызвать проблемы. Этот вопрос был прояснен только в ES5 (<a rel="nofollow"
-                                                                  href="http://es5.github.io/#D">оригинал</a>):</p>
+      вызвать проблемы. Этот вопрос был прояснен только в ES5 ([оригинал](http://es5.github.io/#D)):</p>
 
     <blockquote>
       <p> едакция ECMAScript 5 однозначно устанавливает факт, что запятая в конце ArrayInitialiser не должна увеличивать
@@ -1018,7 +1011,7 @@ $(<span class="s"><span class="pds">'</span>#items<span class="pds">'</span></sp
   ];</pre>
     </div>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="Точки-с-запятой" class="anchor" href="#Точки-с-запятой" aria-hidden="true"><span
@@ -1049,7 +1042,7 @@ $(<span class="s"><span class="pds">'</span>#items<span class="pds">'</span></sp
 })();</pre>
     </div>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="Приведение-типов" class="anchor" href="#Приведение-типов" aria-hidden="true"><span
@@ -1106,8 +1099,8 @@ $(<span class="s"><span class="pds">'</span>#items<span class="pds">'</span></sp
     </div>
   </li>
   <li><p>Если по какой-либо причине вы делаете что-то дикое, и именно на <code>parseInt</code> тратится больше всего
-      ресурсов, используйте побитовый сдвиг <a rel="nofollow" href="https://jsperf.com/coercion-vs-casting/3">из
-        соображений быстродействия</a>, но обязательно оставьте комментарий с объяснением причин.</p>
+      ресурсов, используйте побитовый сдвиг [из
+        соображений быстродействия](https://jsperf.com/coercion-vs-casting/3), но обязательно оставьте комментарий с объяснением причин.</p>
 
     <div class="highlight highlighter-rouge"><pre><span class="c">// хорошо</span>
 <span class="c">/**</span>
@@ -1121,7 +1114,7 @@ $(<span class="s"><span class="pds">'</span>#items<span class="pds">'</span></sp
   </li>
   <li><p><strong>Примечание:</strong> Будьте осторожны с побитовыми операциями. Числа в JavaScript являются <a
         rel="nofollow" href="http://es5.github.io/#x4.3.19">64-битными значениями</a>, но побитовые операции всегда
-      возвращают 32-битные значенения. <a rel="nofollow" href="http://es5.github.io/#x11.7">Источник</a>. Побитовые
+      возвращают 32-битные значенения. [Источник](http://es5.github.io/#x11.7). Побитовые
       операции над числами, значение которых выходит за 32 бита (верхний предел: 2,147,483,647).</p>
 
     <pre><code>2147483647 &gt;&gt; 0 //=&gt; 2147483647
@@ -1144,7 +1137,7 @@ $(<span class="s"><span class="pds">'</span>#items<span class="pds">'</span></sp
 <span class="k">var</span> hasAge <span class="k">=</span> <span class="k">!!</span>age;</pre>
     </div>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="Соглашение-об-именовании" class="anchor" href="#Соглашение-об-именовании" aria-hidden="true"><span
@@ -1259,7 +1252,7 @@ $(<span class="s"><span class="pds">'</span>#items<span class="pds">'</span></sp
 };</pre>
     </div>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="Геттеры-и-сеттеры-функции-для-доступа-к-значениям-объекта" class="anchor"
@@ -1320,7 +1313,7 @@ dragon.setAge(<span class="c1">25</span>);</pre>
 };</pre>
     </div>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="Конструкторы" class="anchor" href="#Конструкторы" aria-hidden="true"><span
@@ -1422,7 +1415,7 @@ luke.jump()
 };</pre>
     </div>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="События" class="anchor" href="#События" aria-hidden="true"><span class="octicon octicon-link"></span></a><a
@@ -1460,7 +1453,7 @@ $(<span class="v">this</span>).on(<span class="s"><span class="pds">'</span>list
 });</pre>
     </div>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="Модули" class="anchor" href="#Модули" aria-hidden="true"><span class="octicon octicon-link"></span></a><a
@@ -1468,8 +1461,7 @@ $(<span class="v">this</span>).on(<span class="s"><span class="pds">'</span>list
 
 <ul>
   <li>Модуль должен начинаться с <code>!</code>. За счет этого даже некорректно сформированный модуль, в конце которого
-    отсутствует точка с запятой, не вызовет ошибок при автоматической сборке скриптов. <a rel="nofollow"
-                                                                                          href="https://github.com/airbnb/javascript/issues/44#issuecomment-13063933">Объяснение</a>
+    отсутствует точка с запятой, не вызовет ошибок при автоматической сборке скриптов. [Объяснение](https://github.com/airbnb/javascript/issues/44#issuecomment-13063933)
   </li>
   <li>Файл должен быть именован с camelCase, находиться в папке с тем же именем, и совпадать с именем экспортируемой
     переменной.
@@ -1499,7 +1491,7 @@ $(<span class="v">this</span>).on(<span class="s"><span class="pds">'</span>list
 }(<span class="v">this</span>);</pre>
     </div>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="jquery" class="anchor" href="#jquery" aria-hidden="true"><span class="octicon octicon-link"></span></a><a
@@ -1548,8 +1540,7 @@ $(<span class="v">this</span>).on(<span class="s"><span class="pds">'</span>list
     </div>
   </li>
   <li><p>Для DOM-запросов используйте классический каскадный CSS-синтаксис <code>$('.sidebar ul')</code> или родитель
-      &gt; потомок <code>$('.sidebar &gt; ul')</code>. <a rel="nofollow"
-                                                          href="https://jsperf.com/jquery-find-vs-context-sel/16">jsPerf</a>
+      &gt; потомок <code>$('.sidebar &gt; ul')</code>. [jsPerf](https://jsperf.com/jquery-find-vs-context-sel/16)
     </p></li>
   <li><p>Используйте <code>find</code> для поиска внутри DOM-объекта.</p>
 
@@ -1572,17 +1563,17 @@ $sidebar.<span class="c1">find</span>(<span class="s"><span class="pds">'</span>
             class="pds">'</span></span>);</pre>
     </div>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="Совместимость-ecmascript-5" class="anchor" href="#Совместимость-ecmascript-5" aria-hidden="true"><span
       class="octicon octicon-link"></span></a><a id="es5">Совместимость ECMAScript 5</a></h2>
 
 <ul>
-  <li><p>Опирайтесь на <a rel="nofollow" href="http://kangax.github.com/es5-compat-table/">таблицу совместимости</a> с
-      ES5 от <a rel="nofollow" href="https://twitter.com/kangax/">Kangax</a></p>
+  <li><p>Опирайтесь на [таблицу совместимости](http://kangax.github.com/es5-compat-table/) с
+      ES5 от [Kangax](https://twitter.com/kangax/)</p>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="Тестирование" class="anchor" href="#Тестирование" aria-hidden="true"><span
@@ -1596,26 +1587,26 @@ $sidebar.<span class="c1">find</span>(<span class="s"><span class="pds">'</span>
 }</pre>
     </div>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="Быстродействие" class="anchor" href="#Быстродействие" aria-hidden="true"><span
       class="octicon octicon-link"></span></a><a id="performance">Быстродействие</a></h2>
 
 <ul>
-  <li><a rel="nofollow" href="http://kellegous.com/j/2013/01/26/layout-performance/">On Layout &amp; Web Performance</a>
+  <li>[On Layout &amp; Web Performance](http://kellegous.com/j/2013/01/26/layout-performance/)
   </li>
-  <li><a rel="nofollow" href="https://jsperf.com/string-vs-array-concat/2">String vs Array Concat</a></li>
-  <li><a rel="nofollow" href="https://jsperf.com/try-catch-in-loop-cost">Try/Catch Cost In a Loop</a></li>
-  <li><a rel="nofollow" href="https://jsperf.com/bang-function">Bang Function</a></li>
-  <li><a rel="nofollow" href="https://jsperf.com/jquery-find-vs-context-sel/13">jQuery Find vs Context, Selector</a>
+  <li>[String vs Array Concat](https://jsperf.com/string-vs-array-concat/2)</li>
+  <li>[Try/Catch Cost In a Loop](https://jsperf.com/try-catch-in-loop-cost)</li>
+  <li>[Bang Function](https://jsperf.com/bang-function)</li>
+  <li>[jQuery Find vs Context, Selector](https://jsperf.com/jquery-find-vs-context-sel/13)
   </li>
-  <li><a rel="nofollow" href="https://jsperf.com/innerhtml-vs-textcontent-for-script-text">innerHTML vs textContent for
-      script text</a></li>
-  <li><a rel="nofollow" href="https://jsperf.com/ya-string-concat">Long String Concatenation</a></li>
+  <li>[innerHTML vs textContent for
+      script text](https://jsperf.com/innerhtml-vs-textcontent-for-script-text)</li>
+  <li>[Long String Concatenation](https://jsperf.com/ya-string-concat)</li>
   <li><p>В процессе наполнения...</p>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id=" есурсы" class="anchor" href="# есурсы" aria-hidden="true"><span class="octicon octicon-link"></span></a><a
@@ -1624,93 +1615,93 @@ $sidebar.<span class="c1">find</span>(<span class="s"><span class="pds">'</span>
 <p><strong>Прочитайте это</strong></p>
 
 <ul>
-  <li><a rel="nofollow" href="http://es5.github.io/">Annotated ECMAScript 5.1</a></li>
+  <li>[Annotated ECMAScript 5.1](http://es5.github.io/)</li>
 </ul>
 
 <p><strong>Другие руководства по стилю</strong></p>
 
 <ul>
-  <li><a rel="nofollow" href="https://google.github.io/styleguide/javascriptguide.xml">Google JavaScript Style Guide</a>
+  <li>[Google JavaScript Style Guide](https://google.github.io/styleguide/javascriptguide.xml)
   </li>
-  <li><a rel="nofollow" href="http://docs.jquery.com/JQuery_Core_Style_Guidelines">jQuery Core Style Guidelines</a></li>
-  <li><a rel="nofollow" href="https://github.com/rwldrn/idiomatic.js/">Principles of Writing Consistent, Idiomatic
-      JavaScript</a></li>
+  <li>[jQuery Core Style Guidelines](http://docs.jquery.com/JQuery_Core_Style_Guidelines)</li>
+  <li>[Principles of Writing Consistent, Idiomatic
+      JavaScript](https://github.com/rwldrn/idiomatic.js/)</li>
 </ul>
 
 <p><strong>Другие стили</strong></p>
 
 <ul>
-  <li><a rel="nofollow" href="http://gist.github.com/4135065">Naming this in nested functions</a> - Christian Johansen
+  <li>[Naming this in nested functions](http://gist.github.com/4135065) - Christian Johansen
   </li>
-  <li><a rel="nofollow" href="https://github.com/airbnb/javascript/issues/52">Conditional Callbacks</a></li>
-  <li><a rel="nofollow" href="http://sideeffect.kr/popularconvention/#javascript">Popular JavaScript Coding Conventions
-      on Github</a></li>
+  <li>[Conditional Callbacks](https://github.com/airbnb/javascript/issues/52)</li>
+  <li>[Popular JavaScript Coding Conventions
+      on Github](http://sideeffect.kr/popularconvention/#javascript)</li>
 </ul>
 
 <p><strong>Дальнейшее прочтение</strong></p>
 
 <ul>
-  <li><a rel="nofollow" href="https://javascriptweblog.wordpress.com/2010/10/25/understanding-javascript-closures/">Understanding
-      JavaScript Closures</a> - Angus Croll
+  <li>[Understanding
+      JavaScript Closures](https://javascriptweblog.wordpress.com/2010/10/25/understanding-javascript-closures/) - Angus Croll
   </li>
-  <li><a rel="nofollow" href="http://www.2ality.com/2013/06/basic-javascript.html">Basic JavaScript for the impatient
-      programmer</a> - Dr. Axel Rauschmayer
+  <li>[Basic JavaScript for the impatient
+      programmer](http://www.2ality.com/2013/06/basic-javascript.html) - Dr. Axel Rauschmayer
   </li>
 </ul>
 
 <p><strong>Книги</strong></p>
 
 <ul>
-  <li><a rel="nofollow" href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742">JavaScript:
-      The Good Parts</a> - Douglas Crockford
+  <li>[JavaScript:
+      The Good Parts](http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742) - Douglas Crockford
   </li>
-  <li><a rel="nofollow" href="http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752">JavaScript
-      Patterns</a> - Stoyan Stefanov
+  <li>[JavaScript
+      Patterns](http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752) - Stoyan Stefanov
   </li>
-  <li><a rel="nofollow" href="http://www.amazon.com/JavaScript-Design-Patterns-Recipes-Problem-Solution/dp/159059908X">Pro
-      JavaScript Design Patterns</a> - Ross Harmes and Dustin Diaz
+  <li>[Pro
+      JavaScript Design Patterns](http://www.amazon.com/JavaScript-Design-Patterns-Recipes-Problem-Solution/dp/159059908X) - Ross Harmes and Dustin Diaz
   </li>
-  <li><a rel="nofollow" href="http://www.amazon.com/High-Performance-Web-Sites-Essential/dp/0596529309">High Performance
-      Web Sites: Essential Knowledge for Front-End Engineers</a> - Steve Souders
+  <li>[High Performance
+      Web Sites: Essential Knowledge for Front-End Engineers](http://www.amazon.com/High-Performance-Web-Sites-Essential/dp/0596529309) - Steve Souders
   </li>
-  <li><a rel="nofollow" href="http://www.amazon.com/Maintainable-JavaScript-Nicholas-C-Zakas/dp/1449327680">Maintainable
-      JavaScript</a> - Nicholas C. Zakas
+  <li>[Maintainable
+      JavaScript](http://www.amazon.com/Maintainable-JavaScript-Nicholas-C-Zakas/dp/1449327680) - Nicholas C. Zakas
   </li>
-  <li><a rel="nofollow" href="http://www.amazon.com/JavaScript-Web-Applications-Alex-MacCaw/dp/144930351X">JavaScript
-      Web Applications</a> - Alex MacCaw
+  <li>[JavaScript
+      Web Applications](http://www.amazon.com/JavaScript-Web-Applications-Alex-MacCaw/dp/144930351X) - Alex MacCaw
   </li>
-  <li><a rel="nofollow" href="http://www.amazon.com/Pro-JavaScript-Techniques-John-Resig/dp/1590597273">Pro JavaScript
-      Techniques</a> - John Resig
+  <li>[Pro JavaScript
+      Techniques](http://www.amazon.com/Pro-JavaScript-Techniques-John-Resig/dp/1590597273) - John Resig
   </li>
-  <li><a rel="nofollow" href="http://www.amazon.com/Smashing-Node-js-JavaScript-Everywhere-Magazine/dp/1119962595">Smashing
-      Node.js: JavaScript Everywhere</a> - Guillermo Rauch
+  <li>[Smashing
+      Node.js: JavaScript Everywhere](http://www.amazon.com/Smashing-Node-js-JavaScript-Everywhere-Magazine/dp/1119962595) - Guillermo Rauch
   </li>
-  <li><a rel="nofollow" href="http://www.amazon.com/Secrets-JavaScript-Ninja-John-Resig/dp/193398869X">Secrets of the
-      JavaScript Ninja</a> - John Resig and Bear Bibeault
+  <li>[Secrets of the
+      JavaScript Ninja](http://www.amazon.com/Secrets-JavaScript-Ninja-John-Resig/dp/193398869X) - John Resig and Bear Bibeault
   </li>
-  <li><a rel="nofollow" href="http://humanjavascript.com/">Human JavaScript</a> - Henrik Joreteg</li>
-  <li><a rel="nofollow" href="http://superherojs.com/">Superhero.js</a> - Kim Joar Bekkelund, Mads Mobæk, &amp; Olav
+  <li>[Human JavaScript](http://humanjavascript.com/) - Henrik Joreteg</li>
+  <li>[Superhero.js](http://superherojs.com/) - Kim Joar Bekkelund, Mads Mobæk, &amp; Olav
     Bjorkoy
   </li>
-  <li><a rel="nofollow" href="http://jsbooks.revolunet.com/">JSBooks</a></li>
+  <li>[JSBooks](http://jsbooks.revolunet.com/)</li>
 </ul>
 
 <p><strong>Блоги</strong></p>
 
 <ul>
-  <li><a rel="nofollow" href="http://dailyjs.com/">DailyJS</a></li>
-  <li><a rel="nofollow" href="http://javascriptweekly.com/">JavaScript Weekly</a></li>
-  <li><a rel="nofollow" href="https://javascriptweblog.wordpress.com/">JavaScript, JavaScript...</a></li>
-  <li><a rel="nofollow" href="http://weblog.bocoup.com/">Bocoup Weblog</a></li>
-  <li><a rel="nofollow" href="http://www.adequatelygood.com/">Adequately Good</a></li>
-  <li><a rel="nofollow" href="https://www.nczonline.net/">NCZOnline</a></li>
-  <li><a rel="nofollow" href="http://perfectionkills.com/">Perfection Kills</a></li>
-  <li><a rel="nofollow" href="http://benalman.com/">Ben Alman</a></li>
-  <li><a rel="nofollow" href="http://dmitry.baranovskiy.com/">Dmitry Baranovskiy</a></li>
-  <li><a rel="nofollow" href="http://dustindiaz.com/">Dustin Diaz</a></li>
-  <li><p><a rel="nofollow" href="http://net.tutsplus.com/?s=javascript">nettuts</a></p>
+  <li>[DailyJS](http://dailyjs.com/)</li>
+  <li>[JavaScript Weekly](http://javascriptweekly.com/)</li>
+  <li>[JavaScript, JavaScript...](https://javascriptweblog.wordpress.com/)</li>
+  <li>[Bocoup Weblog](http://weblog.bocoup.com/)</li>
+  <li>[Adequately Good](http://www.adequatelygood.com/)</li>
+  <li>[NCZOnline](https://www.nczonline.net/)</li>
+  <li>[Perfection Kills](http://perfectionkills.com/)</li>
+  <li>[Ben Alman](http://benalman.com/)</li>
+  <li>[Dmitry Baranovskiy](http://dmitry.baranovskiy.com/)</li>
+  <li>[Dustin Diaz](http://dustindiaz.com/)</li>
+  <li><p>[nettuts](http://net.tutsplus.com/?s=javascript)</p>
 
-    <p><strong><a href="#Оглавление">[⬆]</a></strong></p></li>
+    <p><strong>[[⬆]](#Оглавление)</strong></p></li>
 </ul>
 
 <h2><a id="В-реальном-мире" class="anchor" href="#В-реальном-мире" aria-hidden="true"><span
@@ -1721,37 +1712,35 @@ $sidebar.<span class="c1">find</span>(<span class="s"><span class="pds">'</span>
   использующих данный перевод.</p>
 
 <ul>
-  <li><strong>Aan Zee</strong>: <a rel="nofollow" href="https://github.com/AanZee/javascript">AanZee/javascript</a></li>
-  <li><strong>Airbnb</strong>: <a rel="nofollow" href="https://github.com/airbnb/javascript">airbnb/javascript</a></li>
-  <li><strong>Compass Learning</strong>: <a rel="nofollow"
-                                            href="https://github.com/compasslearning/javascript-style-guide">compasslearning/javascript-style-guide</a>
+  <li><strong>Aan Zee</strong>: [AanZee/javascript](https://github.com/AanZee/javascript)</li>
+  <li><strong>Airbnb</strong>: [airbnb/javascript](https://github.com/airbnb/javascript)</li>
+  <li><strong>Compass Learning</strong>: [compasslearning/javascript-style-guide](https://github.com/compasslearning/javascript-style-guide)
   </li>
-  <li><strong>ExactTarget</strong>: <a rel="nofollow" href="https://github.com/ExactTarget/javascript">ExactTarget/javascript</a>
+  <li><strong>ExactTarget</strong>: [ExactTarget/javascript](https://github.com/ExactTarget/javascript)
   </li>
-  <li><strong>Gawker Media</strong>: <a rel="nofollow" href="https://github.com/gawkermedia/javascript">gawkermedia/javascript</a>
+  <li><strong>Gawker Media</strong>: [gawkermedia/javascript](https://github.com/gawkermedia/javascript)
   </li>
-  <li><strong>GeneralElectric</strong>: <a rel="nofollow" href="https://github.com/GeneralElectric/javascript">GeneralElectric/javascript</a>
+  <li><strong>GeneralElectric</strong>: [GeneralElectric/javascript](https://github.com/GeneralElectric/javascript)
   </li>
-  <li><strong>GoodData</strong>: <a rel="nofollow"
-                                    href="https://github.com/gooddata/gdc-js-style">gooddata/gdc-js-style</a></li>
-  <li><strong>Grooveshark</strong>: <a rel="nofollow" href="https://github.com/grooveshark/javascript">grooveshark/javascript</a>
+  <li><strong>GoodData</strong>: [gooddata/gdc-js-style](https://github.com/gooddata/gdc-js-style)</li>
+  <li><strong>Grooveshark</strong>: [grooveshark/javascript](https://github.com/grooveshark/javascript)
   </li>
-  <li><strong>How About We</strong>: <a rel="nofollow" href="https://github.com/howaboutwe/javascript">howaboutwe/javascript</a>
+  <li><strong>How About We</strong>: [howaboutwe/javascript](https://github.com/howaboutwe/javascript)
   </li>
-  <li><strong>Mighty Spring</strong>: <a rel="nofollow" href="https://github.com/mightyspring/javascript">mightyspring/javascript</a>
+  <li><strong>Mighty Spring</strong>: [mightyspring/javascript](https://github.com/mightyspring/javascript)
   </li>
-  <li><strong>MinnPost</strong>: <a rel="nofollow" href="https://github.com/MinnPost/javascript">MinnPost/javascript</a>
+  <li><strong>MinnPost</strong>: [MinnPost/javascript](https://github.com/MinnPost/javascript)
   </li>
-  <li><strong>ModCloth</strong>: <a rel="nofollow" href="https://github.com/modcloth/javascript">modcloth/javascript</a>
+  <li><strong>ModCloth</strong>: [modcloth/javascript](https://github.com/modcloth/javascript)
   </li>
-  <li><strong>National Geographic</strong>: <a rel="nofollow" href="https://github.com/natgeo/javascript">natgeo/javascript</a>
+  <li><strong>National Geographic</strong>: [natgeo/javascript](https://github.com/natgeo/javascript)
   </li>
-  <li><strong>Razorfish</strong>: <a rel="nofollow" href="https://github.com/razorfish/javascript-style-guide">razorfish/javascript-style-guide</a>
+  <li><strong>Razorfish</strong>: [razorfish/javascript-style-guide](https://github.com/razorfish/javascript-style-guide)
   </li>
-  <li><strong>Shutterfly</strong>: <a rel="nofollow" href="https://github.com/shutterfly/javascript">shutterfly/javascript</a>
+  <li><strong>Shutterfly</strong>: [shutterfly/javascript](https://github.com/shutterfly/javascript)
   </li>
-  <li><strong>Zillow</strong>: <a rel="nofollow" href="https://github.com/zillow/javascript">zillow/javascript</a></li>
-  <li><strong>ZocDoc</strong>: <a rel="nofollow" href="https://github.com/ZocDoc/javascript">ZocDoc/javascript</a></li>
+  <li><strong>Zillow</strong>: [zillow/javascript](https://github.com/zillow/javascript)</li>
+  <li><strong>ZocDoc</strong>: [ZocDoc/javascript](https://github.com/ZocDoc/javascript)</li>
 </ul>
 
-<p><strong><a href="#Оглавление">[⬆]</a></strong></p>
+<p><strong>[[⬆]](#Оглавление)</strong></p>

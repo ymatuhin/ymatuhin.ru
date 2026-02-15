@@ -35,7 +35,7 @@ html {
 
 ## Используем в браузере как пользователи
 
-Для этого вам нужно установить расширение для Chrome / Firefox — <a href="http://userstyles.org">Stylish</a>.
+Для этого вам нужно установить расширение для Chrome / Firefox — [Stylish](http://userstyles.org).
 
 В настройках создать новый стиль (write new style), назвать его (у меня Font render), поставить галочку `Enable`, и
 в поле `code` вставить следующий текст:

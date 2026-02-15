@@ -76,12 +76,12 @@ Capitan public beta?" %}
 ## Как установить public beta?
 
 Вы все таки решили установить себе одну из операционок? Это делается достаточно просто. Зарегистрируйтесь на
-программе <a href="https://beta.apple.com/sp/ru/betaprogram/welcome?locale=ru">бета тестирования</a> (если
+программе [бета тестирования](https://beta.apple.com/sp/ru/betaprogram/welcome?locale=ru) (если
 устанавливаете iOS то заходите сразу с телефона). Далее просто следуйте инструкциям. Если у вас какие-то проблемы, то
 вот пару статей про
-установку <a rel="nofollow" href="http://www.macdigger.ru/macall/kak-ustanovit-publichnuyu-beta-versiyu-os-x-el-capitan-na-mac.html">
-El Capitan</a>
-и <a rel="nofollow" href="http://www.macdigger.ru/iphone-ipod/kak-ustanovit-ios-9-beta-bez-uchetnoj-zapisi-razrabotchika.html">
-iOS 9</a>.
+установку [
+El Capitan](http://www.macdigger.ru/macall/kak-ustanovit-publichnuyu-beta-versiyu-os-x-el-capitan-na-mac.html)
+и [
+iOS 9](http://www.macdigger.ru/iphone-ipod/kak-ustanovit-ios-9-beta-bez-uchetnoj-zapisi-razrabotchika.html).
 
 Вот и все, о проблемах пишите в комментариях, я буду дополнять эту статью.

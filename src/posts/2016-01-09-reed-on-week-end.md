@@ -27,8 +27,8 @@ has_iframe: true
 url: "//codepen.io/joshnh/embed/JCGoF/?height=320&theme-id=0&default-tab=result",
 width: "960",
 height: "320",
-alt: '<a href="http://codepen.io/joshnh/pen/JCGoF/" rel="nofollow">Single Element Pure CSS MacBook Pro</a> by Joshua
-Hibbert (<a href="http://codepen.io/joshnh" rel="nofollow">@joshnh</a>) on CodePen'
+alt: '[Single Element Pure CSS MacBook Pro](http://codepen.io/joshnh/pen/JCGoF/) by Joshua
+Hibbert ([@joshnh](http://codepen.io/joshnh)) on CodePen'
 %}
 
 ## Статьи и видео

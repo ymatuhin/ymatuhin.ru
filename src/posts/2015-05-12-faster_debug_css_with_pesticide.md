@@ -32,8 +32,8 @@ Tools». На самом деле принцип её работы очень п
 то по цвету можно определять цвет элемента и его область.
 
 Сам CSS файл до смешного прост, познакомиться подробнее с Pesticide можно на официальном
-сайте <a href="http://pesticide.io">pesticide.io</a>. Посмотреть исходники и скачать файл можно
-с <a href="https://github.com/mrmrs/pesticide" rel="nofollow">github</a>.
+сайте [pesticide.io](http://pesticide.io). Посмотреть исходники и скачать файл можно
+с [github](https://github.com/mrmrs/pesticide).
 
 {% mediaImage "pesticide/github.png", "Пример использования Pesticide на Github" %}
 
@@ -41,8 +41,8 @@ Tools». На самом деле принцип её работы очень п
 
 Мне кажется, что подключать эту библиотеку как css файл на свой проект не рационально. Особенно когда у неё есть
 расширения для
-браузеров (<a href="https://chrome.google.com/webstore/detail/bblbgcheenepgnnajgfpiicnbbdmmooh" rel="nofollow">
-Chrome</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/pesticide/" rel="nofollow">Firefox</a>).
+браузеров ([
+Chrome](https://chrome.google.com/webstore/detail/bblbgcheenepgnnajgfpiicnbbdmmooh), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/pesticide/)).
 
 Но с расширениями есть одна проблема — они сбрасывается при перезагрузке страницы. В таком случае нам придется
 обязательно подключать pesticide как css файл чтобы избежать этого.
@@ -50,8 +50,8 @@ Chrome</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/pesticide/" 
 Я предложил Адаму исправить это положение вещей в расширении для хрома, но он не поддержал меня и решил не
 включать мои изменения в расширение. Поэтому было решено опубликовать еще одну версию этого расширения для хрома только
 без необходимости каждый раз нажимать на кнопку, чтобы увидеть библиотеку в действии. Так и
-появился <a href="https://chrome.google.com/webstore/detail/pesticide-for-chrome-with/eipbgplchlidkojmppclhkechkhmlefi">
-Pesticide for Chrome with autoupdate</a>.
+появился [
+Pesticide for Chrome with autoupdate](https://chrome.google.com/webstore/detail/pesticide-for-chrome-with/eipbgplchlidkojmppclhkechkhmlefi).
 
 Какое расширение будете использовать вы — дело исключительно ваше. Но я думаю, не мне одному будет удобна моя
 модификация.

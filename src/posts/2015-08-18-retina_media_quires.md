@@ -43,8 +43,8 @@ tags:
 
 ## Почему эти правила
 
-Ответ найдем в поддержке браузерами этих свойств. Открываем <a href="http://caniuse.com/#feat=css-media-resolution">
-caniuse</a> и видим следующее:
+Ответ найдем в поддержке браузерами этих свойств. Открываем [
+caniuse](http://caniuse.com/#feat=css-media-resolution) и видим следующее:
 
 {% mediaImage "media_queries/support.png", "Поддержка Media Queries в браузерах" %}
 

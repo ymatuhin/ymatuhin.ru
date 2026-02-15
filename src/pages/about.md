@@ -15,5 +15,5 @@ description: >
 
 [Резюме](/resume/) и&nbsp;[профиль на&nbsp;гитхабе](https://github.com/ymatuhin), там&nbsp;же есть несколько проектов.
 
-Лучший способ связаться со&nbsp;мной&nbsp;&mdash; написать мне на&nbsp;почту <a href="mailto:ym@ymatuhin.ru">ym@ymatuhin.ru</a>.
-Чаще чем на&nbsp;почте я&nbsp;бываю в твитере <a href="https://twitter.com/ymatuhin">@ymatuhin</a>.
+Лучший способ связаться со&nbsp;мной&nbsp;&mdash; написать мне на&nbsp;почту [ym@ymatuhin.ru](mailto:ym@ymatuhin.ru).
+Чаще чем на&nbsp;почте я&nbsp;бываю в твитере [@ymatuhin](https://twitter.com/ymatuhin).

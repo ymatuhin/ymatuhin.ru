@@ -7,7 +7,7 @@ tags:
   - 'pixel art'
 image:
   path: 'pixel-art/pixel-art.gif'
-  alt: 'Пиратский сюжет, автор: <a href=''http://bugpixel.com/'' rel=''nofollow''>bugpixel</a>.'
+  alt: 'Пиратский сюжет, автор bugpixel'
   pixelated: true
 ---
 
