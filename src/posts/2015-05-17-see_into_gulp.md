@@ -8,8 +8,6 @@ tags: >
   gulp watch task src dist сборка front end клиент pipe
 image:
   path: /assets/img/gulp/logo.png
-  width: 400
-  height: 200
   alt: Gulp — системы сборки фронтенда
 image_link: http://gulpjs.com
 ---

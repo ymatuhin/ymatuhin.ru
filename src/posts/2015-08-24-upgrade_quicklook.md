@@ -8,8 +8,6 @@ tags: [mac os]
 
 image:
   path: /assets/img/quicklook/preview.png
-  width: 500
-  height: 250
 ---
 
 {% include "media-post-image.liquid" %}

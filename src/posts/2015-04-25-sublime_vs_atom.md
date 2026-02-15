@@ -4,8 +4,6 @@ title: Все еще сидите на Sublime? Тогда мы, вместе �
 categories: tools
 image:
   path: /assets/img/atom/atom_vs_sublime.jpg
-  width: 1000
-  height: 700
   alt: Atom
 tags: >
   atom github текстовый редактор кода sublime vs обзор редактора

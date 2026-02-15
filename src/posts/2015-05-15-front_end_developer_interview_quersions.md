@@ -6,8 +6,6 @@ tags: >
   front end собеседование работа вопросы перевод должность кандидат
 image:
   path: /assets/img/front_end_interview/mem.jpg
-  width: 760
-  height: 365
   alt: На собеседовании фронтенд разработчика
 ---
 

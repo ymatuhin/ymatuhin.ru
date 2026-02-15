@@ -8,8 +8,6 @@ tags: [cdn, preconnect, prefetch, prerender, preloading, оптимизация]
 image:
   path: /assets/img/link_prefetch/html5_link_prefetch.png
   caption: Стадии загрузки ресурса / HTML5 Link Prefetch
-  width: 1144
-  height: 564
 ---
 
 {% include "media-post-image.liquid" %}

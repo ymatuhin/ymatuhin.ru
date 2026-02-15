@@ -7,8 +7,6 @@ tags: [mac, osx]
 image:
   path: /assets/img/mac/dialog.png
   caption: Диалог смены расширения у файла в Mac OS
-  width: 420
-  height: 159
 ---
 
 {% include "media-post-image.liquid" %}

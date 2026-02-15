@@ -8,8 +8,6 @@ tags: [frameworks, js, react, flux, redux, testing]
 image:
   path: /assets/img/test-framework/frameworks.jpg
   caption: Разнообразие JavaScript фреймворков
-  width: 638
-  height: 476
 ---
 
 {% include "media-post-image.liquid" %}

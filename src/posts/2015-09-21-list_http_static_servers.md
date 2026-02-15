@@ -6,8 +6,6 @@ tags: [http, server]
 
 image:
   path: /assets/img/server/http-server.png
-  width: 420
-  height: 200
   caption: Http-server статики в терминале
 ---
 

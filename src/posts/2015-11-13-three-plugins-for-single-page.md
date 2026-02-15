@@ -6,8 +6,6 @@ description: Три плагина улучшат приложение для п
 tags: [spa, angular, plugins, offline, loading, mobile]
 image:
   path: /assets/img/spa_plugins/spa_plugins.jpg
-  width: 1400
-  height: 800
 ---
 
 {% include "media-post-image.liquid" %}

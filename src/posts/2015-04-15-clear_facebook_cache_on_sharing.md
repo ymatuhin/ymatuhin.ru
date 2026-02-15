@@ -8,8 +8,6 @@ description: >
   Не работает шаринг в Facebook или Вконтакте? Показывает «Страница не найдена 404» при шаринге (share)? Вам нужно очистить КЭШ и все заработает.
 image:
   path: /assets/img/facebook_sharing_error/facebook_sharing_error.png
-  width: 550
-  height: 280
   caption: Ошибка при шаринге в Facebook — 404 Страница не найдена
 ---
 

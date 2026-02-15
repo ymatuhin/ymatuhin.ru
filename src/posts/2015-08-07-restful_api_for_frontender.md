@@ -8,8 +8,6 @@ tags: [rest, api, http]
 
 image:
   path: /assets/img/rest_api/restful.png
-  width: 700
-  height: 400
 ---
 
 {% include "media-post-image.liquid" %}

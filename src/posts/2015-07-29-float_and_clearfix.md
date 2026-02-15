@@ -8,8 +8,6 @@ tags: clearfix css after div плавающие элементы float обно�
 
 image:
   path: /assets/img/clearfix/clearfix.png
-  width: 800
-  height: 380
   alt: Как работает Clearfix CSS
 ---
 

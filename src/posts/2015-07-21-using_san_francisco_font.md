@@ -8,8 +8,6 @@ tags: >
   привычка разработчика разработчик front end проверяй код перед комитом программиста
 image:
   path: /assets/img/san_francisco/san_francisco.jpg
-  width: 1040
-  height: 600
   alt: San Francisco
 ---
 

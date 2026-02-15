@@ -8,8 +8,6 @@ tags: [bootstrap, media quires, медиа выражения]
 
 image:
   path: /assets/img/media_queries/bootstrap.png
-  width: 640
-  height: 400
   alt: Контрольные точки медиа выражений Twitter Bootstrap
 ---
 

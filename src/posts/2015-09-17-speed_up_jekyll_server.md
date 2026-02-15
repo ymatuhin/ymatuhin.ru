@@ -6,8 +6,6 @@ tags: [jekyll, блог]
 
 image:
   path: /assets/img/jekyll/jekyll-logo.png
-  width: 960
-  height: 480
   alt: Логотип Jekyll
 ---
 

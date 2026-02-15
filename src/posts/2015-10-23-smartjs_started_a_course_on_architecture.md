@@ -7,8 +7,6 @@ tags: [css, smartjs, архитектура]
 updated: 24-05-2016
 image:
   path: /assets/img/smartjs/logo.jpg
-  width: 600
-  height: 757
   caption: "Логотип SmartJS академии"
 ---
 

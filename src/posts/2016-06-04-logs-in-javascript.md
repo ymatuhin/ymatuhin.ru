@@ -7,8 +7,6 @@ tags: [JS, Debug]
 
 image:
   path: /assets/img/logs/bear.jpg
-  width: 1008
-  height: 504
   caption: Вася следит за логами
 has_youtube: true
 ---

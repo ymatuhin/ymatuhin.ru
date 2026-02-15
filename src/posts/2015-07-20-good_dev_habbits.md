@@ -8,8 +8,6 @@ tags: >
   привычка разработчика разработчик front end проверяй код перед комитом программиста
 image:
   path: /assets/img/habbits/good_habbits.png
-  width: 800
-  height: 400
   alt: Полезные привычки разработчика
 ---
 

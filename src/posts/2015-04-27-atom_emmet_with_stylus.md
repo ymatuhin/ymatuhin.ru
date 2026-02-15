@@ -9,8 +9,6 @@ description: >
 
 image:
   path: /assets/img/atom/atom_stylus_emmet.jpg
-  width: 800
-  height: 450
   alt: Atom + Emmet + Stylus
 ---
 

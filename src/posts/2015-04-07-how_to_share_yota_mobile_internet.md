@@ -9,8 +9,6 @@ description: >
 
 image:
   path: /assets/img/yota/yota.png
-  width: 225
-  height: 300
   alt: Yota — снимаем ограничение скорости
 ---
 

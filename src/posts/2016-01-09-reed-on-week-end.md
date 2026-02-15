@@ -7,8 +7,6 @@ tags: [почитать, список, дайджест]
 image:
   path: /assets/img/week-ends/1984.jpg
   caption: Джордж Оруэлл — 1984
-  width: 808
-  height: 474
 has_iframe: true
 ---
 

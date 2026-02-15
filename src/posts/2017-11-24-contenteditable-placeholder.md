@@ -6,8 +6,6 @@ categories: front-end
 tags: [ js, contenteditable, placeholder ]
 image:
   path: /assets/img/contenteditable.jpg
-  width: 1200
-  height: 400
   alt: '[contenteditable]'
 ---
 

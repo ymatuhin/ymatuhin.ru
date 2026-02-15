@@ -8,8 +8,6 @@ tags: [web fonts, font, font-display, css]
 image:
   path: /assets/img/font-display/font-display.png
   alt: Font display
-  width: 762
-  height: 658
 has_youtube: true
 ---
 

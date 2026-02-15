@@ -6,8 +6,6 @@ tags: [css, сглаживание шрифта, mac os, расширение]
 
 image:
   path: /assets/img/font-smooth/compare.png
-  width: 720
-  height: 540
   alt: Сглаживание шрифтов CSS
 ---
 

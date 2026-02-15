@@ -6,8 +6,6 @@ description: >
 categories: front-end
 image:
   path: /assets/img/need_to_frontend/i-have-a-plan.jpg
-  width: 604
-  height: 219
   caption: "Кажется у меня есть план…"
 ---
 

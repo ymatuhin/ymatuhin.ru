@@ -6,8 +6,6 @@ categories: front-end
 tags: [js]
 image:
     path: /assets/img/variables/variables.jpg
-    width: 800
-    height: 400
     alt: Как называть переменные
 ---
 

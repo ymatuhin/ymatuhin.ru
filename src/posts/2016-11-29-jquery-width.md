@@ -7,8 +7,6 @@ description: >
 tags: [ Tips, JS, jQuery ]
 image:
   path: /assets/img/jquery/jquery.jpg
-  width: 1440
-  height: 770
   alt: jQuery.width
 ---
 

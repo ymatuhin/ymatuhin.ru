@@ -6,8 +6,6 @@ categories: front-end
 tags: [ JS, Tips, Array ]
 image:
   path: /assets/img/tips/array_uniq.jpg
-  width: 1440
-  height: 480
   alt: Убрать дубликаты из массива в JavaScript
 ---
 

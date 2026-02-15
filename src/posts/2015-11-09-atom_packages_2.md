@@ -8,8 +8,6 @@ tags: [Atom, плагины, текстовый редактор]
 
 image:
   path: /assets/img/atom/plugins_2/atom-logo.png
-  width: 1200
-  height: 630
 ---
 
 {% include "media-post-image.liquid" %}

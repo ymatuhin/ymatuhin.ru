@@ -7,8 +7,6 @@ tags: [adblock, ads, реклама]
 
 image:
   path: /assets/img/adblock/logo_adblock.png
-  width: 512
-  height: 128
 ---
 
 {% include "media-post-image.liquid" %}

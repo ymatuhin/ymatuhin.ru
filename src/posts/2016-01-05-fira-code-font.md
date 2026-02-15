@@ -8,8 +8,6 @@ tags: [font, text editor, settings]
 image:
   path: /assets/img/fira-code/fira-code.png
   caption: 'Fira Code: шрифт с лигатурами для кода'
-  width: 600
-  height: 340
 ---
 
 {% include "media-post-image.liquid" %}

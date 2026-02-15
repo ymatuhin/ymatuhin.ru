@@ -7,8 +7,6 @@ description: Дебажим CSS слои с помощью библиотеки
 
 image:
   path: /assets/img/pesticide/logo.png
-  width: 530
-  height: 140
   alt: Pesticide — библиотека для дебага CSS
 ---
 

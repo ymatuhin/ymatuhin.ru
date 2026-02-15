@@ -8,8 +8,6 @@ description: >
   Как сделать анимацию высоты в CSS со значением auto через transition? Легко и без единой строчки javascript. Подробнее читайте в этой статье.
 image:
   path: /assets/img/animate_height/transition_sign.jpg
-  width: 1040
-  height: 380
   alt: CSS анимация высоты через transition
 ---
 

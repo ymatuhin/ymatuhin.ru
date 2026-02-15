@@ -6,8 +6,6 @@ categories: front-end
 tags: [js, scroll]
 image:
     path: /assets/img/scroll/scrollbar-windows.jpg
-    width: 506
-    height: 389
     caption: Полосы прокрутки семейства Windows
 ---
 

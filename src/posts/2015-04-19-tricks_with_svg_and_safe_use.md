@@ -8,8 +8,6 @@ description: >
 
 image:
   path: /assets/img/svg/svg_logo.png
-  width: 400
-  height: 200
   alt: Логотип SVG
 ---
 

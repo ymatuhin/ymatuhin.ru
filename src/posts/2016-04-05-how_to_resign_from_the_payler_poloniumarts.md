@@ -7,8 +7,6 @@ tags: [payler, polonium art, увольнение, константин копы
 published: false
 image:
   path: /assets/img/payler/payler.jpg
-  width: 736
-  height: 184
   caption: Payler
 ---
 

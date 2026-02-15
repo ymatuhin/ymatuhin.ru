@@ -6,8 +6,6 @@ description: Проверяем поддержку эмодзи у пользо�
 tags: [emoji, twitter, fallback]
 image:
   path: /assets/img/emoji/emoji.jpg
-  width: 1860
-  height: 830
 ---
 
 {% include "media-post-image.liquid" %}

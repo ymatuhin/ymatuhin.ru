@@ -9,8 +9,6 @@ description: >
 
 image:
   path: /assets/img/git/gitignore.png
-  width: 800
-  height: 300
   caption: Сервис для автоматической генерации файла .gitignore для git — gitignore.io
 image_link: https://www.gitignore.io/
 ---

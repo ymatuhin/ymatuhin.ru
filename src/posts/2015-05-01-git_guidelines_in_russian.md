@@ -9,8 +9,6 @@ description: >
 
 image:
   path: /assets/img/git/git_guide.png
-  width: 800
-  height: 200
   alt: Руководства по GIT на русском языке
 ---
 

@@ -8,8 +8,6 @@ description: >
 
 image:
   path: /assets/img/flickr_extension/new_tab_by_flickr_1.png
-  width: 1280
-  height: 773
   alt: Расширение для Google Chrome — Flickr Tab
 ---
 

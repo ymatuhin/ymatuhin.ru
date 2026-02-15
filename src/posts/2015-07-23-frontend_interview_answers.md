@@ -9,8 +9,6 @@ tags: >
 
 image:
   path: /assets/img/front_end_interview/head.jpg
-  width: 1040
-  height: 600
   alt: 'Разбор вопросов на собеседовании разработчика интерфейсов #1'
 ---
 

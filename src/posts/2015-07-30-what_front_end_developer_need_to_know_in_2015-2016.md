@@ -6,8 +6,6 @@ description: >
 categories: front-end
 image:
   path: /assets/img/need_to_frontend/what-need-to-know-as-frontend.png
-  width: 600
-  height: 320
   alt: Какими знаниями должен обладать фронтенд разработчик в 2015/2016
 ---
 

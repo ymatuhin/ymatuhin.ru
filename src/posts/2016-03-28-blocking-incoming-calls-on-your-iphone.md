@@ -6,8 +6,6 @@ description:
 tags: [лайфхак, блокировка, входящие, звонки, iphone, yota, включить]
 image:
   path: /assets/img/phones/phone.jpeg
-  width: 1107
-  height: 738
 ---
 
 {% include "media-post-image.liquid" %}

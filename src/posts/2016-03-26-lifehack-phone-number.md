@@ -6,8 +6,6 @@ description: Надоели звонки от клиентов в 2 часа н�
 tags: [лайфхак, js, номер, телефон, блокировка в нерабочее время]
 image:
   path: /assets/img/phones/phones.jpeg
-  width: 770
-  height: 513
 ---
 
 {% include "media-post-image.liquid" %}

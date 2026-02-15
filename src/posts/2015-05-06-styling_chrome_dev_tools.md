@@ -7,8 +7,6 @@ tags: >
 
 image:
   path: /assets/img/dev_tools/dev_tools.png
-  width: 1280
-  height: 430
   caption: Темная темя для Chrome Dev Tools
 ---
 

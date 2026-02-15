@@ -9,8 +9,6 @@ tags: >
 
 image:
   path: /assets/img/ios9_osx_el_capitan/el_capitan_and_ios_9.png
-  width: 600
-  height: 436
   alt: Отзыв на публичные беты iOS 9 и El Capitan
 has_youtube: true
 ---

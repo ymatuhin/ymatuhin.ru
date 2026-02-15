@@ -6,8 +6,6 @@ categories: front-end
 tags: [css, link, underline]
 image:
     path: /assets/img/text-decoration/preview.png
-    width: 1280
-    height: 722
     alt: Пример css свойства text-decoration-skip
 ---
 

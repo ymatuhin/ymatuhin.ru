@@ -8,8 +8,6 @@ tags: >
   vivaldi интернет браузер обзор вивальди отзыв
 image:
   path: /assets/img/vivaldi/default_view.png
-  width: 1392
-  height: 885
   alt: Интернет браузер Vivaldi
 ---
 

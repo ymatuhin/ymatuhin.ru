@@ -7,8 +7,6 @@ tags: [css, выравнивание]
 
 image:
   path: /assets/img/margin/margin_right_alignment.gif
-  width: 419
-  height: 278
   caption: Горизонтальное выравнивание в CSS
 ---
 

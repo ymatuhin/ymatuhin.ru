@@ -8,8 +8,6 @@ tags: >
   пасхалки google, динозавр гугл хром, динозавр в хроме, как играть в динозавра в хроме, пасхалки chrome
 image:
   path: /assets/img/eastern_eggs/t-rex-runner.png
-  width: 700
-  height: 400
 has_youtube: true
 ---
 

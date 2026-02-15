@@ -7,8 +7,6 @@ tags: [css, изображения, оформление, стилизация, 
 image:
   path: /assets/img/broken-icons/broken-icons.png
   caption: Браузеры отображают незагруженное изображение
-  width: 600
-  height: 200
 ---
 
 {% include "media-post-image.liquid" %}

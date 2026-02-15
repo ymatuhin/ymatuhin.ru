@@ -6,8 +6,6 @@ categories: tools
 tags: [vscode, tools, editor]
 image:
     path: /assets/img/vscode/icon-dribbble.png
-    width: 800
-    height: 480
     caption: Альтернативная версия иконки для VS Code, автор <a href='https://dribbble.com/shots/2436746-Visual-Studio-Code-replacement-icon'>James Gilyead</a>
 ---
 

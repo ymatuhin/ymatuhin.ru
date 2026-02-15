@@ -9,8 +9,6 @@ tags: >
 
 image:
   path: /assets/img/36/vadim.jpg
-  width: 656
-  height: 367
   caption: Вадим Макишвили выступает на FrontTalks
 has_youtube: true
 ---

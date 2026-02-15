@@ -6,8 +6,6 @@ description: Как незаметно проводить рефакторинг
 tags: [react, smartjs, архитектура, рефакторинг]
 image:
   path: /assets/img/refactoring/cat.jpg
-  width: 438
-  height: 500
   caption: ""
 ---
 

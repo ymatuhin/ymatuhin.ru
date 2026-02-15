@@ -8,8 +8,6 @@ tags: [css, межбуквенный интервал, tools]
 
 image:
   path: /assets/img/letter-spacing/table_of_contents.gif
-  width: 490
-  height: 317
   alt: Виллу Тоотс. Современный шрифт.
 ---
 

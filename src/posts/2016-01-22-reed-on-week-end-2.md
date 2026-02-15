@@ -6,8 +6,6 @@ description: Список статей, библиотек, фреймворко
 tags: [почитать, список, дайджест]
 image:
   path: /assets/img/week-ends/social-previews.png
-  width: 2082
-  height: 2022
   caption: Размеры изображений при шаринге в социальных сетях
 ---
 

@@ -6,8 +6,6 @@ description: Краткое содержание докладов с конфе�
 tags: [видео, конференция, fronttalks]
 image:
   path: /assets/img/fronttalks/fronttalks_2015.jpg
-  width: 469
-  height: 460
   caption: FrontTalks 2015
 ---
 
