@@ -21,3 +21,35 @@ h6 {
   letter-spacing: 0.04em;
   margin: 3rem 0 1rem;
 }
+
+h2 a[href^="#"],
+h3 a[href^="#"],
+h4 a[href^="#"] {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  font-size: 0;
+  color: transparent;
+  white-space: nowrap;
+}
+
+h2 a[href^="#"]::before,
+h3 a[href^="#"]::before,
+h4 a[href^="#"]::before {
+  font-size: var(--heading-font-size);
+  line-height: var(--heading-line-height);
+  color: var(--secondary-text-color);
+  cursor: pointer;
+}
+
+h2 a[href^="#"]::before {
+  content: '##';
+}
+
+h3 a[href^="#"]::before {
+  content: '###';
+}
+
+h4 a[href^="#"]::before {
+  content: '####';
+}
