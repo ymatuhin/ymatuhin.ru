@@ -23,7 +23,8 @@
 {% assign hasStrong = contentToCheck contains "<strong" %}
 {% assign hasB = contentToCheck contains "<b>" or contentToCheck contains "<b " %}
 {% assign hasTh = contentToCheck contains "<th" %}
-{% assign hasButton = contentToCheck contains "<button" %}
+{% assign hasButtonClass = contentToCheck contains 'class="button"' or contentToCheck contains "class='button'" %}
+{% assign hasButton = contentToCheck contains "<button" or hasButtonClass %}
 {% assign contentToCheck = contentHtml | default: content | default: "" %}
 {% assign hasCodeBlock = contentToCheck contains "<pre" or contentToCheck contains "language-" %}
 
@@ -63,7 +64,11 @@
   {% include "styles/content/hr.css" %}
 {% endif %}
 
-{% if hasAnyHeading or hasB or hasStrong or hasTh or hasButton %}
+{% if hasButton %}
+  {% include "styles/content/button.css" %}
+{% endif %}
+
+{% if hasAnyHeading or hasB or hasStrong or hasTh %}
   {% include "styles/content/bold.css" %}
 {% endif %}
 

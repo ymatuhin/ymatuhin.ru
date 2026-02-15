@@ -27,10 +27,10 @@ permalink: "/posts/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | 
 
 <p>
   {% if pagination.href.previous %}
-    <a href="{{ pagination.href.previous }}">Newer posts</a>
+    <a class="button" href="{{ pagination.href.previous }}">Newer posts</a>
   {% endif %}
   {% if pagination.href.previous and pagination.href.next %}&nbsp;·&nbsp;{% endif %}
   {% if pagination.href.next %}
-    <a href="{{ pagination.href.next }}">Older posts</a>
+    <a class="button" href="{{ pagination.href.next }}">Older posts</a>
   {% endif %}
 </p>

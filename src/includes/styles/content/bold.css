@@ -6,7 +6,6 @@ h5,
 h6,
 b,
 strong,
-th,
-button {
+th {
   font-weight: 600;
 }
