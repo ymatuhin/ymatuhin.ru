@@ -1,26 +1,3 @@
 {% if url %}
-<figure>
-	<img src="{{ url | prepend: '/assets/img/' }}"
-		alt="{% if alt %}{{ alt | xml_escape }}{% else %}{{ caption | xml_escape }}{% endif %}"
-		{% if width %}width="{{ width }}"{% endif %}
-		{% if height %}height="{{ height }}"{% endif %}
-		{% if pixelart %}class="pixel-art"{% endif %}>
-
-	{% if caption %}
-		<figcaption>{{ caption }}</figcaption>
-	{% endif %}
-</figure>
-{% endif %}
-
-{% if page.image.pixelart %}
-<style>
-img.pixel-art {
-  -ms-interpolation-mode: nearest-neighbor;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: -webkit-crisp-edges;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -o-crisp-edges;
-  image-rendering: pixelated;
-}
-</style>
+  {% mediaImage url, alt, caption, width, height, pixelated %}
 {% endif %}

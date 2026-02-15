@@ -1,10 +1,11 @@
 {
+  "type": "module",
   "name": "ymatuhin.ru",
   "version": "1.0.0",
   "description": "Hi, it's my Jekyll powered website — <a href=\"https://ymatuhin.ru\">ymatuhin.ru</a>",
   "scripts": {
-    "start": "rm -rf _site && eleventy --serve",
-    "build": "rm -rf _site && eleventy",
+    "start": "rm -rf _site && NODE_ENV=development eleventy --serve",
+    "build": "rm -rf _site && NODE_ENV=production eleventy",
     "debug": "DEBUG=Eleventy* eleventy"
   },
   "repository": {
@@ -18,7 +19,9 @@
   },
   "homepage": "https://github.com/ymatuhin/ymatuhin.github.io#readme",
   "devDependencies": {
+    "markdown-it": "^14.1.1",
     "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-img": "^6.0.0",
     "@11ty/eleventy-plugin-rss": "^2.0.4",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "canvas-confetti": "^1.9.4",
@@ -29,9 +32,5 @@
     "prettier": "^3.8.1",
     "purgecss": "^8.0.0",
     "sass": "^1.97.3"
-  },
-  "type": "module",
-  "dependencies": {
-    "markdown-it": "^14.1.1"
   }
 }

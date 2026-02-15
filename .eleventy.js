@@ -1,6 +1,7 @@
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import {feedPlugin} from "@11ty/eleventy-plugin-rss";
 import {IdAttributePlugin} from "@11ty/eleventy";
+import Image from "@11ty/eleventy-img";
 import markdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
 import {minify} from "html-minifier-terser";
@@ -39,6 +40,43 @@ export default function (eleventyConfig) {
         email: "", // Optional
       }
     }
+  });
+
+  eleventyConfig.addAsyncShortcode("mediaImage", async function (url, alt, caption, width, height, pixelated) {
+    if (!url) return "";
+
+    const source = `./public/assets/img/${url}`;
+    const imageWidth = Number.parseInt(width, 10);
+    const imageHeight = Number.parseInt(height, 10);
+    const imageAlt = (alt || caption || "").toString();
+    const extension = url.split(".").pop()?.toLowerCase();
+    const formats = extension === "svg" || extension === "gif" ? ["auto"] : ["avif", "webp", "auto"];
+
+    const metadata = await Image(source, {
+      widths: [imageWidth || null],
+      formats,
+      outputDir: "./_site/assets/img/optimized/",
+      urlPath: "/assets/img/optimized/"
+    });
+
+    const imageAttributes = {
+      alt: imageAlt,
+      style: pixelated ? "image-rendering: pixelated" : undefined,
+      loading: "lazy",
+      decoding: "async"
+    };
+
+    if (imageWidth) {
+      imageAttributes.width = imageWidth;
+    }
+    if (imageHeight) {
+      imageAttributes.height = imageHeight;
+    }
+
+    const imageMarkup = Image.generateHTML(metadata, imageAttributes);
+    const figcaption = caption ? `<figcaption>${caption}</figcaption>` : "";
+
+    return `<figure>${imageMarkup}${figcaption}</figure>`;
   });
 
   // Passthrough copy
