@@ -56,7 +56,7 @@ class="octicon octicon-link"></span></a>Оглавление</h2>
   <li>[Совместимость с ES5](#es5)</li>
   <li>[Тестирование](#testing)</li>
   <li>[Быстродействие](#performance)</li>
-  <li>[ есурсы](#resources)</li>
+  <li>[Ресурсы](#resources)</li>
   <li>[В реальном мире](#in-the-wild)</li>
 </ol>
 
@@ -825,7 +825,7 @@ id="comments">Комментарии</a></h2>
 }</pre>
 </div>
   </li>
-  <li><p>Используйте <code>//</code> для комментариев в одну строку.  азмещайте комментарии на новой строке над темой
+  <li><p>Используйте <code>//</code> для комментариев в одну строку. Размещайте комментарии на новой строке над темой
       комментария. Добавляйте пустую строку над комментарием.</p>
 
     <div class="highlight highlighter-rouge"><pre><span class="c">// плохо</span>
@@ -1729,8 +1729,8 @@ class="octicon octicon-link"></span></a><a id="performance">Быстродейс
 
 </ul>
 
-<h2><a id=" есурсы" class="anchor" href="# есурсы" aria-hidden="true"><span class="octicon octicon-link"></span></a><a
-id="resources"> есурсы</a></h2>
+<h2><a id="Ресурсы" class="anchor" href="#Ресурсы" aria-hidden="true"><span class="octicon octicon-link"></span></a><a
+id="resources">Ресурсы</a></h2>
 
 <p><strong>Прочитайте это</strong></p>
 

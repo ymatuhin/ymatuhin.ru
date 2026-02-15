@@ -38,9 +38,9 @@ Hibbert ([@joshnh](http://codepen.io/joshnh)) on CodePen'
 1. [Список YouTube-каналов для обучения веб-разработке][24]{:rel='nofollow'}
 1. [Чеклист по установке и настройке нового сайта на WordPress][19]{:rel='nofollow'}
 1. 🇺🇸  [React для начинающих][39]{:rel='nofollow'}
-1. 🇺🇸  [ уководство по React.js][1]{:rel='nofollow'}
+1. 🇺🇸  [Руководство по React.js][1]{:rel='nofollow'}
 1. 🇺🇸  [Путь React.js: руководство по началу работы][2]{:rel='nofollow'}
-1. 🇺🇸  [ уководство по Canvas][6]{:rel='nofollow'}
+1. 🇺🇸  [Руководство по Canvas][6]{:rel='nofollow'}
 1. 🇺🇸  [Awesome Frontend Development][8]{:rel='nofollow'}
 1. 🇺🇸  [Возможно вам не нужен jQuery][11]{:rel='nofollow'}
 1. 🇺🇸  [HTML5 кросс браузерные полифилы][7]{:rel='nofollow'}

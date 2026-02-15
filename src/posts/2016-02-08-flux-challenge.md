@@ -10,7 +10,7 @@ tags:
   - тестирование
 image:
   path: test-framework/frameworks.jpg
-  alt: ' азнообразие JavaScript фреймворков'
+  alt: 'Разнообразие JavaScript фреймворков'
 redirects:
   - /front-end/flux-challenge/
 ---

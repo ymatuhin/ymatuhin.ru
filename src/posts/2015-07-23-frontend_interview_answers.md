@@ -8,7 +8,7 @@ tags:
   - собеседования
 image:
   path: front_end_interview/head.jpg
-  alt: ' азбор вопросов на собеседовании разработчика интерфейсов #1'
+  alt: 'Разбор вопросов на собеседовании разработчика интерфейсов #1'
 redirects:
   - /front-end/frontend_interview_answers/
 ---

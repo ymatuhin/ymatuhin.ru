@@ -69,4 +69,4 @@ iOS до 4 версии, Android до версии 2.3 требуют `-webkit-`
 
 {% mediaImage "box_sizing/w3c_vs_borderbox.png", "Производительность New York Times со моделью W3C и с border-box" %}
 
-азница не превысила порог в 5%
+Разница не превысила порог в 5%
