@@ -12,9 +12,10 @@ permalink: index.html
   {% for post in collections.posts limit: 10 %}
   {% include "card.liquid"
     tag: "h2",
-    categories: post.data.tags,
+    tags: post.data.tags,
     date: post.date,
-    image: post.data.image.path,
+    imagePath: post.data.image.path,
+    imageAlt: post.data.image.alt,
     link: post.url,
     title: post.data.title,
     description: post.data.description %}

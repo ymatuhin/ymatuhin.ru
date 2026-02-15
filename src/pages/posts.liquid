@@ -17,9 +17,10 @@ permalink: "/posts/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | 
   {% for post in postsPage %}
     {% include "card.liquid"
       tag: "h2",
-      categories: post.data.tags,
+      tags: post.data.tags,
       date: post.date,
-      image: post.data.image.path,
+      imagePath: post.data.image.path,
+      imageAlt: post.data.image.alt,
       link: post.url,
       title: post.data.title,
       description: post.data.description %}
