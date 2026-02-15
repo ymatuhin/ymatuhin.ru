@@ -3,15 +3,10 @@ layout: post
 title: Обновляемся до Jekyll v3.x
 description: Как обовиться до новой версии Jekyll избежав багов при переходе.
 tags:
+  - разработка
+  - инструменты
   - jekyll
-  - генератор статических сайтов
-  - github
-  - обновление
   - миграция
-  - markdown
-  - kramdown
-  - rouge
-  - pigments
 image:
   path: jekyll/jekyll-logo.png
   alt: Логотип Jekyll

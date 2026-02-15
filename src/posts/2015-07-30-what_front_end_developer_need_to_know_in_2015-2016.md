@@ -9,6 +9,7 @@ tags:
   - разработка
   - фронтенд
   - собеседования
+  - саморазвитие
 redirects:
   - /front-end/what_front_end_developer_need_to_know_in_2015-2016/
 ---

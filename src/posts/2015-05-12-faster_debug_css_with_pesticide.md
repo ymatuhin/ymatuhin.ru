@@ -7,6 +7,7 @@ tags:
   - фронтенд
   - инструменты
   - css
+  - отладка
 image:
   path: pesticide/logo.png
   alt: Pesticide — библиотека для дебага CSS

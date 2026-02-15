@@ -1,0 +1,36 @@
+---
+layout: default
+pagination:
+  data: collections.posts
+  size: 10
+  alias: postsPage
+permalink: "/posts/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | plus: 1 }}/{% endif %}index.html"
+---
+
+<article class="post typo white-content wrap-inner">
+  <header class="post-header">
+    <h1 class="post-header__title">Posts</h1>
+  </header>
+</article>
+
+<div class="cards">
+  {% for post in postsPage %}
+    {% include "card.liquid"
+      tag: "h2",
+      categories: post.data.tags,
+      image: post.data.image.path,
+      link: post.url,
+      title: post.data.title,
+      description: post.data.description %}
+  {% endfor %}
+</div>
+
+<p>
+  {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous }}">Newer posts</a>
+  {% endif %}
+  {% if pagination.href.previous and pagination.href.next %}&nbsp;·&nbsp;{% endif %}
+  {% if pagination.href.next %}
+    <a href="{{ pagination.href.next }}">Older posts</a>
+  {% endif %}
+</p>

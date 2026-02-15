@@ -3,9 +3,10 @@ layout: post
 title: Фоллбэчим Emoji
 description: Проверяем поддержку эмодзи у пользователя и какая у него операционная система. После этого подключаем любые эмодзи для корректного отображения смайликов.
 tags:
+  - разработка
+  - фронтенд
+  - css
   - emoji
-  - twitter
-  - fallback
 image:
   path: emoji/emoji.jpg
 redirects:

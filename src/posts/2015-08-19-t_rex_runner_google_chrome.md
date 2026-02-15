@@ -3,8 +3,9 @@ layout: post
 title: Динозавр T-Rex — пасхалочка в Google Chrome
 description: Пасхалка и браузере Google Chrome — бегающий диназавр T-Rex прыгающий через кактусы на странице «Нет соединения с интернетом».
 tags:
+  - не разработка
+  - браузеры
   - пасхалки
-  - google
 image:
   path: eastern_eggs/t-rex-runner.png
 has_youtube: true

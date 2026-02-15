@@ -3,13 +3,10 @@ layout: post
 title: Лайфхак. Блокировка входящих без дисконектов на iPhone
 description: null
 tags:
-  - лайфхак
-  - блокировка
-  - входящие
-  - звонки
-  - iphone
+  - не разработка
+  - лайфхаки
+  - ios
   - yota
-  - включить
 image:
   path: phones/phone.jpeg
 redirects:

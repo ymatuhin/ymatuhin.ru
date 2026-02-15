@@ -1,5 +1,15 @@
 const postsGlob = 'src/posts/*.{md,html}';
 const postTypeTags = new Set(['blog', 'frontend', 'tools', 'books']);
+const staticLegacyRedirects = [
+  { from: '/page2/', to: '/posts/2/' },
+  { from: '/page3/', to: '/posts/3/' },
+  { from: '/page4/', to: '/posts/4/' },
+  { from: '/page5/', to: '/posts/5/' },
+  { from: '/page6/', to: '/posts/6/' },
+  { from: '/page7/', to: '/posts/7/' },
+  { from: '/page8/', to: '/posts/8/' },
+  { from: '/page9/', to: '/posts/9/' },
+];
 const normalizeTag = (value) => String(value || '').trim().toLowerCase().replace(/\s+/g, '-').replace(/\//g, '-');
 const extractPostTags = (item) => {
   if (!item?.data?.tags) return [];
@@ -62,18 +72,26 @@ export function buildFrontmatterRedirectsCollection(collectionApi) {
   const redirects = [];
   const redirectKeys = new Set();
   const items = collectionApi.getAll();
+  const addRedirect = (from, to) => {
+    const source = String(from || '').trim();
+    const target = String(to || '').trim();
+    if (!source || !target || source === target) return;
+    const key = `${source}->${target}`;
+    if (redirectKeys.has(key)) return;
+    redirectKeys.add(key);
+    redirects.push({ from: source, to: target });
+  };
+
+  for (const redirect of staticLegacyRedirects) {
+    addRedirect(redirect.from, redirect.to);
+  }
 
   for (const item of items) {
     if (!item.url || !item.data || !item.data.redirects) continue;
 
     const targets = Array.isArray(item.data.redirects) ? item.data.redirects : [item.data.redirects];
     for (const source of targets) {
-      const from = String(source || '').trim();
-      if (!from) continue;
-      const key = `${from}->${item.url}`;
-      if (redirectKeys.has(key) || from === item.url) continue;
-      redirectKeys.add(key);
-      redirects.push({ from, to: item.url });
+      addRedirect(source, item.url);
     }
   }
 

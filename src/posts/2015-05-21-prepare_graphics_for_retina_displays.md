@@ -5,9 +5,9 @@ description: Подготавливаем верску сайта под рет�
 tags:
   - разработка
   - фронтенд
-  - retina
+  - css
   - оптимизация
-  - верстка
+  - retina
 redirects:
   - /front-end/prepare_graphics_for_retina_displays/
 ---

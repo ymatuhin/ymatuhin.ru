@@ -4,8 +4,9 @@ title: Стилизуем инструменты разработчика (dev t
 tags:
   - разработка
   - фронтенд
-  - dev tools
   - инструменты
+  - devtools
+  - css
 image:
   path: dev_tools/dev_tools.png
   alt: Темная темя для Chrome Dev Tools

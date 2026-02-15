@@ -13,16 +13,8 @@ redirects:
 
   <nav aria-label="Все теги и количество публикаций">
     {%- for tagPage in collections.tagPages -%}
-      {%- if tagPage.count > 5 -%}
-        <big><a href="/tag/{{ tagPage.slug }}/">{{ tagPage.name }}&nbsp;({{ tagPage.count
-            }})</a>{% if forloop.last == false %}&nbsp; {% endif %}</big>
-      {%- elsif tagPage.count == 1 -%}
-        <small><a href="/tag/{{ tagPage.slug }}/">{{ tagPage.name }}&nbsp;({{ tagPage.count
-            }})</a>{% if forloop.last == false %}&nbsp; {% endif %}</small>
-      {%- else -%}
-        <a href="/tag/{{ tagPage.slug }}/">{{ tagPage.name }}&nbsp;({{ tagPage.count
-      }})</a>{% if forloop.last == false %}&nbsp; {% endif %}
-      {%- endif -%}
+      <a href="/tag/{{ tagPage.slug }}/">{{ tagPage.name }}&nbsp;({{ tagPage.count
+      }})</a>{% if forloop.last == false %}  {% endif %}
     {%- endfor -%}
   </nav>
 </article>

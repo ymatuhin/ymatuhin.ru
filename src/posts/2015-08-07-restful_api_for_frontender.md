@@ -5,6 +5,7 @@ description: Что такое REST и RESTful API, в чем разница и 
 tags:
   - разработка
   - фронтенд
+  - api
 image:
   path: rest_api/restful.png
 redirects:

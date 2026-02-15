@@ -3,9 +3,11 @@ layout: post
 title: jQuery.width() без округления
 description: Как взять ширину элемента без округления значений до целых чисел без jQuery.
 tags:
-  - tips
-  - js
+  - разработка
+  - фронтенд
+  - javascript
   - jquery
+  - советы
 image:
   path: jquery/jquery.jpg
   alt: jQuery.width

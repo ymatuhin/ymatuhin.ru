@@ -4,10 +4,9 @@ title: Исключаем папки из обычного и Fuzzy поиска
 description: Как исключить некоторые папки (к примеру node_modules, bower_components) из поиска в текстовом редакторе Atom.
 tags:
   - разработка
-  - atom
-  - github
+  - инструменты
   - редакторы
-  - fuzzy
+  - atom
 redirects:
   - /tools/atom_exclude_foilder/
 ---

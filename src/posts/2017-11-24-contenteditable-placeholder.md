@@ -3,9 +3,11 @@ layout: post
 title: Код. Плейсхолдер для [contenteditable]
 description: Placeholder полифил для contenteditable элемента
 tags:
-  - js
+  - разработка
+  - фронтенд
+  - javascript
   - contenteditable
-  - placeholder
+  - плейсхолдеры
 image:
   path: contenteditable.jpg
   alt: '[contenteditable]'

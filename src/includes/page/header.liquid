@@ -7,17 +7,15 @@
 
   <div class="nav-container">
     <nav class="global-navigation" aria-label="Основные категории">
-      {% if page.url == '/frontend/' %}<b class="global-navigation__item">фронтенд</b>
-      {% else %}<a class="global-navigation__item" href="/frontend/">фронтенд</a>{% endif %}
+      Теги:
+      {% if page.url == '/tag/разработка/' %}<b class="global-navigation__item">разработка</b>,
+      {% else %}<a class="global-navigation__item" href="/tag/разработка/">разработка</a>,{% endif %}
 
-      {% if page.url == '/tools/' %}<b class="global-navigation__item">инструменты</b>
-      {% else %}<a class="global-navigation__item" href="/tools/">инструменты</a>{% endif %}
+      {% if page.url == '/tag/блог/' %}<b class="global-navigation__item">не разработка</b>,
+      {% else %}<a class="global-navigation__item" href="/tag/блог/">не разработка</a>,{% endif %}
 
-      {% if page.url == '/blog/' %}<b class="global-navigation__item">блог</b>
-      {% else %}<a class="global-navigation__item" href="/blog/">блог</a>{% endif %}
-      
-      {% if page.url == '/tags/' %}<b class="global-navigation__item">все теги</b>
-      {% else %}<a class="global-navigation__item" href="/tags/">все теги</a>{% endif %}
+      {% if page.url == '/tags/' %}<b class="global-navigation__item">все</b>
+      {% else %}<a class="global-navigation__item" href="/tags/">все</a>{% endif %}
     </nav>
     <nav aria-label="Социальные ссылки: GitHub, Telegram, почта и RSS">
       <a href="https://github.com/ymatuhin">гитхаб</a>

@@ -2,8 +2,10 @@
 layout: post
 title: Ускоряем сборку блога на Jekyll
 tags:
+  - разработка
+  - инструменты
   - jekyll
-  - блог
+  - производительность
 image:
   path: jekyll/jekyll-logo.png
   alt: Логотип Jekyll

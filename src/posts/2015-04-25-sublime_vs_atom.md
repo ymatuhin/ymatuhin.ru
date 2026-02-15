@@ -5,11 +5,8 @@ description: Обзор нового текстового редактора Ato
 tags:
   - разработка
   - инструменты
-  - atom
-  - github
   - редакторы
-  - sublime
-  - сравнение
+  - отзывы
 image:
   path: atom/atom_vs_sublime.jpg
   alt: Atom

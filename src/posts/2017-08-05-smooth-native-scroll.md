@@ -3,8 +3,10 @@ layout: post
 title: Плавный, нативный скрол
 description: Выкиньте лишние библиотеки для прокрутки внутри страницы
 tags:
-  - js
-  - scroll
+  - разработка
+  - фронтенд
+  - javascript
+  - скролл
 image:
   path: scroll/scrollbar-windows.jpg
   alt: Полосы прокрутки семейства Windows

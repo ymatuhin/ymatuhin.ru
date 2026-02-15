@@ -3,9 +3,10 @@ layout: post
 title: Адекватное подчеркивание ссылок
 description: 'Как исправить поведение text-decoration: underline'
 tags:
+  - разработка
+  - фронтенд
   - css
-  - link
-  - underline
+  - ссылки
 image:
   path: text-decoration/preview.png
   alt: Пример css свойства text-decoration-skip

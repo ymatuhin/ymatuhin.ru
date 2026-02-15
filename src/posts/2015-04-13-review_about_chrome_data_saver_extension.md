@@ -3,9 +3,11 @@ layout: post
 title: Отзыв о расширении для экономии трафика Data Saver от Google
 description: Действительно ли хорошо сжимает трафик новое расширение от Google — Data Saver или нет? Читайте в моем отзыве о Chrome Data Saver.
 tags:
-  - google
+  - не разработка
   - отзывы
-  - расширение
+  - инструменты
+  - расширения
+  - браузеры
 redirects:
   - /blog/review_about_chrome_data_saver_extension/
 ---

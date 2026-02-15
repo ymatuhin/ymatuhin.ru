@@ -3,9 +3,10 @@ layout: post
 title: Видео и презентации с конференции «FrontTalks» 2015
 description: Краткое содержание докладов с конференции «FrontTalks» 2015 года, ссылки на видео, презентации и материалы из докладов.
 tags:
+  - разработка
+  - фронтенд
+  - конференции
   - видео
-  - конференция
-  - fronttalks
 image:
   path: fronttalks/fronttalks_2015.jpg
   alt: FrontTalks 2015

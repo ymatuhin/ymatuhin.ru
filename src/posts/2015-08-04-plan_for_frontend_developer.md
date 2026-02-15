@@ -9,6 +9,7 @@ tags:
   - разработка
   - фронтенд
   - собеседования
+  - саморазвитие
 redirects:
   - /front-end/plan_for_frontend_developer/
 ---

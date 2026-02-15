@@ -5,8 +5,8 @@ description: Безопасно загружаем JavaScript библиотек
 tags:
   - разработка
   - фронтенд
+  - javascript
   - cdn
-  - jquery
 redirects:
   - /front-end/safe_use_of_cdn_and_jquery/
 ---

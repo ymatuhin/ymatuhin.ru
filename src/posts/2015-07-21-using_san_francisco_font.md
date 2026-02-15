@@ -6,6 +6,8 @@ tags:
   - разработка
   - фронтенд
   - css
+  - шрифты
+  - macos
 image:
   path: san_francisco/san_francisco.jpg
   alt: San Francisco
