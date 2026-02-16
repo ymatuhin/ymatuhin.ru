@@ -1,3 +1,4 @@
+import fs from 'fs';
 import markdownIt from 'markdown-it';
 import markdownItAttrs from 'markdown-it-attrs';
 import { IdAttributePlugin } from '@11ty/eleventy';
@@ -18,6 +19,7 @@ import {
 } from './config/transforms.js';
 import { buildRelatedPosts } from './config/relatedPosts.js';
 import { toTagLabel, toTagSlug } from './config/tag-utils.js';
+import { findMaxLevelHeading } from './config/findMaxLevelHeading.js';
 import siteData from './config/site.js';
 
 export default function (eleventyConfig) {
@@ -45,13 +47,16 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter('tagSlug', toTagSlug);
   eleventyConfig.addFilter('tagLabel', toTagLabel);
   eleventyConfig.addFilter('relatedPosts', buildRelatedPosts);
+  eleventyConfig.addFilter('maxLevelHeading', findMaxLevelHeading);
 
   // Shortcodes
   eleventyConfig.addAsyncShortcode('mediaImage', mediaImageShortcode);
-
+  eleventyConfig.addAsyncShortcode('modified', function () {
+    return this.page?.inputPath ? fs.statSync(this.page.inputPath).mtime : undefined;
+  });
   // Passthrough copy
   eleventyConfig.addPassthroughCopy({ public: '/' });
-  eleventyConfig.addPassthroughCopy({ './.cache/eleventy-img': '/assets/img/optimized/' });
+  eleventyConfig.addPassthroughCopy({ './.cache/eleventy-img': '/assets/img-optimized/' });
 
   // Collections
   eleventyConfig.addCollection('posts', buildPostsCollection);

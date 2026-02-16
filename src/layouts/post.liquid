@@ -15,11 +15,15 @@ layout: default
   </heading-anchors>
 </article>
 
+<p>modified (shortcode): {% modified %}</p>
+
 <hr class="post__divider-after / divider">
 {% assign relatedPosts = collections.posts | relatedPosts: page, tags %}
 {% if relatedPosts.size > 0 %}
   <aside class="similar-articles" aria-label="Похожие статьи">
-    <h5>Похожие (по тегам) статьи:</h5>
+    <h{{ content | maxLevelHeading | plus: 1 }}>
+      Похожие (по тегам) статьи:
+    </h{{ content | maxLevelHeading | plus: 1 }}>
     <ul>
       {% for post in relatedPosts %}
         <li>

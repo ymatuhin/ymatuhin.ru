@@ -12,6 +12,7 @@ picture {
   display: inline-block;
   vertical-align: middle;
   position: relative;
+  max-width: 100%;
 }
 
 picture::after {

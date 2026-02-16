@@ -3,6 +3,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ title | default: site.title }}</title>
   <meta name="description" content="{{ description | default: site.description }}">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="{{ site.url }}{{ permalink | default: page.url }}">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 
   <style>
     @layer base, content, layout, components;
@@ -15,6 +18,7 @@
     {% getBundle "css" %}
   </style>
 
+
   {% comment %} Icons {% endcomment %}
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png?v=JymzngPEmg2">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png?v=JymzngPEmg2">
@@ -25,6 +29,75 @@
   <meta name="msapplication-config" content="/assets/icons/browserconfig.xml?v=JymzngPEmg2">
   <meta name="theme-color" content="#0c00ff">
   <link rel="manifest" href="/manifest.json">
+
+  <!-- Site-wide: Add this to base layout / every page -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://ymatuhin.ru/#website",
+  "url": "https://ymatuhin.ru/",
+  "name": "Юрий Матюхин",
+  "description": "Личный блог Юрия Матюхина: фронтенд, CSS, разработка, личные заметки и эксперименты",
+  "inLanguage": "ru-RU",
+  "publisher": {
+    "@type": "Person",
+    "@id": "https://ymatuhin.ru/#author",
+    "name": "Юрий Матюхин",
+    "url": "https://ymatuhin.ru/",
+    "sameAs": [
+      "https://github.com/ymatuhin",
+      "https://t.me/ymatuhin"
+    ]
+  }
+  // Optional: if you have search functionality
+  // ,"potentialAction": {
+  //   "@type": "SearchAction",
+  //   "target": "https://ymatuhin.ru/search/?q={search_term_string}",
+  //   "query-input": "required name=search_term_string"
+  // }
+}
+</script>
+
+  <!-- Page-specific: Add this only to the blog post page/template -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Код. Плейсхолдер для [contenteditable]",
+  "description": "Простое CSS-решение для добавления placeholder в элементы с contenteditable. Пример кода, JSFiddle и предупреждения о поведении в разных браузерах.",
+  "datePublished": "2017-11-24T00:00:00+03:00",
+  "dateModified": "2017-11-24T00:00:00+03:00",
+  "author": {
+    "@type": "Person",
+    "@id": "https://ymatuhin.ru/#author",
+    "name": "Юрий Матюхин",
+    "url": "https://ymatuhin.ru/",
+    "sameAs": [
+      "https://github.com/ymatuhin",
+      "https://t.me/ymatuhin"
+    ]
+  },
+  "publisher": {
+    "@type": "Person",
+    "@id": "https://ymatuhin.ru/#author",
+    "name": "Юрий Матюхин",
+    "url": "https://ymatuhin.ru/"
+  },
+  "image": [
+    "https://ymatuhin.ru/assets/img/optimized/DOsl-Qqh8g-1200.jpeg"
+  ],
+  "url": "https://ymatuhin.ru/posts/kod-pleyskholder-dlya-contenteditable/",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ymatuhin.ru/posts/kod-pleyskholder-dlya-contenteditable/"
+  },
+  "keywords": "contenteditable, placeholder, css, frontend, разработка, плейсхолдер contenteditable",
+  "articleSection": "разработка",
+  "inLanguage": "ru-RU",
+  "wordCount": 350
+}
+</script>
 
   {% getBundle "html", "head" %}
 </head>

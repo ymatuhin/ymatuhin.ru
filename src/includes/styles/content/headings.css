@@ -29,8 +29,10 @@ h4 a[href^="#"] {
   vertical-align: top;
   position: relative;
   font-size: 0;
+  line-height: 0;
   color: transparent;
   white-space: nowrap;
+  letter-spacing: -999px;
 }
 
 h2 a[href^="#"]::before,
@@ -40,6 +42,8 @@ h4 a[href^="#"]::before {
   line-height: var(--heading-line-height);
   color: var(--secondary-text-color);
   cursor: pointer;
+  letter-spacing: initial;
+  margin-right: 1ch;
 }
 
 h2 a[href^="#"]::before {

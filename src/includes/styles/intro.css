@@ -12,6 +12,7 @@
 
   details.intro > summary {
     cursor: pointer;
+    user-select: none;
   }
 
   details.intro > summary::marker {

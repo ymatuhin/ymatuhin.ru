@@ -23,8 +23,12 @@
   }
 
   .post-card__divider {
-    color: var(--secondary-text-color);
+    color: inherit;
     margin: 0.5rem 0;
+  }
+
+  .post-card_in-post .post-card__divider {
+    color: var(--secondary-text-color)
   }
 
   .post-card__title {

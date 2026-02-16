@@ -16,7 +16,7 @@ export async function mediaImageShortcode(url, alt, loading = 'lazy', pixelated 
     widths: ['366', '830', '1660', 'auto'],
     formats,
     outputDir: './.cache/eleventy-img/',
-    urlPath: '/assets/img/optimized/',
+    urlPath: '/assets/img-optimized/',
   });
 
   const imageAttributes = {
