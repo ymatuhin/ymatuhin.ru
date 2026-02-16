@@ -4,15 +4,14 @@
   }
 
   :root {
-    --font-family: "Ubuntu Sans Mono", Monaco, Consolas, "Ubuntu Mono", monospace;
+    --font-family: "Ubuntu Sans Mono", "JetBrains Mono", "Fira Code", "Iosevka", Consolas, "Ubuntu Mono", monospace;
     --code-font-family: var(--font-family);
     --background-color: #181825;
-    --deeper-background-color: #11111b;
     --lighter-background-color: #1e1e2e;
     --border-color: #313244;
     --accent-color: #cba6f7;
     --text-color: #cdd6f4;
-    --secondary-text-color: #7f849c;
+    --secondary-text-color: #9399b2;
     --text-font-size: 17px;
     --text-line-height: 28px;
     --heading-font-size: 19px;
@@ -24,6 +23,7 @@
     height: 100%;
     scroll-padding-top: 1rem;
     scroll-behavior: smooth;
+    background-color: var(--background-color);
   }
 
   *,
@@ -40,7 +40,8 @@
     font-weight: 400;
     font-size: var(--text-font-size);
     line-height: var(--text-line-height);
-    background-color: var(--deeper-background-color);
+    background: linear-gradient(to top, transparent, transparent, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+    background-size: 100% 2px;
     color: var(--text-color);
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
@@ -56,6 +57,8 @@
 
   a:focus-visible, a:hover {
     text-decoration: none;
+    /*filter: brightness(1.15);*/
+    /*text-shadow: 0 0 8px rgba(203, 166, 247, 0.4)*/
   }
 
   a:focus-visible {
