@@ -22,12 +22,7 @@
   }
 
   .post-card__divider {
-    color: inherit;
     margin: 0.75rem 0;
-  }
-
-  .post-card_in-post .post-card__divider {
-    color: var(--secondary-text-color)
   }
 
   .post-card__title {
@@ -40,13 +35,11 @@
   }
 
   .post-card__cover {
-    margin-bottom: 1rem;
+    margin-bottom: 1.75rem;
   }
-  /*.post-card__content {*/
-  /*  margin-top: 1rem;*/
-  /*}*/
 
   .post-card__meta {
+    font-size: 1rem;
     color: var(--secondary-text-color);
   }
 

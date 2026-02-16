@@ -1,6 +1,5 @@
 @layer components {
   details.intro {
-    display: inline-block;
     border: 2px solid var(--accent-color);
     padding: 1rem 1.5rem;
     margin-bottom: 1rem;

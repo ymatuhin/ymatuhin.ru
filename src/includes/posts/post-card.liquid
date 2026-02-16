@@ -21,9 +21,9 @@
 
   {% if link %}<a href="{{ link }}" class="post-card__link">{% endif %}
     <{{ titleTag }} class="post-card__title">{{ title }}</{{ titleTag }}>
-    {% unless imagePath %}
+    {% if inPostMode %}
       <hr class="post-card__divider / divider">
-    {% endunless %}
+    {% endif %}
   {% if link %}</a>{% endif %}
 
   {% if description and inPostMode != true %}
@@ -54,7 +54,6 @@
   {% endif %}
 </{{ cardRootTag }}>
 
-
 {% css %}
-{% include "styles/post-card.css" %}
+  {% include "styles/post-card.css" %}
 {% endcss %}

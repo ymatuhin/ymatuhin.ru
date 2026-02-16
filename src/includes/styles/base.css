@@ -6,6 +6,7 @@
   :root {
     --font-family: "Ubuntu Sans Mono", "JetBrains Mono", "Fira Code", "Iosevka", Consolas, "Ubuntu Mono", monospace;
     --code-font-family: var(--font-family);
+    --divider-color: #585b70;
     --background-color: #181825;
     --lighter-background-color: #1e1e2e;
     --border-color: #313244;

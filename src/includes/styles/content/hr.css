@@ -10,6 +10,6 @@ hr.divider {
   margin: 1rem 0;
   height: 9px;
   background: initial;
-  border-top: 3px dotted currentColor;
-  border-bottom: 3px dotted currentColor;
+  border-top: 3px dotted var(--divider-color);
+  border-bottom: 3px dotted var(--divider-color);
 }
