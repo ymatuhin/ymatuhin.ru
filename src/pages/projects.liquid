@@ -5,17 +5,23 @@ permalink: /projects/
 ---
 
 <div class="typo">
-    <h1>{{ title }}</h1>
+  <h1>{{ title }}</h1>
 </div>
+
 <br>
+
 <div class="cards">
-    {% for proj in projects %}
-        {% include "posts/post-card.liquid",
-            tag: "h2",
-            tags: proj.category | split: ",",
-            imagePath: proj.image,
-            link: proj.url,
-            title: proj.title,
-            description: proj.description %}
-    {% endfor %}
+  {% for proj in projects %}
+    {% include "posts/post-card.liquid",
+      tag: "h2",
+      tags: proj.category | split: ",",
+      imagePath: proj.image,
+      link: proj.url,
+      title: proj.title,
+      description: proj.description %}
+  {% endfor %}
 </div>
+
+{% css %}
+  {% include "styles/cards.css" %}
+{% endcss %}

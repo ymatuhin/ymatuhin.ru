@@ -1,0 +1,12 @@
+.post__content > :first-child {
+  margin-top: 0
+}
+
+.post__content > :last-child {
+  margin-bottom: 0
+}
+
+.post__divider-after {
+  color: var(--secondary-text-color);
+  margin: 3rem 0;
+}

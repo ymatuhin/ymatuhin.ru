@@ -12,6 +12,7 @@ img {
 
 figure {
   display: inline-flex;
+  vertical-align: top;
   flex-direction: column;
   max-width: 100%;
 }

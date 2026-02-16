@@ -1,18 +1,17 @@
 @layer components {
-  .cards {
-    margin-top: 3rem;
-  }
-
   .post-card_in-post {
     margin-bottom: 2rem;
   }
 
   .post-card + .post-card {
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
     margin-top: 2rem;
   }
 
   @media (min-width: 480px) {
     .post-card + .post-card {
+      padding-top: 3.5rem;
       margin-top: 3rem;
     }
   }
@@ -24,7 +23,7 @@
 
   .post-card__divider {
     color: inherit;
-    margin: 0.5rem 0;
+    margin: 0.75rem 0;
   }
 
   .post-card_in-post .post-card__divider {
@@ -40,10 +39,12 @@
     text-decoration: none;
   }
 
-  .post-card__cover,
-  .post-card__content {
-    margin-top: 1rem;
+  .post-card__cover {
+    margin-bottom: 1rem;
   }
+  /*.post-card__content {*/
+  /*  margin-top: 1rem;*/
+  /*}*/
 
   .post-card__meta {
     color: var(--secondary-text-color);

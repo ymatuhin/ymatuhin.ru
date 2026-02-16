@@ -17,6 +17,11 @@ layout: default
 
 <p>modified (shortcode): {% modified %}</p>
 
+{% assign previousPost = collections.posts | getNextCollectionItem %}
+{% assign nextPost = collections.posts | getPreviousCollectionItem %}
+{% if previousPost %}Previous Blog Post: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %}
+{% if nextPost %}Next Blog Post: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %}
+
 <hr class="post__divider-after / divider">
 {% assign relatedPosts = collections.posts | relatedPosts: page, tags %}
 {% if relatedPosts.size > 0 %}
@@ -35,10 +40,9 @@ layout: default
 {% endif %}
 
 {% css %}
-.post__content > :last-child { margin-bottom: 0 }
-.post__divider-after { color: var(--secondary-text-color); margin: 3rem 0; }
+  {% include "styles/post.css" %}
 {% endcss %}
 
 {% html "head" %}
-<script type="module" src="/assets/js/heading-anchors.js"></script>
+  <script type="module" src="/assets/js/heading-anchors.js"></script>
 {% endhtml %}

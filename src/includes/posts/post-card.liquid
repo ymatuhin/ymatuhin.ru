@@ -9,51 +9,51 @@
 {% endif %}
 
 <{{ cardRootTag }} class="{{ cardRootClass }}">
-{% if link %}<a href="{{ link }}" class="post-card__link">{% endif %}
-  <{{ titleTag }} class="post-card__title">
-  {{ title }}
-  <hr class="post-card__divider / divider">
-</{{ titleTag }}>
+  {% if imagePath and inPostMode != true %}
+    <div class="post-card__cover">
+      {% if link %}<a href="{{ link }}">{% endif %}
+        {% assign cardImageAlt = imageAlt | default: title %}
+        {% assign cardImageLoading = imageLoading | default: "lazy" %}
+        {% mediaImage imagePath, cardImageAlt, cardImageLoading %}
+      {% if link %}</a>{% endif %}
+    </div>
+  {% endif %}
+
+  {% if link %}<a href="{{ link }}" class="post-card__link">{% endif %}
+    <{{ titleTag }} class="post-card__title">{{ title }}</{{ titleTag }}>
+    {% unless imagePath %}
+      <hr class="post-card__divider / divider">
+    {% endunless %}
   {% if link %}</a>{% endif %}
 
-{% if date or tags %}
-  <div class="post-card__meta">
+  {% if description and inPostMode != true %}
+    <p class="post-card__content">{{ description }}</p>
+  {% endif %}
+
+
+  {% if date or tags %}
+    <div class="post-card__meta">
       {% if date %}
         <span class="post-card__date">{% include "posts/pubdate.liquid", date: date %}</span>
       {% endif %}
 
-    {% if date and tags %}:::{% endif %}
+      {% if date and tags %}:::{% endif %}
 
-    {% if tags %}
-      <span class="post-card__tags">
-        {% for itemTag in tags %}
-          {% assign tagTrimmed = itemTag | strip %}
-          {% assign tagSlug = tagTrimmed | tagSlug %}
-          {% assign tagUrl = "/tag/" | append: tagSlug | append: "/" %}
-          {% assign tagLabel = tagTrimmed | tagLabel %}
-          <a href="{{ tagUrl }}">{{ tagLabel }}</a>{% unless forloop.last %}, {% endunless %}
-        {% endfor %}
+      {% if tags %}
+        <span class="post-card__tags">
+          {% for itemTag in tags %}
+            {% assign tagTrimmed = itemTag | strip %}
+            {% assign tagSlug = tagTrimmed | tagSlug %}
+            {% assign tagUrl = "/tag/" | append: tagSlug | append: "/" %}
+            {% assign tagLabel = tagTrimmed | tagLabel %}
+            <a href="{{ tagUrl }}">{{ tagLabel }}</a>{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
         </span>
-    {% endif %}
+      {% endif %}
     </div>
-{% endif %}
-
-{% if imagePath and inPostMode != true %}
-  <div class="post-card__cover">
-        {% if link %}<a href="{{ link }}">{% endif %}
-            {% assign cardImageAlt = imageAlt | default: title %}
-            {% assign cardImageLoading = imageLoading | default: "lazy" %}
-            {% mediaImage imagePath, cardImageAlt, cardImageLoading %}
-            {% if link %}</a>{% endif %}
-    </div>
-{% endif %}
-
-{% if description and inPostMode != true %}
-  <div class="post-card__content">
-      <p>{{ description }}</p>
-    </div>
-{% endif %}
+  {% endif %}
 </{{ cardRootTag }}>
+
 
 {% css %}
 {% include "styles/post-card.css" %}

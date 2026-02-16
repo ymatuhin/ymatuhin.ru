@@ -68,6 +68,6 @@ Nearest Neighbor. Этим мы и займемся.
 пользователя будет легче сканировать код.
 
 {% css %}
-.pixelated { image-rendering: pixelated; }
-.size256 img { width: 256px; height: 256px; } 
+  .pixelated { image-rendering: pixelated; }
+  .size256 img { width: 256px; height: 256px; } 
 {% endcss %}
