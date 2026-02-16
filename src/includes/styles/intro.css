@@ -15,8 +15,14 @@
     user-select: none;
   }
 
+  details.intro > summary:focus-visible {
+    outline: 1px solid var(--accent-color);
+    outline-offset: 2px;
+  }
+
   details.intro > summary::marker {
     margin-right: .5rem;
+    color: var(--accent-color);
   }
 
   details.intro[open] > summary {

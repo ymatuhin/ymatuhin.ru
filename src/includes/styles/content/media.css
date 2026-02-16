@@ -8,19 +8,20 @@ img, iframe {
 }
 
 /* Old TV flare */
-picture {
+figure {
   display: inline-block;
   vertical-align: middle;
   position: relative;
   max-width: 100%;
 }
 
-picture::after {
+figure::after {
   content: '';
   position: absolute;
   inset: 1rem;
   background: linear-gradient(to top, transparent, transparent, rgba(0, 0, 0, .25), rgba(0, 0, 0, .25));
-  background-size: 100% 1px;
+  background-size: 100% 2px;
+  transition: opacity .15s ease;
 }
 
 figure img,

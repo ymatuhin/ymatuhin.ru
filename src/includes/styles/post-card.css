@@ -36,6 +36,7 @@
   }
 
   .post-card__link {
+    display: block;
     text-decoration: none;
   }
 
