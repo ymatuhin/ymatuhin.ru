@@ -18,8 +18,8 @@ layout: default
 <hr class="post__divider-after / divider">
 {% assign relatedPosts = collections.posts | relatedPosts: page, tags %}
 {% if relatedPosts.size > 0 %}
-  <aside class="similar-articles" aria-label="Similar articles">
-    <h3>Похожие (ну почти) записи</h3>
+  <aside class="similar-articles" aria-label="Похожие статьи">
+    <h5>Похожие (по тегам) статьи:</h5>
     <ul>
       {% for post in relatedPosts %}
         <li>

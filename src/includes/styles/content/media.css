@@ -7,6 +7,21 @@ img, iframe {
   padding: 8px;
 }
 
+/* Old TV flare */
+picture {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+picture::after {
+  content: '';
+  position: absolute;
+  inset: 1rem;
+  background: linear-gradient(to top, transparent, transparent, rgba(0, 0, 0, .25), rgba(0, 0, 0, .25));
+  background-size: 100% 1px;
+}
+
 figure img,
 figure iframe,
 figure video {
