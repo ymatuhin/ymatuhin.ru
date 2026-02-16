@@ -1,26 +1,39 @@
 img, iframe {
   background-color: var(--lighter-background-color);
   display: block;
-  max-width: 100%;
-  height: auto;
   border: 8px solid var(--accent-color);
   padding: 8px;
-}
-
-/* Old TV flare */
-figure {
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
   max-width: 100%;
 }
 
-figure::after {
+img {
+  height: auto;
+}
+
+figure {
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+figure > picture,
+figure > div {
+  position: relative;
+}
+
+figure > picture::after,
+figure > div::after {
   content: '';
   position: absolute;
   inset: 1rem;
   background: linear-gradient(to top, transparent, transparent, rgba(0, 0, 0, .25), rgba(0, 0, 0, .25));
   background-size: 100% 2px;
+}
+
+figure:hover > picture::after,
+figure:hover > div::after,
+:focus-visible figure::after {
+  background: initial;
 }
 
 figure img,
@@ -32,8 +45,11 @@ figure video {
 figure figcaption {
   background: var(--accent-color);
   color: var(--background-color);
-  text-align: center;
   font-size: 1em;
   font-weight: normal;
-  margin-top: -8px;
+  padding: 0 1ch;
+  margin-top: .5rem;
+
+  contain: inline-size;
+  text-align: center;
 }

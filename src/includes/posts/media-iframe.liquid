@@ -4,11 +4,5 @@
 		width="{{ width }}"
 		height="{{ height }}"
 		sandbox="allow-scripts allow-same-origin"
-		frameborder="0"
-		src="{{ url }}"></iframe>
-
-	{% if caption %}
-		<figcaption>{{ caption }}</figcaption>
-	{% endif %}
-</figure>
+		src="{{ url }}"></iframe>{% if caption %}<figcaption>{{ caption }}</figcaption>{% endif %}</figure>
 {% endif %}

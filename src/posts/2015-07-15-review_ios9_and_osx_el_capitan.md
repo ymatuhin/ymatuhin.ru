@@ -24,10 +24,10 @@ redirects:
 Я прочитал кучу статей, хотел оставить здесь ссылки на них. Но потом нашел эти крутые короткие видосы с обзором новых
 OS. Приятного просмотра 👍
 
-{% include "posts/media-iframe.liquid", url: "https://www.youtube.com/embed/dVupItayMmM", width: "560", height: "315", caption: "Что нового в iOS 9 public
+{% include "posts/media-iframe.liquid", url: "https://www.youtube.com/embed/dVupItayMmM", width: 560, height: 315, caption: "Что нового в iOS 9 public
 beta?" %}
 
-{% include "posts/media-iframe.liquid", url: "https://www.youtube.com/embed/qwWnfZu6YjM", width: "560", height: "315", caption: "Что нового в OSX El
+{% include "posts/media-iframe.liquid", url: "https://www.youtube.com/embed/qwWnfZu6YjM", width: 560, height: 315, caption: "Что нового в OSX El
 Capitan public beta?" %}
 
 ## Когда выйдет финальная версия

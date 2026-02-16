@@ -1,10 +1,15 @@
 import Image from '@11ty/eleventy-img';
 
-export async function mediaImageShortcode(url, alt, loading = 'lazy', pixelated = false) {
+export async function mediaImageShortcode(
+  url,
+  alt,
+  loading = 'lazy',
+  caption = false,
+  className = '',
+) {
   const imageUrl = url;
   const imageAlt = (alt || '').toString();
   let imageLoading = 'lazy';
-  let isPixelated = Boolean(pixelated);
 
   if (!imageUrl) return '';
 
@@ -22,10 +27,16 @@ export async function mediaImageShortcode(url, alt, loading = 'lazy', pixelated 
   const imageAttributes = {
     alt: imageAlt,
     sizes: imageLoading === 'eager' ? '(min-width: 926px) 830px, 366px' : 'auto',
-    style: isPixelated ? 'image-rendering: pixelated' : undefined,
     loading: imageLoading,
     decoding: 'async',
   };
 
-  return `<figure>${Image.generateHTML(metadata, imageAttributes)}</figure>`;
+  const captionText = typeof caption === 'string' ? caption : imageAlt;
+  const captionHtml = caption ? `<figcaption>${captionText}</figcaption>` : '';
+  const figureClass = className ? ` class="${className}"` : '';
+
+  const imageHtml = Image.generateHTML(metadata, imageAttributes);
+  const wrappedIfNeeded = imageHtml.startsWith('<picture') ? imageHtml : `<div>${imageHtml}</div>`;
+
+  return `<figure${figureClass}>${wrappedIfNeeded}${captionHtml}</figure>`;
 }

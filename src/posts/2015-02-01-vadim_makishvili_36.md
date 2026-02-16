@@ -27,8 +27,13 @@ redirects:
 образом. И даже посетил это мероприятие и послушал доклад в живую. Но блог у меня появился только сейчас, и поэтому вот
 этот доклад. Смотрите, думайте, делитесь впечатлениями :-)
 
-{% include "posts/media-iframe.liquid", url: "https://www.youtube.com/embed/xPPCzryZK44" width="560" height="315" caption="Выступление Вадима Макишвили на
-FrontTalks с докладом “36”" %}
+{% 
+  include "posts/media-iframe.liquid", 
+  url: "https://www.youtube.com/embed/xPPCzryZK44", 
+  width: 560, 
+  height: 315, 
+  caption: "Выступление Вадима Макишвили на FrontTalks с докладом “36”" 
+%}
 
 Ссылка на [Яндекс События](https://events.yandex.ru/lib/talks/2235/){:rel='nofollow'}, если видео по каким-то причинам
 не работает.

@@ -17,7 +17,7 @@ redirects:
   - /front-end/flux-challenge/
 ---
 
-{% mediaImage image.path, image.alt, "eager" %}
+{% mediaImage image.path, image.alt, "eager", true %}
 
 Вы увидели новый фреймворк, который конечно в миллион раз лучше текущего. Заманчиво, но использовать его в боевом
 проекте нельзя, т.к. нет опыта работы с ним, непонятны сильные и слабые стороны.
@@ -32,7 +32,7 @@ redirects:
 задание — реализовать базу данных ситхов. Как нам объяснили позже, это задание придумал André Staltz, чтобы показать
 недостатки Flux архитектуры. Но другим архитектурам тоже приходится не сладко.
 
-{% mediaImage "test-framework/sith-database.gif", "Flux Challenge — база данных ситхов" %}
+{% mediaImage "test-framework/sith-database.gif", "Flux Challenge — база данных ситхов", "lazy", true %}
 
 Подробнее о задании читайте в репозитории [Flux challenge](https://github.com/staltz/flux-challenge){:rel='nofollow'},
 или на русском [у меня](https://github.com/ymatuhin/architect/blob/master/learning-1-sith-backbone/README.md){:
