@@ -1,0 +1,25 @@
+sup, sub {
+  line-height: 0;
+}
+
+abbr {
+  position: relative;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--accent-color);
+  cursor: help;
+}
+
+sub {
+  position: relative;
+  bottom: -0.25em;
+}
+
+sup {
+  position: relative;
+  top: -0.25em;
+}
+
+mark {
+  background: color-mix(in srgb, var(--accent-color) 45%, transparent);
+  color: var(--text-color);
+}

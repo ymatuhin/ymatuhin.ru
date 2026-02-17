@@ -1,0 +1,11 @@
+@layer components {
+  .posts-pagination {
+    margin-top: 3rem;
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .posts-pagination__newer {
+    margin-left: auto;
+  }
+}

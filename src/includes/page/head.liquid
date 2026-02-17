@@ -1,0 +1,28 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title | default: site.title }}</title>
+  <meta name="description" content="{{ description | default: site.description }}">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="{{ site.url }}{{ permalink | default: page.url }}">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <style>
+    @layer base, content, layout, components;
+
+    {% include "styles/fonts.css" %}
+    {% include "styles/base.css" %}
+
+    {% include "styles/content.liquid", contentHtml: content %}
+
+    {% getBundle "css" %}
+  </style>
+
+  {% include "page/schema-general.liquid" %}
+
+  {% getBundle "html", "head" %}
+</head>

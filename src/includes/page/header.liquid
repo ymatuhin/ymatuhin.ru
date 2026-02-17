@@ -1,0 +1,39 @@
+<header class="header">
+  {% assign developmentTagSlug = "development" | tagSlug %}
+  {% assign nonDevelopmentTagSlug = "non-development" | tagSlug %}
+  {% assign developmentTagUrl = "/tag/" | append: developmentTagSlug | append: "/" %}
+  {% assign nonDevelopmentTagUrl = "/tag/" | append: nonDevelopmentTagSlug | append: "/" %}
+
+  <div class="header__inner">
+    <a class="header__logo" href="/" aria-label="Юра Матюхин — главная страница">
+      {% include "svg/logo.svg" %}
+    </a>
+  </div>
+
+  <div class="nav-container">
+    <nav aria-label="Основные категории">
+      {% if page.url == developmentTagUrl %}<b>разработка</b>
+      {% else %}<a href="{{ developmentTagUrl }}">разработка</a>{% endif %}
+
+      {% if page.url == nonDevelopmentTagUrl %}<b>не разработка</b>
+      {% else %}<a href="{{ nonDevelopmentTagUrl }}">не разработка</a>{% endif %}
+
+      {% if page.url == '/tags/' %}<b>все теги</b>
+      {% else %}<a href="/tags/">все теги</a>{% endif %}
+    </nav>
+    <nav aria-label="Социальные ссылки: GitHub, Telegram, почта и RSS">
+      <a href="https://github.com/ymatuhin">гитхаб</a>
+      <a href="https://t.me/ymatuhin">телега</a>
+      <a href="mailto:{{ site.email }}">почта</a>
+      {% if currentTagPage and currentTagPage.slug %}
+        <a href="/tag/{{ currentTagPage.slug }}/feed.xml">рсс тега</a>
+      {% else %}
+        <a href="{{ site.feed_url }}">рсс</a>
+      {% endif %}
+    </nav>
+  </div>
+</header>
+
+{% css %}
+  {% include "styles/header.css" %}
+{% endcss %}

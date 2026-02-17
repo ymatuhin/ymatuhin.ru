@@ -1,0 +1,46 @@
+---
+layout: post
+title: Фиксим Emmet под Atom для работы со Stylus файлами
+description: >-
+  Расширение Emmet отлично работает с html, css, sass, scss, less. Видимо из-за того, что этот
+  препроцессор не так распространен то в Emmet официально нет его поддержки.
+tags:
+  - development
+  - tools
+  - editors
+  - atom
+  - stylus
+image:
+  path: atom/atom_stylus_emmet.jpg
+  alt: Atom + Emmet + Stylus
+redirects:
+  - /tools/atom_emmet_with_stylus/
+---
+
+{% mediaImage image.path, image.alt, "eager" %}
+
+Расширение **Emmet** отлично работает с html, css, sass, scss, less. Но есть одна проблема — *Stylus*. Видимо из-за того,
+что этот препроцессор не так распространен то в Emmet официально нет его поддержки. То есть наши правила наподобие
+`bd+` не раскрываются.
+
+Несмотря на то, что в дополнении Stylus уже идут многие сниппеты похожие на Emmet, но не все. А переучиваться не
+хочется, ведь Emmet более распространен среди текстовых редакторов. Значит нужно что-то придумать для этого.
+
+Решение нашлось очень простое, выглядит как небольшой костыль, но оно полностью рабочее. Основной смысл в том, чтобы
+принудительно вызывать Emmet при нажатии на Tab в файлах Stylus.
+
+Заходим в настройки Keymap (Atom → Open Your Keymap). И в самом низу дописываем следующие строки:
+
+```bash
+'atom-text-editor[data-grammar~="stylus"]:not([mini])':
+    'tab': 'emmet:expand-abbreviation-with-tab'
+```
+
+Теперь все работает хорошо.
+
+<br><b>UPD #1</b> Добавляем поддержку Emmet для руби файлов `.erb`. Код который поможет:
+
+```bash
+'atom-text-editor[data-grammar="text html erb"]:not([mini])':
+    'tab': 'emmet:expand-abbreviation-with-tab'
+```

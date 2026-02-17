@@ -1,12 +1,12 @@
 {
+  "type": "module",
   "name": "ymatuhin.ru",
   "version": "1.0.0",
-  "description":
-    "Hi, it's my Jekyll powered website — <a href=\"https://ymatuhin.ru\">ymatuhin.ru</a>",
+  "description": "Hi, it's my Jekyll powered website — <a href=\"https://ymatuhin.ru\">ymatuhin.ru</a>",
   "scripts": {
-    "postinstall": "bundle",
-    "dev": "bundle exec jekyll server --limit_posts 15",
-    "start": "bundle exec jekyll server"
+    "start": "rm -rf _site && NODE_ENV=development eleventy --serve",
+    "build": "rm -rf _site && NODE_ENV=production eleventy",
+    "debug": "DEBUG=Eleventy* eleventy"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,17 @@
   "bugs": {
     "url": "https://github.com/ymatuhin/ymatuhin.github.io/issues"
   },
-  "homepage": "https://github.com/ymatuhin/ymatuhin.github.io#readme"
+  "homepage": "https://github.com/ymatuhin/ymatuhin.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-img": "^6.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "html-minifier-terser": "^7.2.0",
+    "markdown-it": "^14.1.1",
+    "markdown-it-attrs": "^4.3.1",
+    "prettier": "^3.8.1",
+    "purgecss": "^8.0.0",
+    "sass": "^1.97.3",
+    "typograf": "^7.6.0"
+  }
 }

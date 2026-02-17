@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default: site.lang | default: 'ru' }}">
+
+{% unless currentTagPage and currentTagPage.slug %}
+  {% html "head" %}
+    <link rel="alternate" href="{{ site.feed_url }}" type="application/rss+xml" title="{{ site.title }}">
+  {% endhtml %}
+{% endunless %}
+{% include "page/head.liquid" %}
+
+<div class="layout">
+    <div class="layout__content">
+      {% include "page/header.liquid" %}
+
+      <main class="layout__main">{{ content }}</main>
+    </div>
+
+  {% include "page/footer.liquid", class: 'layout__footer' %}
+  </div>
+
+{% comment %} Simple analytics {% endcomment %}
+{% comment %}<img src="https://mc.yandex.ru/watch/28017147" style="position:absolute; left:-9999px;" alt="" />{% endcomment %}
+
+{% css %}
+  {% include "styles/layout.css" %}
+{% endcss %}
+</html>

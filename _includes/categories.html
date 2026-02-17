@@ -1,7 +1,0 @@
-{% if include.categories.first %}
-    {% if include.categories.first == 'blog' %}Блог{% endif %}
-    {% if include.categories.first == 'front-end' %}Фронтенд{% endif %}
-    {% if include.categories.first == 'tools' %}Инструменты{% endif %}
-{% else %}
-    {{ include.categories }}
-{% endif %}

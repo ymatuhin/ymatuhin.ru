@@ -1,0 +1,93 @@
+/**
+ * Prism.js compatible theme based on Catppuccin Mocha
+ */
+code[class*=language-],
+pre[class*=language-] {
+  color: #cdd6f4;
+  background: none;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*=language-] {
+  overflow: auto;
+  background: #1e1e2e;
+}
+
+:not(pre) > code[class*=language-],
+pre[class*=language-] {
+  background: #1e1e2e;
+}
+
+/* Inline code */
+:not(pre) > code[class*=language-] {
+  white-space: normal;
+}
+
+.token.comment,
+.token.doctype {
+  color: #9399b2;
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: #cdd6f4;
+}
+
+.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant {
+  color: #f38ba8;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.builtin {
+  color: #a6e3a1;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #cdd6f4;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #cba6f7;
+}
+
+.token.function,
+.token.class-name {
+  color: #89b4fa;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #fab387;
+}
+
+.token.important {
+  font-weight: bold;
+}
+
+.token.entity {
+  cursor: help;
+}

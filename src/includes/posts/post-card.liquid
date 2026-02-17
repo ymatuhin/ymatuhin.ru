@@ -1,0 +1,59 @@
+{% assign titleTag = tag | default: "h2" %}
+{% assign inPostMode = in-post | default: in_post | default: false %}
+{% assign cardRootTag = "article" %}
+{% assign cardRootClass = "post-card" %}
+
+{% if inPostMode %}
+  {% assign cardRootTag = "header" %}
+  {% assign cardRootClass = "post-card post-card_in-post" %}
+{% endif %}
+
+<{{ cardRootTag }} class="{{ cardRootClass }}">
+  {% if imagePath and inPostMode != true %}
+    <div class="post-card__cover">
+      {% if link %}<a href="{{ link }}">{% endif %}
+        {% assign cardImageAlt = imageAlt | default: title %}
+        {% assign cardImageLoading = imageLoading | default: "lazy" %}
+        {% mediaImage imagePath, cardImageAlt, cardImageLoading %}
+      {% if link %}</a>{% endif %}
+    </div>
+  {% endif %}
+
+  {% if link %}<a href="{{ link }}" class="post-card__link">{% endif %}
+    <{{ titleTag }} class="post-card__title">{{ title }}</{{ titleTag }}>
+    {% if inPostMode %}
+      <hr class="post-card__divider / divider">
+    {% endif %}
+  {% if link %}</a>{% endif %}
+
+  {% if description and inPostMode != true %}
+    <p class="post-card__content">{{ description }}</p>
+  {% endif %}
+
+
+  {% if date or tags %}
+    <div class="post-card__meta">
+      {% if date %}
+        <span class="post-card__date">{% include "posts/pubdate.liquid", date: date %}</span>
+      {% endif %}
+
+      {% if date and tags %}:::{% endif %}
+
+      {% if tags %}
+        <span class="post-card__tags">
+          {% for itemTag in tags %}
+            {% assign tagTrimmed = itemTag | strip %}
+            {% assign tagSlug = tagTrimmed | tagSlug %}
+            {% assign tagUrl = "/tag/" | append: tagSlug | append: "/" %}
+            {% assign tagLabel = tagTrimmed | tagLabel %}
+            <a href="{{ tagUrl }}">{{ tagLabel }}</a>{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </span>
+      {% endif %}
+    </div>
+  {% endif %}
+</{{ cardRootTag }}>
+
+{% css %}
+  {% include "styles/post-card.css" %}
+{% endcss %}

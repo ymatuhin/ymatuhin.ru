@@ -1,0 +1,61 @@
+---
+layout: post
+title: Фоллбэчим Emoji
+description: >-
+  Показываю, как проверять поддержку emoji и подключать fallback для разных платформ.
+  Так смайлы отображаются предсказуемо и не ломают дизайн на старых системах.
+tags:
+  - development
+  - frontend
+  - css
+  - emoji
+image:
+  path: emoji/emoji.jpg
+redirects:
+  - /front-end/emoji-fallback/
+---
+
+{% mediaImage image.path, image.alt, "eager" %}
+
+Emoji набирают популярность. В блоге я тоже использовал их несколько раз, но получил отзыв о том, что они не везде
+показываются. На тот момент я прикрутил к сайту [Twemoji](https://github.com/twitter/twemoji){:rel='nofollow'}, но мне
+не нравилось что они заменяют стандартные на iOS и OS X.
+
+У пользователя два варианта развития событий с эмодзи:
+
+1. Не поддерживаются вообще (показываются квадратики)
+2. Поддерживаются, но не красивые (стандартные в некоторых ОС)
+
+Мы можем решить эту проблему, определив поддержку эмодзи и ОС пользователя.
+
+## Определяем поддержку эмодзи
+
+```js
+var emojiSupported = (function() {
+  var node = document.createElement('canvas');
+  if (!node.getContext || !node.getContext('2d') ||
+      typeof node.getContext('2d').fillText !== 'function')
+    return false;
+  var ctx = node.getContext('2d');
+  ctx.textBaseline = 'top';
+  ctx.font = '32px Arial';
+  ctx.fillText('\ud83d\ude03', 0, 0);
+  return ctx.getImageData(16, 16, 1, 1).data[0] !== 0;
+})();
+```
+
+## Определяем Apple девайсы
+
+```js
+var isMacLike = navigator.platform.match(/(Mac|iPhone|iPod|iPad)/i)?true:false;
+```
+
+После того, как мы определили на чем сидит пользователь и поддерживаются у него эмодзи мы сможем решить эту проблему с
+помощью Twemoji.
+
+```js
+if (!emojiSupported || !isMacLike) {
+	// загрузить Twemoji и обработать документ
+	// twemoji.parse(document.body)
+}
+```

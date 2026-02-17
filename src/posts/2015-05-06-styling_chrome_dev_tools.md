@@ -1,0 +1,52 @@
+---
+layout: post
+title: Стилизуем инструменты разработчика (dev tools) в Google Chrome
+description: >-
+  Совсем недавно я узнал, что Chrome поддерживает темы для dev tools. Мне сразу же захотелось
+  попробовать это.
+tags:
+  - development
+  - frontend
+  - tools
+  - devtools
+  - css
+image:
+  path: dev_tools/dev_tools.png
+  alt: Темная темя для Chrome Dev Tools
+redirects:
+  - /front-end/styling_chrome_dev_tools/
+  - /tools/styling_chrome_dev_tools/
+---
+
+{% mediaImage image.path, image.alt, "eager" %}
+
+Совсем недавно я узнал, что Chrome поддерживает темы для dev tools. Мне сразу же захотелось попробовать это. Сразу скажу
+результат меня не совсем порадовал :-)
+
+## Подготовка
+
+Для того, чтобы установить тему для dev tools, нужно включить экспериментальные функции. Чтобы это сделать введите в
+адресной строке Google Chrome `chrome://flags/#enable-devtools-experiments`. ядом с пунктом _Enable Developer Tools
+experiments_ нажмите _Enable_. Теперь перезапустите браузер (внизу должна быть кнопка).
+
+{% mediaImage "dev_tools/flags.png", "Google Chrome — флаги" %}
+
+Откройте инструменты разработчика (`cmd + shif + i / F12`), зайдите в настройки (иконка шестеренки), перейдите во
+вкладку <strong>Experiments</strong> и поставьте галочку рядом с пунктом «Allow custom UI themes».
+Теперь можно спокойно устанавливать темы из магазина.
+
+## Поиск и установка тем
+
+Найти темы можно в магазине [Google Chrome](https://chrome.google.com/webstore/category/extensions). Искать
+по запросу dev themes. Но это не очень удобно, почти все темы собраны на
+сайте [devthemez.com](http://devthemez.com/themes/chrome-developer-tools). И там же есть темы для dev tools.
+
+Теперь переходим в магазин, выбираем нужную нам тему и устанавливаем её. Теперь при открытии инструментов разработчика
+вы увидите вашу тему.
+
+Теперь немного о неприятном. Темы очень часто выглядят убого. Еще есть проблема с привыканием. К примеру, я привык, что
+если в консоли цифра синяя — это Number, а если красная — String. Но в каждой теме свои цвета, и становится сложнее в
+них ориентироваться.
+
+Сейчас я не буду переходить на стилизованные dev tools. Однако если будет крутая, темная тема от Atom то я бы посмотрел
+на это.

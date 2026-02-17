@@ -1,0 +1,15 @@
+@layer components {
+  .footer {
+    margin-top: 3rem;
+    flex-grow: 0;
+    color: var(--secondary-text-color);
+  }
+
+  .footer a {
+    color: inherit
+  }
+
+  .footer p {
+    margin: 0;
+  }
+}

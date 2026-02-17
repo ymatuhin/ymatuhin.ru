@@ -1,0 +1,59 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+  font-size: var(--heading-font-size);
+  line-height: var(--heading-line-height);
+  letter-spacing: 0.04em;
+  margin: 3rem 0 1rem;
+}
+
+h1 {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: calc(var(--heading-font-size) * 0.25);
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+h2 a[href^="#"],
+h3 a[href^="#"],
+h4 a[href^="#"] {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  white-space: nowrap;
+  letter-spacing: -999px;
+}
+
+h2 a[href^="#"]::before,
+h3 a[href^="#"]::before,
+h4 a[href^="#"]::before {
+  font-size: var(--heading-font-size);
+  line-height: var(--heading-line-height);
+  color: var(--divider-color);
+  cursor: pointer;
+  letter-spacing: initial;
+  margin-right: 1ch;
+}
+
+h2 a[href^="#"]::before {
+  content: '##';
+}
+
+h3 a[href^="#"]::before {
+  content: '###';
+}
+
+h4 a[href^="#"]::before {
+  content: '####';
+}

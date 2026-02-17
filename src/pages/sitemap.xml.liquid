@@ -1,0 +1,49 @@
+---
+permalink: /sitemap.xml
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- assign static_pages = "/,/about/,/autoprefixer_instruction/,/posts/,/projects/,/resume/,/tags/" | split: "," -%}
+
+  {%- for page_url in static_pages -%}
+    <url>
+      <loc>{{ site.url }}{{ page_url }}</loc>
+    </url>
+  {%- endfor -%}
+
+  {%- for post in collections.posts -%}
+    {%- unless post.sitemap_ignore == true -%}
+    <url>
+      <loc>{{ site.url }}{{ post.url }}</loc>
+      {%- if post.last_modified_at -%}
+        <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
+      {%- elsif post.date -%}
+        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      {%- endif -%}
+    </url>
+    {%- endunless -%}
+  {%- endfor -%}
+
+  {%- assign posts_per_page = 10 -%}
+  {%- assign posts_total = collections.posts.size -%}
+  {%- assign posts_pages = posts_total | divided_by: posts_per_page -%}
+  {%- assign posts_remainder = posts_total | modulo: posts_per_page -%}
+  {%- if posts_remainder > 0 -%}
+    {%- assign posts_pages = posts_pages | plus: 1 -%}
+  {%- endif -%}
+
+  {%- if posts_pages > 1 -%}
+    {%- for page_num in (2..posts_pages) -%}
+    <url>
+      <loc>{{ site.url }}/posts/{{ page_num }}/</loc>
+    </url>
+    {%- endfor -%}
+  {%- endif -%}
+
+  {%- for tag_page in collections.tagPages -%}
+    <url>
+      <loc>{{ site.url }}/tag/{{ tag_page.slug }}/</loc>
+    </url>
+  {%- endfor -%}
+</urlset>

@@ -1,0 +1,20 @@
+---
+layout: default
+title: Все теги
+permalink: /tags/
+redirects:
+- /tag/
+---
+
+<article class="post typo white-content wrap-inner">
+  <header class="post-header">
+    <h1 class="post-header__title">Все теги</h1>
+  </header>
+
+  <nav aria-label="Все теги и количество публикаций">
+    {%- for tagPage in collections.tagPages -%}
+      <a href="/tag/{{ tagPage.slug }}/">{{ tagPage.name }}&nbsp;({{ tagPage.count
+      }})</a>{% if forloop.last == false %}  {% endif %}
+    {%- endfor -%}
+  </nav>
+</article>

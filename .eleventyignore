@@ -1,0 +1,10 @@
+node_modules
+README.md
+readme.md
+package.json
+package-lock.json
+.git
+.gitignore
+.eleventy.js
+google*.html
+yandex*.html

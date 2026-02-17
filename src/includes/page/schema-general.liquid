@@ -1,0 +1,22 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "{{ site.url }}/#website",
+  "url": "{{ site.url }}",
+  "name": "{{ site.social.name }}",
+  "description": "{{  site.description }}",
+  "inLanguage": "ru-RU",
+  "publisher": {
+    "@type": "Person",
+    "@id": "{{ site.url }}/#author",
+    "name": "{{ site.social.name }}",
+    "url": "{{ site.url }}",
+    "sameAs": [
+      "{{  site.social.githubUrl }}",
+      "{{  site.social.twitterUrl }}",
+      "{{  site.social.vkUrl }}"
+    ]
+  }
+}
+</script>

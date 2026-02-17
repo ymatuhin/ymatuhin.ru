@@ -1,0 +1,15 @@
+hr {
+  width: 100%;
+  border: none;
+  background: var(--accent-color);
+  height: 2px;
+  margin: 1rem 0;
+}
+
+hr.divider {
+  margin: 1rem 0;
+  height: 9px;
+  background: initial;
+  border-top: 3px dotted var(--divider-color);
+  border-bottom: 3px dotted var(--divider-color);
+}

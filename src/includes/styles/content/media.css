@@ -1,0 +1,56 @@
+img, iframe {
+  background-color: var(--lighter-background-color);
+  display: block;
+  border: 8px solid var(--accent-color);
+  padding: 8px;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+figure {
+  display: inline-flex;
+  vertical-align: top;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+figure > picture,
+figure > div {
+  position: relative;
+}
+
+figure > picture::after,
+figure > div::after {
+  content: '';
+  position: absolute;
+  inset: 1rem;
+  background: linear-gradient(to top, transparent, transparent, rgba(0, 0, 0, .25), rgba(0, 0, 0, .25));
+  background-size: 100% 2px;
+}
+
+figure:hover > picture::after,
+figure:hover > div::after,
+:focus-visible figure::after {
+  background: initial;
+}
+
+figure img,
+figure iframe,
+figure video {
+  margin-bottom: 0;
+}
+
+figure figcaption {
+  background: var(--accent-color);
+  color: var(--background-color);
+  font-size: 1em;
+  font-weight: normal;
+  padding: 0 1ch;
+  margin-top: .5rem;
+
+  contain: inline-size;
+  text-align: center;
+}

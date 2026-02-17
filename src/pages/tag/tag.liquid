@@ -1,0 +1,53 @@
+---
+layout: default
+pagination:
+  data: collections.tagPages
+  size: 1
+  alias: currentTagPage
+permalink: "/tag/{{ currentTagPage.slug }}/index.html"
+eleventyComputed:
+  title: "Тег: {{ currentTagPage.name }}"
+---
+
+
+{% html "head" %}
+  <link rel="alternate" href="/tag/{{ currentTagPage.slug }}/feed.xml" type="application/rss+xml" title="{{ site.title }} — {{ currentTagPage.name }}">
+{% endhtml %}
+
+<h1>Тег: {{ currentTagPage.name }}</h1>
+
+<div class="cards">
+  {% assign isFirstTagCard = true %}
+  {% for post in collections.posts %}
+    {% assign showPost = false %}
+    {% assign currentTagKey = currentTagPage.key %}
+    {% for postTag in post.data.tags %}
+      {% assign postTagNormalized = postTag | tagSlug %}
+      {% if postTagNormalized == currentTagKey %}
+        {% assign showPost = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if showPost %}
+      {% assign cardImageLoading = "lazy" %}
+      {% if isFirstTagCard %}
+        {% assign cardImageLoading = "eager" %}
+        {% assign isFirstTagCard = false %}
+      {% endif %}
+      {% include "posts/post-card.liquid"
+        tag: "h2",
+        tags: post.data.tags,
+        date: post.date,
+        imagePath: post.data.image.path,
+        imageAlt: post.data.image.alt,
+        imageLoading: cardImageLoading,
+        link: post.url,
+        title: post.data.title,
+        description: post.data.description %}
+    {% endif %}
+  {% endfor %}
+</div>
+
+{% css %}
+  {% include "styles/cards.css" %}
+{% endcss %}

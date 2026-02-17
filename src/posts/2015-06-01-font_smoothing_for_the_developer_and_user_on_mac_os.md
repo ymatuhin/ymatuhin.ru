@@ -1,0 +1,56 @@
+---
+layout: post
+title: Сглаживание шрифтов для разработчика и пользователя на Mac OS
+description: >-
+  Я давно интересовался сглаживанием шрифта для веб страниц на CSS. Но «волшебные» свойства, такие
+  как -webkit-font-smoothing, не работали на моем Win 7.
+tags:
+  - development
+  - frontend
+  - css
+  - macos
+  - fonts
+image:
+  path: font-smooth/compare.png
+  alt: Сглаживание шрифтов CSS
+redirects:
+  - /front-end/font_smoothing_for_the_developer_and_user_on_mac_os/
+---
+
+{% mediaImage image.path, image.alt, "eager" %}
+
+Я давно интересовался сглаживанием шрифта для веб страниц на CSS. Но «волшебные» свойства, такие как
+`-webkit-font-smoothing`, не работали на моем Win 7. Поэтому никакого смысла в этих css свойствах я не видел. Но
+сейчас у меня Mac OS и они работают! Сразу скажу я проверял только Win 7, может в более поздних версиях эти
+свойства тоже хоть как-то работают.
+
+## Используем в работе
+
+Очень хорошо этим свойством обрабатываются подгружаемые шрифты.
+
+```css
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+```
+
+Вот и все, больше ничего не нужно. Теперь ваш сайт стал чуточку красивее и элегантней, хоть это и не так заметно с
+первого взгляда.
+
+## Используем в браузере как пользователи
+
+Для этого вам нужно установить расширение для Chrome / Firefox — [Stylish](http://userstyles.org).
+
+В настройках создать новый стиль (write new style), назвать его (у меня Font render), поставить галочку `Enable`, и
+в поле `code` вставить следующий текст:
+
+```css
+html {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+```
+
+И нажать на кнопку сохранить (save). Теперь можно закрыть это окно и сглаживание будет по умолчанию включено на
+всех сайтах. Я именно так и сделал :-)

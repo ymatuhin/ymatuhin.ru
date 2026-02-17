@@ -1,0 +1,8 @@
+{% if url %}
+<figure>
+	<iframe
+		width="{{ width }}"
+		height="{{ height }}"
+		sandbox="allow-scripts allow-same-origin"
+		src="{{ url }}"></iframe>{% if caption %}<figcaption>{{ caption }}</figcaption>{% endif %}</figure>
+{% endif %}

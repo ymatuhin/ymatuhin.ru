@@ -1,0 +1,25 @@
+---
+permalink: "/feed.xml"
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title | escape }}</title>
+    <link>{{ site.url }}/</link>
+    <description>{{ site.description | escape }}</description>
+    <language>{{ site.lang | default: "ru" }}</language>
+    <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
+    {%- for post in collections.posts limit: 10 -%}
+      <item>
+        <title>{{ post.data.title | default: post.fileSlug | escape }}</title>
+        <link>{{ site.url }}{{ post.url }}</link>
+        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+        {% if post.data.description %}
+          <description>{{ post.data.description | escape }}</description>
+        {% endif %}
+      </item>
+    {%- endfor -%}
+  </channel>
+</rss>

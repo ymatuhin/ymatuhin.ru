@@ -1,0 +1,42 @@
+---
+layout: default
+pagination:
+  data: collections.posts
+  size: 10
+  alias: postsPage
+permalink: "/posts/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | plus: 1 }}/{% endif %}index.html"
+eleventyComputed:
+  title: "Все заметки, страница #{{ pagination.pageNumber | plus: 1 }}"
+---
+
+<h1>Все заметки</h1>
+
+<div class="cards">
+  {% for post in postsPage %}
+    {% include "posts/post-card.liquid"
+      tag: "h2",
+      tags: post.data.tags,
+      date: post.date,
+      imagePath: post.data.image.path,
+      imageAlt: post.data.image.alt,
+      link: post.url,
+      title: post.data.title,
+      description: post.data.description %}
+  {% endfor %}
+</div>
+
+<hr class="divider">
+
+<nav class="posts-pagination" aria-label="Предыдущая и следующая страница">
+  {% if pagination.href.next %}
+    <a class="posts-pagination__older / button" href="{{ pagination.href.next }}"> « По старее</a>
+  {% endif %}
+  {% if pagination.href.previous %}
+    <a class="posts-pagination__newer / button" href="{{ pagination.href.previous }}">По новее »</a>
+  {% endif %}
+</nav>
+
+{% css %}
+  {% include "styles/cards.css" %}
+  {% include "styles/posts-pagination.css" %}
+{% endcss %}

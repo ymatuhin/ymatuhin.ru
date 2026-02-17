@@ -1,0 +1,38 @@
+---
+layout: post
+title: Динозавр T-Rex — пасхалочка в Google Chrome
+description: >-
+  Бегущий динозавр перепрыгивающий через кактусы — пасхалка в хроме c 2014 года, о которой я узнал
+  только вчера.
+tags:
+  - non-development
+  - browsers
+  - easter-eggs
+image:
+  path: eastern_eggs/t-rex-runner.png
+has_youtube: true
+redirects:
+  - /blog/t_rex_runner_google_chrome/
+---
+
+{% mediaImage image.path, image.alt, "eager" %}
+
+Бегущий динозавр перепрыгивающий через кактусы — пасхалка в хроме c 2014 года, о которой я узнал только вчера.
+
+## Как играть в динозавра
+
+> Если есть интернет: перейдите на сайт **[googledino.ru](http://googledino.ru/){:class="bigger"}**
+
+Если нет, тогда:
+
+1. Отключите интернет
+1. Попробуйте открыть любую страницу (вы увидите сообщение о неподключенном интернете)
+1. Нажмите <mark>пробел</mark>
+
+## Геймплей T-Rex runner
+
+{% include "posts/media-iframe.liquid", url: "https://www.youtube.com/embed/buPl0vnusls", width: "560", height: "315", caption: "Пасхалка в гугл хроме —
+динозавр T-Rex" %}
+
+Если вам интересно посмотреть, как написана эта игра, то вы откройте дебагер на странице и найдите в одном из `script`
+исходники.

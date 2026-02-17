@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<article class="post">
+  {% include "posts/post-card.liquid",
+    tag: "h1",
+    tags: tags,
+    date: page.date,
+    title: title,
+    in-post: true %}
+
+  <heading-anchors position="afterbegin" class="post__content">
+    {{ content }}
+  </heading-anchors>
+</article>
+
+<hr class="post__divider-after / divider">
+{% assign relatedPosts = collections.posts | relatedPosts: page, tags %}
+{% if relatedPosts.size > 0 %}
+  <aside class="similar-articles" aria-label="Похожие статьи">
+    <h{{ content | maxLevelHeading | plus: 1 }}>
+      Статьи с такими же тегами:
+    </h{{ content | maxLevelHeading | plus: 1 }}>
+    <ul>
+      {% for post in relatedPosts %}
+        <li>
+          <a href="{{ post.url }}">{{ post.data.title | default: post.fileSlug }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </aside>
+{% endif %}
+
+{% css %}
+  {% include "styles/post.css" %}
+  {% include "styles/posts-pagination.css" %}
+{% endcss %}
+
+{% html "head" %}
+  {% include "page/schema-post.liquid" %}
+  <script type="module" src="/assets/js/heading-anchors.js"></script>
+{% endhtml %}
