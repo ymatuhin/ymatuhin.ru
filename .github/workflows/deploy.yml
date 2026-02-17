@@ -1,0 +1,37 @@
+name: Build & Deploy to FTP (pnpm)
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🔧 Setup Node.js + pnpm cache
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'pnpm'
+
+      - name: 📦 Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: 🛠 Build project
+        run: pnpm run build
+
+      - name: 📤 Sync files to FTP server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server:       ${{ secrets.FTP_SERVER }}
+          username:     ${{ secrets.FTP_USERNAME }}
+          password:     ${{ secrets.FTP_PASSWORD }}
+          local-dir:    ./_site/
+          server-dir:   /
+          protocol:     ftps
+          # exclude:    .git* *.md *.log node_modules/
