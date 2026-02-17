@@ -5,7 +5,10 @@ pagination:
   size: 1
   alias: currentTagPage
 permalink: "/tag/{{ currentTagPage.slug }}/index.html"
+eleventyComputed:
+  title: "Тег: {{ currentTagPage.name }}"
 ---
+
 
 {% html "head" %}
   <link rel="alternate" href="/tag/{{ currentTagPage.slug }}/feed.xml" type="application/rss+xml" title="{{ site.title }} — {{ currentTagPage.name }}">

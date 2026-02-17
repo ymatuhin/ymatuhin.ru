@@ -5,6 +5,8 @@ pagination:
   size: 10
   alias: postsPage
 permalink: "/posts/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | plus: 1 }}/{% endif %}index.html"
+eleventyComputed:
+  title: "Все заметки, страница #{{ pagination.pageNumber | plus: 1 }}"
 ---
 
 <h1>Все заметки</h1>

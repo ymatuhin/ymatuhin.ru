@@ -7,6 +7,10 @@
   <link rel="canonical" href="{{ site.url }}{{ permalink | default: page.url }}">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
   <style>
     @layer base, content, layout, components;
 
@@ -18,19 +22,7 @@
     {% getBundle "css" %}
   </style>
 
-
-  {% comment %} Icons {% endcomment %}
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png?v=JymzngPEmg2">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png?v=JymzngPEmg2">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png?v=JymzngPEmg2">
-  <link rel="manifest" href="/assets/icons/manifest.json?v=JymzngPEmg2">
-  <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg?v=JymzngPEmg2" color="#0c00ff">
-  <link rel="shortcut icon" href="/assets/icons/favicon.ico?v=JymzngPEmg2">
-  <meta name="msapplication-config" content="/assets/icons/browserconfig.xml?v=JymzngPEmg2">
-  <meta name="theme-color" content="#0c00ff">
-  <link rel="manifest" href="/manifest.json">
-
   {% include "page/schema-general.liquid" %}
-  
+
   {% getBundle "html", "head" %}
 </head>

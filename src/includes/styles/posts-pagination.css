@@ -8,9 +8,4 @@
   .posts-pagination__newer {
     margin-left: auto;
   }
-
-  .posts-pagination__newer,
-  .posts-pagination__older {
-    flex: 1;
-  }
 }
