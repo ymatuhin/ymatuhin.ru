@@ -39,4 +39,6 @@ jobs:
           local-dir:    ./_site/
           server-dir:   /
           protocol:     ftp
+          passive:      true
+          timeout:      120000
           # exclude:    .git* *.md *.log node_modules/
