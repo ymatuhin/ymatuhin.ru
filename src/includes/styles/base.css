@@ -56,8 +56,9 @@
     text-underline-offset: 2px;
   }
 
-  a:focus-visible, a:hover {
+  a:not(:has(img, iframe)):focus-visible, a:not(:has(img, iframe)):hover {
     text-decoration: none;
+    filter: brightness(1.2);
     text-shadow: 0 0 0.5rem color-mix(in srgb, currentColor 50%, transparent)
   }
 

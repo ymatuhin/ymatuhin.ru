@@ -15,6 +15,11 @@
     flex-shrink: 0;
   }
 
+  .header__logo:hover,
+  .header__logo:focus-visible {
+    filter: brightness(1.2);
+  }
+
   .header__logo::after {
     content: "";
     background: repeating-linear-gradient(90deg, var(--accent-color), var(--accent-color) 2px, transparent 0, transparent 10px);
