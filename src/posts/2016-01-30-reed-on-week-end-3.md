@@ -17,8 +17,7 @@ redirects:
 Горячие новости 🔥 — Sublime Text [жив](https://sublimetext.com/3dev){:rel='nofollow'}! Сборка 3099 вышла 29 января 2016.
 
 {% include "posts/media-iframe.liquid", url: "https://www.youtube.com/embed/20BySC_6HyY", width: "960", height: "720",
-caption: "Wat by Gary
-Bernhardt" %}
+caption: "Wat by Gary Bernhardt" %}
 
 > **UPD**. Совсем забыл о классном видео Андрея Листочкина с Харьков
 > JS — [Как не гнаться за технологиями и начать жить](https://www.youtube.com/watch?v=xPFRUM_oDKA). Рекомендую 👍
