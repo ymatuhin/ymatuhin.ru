@@ -10,14 +10,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ymatuhin/ymatuhin.github.io.git"
+    "url": "git+https://github.com/ymatuhin/ymatuhin.ru.git"
   },
   "author": "ymatuhin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ymatuhin/ymatuhin.github.io/issues"
+    "url": "https://github.com/ymatuhin/ymatuhin.ru/issues"
   },
-  "homepage": "https://github.com/ymatuhin/ymatuhin.github.io#readme",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp"
+    ],
+    "ignoredBuiltDependencies": [
+      "@parcel/watcher"
+    ]
+  },
+  "homepage": "https://github.com/ymatuhin/ymatuhin.ru#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-img": "^6.0.0",
