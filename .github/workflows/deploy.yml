@@ -38,5 +38,5 @@ jobs:
           password:     ${{ secrets.FTP_PASSWORD }}
           local-dir:    ./_site/
           server-dir:   /
-          protocol:     ftps
+          protocol:     ftp
           # exclude:    .git* *.md *.log node_modules/
