@@ -58,8 +58,7 @@
 
   a:focus-visible, a:hover {
     text-decoration: none;
-    /*filter: brightness(1.15);*/
-    /*text-shadow: 0 0 8px rgba(203, 166, 247, 0.4)*/
+    text-shadow: 0 0 0.5rem color-mix(in srgb, currentColor 50%, transparent)
   }
 
   a:focus-visible {

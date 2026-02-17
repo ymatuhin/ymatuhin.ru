@@ -40,7 +40,7 @@ h3 a[href^="#"]::before,
 h4 a[href^="#"]::before {
   font-size: var(--heading-font-size);
   line-height: var(--heading-line-height);
-  color: var(--secondary-text-color);
+  color: var(--divider-color);
   cursor: pointer;
   letter-spacing: initial;
   margin-right: 1ch;

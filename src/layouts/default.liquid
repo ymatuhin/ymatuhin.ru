@@ -3,7 +3,7 @@
 
 {% unless currentTagPage and currentTagPage.slug %}
   {% html "head" %}
-  <link rel="alternate" href="{{ site.feed_url }}" type="application/rss+xml" title="{{ site.title }}">
+    <link rel="alternate" href="{{ site.feed_url }}" type="application/rss+xml" title="{{ site.title }}">
   {% endhtml %}
 {% endunless %}
 {% include "page/head.liquid" %}
@@ -22,6 +22,6 @@
 {% comment %}<img src="https://mc.yandex.ru/watch/28017147" style="position:absolute; left:-9999px;" alt="" />{% endcomment %}
 
 {% css %}
-{% include "styles/layout.css" %}
+  {% include "styles/layout.css" %}
 {% endcss %}
 </html>

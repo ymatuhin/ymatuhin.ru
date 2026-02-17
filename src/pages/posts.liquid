@@ -23,7 +23,9 @@ permalink: "/posts/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | 
   {% endfor %}
 </div>
 
-<nav class="posts-pagination" aria-label="Posts pagination">
+<hr class="divider">
+
+<nav class="posts-pagination" aria-label="Предыдущая и следующая страница">
   {% if pagination.href.next %}
     <a class="posts-pagination__older / button" href="{{ pagination.href.next }}"> « По старее</a>
   {% endif %}

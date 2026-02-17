@@ -25,7 +25,7 @@ export function buildRelatedPosts(allPosts, page, tags) {
       .filter(({ score }) => score > 0)
       // best match first; tie-breaker newest first
       .sort((a, b) => b.score - a.score || b.item.date - a.item.date)
-      .slice(0, 3) // how many "similar" posts to show
+      .slice(0, 5) // how many "similar" posts to show
       .map(({ item }) => item)
   );
 }

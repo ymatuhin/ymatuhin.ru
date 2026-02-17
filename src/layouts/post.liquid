@@ -15,19 +15,12 @@ layout: default
   </heading-anchors>
 </article>
 
-<p>modified (shortcode): {% modified %}</p>
-
-{% assign previousPost = collections.posts | getNextCollectionItem %}
-{% assign nextPost = collections.posts | getPreviousCollectionItem %}
-{% if previousPost %}Previous Blog Post: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %}
-{% if nextPost %}Next Blog Post: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %}
-
 <hr class="post__divider-after / divider">
 {% assign relatedPosts = collections.posts | relatedPosts: page, tags %}
 {% if relatedPosts.size > 0 %}
   <aside class="similar-articles" aria-label="Похожие статьи">
     <h{{ content | maxLevelHeading | plus: 1 }}>
-      Похожие (по тегам) статьи:
+      Статьи с такими же тегами:
     </h{{ content | maxLevelHeading | plus: 1 }}>
     <ul>
       {% for post in relatedPosts %}
@@ -41,8 +34,10 @@ layout: default
 
 {% css %}
   {% include "styles/post.css" %}
+  {% include "styles/posts-pagination.css" %}
 {% endcss %}
 
 {% html "head" %}
+  {% include "page/schema-post.liquid" %}
   <script type="module" src="/assets/js/heading-anchors.js"></script>
 {% endhtml %}

@@ -52,7 +52,7 @@ export default function (eleventyConfig) {
   // Shortcodes
   eleventyConfig.addAsyncShortcode('mediaImage', mediaImageShortcode);
   eleventyConfig.addAsyncShortcode('modified', function () {
-    return this.page?.inputPath ? fs.statSync(this.page.inputPath).mtime : undefined;
+    return this.page?.inputPath ? fs.statSync(this.page.inputPath).mtime.toJSON() : undefined;
   });
   // Passthrough copy
   eleventyConfig.addPassthroughCopy({ public: '/' });

@@ -30,74 +30,7 @@
   <meta name="theme-color" content="#0c00ff">
   <link rel="manifest" href="/manifest.json">
 
-  <!-- Site-wide: Add this to base layout / every page -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://ymatuhin.ru/#website",
-  "url": "https://ymatuhin.ru/",
-  "name": "Юрий Матюхин",
-  "description": "Личный блог Юрия Матюхина: фронтенд, CSS, разработка, личные заметки и эксперименты",
-  "inLanguage": "ru-RU",
-  "publisher": {
-    "@type": "Person",
-    "@id": "https://ymatuhin.ru/#author",
-    "name": "Юрий Матюхин",
-    "url": "https://ymatuhin.ru/",
-    "sameAs": [
-      "https://github.com/ymatuhin",
-      "https://t.me/ymatuhin"
-    ]
-  }
-  // Optional: if you have search functionality
-  // ,"potentialAction": {
-  //   "@type": "SearchAction",
-  //   "target": "https://ymatuhin.ru/search/?q={search_term_string}",
-  //   "query-input": "required name=search_term_string"
-  // }
-}
-</script>
-
-  <!-- Page-specific: Add this only to the blog post page/template -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Код. Плейсхолдер для [contenteditable]",
-  "description": "Простое CSS-решение для добавления placeholder в элементы с contenteditable. Пример кода, JSFiddle и предупреждения о поведении в разных браузерах.",
-  "datePublished": "2017-11-24T00:00:00+03:00",
-  "dateModified": "2017-11-24T00:00:00+03:00",
-  "author": {
-    "@type": "Person",
-    "@id": "https://ymatuhin.ru/#author",
-    "name": "Юрий Матюхин",
-    "url": "https://ymatuhin.ru/",
-    "sameAs": [
-      "https://github.com/ymatuhin",
-      "https://t.me/ymatuhin"
-    ]
-  },
-  "publisher": {
-    "@type": "Person",
-    "@id": "https://ymatuhin.ru/#author",
-    "name": "Юрий Матюхин",
-    "url": "https://ymatuhin.ru/"
-  },
-  "image": [
-    "https://ymatuhin.ru/assets/img/optimized/DOsl-Qqh8g-1200.jpeg"
-  ],
-  "url": "https://ymatuhin.ru/posts/kod-pleyskholder-dlya-contenteditable/",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://ymatuhin.ru/posts/kod-pleyskholder-dlya-contenteditable/"
-  },
-  "keywords": "contenteditable, placeholder, css, frontend, разработка, плейсхолдер contenteditable",
-  "articleSection": "разработка",
-  "inLanguage": "ru-RU",
-  "wordCount": 350
-}
-</script>
-
+  {% include "page/schema-general.liquid" %}
+  
   {% getBundle "html", "head" %}
 </head>

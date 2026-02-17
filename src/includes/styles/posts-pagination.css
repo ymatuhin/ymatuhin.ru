@@ -2,11 +2,15 @@
   .posts-pagination {
     margin-top: 3rem;
     display: flex;
-    flex-wrap: wrap;
     gap: 0.75rem;
   }
 
   .posts-pagination__newer {
     margin-left: auto;
+  }
+
+  .posts-pagination__newer,
+  .posts-pagination__older {
+    flex: 1;
   }
 }
