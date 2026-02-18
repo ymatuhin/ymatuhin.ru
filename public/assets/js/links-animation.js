@@ -1,14 +1,13 @@
 document.addEventListener('DOMContentLoaded', startListening);
 
 function startListening() {
-  const allAnimatableLinks = [...document.querySelectorAll('a')]
-    .filter((link) => !link.innerHTML.includes('<img'))
-    .filter(
-      (link) => link.childNodes.length === 1 && link.childNodes[0].nodeType === Node.TEXT_NODE,
-    );
+  const animatableLinks = [...document.querySelectorAll('a')].filter(
+    // только те ссылки, внутри которых один текст
+    (link) => link.childNodes.length === 1 && link.childNodes[0].nodeType === Node.TEXT_NODE,
+  );
 
-  allAnimatableLinks.forEach((link) => {
-    link.addEventListener('pointerover', () => runAnimation(link), { passive: true });
+  animatableLinks.forEach((link) => {
+    link.addEventListener('pointerenter', () => runAnimation(link), { passive: true });
     link.addEventListener(
       'focus',
       (event) => {
@@ -16,31 +15,37 @@ function startListening() {
       },
       { passive: true },
     );
-    link.addEventListener('pointerleave', () => (link.isAnimating = false), { passive: true });
-    link.addEventListener('blur', () => (link.isAnimating = false), { passive: true });
   });
 }
 
-function runAnimation(element) {
-  if (element.isAnimating) return;
-  element.isAnimating = true;
-  const originalText = element.textContent;
-  const newText = generateRandomString(originalText.length);
+function runAnimation(link) {
+  if (link.isAnimating) return;
+  link.isAnimating = true;
+  const originalText = link.textContent;
+  const newText = generateRandomString(originalText);
+  const oneFrameLengthMs = 60;
+  const totalFrames = 6;
 
+  // сколько символов менять за кадр
+  const batchSize = Math.max(1, Math.round(originalText.length * 0.1));
+  const shuffledIndexes = [...newText].map((_, index) => index).sort(() => Math.random() - 0.5);
   const interval = setInterval(() => {
-    const randomIndex = Math.floor(Math.random() * newText.length);
+    const indexesToUpdate = shuffledIndexes.splice(0, batchSize);
     const textArray = [...originalText];
-    textArray[randomIndex] = newText[randomIndex];
-    element.textContent = textArray.join('');
-  }, 50);
+    indexesToUpdate.forEach((index) => {
+      textArray[index] = newText[index];
+      link.textContent = textArray.join('');
+    });
+  }, oneFrameLengthMs);
 
   setTimeout(() => {
     clearInterval(interval);
-    element.textContent = originalText;
-  }, 333);
+    link.textContent = originalText;
+    link.isAnimating = false;
+  }, oneFrameLengthMs * totalFrames);
 }
 
-function generateRandomString(length) {
+function generateRandomString(text) {
   const chars =
     'abcdefghijklmnopqrstuvwxyz' +
     'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
@@ -51,7 +56,13 @@ function generateRandomString(length) {
 
   let result = '';
 
-  for (let i = 0; i < length; i++) {
+  for (const ch of text) {
+    // сохраняем пробелы/табы/переносы на своих местах
+    if (/\s/.test(ch)) {
+      result += ch;
+      continue;
+    }
+
     const randomIndex = Math.floor(Math.random() * chars.length);
     result += chars[randomIndex];
   }
