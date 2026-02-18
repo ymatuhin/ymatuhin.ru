@@ -16,7 +16,7 @@
 
   .intro > summary:focus-visible {
     outline: 1px solid var(--accent-color);
-    outline-offset: 2px;
+    outline-offset: -8px;
   }
 
   .intro > summary::marker {
