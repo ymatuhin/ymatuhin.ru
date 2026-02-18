@@ -54,6 +54,8 @@
   a {
     color: var(--accent-color);
     text-underline-offset: 2px;
+    margin: -.5rem;
+    padding: .5rem;
   }
 
   a:not(:has(img, iframe)):focus-visible, a:not(:has(img, iframe)):hover {
