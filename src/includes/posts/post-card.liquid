@@ -19,12 +19,15 @@
     </div>
   {% endif %}
 
-  {% if link %}<a href="{{ link }}" class="post-card__link">{% endif %}
-    <{{ titleTag }} class="post-card__title">{{ title }}</{{ titleTag }}>
-    {% if inPostMode %}
-      <hr class="post-card__divider / divider">
-    {% endif %}
-  {% if link %}</a>{% endif %}
+  <{{ titleTag }} class="post-card__title">
+    {% if link %}<a href="{{ link }}" class="post-card__link">{% endif %}
+      {{ title }}
+    {% if link %}</a>{% endif %}
+  </{{ titleTag }}>
+
+  {% if inPostMode %}
+    <hr class="post-card__divider / divider">
+  {% endif %}
 
   {% if description and inPostMode != true %}
     <p class="post-card__content">{{ description }}</p>

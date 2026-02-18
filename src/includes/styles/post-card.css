@@ -38,6 +38,10 @@
     margin-bottom: 1.75rem;
   }
 
+  .post-card__cover a {
+    display: block;
+  }
+
   .post-card__meta {
     font-size: 1rem;
     color: var(--secondary-text-color);
