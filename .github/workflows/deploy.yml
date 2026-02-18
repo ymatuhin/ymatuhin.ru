@@ -30,15 +30,16 @@ jobs:
       - name: 🛠 Build project
         run: pnpm run build
 
-      - name: 📤 Sync files to FTP server
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+      - name: 🔐 Install SSH Key
+        uses: shimataro/ssh-key-action@v2
         with:
-          server:       ${{ secrets.FTP_SERVER }}
-          username:     ${{ secrets.FTP_USERNAME }}
-          password:     ${{ secrets.FTP_PASSWORD }}
-          local-dir:    ./_site/
-          server-dir:   /
-          protocol:     ftp
-          security:     loose
-          timeout:      120000
-          # exclude:    .git* *.md *.log node_modules/
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: unnecessary   # отключаем проверку, если не добавлял known_hosts
+
+      # Добавляем права на ключ (иногда нужно)
+      - name: 🔐 Add known hosts (optional but recommended)
+        run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: 📤 Sync files via rsync
+        run: |
+          rsync -avz --delete ./_site/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/html/
