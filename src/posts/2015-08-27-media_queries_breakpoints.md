@@ -15,6 +15,7 @@ image:
   alt: Контрольные точки медиа выражений Twitter Bootstrap
 redirects:
   - /front-end/media_quires_breakpoins/
+  - /posts/media_quires_breakpoins/
 ---
 
 {% mediaImage image.path, image.alt, "eager" %}

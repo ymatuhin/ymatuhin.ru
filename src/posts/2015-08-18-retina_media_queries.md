@@ -3,7 +3,7 @@ layout: post
 title: Правильный сниппет медиа выражений для retina
 description: >-
   Я видел разные способы определения мониторов retina. Разберемся, какие из media queries
-  изпользовать.
+  использовать.
 tags:
   - development
   - frontend
@@ -11,10 +11,11 @@ tags:
   - retina
 redirects:
   - /front-end/retina_media_quires/
+  - /posts/retina_media_quires/
 ---
 
 Я видел разные способы определения мониторов retina. Одни объемные, другие наоборот. Разберемся, какие из media queries
-изпользовать.
+использовать.
 
 ## Правильное решение для retina (2x)
 

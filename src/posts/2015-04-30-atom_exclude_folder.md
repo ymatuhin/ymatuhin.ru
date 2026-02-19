@@ -12,12 +12,13 @@ tags:
   - atom
 redirects:
   - /tools/atom_exclude_foilder/
+  - /posts/atom_exclude_foilder/
 ---
 
 Порой, чтобы открыть нужный файл, нужно знать все его название. А все из-за того, что у нас очень много файлов в папках
 `node_modules` и `bower_components` и они мешают открытию написанных нами файлов.
 
-ешается эта <em>проблема</em> достаточно легко. Заходим в настройки Config (Atom → Open Your Config). Ищем там строку
+Решается эта <em>проблема</em> достаточно легко. Заходим в настройки Config (Atom → Open Your Config). Ищем там строку
 `core` и дописываем туда `ignoredNames`:
 
 ```bash

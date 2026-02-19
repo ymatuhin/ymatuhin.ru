@@ -12,6 +12,7 @@ updated: 14-03-2016
 has_youtube: true
 redirects:
   - /front-end/reed-on-week-end-3/
+  - /posts/reed-on-week-end-3/
 ---
 
 Горячие новости 🔥 — Sublime Text [жив](https://sublimetext.com/3dev){:rel='nofollow'}! Сборка 3099 вышла 29 января 2016.
