@@ -38,7 +38,7 @@ redirects:
 или на русском [у меня](https://github.com/ymatuhin/architect/blob/master/learning-1-sith-backbone/README.md){:
 rel='nofollow'}.
 
-Так же есть еще одно не тривиальное, но простое задание, чтобы показать проблему взаимодействия Redux и
+Также есть еще одно нетривиальное, но простое задание, чтобы показать проблему взаимодействия Redux и
 react-router — [friend-list](https://github.com/DerekCuevas/friend-list). Там же в репозитории можно посмотреть решения
 на [Cycle.js](http://cycle.js.org/).
 
