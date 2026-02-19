@@ -20,7 +20,7 @@ layout: default
 {% if relatedPosts.size > 0 %}
   <aside class="similar-articles" aria-label="Похожие статьи">
     <h{{ content | maxLevelHeading | plus: 1 }}>
-      Статьи с такими же тегами:
+      Статьи с такими же тегами
     </h{{ content | maxLevelHeading | plus: 1 }}>
     <ul>
       {% for post in relatedPosts %}
@@ -32,9 +32,10 @@ layout: default
   </aside>
 {% endif %}
 
-<hr class="post__divider-after / divider">
-
-<script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-discussion="yury_matuhin" data-comments-limit="5" data-color="b4befe" data-dark="1"></script>
+{% if comments %}
+  <hr class="post__divider-after / divider">
+  {% include "page/comments.liquid" %}
+{% endif %}
 
 {% css %}
   {% include "styles/post.css" %}

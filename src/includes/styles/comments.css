@@ -1,0 +1,29 @@
+.comments {}
+
+.comments__headline {
+  margin: 3rem 0 1rem;
+  display: flex;
+}
+
+.comments__headline :where(h2, h3, h4, h5, h6) {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: auto;
+}
+
+.comments__headline label {
+  margin: -.25rem;
+  padding: .25rem;
+  margin-left: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.comments__content [data-platform] {
+  display: none;
+}
+
+.comments:has(input[type="radio"][value="telegram"]:checked) [data-platform="telegram"],
+.comments:has(input[type="radio"][value="vk"]:checked) [data-platform="vk"]{
+  display: block;
+}

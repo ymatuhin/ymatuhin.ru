@@ -1,0 +1,41 @@
+<div class="comments">
+  <div class="comments__headline">
+    <h{{ content | maxLevelHeading | plus: 2 }}>
+      Комментарии
+    </h{{ content | maxLevelHeading | plus: 2 }}>
+    <label>
+      <input type="radio" name="comments-system" value="telegram" checked> Телеграм
+    </label>
+    <label>
+      <input type="radio" name="comments-system" value="vk"> Вконтакте
+    </label>
+  </div>
+
+  <div class="comments__content">
+    <div data-platform="telegram">
+      <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-discussion="yury_matuhin" data-comments-limit="5" data-color="b4befe" data-dark="1"></script>
+    </div>
+    <div data-platform="vk">
+      <script src="https://vk.ru/js/api/openapi.js?169" type="text/javascript"></script>
+
+      <div id="vk_comments"></div>
+      <script type="text/javascript">
+        VK.init({ apiId: 54457625, onlyWidgets: true });
+        VK.Widgets.Comments('vk_comments');
+      </script>
+    </div>
+  </div>
+
+  <script>
+    const tgInput = document.querySelector('input[name="comments-system"][value="telegram"]');
+    const vkInput = document.querySelector('input[name="comments-system"][value="vk"]');
+    if (navigator.language.includes('ru')) {
+      vkInput.checked = true;
+      tgInput.checked = false;
+    }
+  </script>
+</div>
+
+{% css %}
+  {% include "styles/comments.css" %}
+{% endcss %}

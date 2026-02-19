@@ -27,6 +27,11 @@
 {% assign hasButtonClass = contentToCheck contains 'class="button"' or contentToCheck contains 'class="button ' or contentToCheck contains ' button"' or contentToCheck contains "class='button'" or contentToCheck contains "class='button " or contentToCheck contains " button'" %}
 {% assign hasButton = contentToCheck contains "<button" or hasButtonClass %}
 {% assign hasCodeBlock = contentToCheck contains "<pre" or contentToCheck contains "language-" %}
+{% assign hasFieldset = contentToCheck contains "<fieldset" %}
+{% assign hasSelect = contentToCheck contains "<select" %}
+{% assign hasInput = contentToCheck contains "<input" %}
+{% assign hasTextarea = contentToCheck contains "<textarea" %}
+{% assign hasLabel = contentToCheck contains "<label" %}
 
 {% if hasAnyHeading %}
   {% include "styles/content/headings.css" %}
@@ -74,5 +79,13 @@
 
 {% if hasCodeBlock %}
   {% include "styles/prism.css" %}
+{% endif %}
+
+{% if hasFieldset %}
+  {% include "styles/fieldset.css" %}
+{% endif %}
+
+{% if hasSelect or hasInput or hasTextarea or hasLabel %}
+  {% include "styles/forms.css" %}
 {% endif %}
 }
