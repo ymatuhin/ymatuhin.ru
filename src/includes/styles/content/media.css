@@ -1,12 +1,15 @@
-img, iframe {
+iframe {
+  background-color: var(--lighter-background-color);
+  display: block;
+  max-width: 100%;
+}
+
+img {
   background-color: var(--lighter-background-color);
   display: block;
   border: 8px solid var(--accent-color);
   padding: 8px;
   max-width: 100%;
-}
-
-img {
   height: auto;
 }
 
