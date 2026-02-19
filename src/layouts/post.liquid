@@ -15,10 +15,11 @@ layout: default
   </heading-anchors>
 </article>
 
-<hr class="post__divider-after / divider">
 {% assign relatedPosts = collections.posts | relatedPosts: page, tags %}
 {% if relatedPosts.size > 0 %}
-  <aside class="similar-articles" aria-label="Похожие статьи">
+  <hr class="post__divider-after / divider">
+
+  <aside aria-label="Похожие статьи">
     <h{{ content | maxLevelHeading | plus: 1 }}>
       Статьи с такими же тегами
     </h{{ content | maxLevelHeading | plus: 1 }}>
