@@ -1,4 +1,6 @@
-document.addEventListener('DOMContentLoaded', startListening);
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (!prefersReducedMotion) startListening();
 
 function startListening() {
   const animatableLinks = [...document.querySelectorAll('a')].filter(
@@ -27,7 +29,7 @@ function runAnimation(link) {
   const totalFrames = 6;
 
   // сколько символов менять за кадр
-  const batchSize = Math.max(1, Math.round(originalText.length * 0.1));
+  const batchSize = Math.max(1, Math.round(originalText.length * 0.15));
   const shuffledIndexes = [...newText].map((_, index) => index).sort(() => Math.random() - 0.5);
   const interval = setInterval(() => {
     const indexesToUpdate = shuffledIndexes.splice(0, batchSize);
