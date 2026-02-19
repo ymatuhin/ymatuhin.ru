@@ -46,10 +46,13 @@
         <span class="post-card__tags">
           {% for itemTag in tags %}
             {% assign tagTrimmed = itemTag | strip %}
-            {% assign tagSlug = tagTrimmed | tagSlug %}
-            {% assign tagUrl = "/tag/" | append: tagSlug | append: "/" %}
+            {% assign tagKey = tagTrimmed | tagSlug %}
+            {% assign tagPage = collections.tagPages | where: "key", tagKey | first %}
             {% assign tagLabel = tagTrimmed | tagLabel %}
-            <a href="{{ tagUrl }}">{{ tagLabel }}</a>{% unless forloop.last %}, {% endunless %}
+            {% if tagPage %}
+              {% assign tagUrl = "/tag/" | append: tagPage.slug | append: "/" %}<a href="{{ tagUrl }}">{{ tagLabel }}</a>{% else %}
+              {{ tagLabel }}
+            {% endif %}{% unless forloop.last %}, {% endunless %}
           {% endfor %}
         </span>
       {% endif %}

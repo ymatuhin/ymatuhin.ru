@@ -44,20 +44,31 @@ export function buildTagPagesCollection(collectionApi) {
   const pages = [];
   const usedKeys = new Set();
   const usedSlugs = new Set();
+  const tagCounts = new Map();
+
+  for (const post of posts) {
+    const uniquePostTags = new Set(
+      extractPostTags(post)
+        .map((postTag) => toTagSlug(postTag))
+        .filter(Boolean),
+    );
+
+    for (const postTagKey of uniquePostTags) {
+      tagCounts.set(postTagKey, (tagCounts.get(postTagKey) || 0) + 1);
+    }
+  }
 
   for (const tag of buildTagsCollection(collectionApi)) {
     const key = toTagSlug(tag);
     if (!key || usedKeys.has(key)) continue;
+    const count = tagCounts.get(key) || 0;
+    if (count <= 1) continue;
     usedKeys.add(key);
     const slug = toUniqueTagSlug(key, usedSlugs);
     if (!slug) continue;
     const name = toTagLabel(key);
     const legacySlug = toLegacyTagSlug(name);
     usedSlugs.add(slug);
-    const count = posts.filter((post) => {
-      const postTags = extractPostTags(post).filter(Boolean);
-      return postTags.some((postTag) => toTagSlug(postTag) === key);
-    }).length;
     pages.push({ name, slug, legacySlug, count, key });
   }
 
@@ -93,7 +104,9 @@ export function buildFrontmatterRedirectsCollection(collectionApi) {
   for (const item of items) {
     if (!item.url || !item.data || !item.data.redirects) continue;
 
-    const targets = Array.isArray(item.data.redirects) ? item.data.redirects : [item.data.redirects];
+    const targets = Array.isArray(item.data.redirects)
+      ? item.data.redirects
+      : [item.data.redirects];
     for (const source of targets) {
       addRedirect(source, item.url);
     }
