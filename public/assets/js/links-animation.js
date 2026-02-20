@@ -43,7 +43,7 @@ function runAnimation(link) {
   setTimeout(() => {
     clearInterval(interval);
     link.textContent = originalText;
-    link.isAnimating = false;
+    setTimeout(() => (link.isAnimating = false), oneFrameLengthMs);
   }, oneFrameLengthMs * totalFrames);
 }
 
