@@ -8,6 +8,7 @@
     --code-font-family: var(--font-family);
     --divider-color: #585b70;
     --background-color: #181825;
+    --darker-background-color: #11111b;
     --lighter-background-color: #1e1e2e;
     --border-color: #313244;
     --accent-color: #b4befe;
@@ -25,6 +26,8 @@
     scroll-padding-top: 1rem;
     scroll-behavior: smooth;
     background-color: var(--background-color);
+    background-image: linear-gradient(to bottom right, var(--background-color), var(--darker-background-color));
+    background-attachment: fixed;
   }
 
   *,
@@ -41,7 +44,7 @@
     font-weight: 400;
     font-size: var(--text-font-size);
     line-height: var(--text-line-height);
-    background: linear-gradient(to top, transparent, transparent, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+    background: linear-gradient(to top, transparent, transparent, rgba(0, 0, 0, .333), rgba(0, 0, 0, .333));
     background-size: 100% 2px;
     color: var(--text-color);
     text-rendering: optimizeLegibility;
