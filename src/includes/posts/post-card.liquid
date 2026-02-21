@@ -47,12 +47,11 @@
           {% for itemTag in tags %}
             {% assign tagTrimmed = itemTag | strip %}
             {% assign tagKey = tagTrimmed | tagSlug %}
-            {% assign tagPage = collections.tagPages | where: "key", tagKey | first %}
+            {% assign tagPageData = collections.tagPages | where: "key", tagKey | first %}
             {% assign tagLabel = tagTrimmed | tagLabel %}
-            {% if tagPage %}
-              {% assign tagUrl = "/tag/" | append: tagPage.slug | append: "/" %}<a href="{{ tagUrl }}">{{ tagLabel }}</a>{% else %}
-              {{ tagLabel }}
-            {% endif %}{% unless forloop.last %}, {% endunless %}
+            {% if tagPageData %}
+              {% assign tagUrl = "/tag/" | append: tagPageData.slug | append: "/" %}
+              <a href="{{ tagUrl }}">{{ tagLabel }}</a>{% else %}{{ tagLabel }}{% endif %}{% unless forloop.last %}, {% endunless %}
           {% endfor %}
         </span>
       {% endif %}
