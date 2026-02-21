@@ -1,6 +1,6 @@
 export default {
   lang: 'ru',
-  title: 'Юрий Матюхин — фронтенд разработчик и блогер',
+  title: 'Юрий Матюхин — фронтенд, обычный',
   author: 'ymatuhin',
   email: 'ym@ymatuhin.ru',
   description:
