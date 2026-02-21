@@ -4,8 +4,9 @@ title: 'Плагин Pingometr для SwiftBar (macOS)'
 description: >-
   Мой небольшой плагин Pingometr для SwiftBar (системы микроплагинов на macOS для меню-бара). Показывает стабильность сети, работает под VPN.
 tags:
-  - network
+  - non-development
   - macOS
+  - network
   - swiftbar
 image:
   path: swiftbar-pingometr.png
