@@ -14,7 +14,6 @@ image:
   alt: Пиратский сюжет, автор bugpixel
 redirects:
   - /front-end/scalable-pixel-art/
-comments: true
 ---
 
 {% mediaImage image.path, image.alt, "eager", true, "pixelated" %}

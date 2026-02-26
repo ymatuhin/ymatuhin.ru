@@ -13,7 +13,6 @@ image:
   alt: Горизонтальное выравнивание в CSS
 redirects:
   - /front-end/margin-align-right/
-comments: true
 ---
 
 {% mediaImage image.path, image.alt, "eager" %}

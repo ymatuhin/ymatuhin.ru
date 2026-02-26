@@ -14,7 +14,6 @@ image:
   alt: Полосы прокрутки семейства Windows
 redirects:
   - /front-end/smooth-native-scroll/
-comments: true
 ---
 
 {% mediaImage image.path, image.alt, "eager" %}

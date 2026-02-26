@@ -15,7 +15,6 @@ image:
 has_youtube: true
 redirects:
   - /front-end/logs-in-javascript/
-comments: true
 ---
 
 Логирование — незаменимый инструмент в отладке JS кода. Расставьте логи в критические места и при возникновении ошибки

@@ -15,7 +15,6 @@ image:
   alt: Убрать дубликаты из массива в JavaScript
 redirects:
   - /front-end/remove-duplicates-from-array/
-comments: true
 ---
 
 {% mediaImage image.path, image.alt, "eager" %}

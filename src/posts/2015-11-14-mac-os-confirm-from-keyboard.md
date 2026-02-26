@@ -13,7 +13,6 @@ image:
   alt: Диалог смены расширения у файла в Mac OS
 redirects:
   - /blog/mac-os-confirm-from-keyboard/
-comments: true
 ---
 
 {% mediaImage image.path, image.alt, "eager" %}

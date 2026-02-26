@@ -33,7 +33,7 @@ layout: default
   </aside>
 {% endif %}
 
-{% if comments %}
+{% if comments != false %}
   <hr class="post__divider-after / divider">
   {% include "page/comments.liquid" %}
 {% endif %}

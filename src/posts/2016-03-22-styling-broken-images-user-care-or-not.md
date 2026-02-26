@@ -14,7 +14,6 @@ image:
   alt: Браузеры отображают незагруженное изображение
 redirects:
   - /front-end/styling-broken-images-user-care-or-not/
-comments: true
 ---
 
 {% mediaImage image.path, image.alt, "eager" %}

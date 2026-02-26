@@ -13,7 +13,6 @@ image:
   alt: '[contenteditable]'
 redirects:
   - /front-end/contenteditable-placeholder/
-comments: true
 ---
 
 {% mediaImage image.path, image.alt, "eager" %}

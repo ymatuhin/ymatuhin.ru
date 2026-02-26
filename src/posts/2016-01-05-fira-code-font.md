@@ -14,7 +14,6 @@ image:
   alt: 'Fira Code: шрифт с лигатурами для кода'
 redirects:
   - /tools/fira-code-font/
-comments: true
 ---
 
 {% mediaImage image.path, image.alt, "eager" %}
