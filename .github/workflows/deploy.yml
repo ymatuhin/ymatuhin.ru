@@ -1,45 +1,45 @@
-name: Build & Deploy to FTP (pnpm)
-
-on:
-  push:
-    branches:
-      - master
-  workflow_dispatch:
-
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 🚚 Checkout code
-        uses: actions/checkout@v4
-
-      - name: 🔧 Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10
-
-      - name: 🔧 Setup Node.js + pnpm cache
-        uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-          cache: 'pnpm'
-
-      - name: 📦 Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: 🛠 Build project
-        run: pnpm run build
-
-      - name: 🔐 Install SSH Key
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          known_hosts: unnecessary   # отключаем проверку, если не добавлял known_hosts
-
-      # Добавляем права на ключ (иногда нужно)
-      - name: 🔐 Add known hosts (optional but recommended)
-        run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-
-      - name: 📤 Sync files via rsync
-        run: |
-          rsync -avz --delete ./_site/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/html/
+#name: Build & Deploy
+#
+#on:
+#  push:
+#    branches:
+#      - master
+#  workflow_dispatch:
+#
+#jobs:
+#  build-and-deploy:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: 🚚 Checkout code
+#        uses: actions/checkout@v4
+#
+#      - name: 🔧 Setup pnpm
+#        uses: pnpm/action-setup@v4
+#        with:
+#          version: 10
+#
+#      - name: 🔧 Setup Node.js + pnpm cache
+#        uses: actions/setup-node@v4
+#        with:
+#          node-version: '24'
+#          cache: 'pnpm'
+#
+#      - name: 📦 Install dependencies
+#        run: pnpm install --frozen-lockfile
+#
+#      - name: 🛠 Build project
+#        run: pnpm run build
+#
+#      - name: 🔐 Install SSH Key
+#        uses: shimataro/ssh-key-action@v2
+#        with:
+#          key: ${{ secrets.SSH_PRIVATE_KEY }}
+#          known_hosts: unnecessary   # отключаем проверку, если не добавлял known_hosts
+#
+#      # Добавляем права на ключ (иногда нужно)
+#      - name: 🔐 Add known hosts (optional but recommended)
+#        run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+#
+#      - name: 📤 Sync files via rsync
+#        run: |
+#          rsync -avz --delete ./_site/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/html/
