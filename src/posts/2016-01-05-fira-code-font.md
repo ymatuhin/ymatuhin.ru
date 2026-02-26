@@ -14,6 +14,7 @@ image:
   alt: 'Fira Code: шрифт с лигатурами для кода'
 redirects:
   - /tools/fira-code-font/
+comments: true
 ---
 
 {% mediaImage image.path, image.alt, "eager" %}
@@ -71,7 +72,7 @@ redirects:
 * IE 10+, Edge: работает со свойством `font-feature-settings: "calt" 1;`
 * Firefox
 * Safari
-* Браузеры на Chromium: работают со свйоством `font-variant-ligatures: contextual;` или
+* Браузеры на Chromium: работают со свойством `font-variant-ligatures: contextual;` или
   `text-rendering: optimizeLegibility` (
   подробнее [571246](https://code.google.com/p/chromium/issues/detail?q=font-variant-ligatures&id=571246&thanks=571246&ts=1450553433&){:
   rel='nofollow'})
