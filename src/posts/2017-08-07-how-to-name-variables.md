@@ -13,6 +13,7 @@ image:
   alt: Как называть переменные
 redirects:
   - /front-end/how-to-name-variables/
+comments: true
 ---
 
 {% mediaImage image.path, image.alt, "eager" %}
