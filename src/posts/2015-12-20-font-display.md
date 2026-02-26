@@ -15,6 +15,7 @@ image:
 has_youtube: true
 redirects:
   - /front-end/font-display/
+comments: true
 ---
 
 {% mediaImage image.path, image.alt, "eager" %}

@@ -14,6 +14,7 @@ image:
   alt: Альтернативная версия иконки для VS Code, автор James Gilyead
 redirects:
   - /tools/migrate-to-vs-studio-code/
+comments: true
 ---
 
 {% mediaImage image.path, image.alt, "eager" %}

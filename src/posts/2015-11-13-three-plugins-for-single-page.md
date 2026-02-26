@@ -15,6 +15,7 @@ image:
   path: spa_plugins/spa_plugins.jpg
 redirects:
   - /front-end/three-plugins-for-single-page/
+comments: true
 ---
 
 {% mediaImage image.path, image.alt, "eager" %}

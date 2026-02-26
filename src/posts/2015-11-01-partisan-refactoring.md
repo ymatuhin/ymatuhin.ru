@@ -14,6 +14,7 @@ image:
   alt: ''
 redirects:
   - /front-end/partisan-refactoring/
+comments: true
 ---
 
 {% mediaImage image.path, image.alt, "eager" %}

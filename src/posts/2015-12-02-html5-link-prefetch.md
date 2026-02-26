@@ -14,6 +14,7 @@ image:
   alt: Стадии загрузки ресурса / HTML5 Link Prefetch
 redirects:
   - /front-end/html5-link-prefetch/
+comments: true
 ---
 
 {% mediaImage image.path, image.alt, "eager" %}

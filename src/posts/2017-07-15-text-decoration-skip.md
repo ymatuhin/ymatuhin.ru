@@ -14,6 +14,7 @@ image:
   alt: Пример css свойства text-decoration-skip
 redirects:
   - /front-end/text-decoration-skip/
+comments: true
 ---
 
 {% mediaImage image.path, image.alt, "eager" %}
